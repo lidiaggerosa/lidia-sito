@@ -1,0 +1,128 @@
+/*
+ * Valori — cinque colonne in fila, unite da un filo, allineate in alto.
+ * 23/09: da «quattro passaggi» a «cinque valori». Le tessere portano solo il
+ * numero (niente icona); titolo e testo partono dalla stessa quota in tutte
+ * le colonne, anche quando un titolo va su due righe.
+ */
+
+.lidia-come {
+	text-align: center;
+}
+
+.lidia-come h2 {
+	max-width: 22ch;
+	margin: 0 auto 60px;
+	text-wrap: balance;
+}
+
+.lidia-passaggi {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 28px 20px;
+	position: relative;
+	align-items: start;
+}
+
+/* Stessa regola dei riquadri sicurezza: niente margini di flusso dentro la griglia. */
+.lidia-passaggi > *,
+.lidia-passaggio > * {
+	margin-block: 0 !important;
+}
+
+.lidia-passaggi::before {
+	content: "";
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	top: 30px;
+	height: 1px;
+	background: linear-gradient(90deg, var(--lidia-filetto-colore), var(--wp--preset--color--azione), var(--lidia-filetto-colore));
+}
+
+.lidia-passaggio {
+	position: relative;
+	display: grid;
+	grid-template-rows: 60px minmax(2.6em, auto) auto;
+	justify-items: center;
+	align-items: start;
+	gap: 14px;
+}
+
+/* La tessera: il numero come segno, non un badge in un angolo. */
+.lidia-passaggio .lidia-tessera {
+	width: 60px;
+	height: 60px;
+	border-radius: 16px;
+	background: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--wp--preset--color--azione);
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: 20px;
+	letter-spacing: 0.02em;
+	font-variant-numeric: tabular-nums;
+	margin: 0;
+	position: relative;
+	z-index: 1;
+}
+
+.lidia-passaggio h3 {
+	font-size: var(--wp--preset--font-size--voce);
+	line-height: 1.3;
+	margin: 0;
+	text-wrap: balance;
+	align-self: start;
+}
+
+.lidia-passaggio p {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.5;
+	color: var(--lidia-secondario);
+	max-width: 24ch;
+}
+
+/* Variante a quattro colonne: le quattro azioni di /prodotto/ (24/09). */
+.lidia-passaggi.lidia-quattro {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+	.lidia-passaggi {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 40px 24px;
+	}
+
+	.lidia-passaggi.lidia-quattro {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	/* Stessa regola dei riquadri sicurezza: niente margini di flusso dentro la griglia. */
+.lidia-passaggi > *,
+.lidia-passaggio > * {
+	margin-block: 0 !important;
+}
+
+.lidia-passaggi::before {
+		display: none;
+	}
+}
+
+@media (max-width: 720px) {
+	.lidia-passaggi {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 480px) {
+	.lidia-passaggi {
+		grid-template-columns: 1fr;
+	}
+
+	.lidia-passaggio {
+		grid-template-rows: 60px auto auto;
+	}
+}

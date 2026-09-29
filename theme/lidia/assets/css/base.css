@@ -1,0 +1,251 @@
+/*
+ * base.css — quello che vale su ogni pagina: sezioni, occhiello, misure,
+ * focus, bottoni, e il comportamento del testo dentro un registro scuro.
+ * Niente colori "a mano": si legge sempre da var(--lidia-*).
+ */
+
+/* ---------- sezioni ---------- */
+
+/*
+ * Una sezione è un core/group a tutta larghezza con dentro un contenitore
+ * constrained da 1040 px. Il respiro verticale è sempre questo, salvo dove
+ * la sezione dichiara il contrario.
+ */
+.lidia-sezione {
+	padding-block: var(--wp--preset--spacing--70);
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-sezione:first-child {
+	border-top: 0;
+}
+
+/*
+ * Il contenitore interno della sezione. Porta la colonna e la centra; dentro
+ * ha un layout di flusso, quindi WordPress non applica `margin-inline: auto`
+ * ai figli e titoli, prose a misura di lettura e griglie condividono lo stesso
+ * bordo sinistro a qualunque larghezza. Senza di lui, sopra i 1040 px i blocchi
+ * larghi si centrano nella finestra e quelli stretti restano a sinistra.
+ */
+.lidia-colonna {
+	max-width: var(--lidia-colonna);
+	margin-inline: auto;
+}
+
+/* Fra una sezione e l'altra non passa aria: il respiro è dentro la sezione. */
+:where(.lidia-sezione) {
+	margin-block: 0;
+}
+
+/* Nemmeno fra testata, contenuto e footer: il blockGap qui non serve. */
+.wp-site-blocks > * {
+	margin-block-start: 0;
+}
+
+@media (max-width: 620px) {
+	.lidia-sezione {
+		padding-block: var(--wp--preset--spacing--60);
+	}
+}
+
+/* ---------- testo ---------- */
+
+.lidia-occhiello {
+	font-family: var(--wp--preset--font-family--testo);
+	font-size: var(--wp--preset--font-size--micro);
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--lidia-secondario);
+	margin-block: 0 14px;
+}
+
+/*
+ * La misura di lettura: si mette sul paragrafo, non sul contenitore.
+ * L'`!important` non è una scorciatoia: il layout constrained di WordPress
+ * scrive `margin-inline: auto !important` su ogni figlio più stretto della
+ * sezione, e senza questa riga il paragrafo si centrerebbe invece di allinearsi
+ * al titolo. Nelle pagine di testo il problema non c'è — lì la colonna intera
+ * vale la misura, vedi parti/pagina.css.
+ */
+.lidia-misura-lettura {
+	max-width: var(--lidia-misura);
+	margin-inline: 0 !important;
+}
+
+/*
+ * La cifra: il numero come affermazione, non come prezzo in vetrina.
+ * Sta qui e non in `sezioni/prezzo.css` dal 17/09, perché la usano la home e
+ * /prezzi/: è un trattamento tipografico, non una proprietà di una sezione.
+ */
+.lidia-cifra {
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: var(--wp--preset--font-size--cifra);
+	letter-spacing: -0.025em;
+	line-height: 1.1;
+	margin: 0 0 12px;
+	color: var(--lidia-testo);
+}
+
+/*
+ * La cifra: il numero come affermazione, non come prezzo in vetrina.
+ * Sta qui e non in `sezioni/prezzo.css` dal 17/09, perché la usano la home e
+ * /prezzi/: è un trattamento tipografico, non una proprietà di una sezione.
+ */
+.lidia-cifra {
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: var(--wp--preset--font-size--cifra);
+	letter-spacing: -0.025em;
+	line-height: 1.1;
+	margin: 0 0 12px;
+	color: var(--lidia-testo);
+}
+
+/*
+ * Il segnaposto. Si deve vedere che è un segnaposto, anche in bozza: bordo
+ * tratteggiato e corpo minore, mai una casella finta che somiglia a un modulo.
+ * Sta qui e non in un foglio di sezione perché lo usano più pagine — risorse,
+ * whitepaper, prova gratuita — e sparisce quando arriva la cosa vera.
+ */
+.lidia-segnaposto {
+	margin-block-start: var(--wp--preset--spacing--40);
+	padding: var(--wp--preset--spacing--40);
+	border: 1px dashed var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-scheda);
+	color: var(--lidia-secondario);
+	font-size: var(--wp--preset--font-size--riscontro);
+	max-width: 76ch;
+}
+
+.lidia-secondario {
+	color: var(--lidia-secondario);
+}
+
+/* Titoli e testo dentro una fascia scura non si ricolorano uno per uno. */
+.lidia-registro-scuro :is(h1, h2, h3, h4),
+.lidia-registro-notte :is(h1, h2, h3, h4) {
+	color: var(--lidia-testo);
+}
+
+.lidia-registro-scuro p:not(.lidia-occhiello),
+.lidia-registro-notte p:not(.lidia-occhiello) {
+	color: var(--lidia-secondario);
+}
+
+.lidia-registro-scuro :is(h2, h3) + p {
+	color: var(--lidia-secondario);
+}
+
+/* ---------- collegamenti ---------- */
+
+/* Il link "→" che porta a una pagina di approfondimento. */
+.lidia-freccia a,
+a.lidia-freccia {
+	color: var(--lidia-accento);
+	font-size: 15px;
+	font-weight: 500;
+	text-decoration: none;
+	border-bottom: var(--lidia-filetto) solid currentColor;
+	padding-bottom: 2px;
+}
+
+.lidia-freccia a:hover,
+a.lidia-freccia:hover {
+	color: var(--lidia-testo);
+}
+
+/* ---------- focus ---------- */
+
+:where(a, button, summary, input, textarea, select, details):focus-visible {
+	outline: var(--lidia-focus-spessore) solid var(--lidia-focus-colore);
+	outline-offset: var(--lidia-focus-offset);
+}
+
+/* ---------- bottoni ---------- */
+
+/* Sul fondo scuro il bottone primario si inverte: bianco su notte. */
+.lidia-registro-scuro .wp-element-button,
+.lidia-registro-notte .wp-element-button,
+.lidia-cta-chiara .wp-element-button {
+	background-color: var(--wp--preset--color--superficie);
+	color: var(--wp--preset--color--notte);
+}
+
+.lidia-registro-scuro .wp-element-button:hover,
+.lidia-registro-notte .wp-element-button:hover,
+.lidia-cta-chiara .wp-element-button:hover {
+	background-color: var(--wp--preset--color--chiaro);
+	color: var(--wp--preset--color--notte);
+}
+
+/* Secondario: fondo trasparente, filetto. */
+.is-style-secondario .wp-element-button {
+	background-color: transparent;
+	color: var(--lidia-accento);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.is-style-secondario .wp-element-button:hover {
+	background-color: var(--lidia-superficie);
+}
+
+/* Terziario: un link con il peso di un bottone. */
+.is-style-terziario .wp-element-button {
+	background-color: transparent;
+	color: var(--lidia-accento);
+	padding-inline: 0;
+	padding-block: 6px;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+/* ---------- icone ---------- */
+
+/*
+ * Le icone non stanno nel markup: la sezione dichiara una classe e il CSS
+ * disegna il segno con mask-image, così prende il colore del registro.
+ * Motivo: un blocco core/html con SVG dentro non sopravvive al giro nell'editor.
+ */
+.lidia-icona::before {
+	content: "";
+	display: block;
+	background-color: currentColor;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	flex: none;
+}
+
+.lidia-icona-conoscenza::before { -webkit-mask-image: url("../images/icone/conoscenza.svg"); mask-image: url("../images/icone/conoscenza.svg"); }
+.lidia-icona-contesto::before { -webkit-mask-image: url("../images/icone/contesto.svg"); mask-image: url("../images/icone/contesto.svg"); }
+.lidia-icona-ragionamento::before { -webkit-mask-image: url("../images/icone/ragionamento.svg"); mask-image: url("../images/icone/ragionamento.svg"); }
+.lidia-icona-output::before { -webkit-mask-image: url("../images/icone/output.svg"); mask-image: url("../images/icone/output.svg"); }
+.lidia-icona-scudo::before { -webkit-mask-image: url("../images/icone/scudo.svg"); mask-image: url("../images/icone/scudo.svg"); }
+.lidia-icona-nomodello::before { -webkit-mask-image: url("../images/icone/nomodello.svg"); mask-image: url("../images/icone/nomodello.svg"); }
+.lidia-icona-europa::before { -webkit-mask-image: url("../images/icone/europa.svg"); mask-image: url("../images/icone/europa.svg"); }
+.lidia-icona-verifica::before { -webkit-mask-image: url("../images/icone/verifica.svg"); mask-image: url("../images/icone/verifica.svg"); }
+
+/* ---------- immagini ---------- */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ---------- movimento ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}

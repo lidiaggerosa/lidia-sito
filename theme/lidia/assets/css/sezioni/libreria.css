@@ -1,0 +1,151 @@
+/*
+ * libreria.css — la pagina /libreria/: testa, indice e schede che precedono ogni
+ * sezione. Le sezioni sono quelle vere, con il loro CSS: qui si veste solo la
+ * cornice tecnica, che deve leggersi come "etichetta", non come parte del sito.
+ * Registro chiaro alterno, filetto tratteggiato: si distingue a colpo d'occhio.
+ */
+
+.lidia-libreria-testa {
+	background-color: var(--wp--preset--color--alterno);
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-libreria-testa .lidia-colonna {
+	max-width: var(--lidia-colonna);
+	margin-inline: auto;
+	padding-inline: var(--wp--preset--spacing--40);
+}
+
+.lidia-libreria-testa h1 {
+	margin-block: 6px var(--wp--preset--spacing--40);
+}
+
+.lidia-libreria-testa > .lidia-colonna > p {
+	max-width: var(--lidia-misura);
+}
+
+/* ---------- indice ---------- */
+
+.lidia-libreria-indice {
+	margin-block-start: var(--wp--preset--spacing--50);
+	font-size: var(--wp--preset--font-size--piccolo, 0.9375rem);
+}
+
+.lidia-libreria-indice__riga {
+	margin-block: 0 var(--wp--preset--spacing--30);
+	line-height: 1.7;
+}
+
+.lidia-libreria-indice__categoria {
+	display: inline-block;
+	font-weight: 600;
+	margin-inline-end: var(--wp--preset--spacing--30);
+}
+
+.lidia-libreria-indice a {
+	color: var(--lidia-testo);
+	text-decoration-color: var(--lidia-filetto-colore);
+}
+
+.lidia-libreria-indice a:hover {
+	color: var(--lidia-accento);
+}
+
+/* ---------- categoria ---------- */
+
+.lidia-libreria-categoria {
+	max-width: var(--lidia-colonna);
+	margin: var(--wp--preset--spacing--80) auto var(--wp--preset--spacing--40);
+	padding-inline: var(--wp--preset--spacing--40);
+	scroll-margin-top: var(--wp--preset--spacing--60);
+}
+
+.lidia-libreria-categoria span {
+	font-family: var(--wp--preset--font-family--inter);
+	font-size: 0.6em;
+	font-weight: 500;
+	color: var(--lidia-secondario);
+	margin-inline-start: 0.4em;
+	vertical-align: middle;
+}
+
+/* ---------- scheda ---------- */
+
+.lidia-libreria-scheda {
+	max-width: var(--lidia-colonna);
+	margin: var(--wp--preset--spacing--60) auto var(--wp--preset--spacing--30);
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+	border-block: var(--lidia-filetto) dashed var(--lidia-filetto-colore);
+	font-size: 0.9375rem;
+	line-height: 1.55;
+	scroll-margin-top: var(--wp--preset--spacing--50);
+}
+
+.lidia-libreria-scheda__riga {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 6px 12px;
+}
+
+.lidia-libreria-scheda__nome {
+	font-weight: 600;
+	font-size: 1.0625rem;
+}
+
+.lidia-libreria-scheda__slug,
+.lidia-libreria-scheda__stato {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: var(--lidia-raggio-pillola);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	font-size: 0.8125rem;
+	color: var(--lidia-secondario);
+}
+
+.lidia-libreria-scheda__stato {
+	border-color: var(--wp--preset--color--azione);
+	color: var(--wp--preset--color--azione);
+}
+
+.lidia-libreria-scheda__descrizione,
+.lidia-libreria-scheda__dove {
+	margin-block: 8px 0;
+	color: var(--lidia-secondario);
+}
+
+.lidia-libreria-scheda__dove a {
+	color: inherit;
+}
+
+/* ---------- esemplare ---------- */
+
+/*
+ * Le sezioni sono `alignfull` e si allargano da sole. Il contenitore non deve
+ * aggiungere né spazio né vincoli: deve solo separare un esemplare dal seguente.
+ */
+.lidia-libreria-esemplare {
+	margin-block-end: var(--wp--preset--spacing--30);
+}
+
+/* Il campionario: una colonna di lettura semplice. */
+.lidia-libreria-campionario {
+	padding-block: var(--wp--preset--spacing--60);
+}
+
+.lidia-libreria-campionario .lidia-colonna {
+	max-width: var(--lidia-misura);
+	margin-inline: auto;
+	padding-inline: var(--wp--preset--spacing--40);
+}
+
+@media (max-width: 620px) {
+	.lidia-libreria-testa {
+		padding-block: var(--wp--preset--spacing--60) var(--wp--preset--spacing--50);
+	}
+
+	.lidia-libreria-categoria {
+		margin-block-start: var(--wp--preset--spacing--70);
+	}
+}

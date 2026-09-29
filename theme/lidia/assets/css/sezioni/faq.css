@@ -1,0 +1,89 @@
+/* FAQ — elenco a fisarmonica, filetti orizzontali, nessuna scheda. */
+
+.lidia-faq {
+	padding-block: 80px;
+}
+
+/*
+ * Titolo e fisarmonica allineati a sinistra come tutto il resto: il centrato
+ * era una regola della home applicata ovunque, e su una pagina allineata a
+ * sinistra si leggeva come un errore. Tolto il 18/09.
+ */
+.lidia-faq h2 {
+	max-width: none;
+	margin-bottom: 26px;
+}
+
+/*
+ * `!important` come per `.lidia-misura-lettura`: sulla home la fisarmonica sta
+ * dentro un gruppo constrained, e la regola generata da WordPress centra i figli
+ * con `margin-left: auto !important`. Senza questo, la fisarmonica resta di 65 px
+ * più a destra del titolo.
+ */
+.lidia-faq .lidia-domande {
+	max-width: 80ch;
+	margin-inline: 0 !important;
+}
+
+/*
+ * Variante centrata (home, 23/09): la sezione è a colonna singola e centrata,
+ * quindi titolo e fisarmonica stanno al centro. Le altre pagine restano a sinistra.
+ */
+.lidia-faq-centrata h2 {
+	text-align: center;
+}
+
+.lidia-faq-centrata .lidia-domande {
+	margin-inline: auto !important;
+}
+
+.lidia-faq .wp-block-details {
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-faq .wp-block-details:last-child {
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-faq summary {
+	cursor: pointer;
+	list-style: none;
+	padding: 20px 34px 20px 0;
+	position: relative;
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: var(--wp--preset--font-size--voce);
+	letter-spacing: -0.01em;
+	color: var(--lidia-testo);
+}
+
+.lidia-faq summary::-webkit-details-marker {
+	display: none;
+}
+
+.lidia-faq summary::after {
+	content: "+";
+	position: absolute;
+	right: 4px;
+	top: 18px;
+	font-size: 20px;
+	color: var(--wp--preset--color--azione);
+	font-family: var(--wp--preset--font-family--testo);
+}
+
+.lidia-faq .wp-block-details[open] summary::after {
+	content: "–";
+}
+
+.lidia-faq .wp-block-details p {
+	margin: 0 0 22px;
+	font-size: 15.5px;
+	line-height: 1.62;
+	color: var(--lidia-secondario);
+	max-width: none;
+}
+
+.lidia-faq .wp-block-details p strong {
+	color: var(--lidia-testo);
+	font-weight: 600;
+}

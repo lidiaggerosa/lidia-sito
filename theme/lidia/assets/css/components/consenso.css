@@ -1,0 +1,198 @@
+/*
+ * consenso.css — il banner dei cookie di Complianz nel design system di Lidia.
+ *
+ * Complianz genera la struttura e il suo foglio base; qui si ridisegna soltanto, sopra.
+ * Si sovrascrivono le sue variabili (--cmplz_*) e poche regole dirette: se un aggiornamento
+ * del plugin cambia qualcosa, cade al massimo il ritocco, mai il funzionamento.
+ * Niente nel campo «CSS personalizzato» di Complianz: il codice sta nel tema (CLAUDE.md §6.2).
+ *
+ * Regola del Garante: «Rifiuta» ha lo stesso peso visivo di «Accetta» — stesso stile, stessa
+ * misura. «Preferenze» è secondario.
+ * Si carica solo se Complianz è attivo (inc/enqueue.php). 25/09/2026.
+ */
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner {
+	/* Le variabili di Complianz, con i valori del tema. */
+	--cmplz_banner_background_color: var(--wp--preset--color--superficie);
+	--cmplz_banner_border_color: var(--wp--preset--color--filetto);
+	--cmplz_banner_border_width: 1px;
+	--cmplz_banner_border_radius: var(--lidia-raggio-box);
+	--cmplz_text_color: var(--wp--preset--color--inchiostro);
+	--cmplz_hyperlink_color: var(--wp--preset--color--azione);
+	--cmplz_text_font_size: var(--wp--preset--font-size--riscontro);
+	--cmplz_link_font_size: var(--wp--preset--font-size--minuto);
+	--cmplz_category_body_font_size: var(--wp--preset--font-size--minuto);
+	--cmplz_title_font_size: 20px;
+	--cmplz_text_line_height: 1.55;
+	--cmplz_button_font_size: 14px;
+	--cmplz_button_border_radius: var(--lidia-raggio-pillola);
+	--cmplz_button_accept_background_color: var(--wp--preset--color--azione);
+	--cmplz_button_accept_border_color: var(--wp--preset--color--azione);
+	--cmplz_button_accept_text_color: var(--wp--preset--color--superficie);
+	--cmplz_button_deny_background_color: var(--wp--preset--color--azione);
+	--cmplz_button_deny_border_color: var(--wp--preset--color--azione);
+	--cmplz_button_deny_text_color: var(--wp--preset--color--superficie);
+	--cmplz_button_settings_background_color: var(--wp--preset--color--superficie);
+	--cmplz_button_settings_border_color: var(--wp--preset--color--filetto);
+	--cmplz_button_settings_text_color: var(--wp--preset--color--azione);
+	--cmplz_slider_active_color: var(--wp--preset--color--azione);
+	/* Spento ma leggibile come comando (25/09). */
+	--cmplz_slider_inactive_color: var(--wp--preset--color--secondario);
+	--cmplz_slider_bullet_color: var(--wp--preset--color--superficie);
+	--cmplz_category_open_icon_color: var(--wp--preset--color--secondario);
+	--cmplz_category_header_always_active_color: var(--wp--preset--color--secondario);
+
+	font-family: var(--wp--preset--font-family--testo);
+	color: var(--wp--preset--color--inchiostro);
+	background-color: var(--wp--preset--color--superficie);
+	border: 1px solid var(--wp--preset--color--filetto);
+	border-radius: var(--lidia-raggio-box);
+	/* Il banner galleggia sulla pagina: separato dal bordo, non da un'ombra morbida. */
+	box-shadow: none;
+	padding: 24px 26px 22px;
+}
+
+/* --- Testa ------------------------------------------------------------------ */
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-title {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+	color: var(--wp--preset--color--inchiostro);
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-logo {
+	display: none;
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-divider {
+	border-color: var(--wp--preset--color--filetto);
+}
+
+/* --- Testo e categorie ------------------------------------------------------------------ */
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-message {
+	color: var(--wp--preset--color--secondario);
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.55;
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-message a,
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-links a {
+	color: var(--wp--preset--color--azione);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-category {
+	background-color: var(--wp--preset--color--base);
+	border: 1px solid var(--wp--preset--color--filetto);
+	border-radius: var(--lidia-raggio);
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-category-title {
+	font-weight: 600;
+	color: var(--wp--preset--color--inchiostro);
+}
+
+/* --- Pulsanti ------------------------------------------------------------------ */
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-buttons {
+	gap: 10px;
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn {
+	font-family: var(--wp--preset--font-family--testo);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.2;
+	min-height: 44px;
+	padding: 12px 22px;
+	border-radius: var(--lidia-raggio-pillola);
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Accetta e Rifiuta: identici. */
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-accept,
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-deny {
+	background-color: var(--wp--preset--color--azione);
+	border: 1px solid var(--wp--preset--color--azione);
+	color: var(--wp--preset--color--superficie);
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover,
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-deny:hover {
+	background-color: var(--wp--preset--color--azione-attiva);
+	border-color: var(--wp--preset--color--azione-attiva);
+}
+
+/* Preferenze e Salva preferenze: secondari, come i bottoni con bordo del sito. */
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-view-preferences,
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-save-preferences,
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-manage-options {
+	background-color: var(--wp--preset--color--superficie);
+	border: 1px solid var(--wp--preset--color--filetto);
+	color: var(--wp--preset--color--azione);
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-view-preferences:hover,
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-save-preferences:hover,
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-manage-options:hover {
+	border-color: var(--wp--preset--color--azione);
+}
+
+/* Focus visibile, come nel resto del sito. */
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn:focus-visible,
+#cmplz-cookiebanner-container .cmplz-cookiebanner a:focus-visible,
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-close:focus-visible {
+	outline: var(--lidia-focus-spessore) solid var(--lidia-focus-colore);
+	outline-offset: var(--lidia-focus-offset);
+}
+
+/* Interruttori delle categorie: spenti in grigio-blu pieno, accesi nel colore d'azione. */
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-banner-checkbox input.cmplz-consent-checkbox + .cmplz-label::before {
+	background-color: var(--wp--preset--color--secondario);
+	opacity: 0.55;
+}
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-banner-checkbox input.cmplz-consent-checkbox:checked + .cmplz-label::before {
+	background-color: var(--wp--preset--color--azione);
+	opacity: 1;
+}
+
+/* --- Link ai documenti ------------------------------------------------------------------ */
+
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-links {
+	font-size: var(--wp--preset--font-size--minuto);
+}
+
+/* --- Riapertura ------------------------------------------------------------------ */
+
+/*
+ * La linguetta «Gestisci consenso» che Complianz lascia in basso sulla pagina: via.
+ * Il banner si riapre da «Preferenze cookie» nel footer (classe cmplz-show-banner).
+ */
+#cmplz-manage-consent .cmplz-manage-consent {
+	display: none !important;
+}
+
+/* --- Telefono ------------------------------------------------------------------ */
+
+@media (max-width: 560px) {
+	#cmplz-cookiebanner-container .cmplz-cookiebanner {
+		padding: 20px 18px 18px;
+		border-radius: var(--lidia-raggio-scheda);
+	}
+
+	#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn {
+		transition: none;
+	}
+}

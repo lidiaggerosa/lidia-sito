@@ -1,0 +1,243 @@
+/* Modulo — campi in chiaro, filetti, nessuna scheda. Vive su fondo chiaro e su fondo scuro. */
+
+.lidia-modulo {
+	--lidia-modulo-errore: var(--wp--preset--color--errore);
+	--lidia-modulo-errore-testo: var(--wp--preset--color--errore);
+
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	max-width: 46rem;
+}
+
+/*
+ * Nei registri scuri il rosso di `errore` non ha contrasto sufficiente per un testo:
+ * il bordo resta rosso, il messaggio passa al colore del testo. Il senso lo porta la
+ * frase, non il colore — che è la regola, non un ripiego.
+ */
+.lidia-registro-scuro .lidia-modulo,
+.lidia-registro-notte .lidia-modulo {
+	--lidia-modulo-errore-testo: var(--lidia-testo);
+}
+
+/* L'esca: fuori schermo, non `display: none`, che i bot leggono nel CSS. */
+.lidia-esca {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* --- L'intenzione ------------------------------------------------------- */
+
+.lidia-intento {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 24px;
+}
+
+.lidia-intento legend {
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: var(--wp--preset--font-size--minuto);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--lidia-secondario);
+}
+
+.lidia-scelta {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.lidia-scelta label {
+	font-size: var(--wp--preset--font-size--riscontro);
+	color: var(--lidia-testo);
+	cursor: pointer;
+}
+
+/* --- I campi ------------------------------------------------------------ */
+
+.lidia-modulo-griglia {
+	display: grid;
+	gap: 18px;
+}
+
+@media (min-width: 640px) {
+	.lidia-modulo-griglia {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.lidia-campo {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin: 0;
+}
+
+.lidia-campo label {
+	font-size: var(--wp--preset--font-size--minuto);
+	font-weight: 500;
+	letter-spacing: 0.01em;
+	color: var(--lidia-testo);
+}
+
+.lidia-campo-nota {
+	font-weight: 400;
+	color: var(--lidia-secondario);
+}
+
+.lidia-campo input,
+.lidia-campo select {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 12px 14px;
+	/* 16px pieni: sotto questa soglia iOS ingrandisce la pagina al focus. */
+	font-size: 16px;
+	font-family: inherit;
+	line-height: 1.4;
+	color: var(--lidia-testo);
+	background: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio);
+	appearance: none;
+}
+
+.lidia-campo select {
+	/* La freccia è disegnata, non un font di icone. */
+	background-image: linear-gradient( 45deg, transparent 50%, currentColor 50% ), linear-gradient( 135deg, currentColor 50%, transparent 50% );
+	background-position: calc(100% - 20px) calc(50% + 2px), calc(100% - 14px) calc(50% + 2px);
+	background-size: 6px 6px, 6px 6px;
+	background-repeat: no-repeat;
+	padding-right: 40px;
+}
+
+.lidia-campo input:focus-visible,
+.lidia-campo select:focus-visible,
+.lidia-consenso input:focus-visible,
+.lidia-scelta input:focus-visible,
+.lidia-modulo button:focus-visible {
+	outline: var(--lidia-focus-spessore) solid var(--lidia-focus-colore);
+	outline-offset: var(--lidia-focus-offset);
+}
+
+.lidia-campo-aiuto {
+	font-size: var(--wp--preset--font-size--minuto);
+	color: var(--lidia-secondario);
+}
+
+.lidia-campo-errore {
+	font-size: var(--wp--preset--font-size--minuto);
+	font-weight: 600;
+	color: var(--lidia-modulo-errore-testo);
+}
+
+.lidia-campo--errore input,
+.lidia-campo--errore select {
+	border-color: var(--lidia-modulo-errore);
+	border-width: 2px;
+}
+
+/* --- I consensi --------------------------------------------------------- */
+
+.lidia-consensi {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.lidia-consenso {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 4px 10px;
+	align-items: start;
+	margin: 0;
+}
+
+.lidia-consenso input {
+	width: 18px;
+	height: 18px;
+	margin: 3px 0 0;
+	accent-color: var(--lidia-accento);
+}
+
+.lidia-consenso label {
+	font-size: var(--wp--preset--font-size--minuto);
+	line-height: 1.55;
+	color: var(--lidia-secondario);
+}
+
+.lidia-consenso a {
+	color: inherit;
+}
+
+.lidia-consenso .lidia-campo-errore {
+	grid-column: 2;
+}
+
+.lidia-consenso.lidia-campo--errore input {
+	outline: 2px solid var(--lidia-modulo-errore);
+	outline-offset: 2px;
+}
+
+/* --- Invio -------------------------------------------------------------- */
+
+.lidia-modulo-invio {
+	margin: 0;
+}
+
+.lidia-modulo-invio button {
+	cursor: pointer;
+	border: 0;
+	font-family: inherit;
+}
+
+.lidia-modulo-invio button[disabled] {
+	opacity: 0.6;
+	cursor: progress;
+}
+
+.lidia-modulo-allarme {
+	margin: 0;
+	padding: 14px 16px;
+	font-size: var(--wp--preset--font-size--riscontro);
+	color: var(--lidia-modulo-errore-testo);
+	border: 2px solid var(--lidia-modulo-errore);
+	border-radius: var(--lidia-raggio-scheda);
+}
+
+/* --- Conferma ----------------------------------------------------------- */
+
+.lidia-modulo-conferma {
+	max-width: var(--lidia-misura);
+}
+
+.lidia-modulo-conferma:focus {
+	outline: none;
+}
+
+.lidia-modulo-conferma h3 {
+	margin: 0 0 12px;
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: var(--wp--preset--font-size--scheda);
+	letter-spacing: -0.015em;
+	color: var(--lidia-testo);
+}
+
+.lidia-modulo-conferma p {
+	margin: 0 0 10px;
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.62;
+	color: var(--lidia-secondario);
+}
+
+.lidia-modulo-conferma p:last-child {
+	margin-bottom: 0;
+}

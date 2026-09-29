@@ -1,0 +1,42 @@
+/*
+ * Gesto 1 — Il riscontro.
+ * La prova attaccata all'affermazione: fonte, norma, documento o dato.
+ * Scarsità: max 4 per pagina, max 1 per sezione. Vedi docs/01a-concept.md §2.
+ */
+
+.is-style-riscontro {
+	font-family: var(--wp--preset--font-family--testo);
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.45;
+	color: var(--lidia-secondario);
+	max-width: 52ch;
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+
+/* Il riferimento verificabile: sottolineatura spessa nel colore d'azione del registro. */
+.is-style-riscontro a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: var(--lidia-accento);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+}
+
+.is-style-riscontro a:hover {
+	color: var(--lidia-testo);
+	text-decoration-thickness: 3px;
+}
+
+/* Divieti resi espliciti: niente riquadro, niente centratura, niente corsivo. */
+.is-style-riscontro {
+	border: 0;
+	background: none;
+	text-align: start;
+	font-style: normal;
+}
+
+@media (max-width: 390px) {
+	.is-style-riscontro {
+		max-width: none;
+	}
+}

@@ -1,0 +1,162 @@
+/*
+ * listato.css — elenchi di contenuti: archivi, blog, ricerca.
+ * Si carica solo su archivio, home dei post e ricerca.
+ */
+
+/* ---------- griglia ---------- */
+
+.lidia-elenco-voci {
+	gap: var(--wp--preset--spacing--40);
+}
+
+/* ---------- scheda articolo ---------- */
+
+.lidia-scheda-articolo {
+	background-color: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-scheda);
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.lidia-scheda-articolo > * {
+	margin-block: 0;
+}
+
+/* I termini sono link: nell'occhiello della scheda non si sottolineano. */
+.lidia-scheda-articolo .lidia-occhiello a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.lidia-scheda-articolo .lidia-occhiello a:hover {
+	color: var(--lidia-accento);
+}
+
+.lidia-scheda-articolo .wp-block-post-title a {
+	color: var(--lidia-testo);
+	text-decoration: none;
+}
+
+.lidia-scheda-articolo .wp-block-post-title a:hover {
+	color: var(--lidia-accento);
+}
+
+.lidia-scheda-articolo .wp-block-post-excerpt {
+	color: var(--lidia-secondario);
+}
+
+.lidia-scheda-articolo .wp-block-post-excerpt__more-text {
+	display: none;
+}
+
+/* La data si appoggia in fondo alla scheda, così le schede restano pari. */
+.lidia-scheda-articolo .wp-block-post-date {
+	margin-block-start: auto;
+	padding-block-start: 10px;
+}
+
+@media (max-width: 780px) {
+	.lidia-elenco-voci {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ---------- riga di risultato (ricerca) ---------- */
+
+.lidia-riga-risultato {
+	padding-block: var(--wp--preset--spacing--40);
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-riga-risultato > * {
+	margin-block: 0;
+}
+
+.lidia-riga-risultato .wp-block-post-title a {
+	color: var(--lidia-testo);
+	text-decoration: none;
+}
+
+.lidia-riga-risultato .wp-block-post-title a:hover {
+	color: var(--lidia-accento);
+}
+
+.lidia-riga-risultato .wp-block-post-excerpt {
+	color: var(--lidia-secondario);
+	margin-block-start: 8px;
+}
+
+/* ---------- paginazione ---------- */
+
+.lidia-paginazione {
+	margin-block-start: var(--wp--preset--spacing--60);
+	padding-block-start: var(--wp--preset--spacing--40);
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	align-items: center;
+}
+
+.lidia-paginazione a {
+	color: var(--lidia-accento);
+	text-decoration: none;
+}
+
+.lidia-paginazione a:hover {
+	text-decoration: underline;
+}
+
+.lidia-paginazione .wp-block-query-pagination-numbers {
+	display: flex;
+	gap: 6px;
+}
+
+.lidia-paginazione :is(a, .current) {
+	padding: 6px 11px;
+	border-radius: var(--lidia-raggio);
+}
+
+.lidia-paginazione .current {
+	background-color: var(--lidia-accento);
+	color: var(--wp--preset--color--superficie);
+}
+
+@media (max-width: 620px) {
+	.lidia-paginazione .wp-block-query-pagination-numbers {
+		display: none;
+	}
+}
+
+/* ---------- campo di ricerca ---------- */
+
+.lidia-ricerca .wp-block-search__inside-wrapper {
+	background-color: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-pillola);
+	padding: 4px 4px 4px 18px;
+	max-width: 420px;
+}
+
+.lidia-ricerca .wp-block-search__input {
+	border: 0;
+	background: transparent;
+	font-size: var(--wp--preset--font-size--corpo);
+	color: var(--lidia-testo);
+	padding-block: 8px;
+}
+
+.lidia-ricerca .wp-block-search__input:focus {
+	outline: 0;
+}
+
+.lidia-ricerca .wp-block-search__button {
+	background-color: var(--lidia-accento);
+	color: var(--wp--preset--color--superficie);
+	border: 0;
+	border-radius: var(--lidia-raggio-pillola);
+	font-size: var(--wp--preset--font-size--minuto);
+	font-weight: 600;
+	padding: 9px 18px;
+	margin: 0;
+}

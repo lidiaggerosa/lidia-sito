@@ -1,0 +1,58 @@
+/* Form — fascia scura, argomenti a sinistra, modulo `lidia/modulo` a destra. */
+
+.lidia-form {
+	padding-block: 84px;
+	border-top: 0;
+}
+
+.lidia-form .lidia-form-griglia {
+	display: grid;
+	gap: 44px 72px;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+	align-items: start;
+}
+
+.lidia-form h2 {
+	max-width: 17ch;
+	margin-top: 0;
+}
+
+.lidia-form .lidia-elenco-argomenti {
+	list-style: none;
+	margin: 26px 0 0;
+	padding: 0;
+	display: grid;
+	gap: 12px;
+}
+
+.lidia-form .lidia-elenco-argomenti li {
+	font-size: var(--wp--preset--font-size--riscontro);
+	color: var(--lidia-secondario);
+	display: flex;
+	gap: 11px;
+}
+
+.lidia-form .lidia-elenco-argomenti li::before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--lidia-accento);
+	flex: none;
+	margin-top: 8px;
+}
+
+/* Il riquadro che contiene il modulo del tema. */
+.lidia-form-box {
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-box);
+	padding: 14px;
+	background-color: var(--lidia-superficie);
+	overflow: hidden;
+}
+
+@media (max-width: 860px) {
+	.lidia-form .lidia-form-griglia {
+		grid-template-columns: 1fr;
+	}
+}

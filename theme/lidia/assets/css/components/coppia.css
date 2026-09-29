@@ -1,0 +1,68 @@
+/*
+ * Gesto 2 — La coppia domanda → ragionamento.
+ * Scarsità: una per pagina, solo dove si spiega come funziona il prodotto.
+ * Vive in un registro scuro. Vedi docs/01a-concept.md §2.
+ *
+ * 16/09: riportato sui token della Palette D — i colori si leggono dal registro
+ * della sezione che contiene il gesto, mai scritti a mano.
+ */
+
+.lidia-coppia {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+	gap: var(--wp--preset--spacing--50);
+	align-items: start;
+	background-color: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-left: var(--lidia-firma) solid var(--lidia-accento);
+	border-radius: var(--lidia-raggio-scheda);
+	padding: var(--wp--preset--spacing--50);
+	max-width: none;
+}
+
+.lidia-coppia > * {
+	margin-block: 0;
+}
+
+/* La domanda è la voce dello studio: Fraunces corsivo, non virgolettato a mano. */
+.lidia-coppia__domanda {
+	font-family: var(--wp--preset--font-family--display);
+	font-style: italic;
+	font-size: var(--wp--preset--font-size--scheda);
+	line-height: 1.32;
+	color: var(--lidia-testo);
+	margin: 0;
+}
+
+.lidia-coppia__ragionamento {
+	color: var(--lidia-secondario);
+	margin: 0;
+}
+
+/* Chip delle fonti: esistono solo dentro la coppia. */
+.lidia-coppia__fonti {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--20);
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+
+.lidia-coppia__fonte {
+	font-size: var(--wp--preset--font-size--riscontro);
+	font-variant-numeric: tabular-nums;
+	color: var(--lidia-secondario);
+	background-color: var(--lidia-fondo);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio);
+	padding: 4px 10px;
+	margin: 0;
+}
+
+/* Sotto gli 820 si impila: la domanda resta prima, il filetto firma a sinistra. */
+@media (max-width: 820px) {
+	.lidia-coppia {
+		grid-template-columns: 1fr;
+		gap: var(--wp--preset--spacing--40);
+		padding: var(--wp--preset--spacing--40);
+	}
+}

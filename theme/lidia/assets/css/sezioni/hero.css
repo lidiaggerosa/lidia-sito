@@ -1,0 +1,57 @@
+/* Hero — l'unica fascia con la sfumatura notte. Una per pagina. */
+
+.lidia-hero {
+	position: relative;
+	overflow: hidden;
+	/*
+	 * 23/09: fascia più alta e senza stacco in basso — i loghi cliente le stanno
+	 * attaccati (vedi loghi.css, che toglie filetto e spazio sopra).
+	 */
+	padding-block: var(--wp--preset--spacing--80) 104px;
+	text-align: center;
+	border-top: 0;
+}
+
+/* Il reticolo di punti: appartiene alla notte, sta sotto soglia. */
+.lidia-hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, rgba(255, 255, 255, 0.16) 1.1px, transparent 1.1px);
+	background-size: 26px 26px;
+	-webkit-mask-image: radial-gradient(120% 90% at 50% 15%, #000 0%, rgba(0, 0, 0, 0.35) 55%, transparent 85%);
+	mask-image: radial-gradient(120% 90% at 50% 15%, #000 0%, rgba(0, 0, 0, 0.35) 55%, transparent 85%);
+}
+
+.lidia-hero > * {
+	position: relative;
+	z-index: 1;
+}
+
+.lidia-hero h1 {
+	color: var(--wp--preset--color--chiaro);
+	max-width: 22ch;
+	margin-inline: auto;
+	margin-block: 0 26px;
+	text-wrap: balance;
+}
+
+.lidia-hero .lidia-hero-sommario {
+	color: var(--wp--preset--color--chiaro-secondario);
+	font-size: var(--wp--preset--font-size--voce);
+	line-height: 1.55;
+	max-width: 62ch;
+	margin-inline: auto;
+	margin-block: 0 38px;
+}
+
+.lidia-hero .wp-block-buttons {
+	justify-content: center;
+}
+
+@media (max-width: 620px) {
+	.lidia-hero {
+		padding-block: var(--wp--preset--spacing--60) 72px;
+	}
+}

@@ -1,0 +1,66 @@
+/*
+ * Blocco lettura — testo a sinistra (titolo + un paragrafo), immagine a destra.
+ * 23/09: era titolo | paragrafo; ora la colonna destra è per l'immagine, quindi
+ * il titolo sta a sinistra (regola: due colonne → allineamento a sinistra).
+ */
+
+.lidia-lettura .lidia-lettura-griglia {
+	display: grid;
+	gap: 36px 64px;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	align-items: center;
+}
+
+.lidia-lettura h2 {
+	max-width: 18ch;
+	margin: 0 0 22px;
+	text-wrap: balance;
+}
+
+.lidia-lettura p {
+	margin: 0;
+	color: var(--lidia-secondario);
+	max-width: var(--lidia-misura);
+}
+
+/* Lo spazio per l'immagine: proporzione fissa, così il layout non salta quando arriva l'asset. */
+.lidia-lettura .lidia-lettura-media {
+	margin: 0;
+}
+
+.lidia-lettura .lidia-lettura-immagine {
+	margin: 0;
+	aspect-ratio: 5 / 4;
+	border-radius: var(--lidia-raggio-box);
+	overflow: hidden;
+	background-color: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-lettura .lidia-lettura-immagine img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Finché è un segnaposto si deve vedere che lo è. */
+.lidia-lettura .lidia-immagine-segnaposto {
+	border-style: dashed;
+}
+
+@media (max-width: 860px) {
+	.lidia-lettura .lidia-lettura-griglia {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	.lidia-lettura .lidia-lettura-immagine {
+		aspect-ratio: 16 / 10;
+	}
+}
+
+/* Niente margini di flusso di WordPress dentro la griglia. */
+.lidia-lettura .lidia-lettura-griglia > * {
+	margin-block: 0 !important;
+}

@@ -1,0 +1,103 @@
+/*
+ * contatti.css — le sezioni di /contatti/.
+ * Si carica dove compare la classe `lidia-contatti`.
+ *
+ * 25/09/2026: il modulo qui è quello del team commerciale (offerta Enterprise),
+ * non la prova, che resta su /prova-gratuita/. Forma del modulo in sezioni/modulo.css.
+ */
+
+.lidia-cnt-testa {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+}
+
+.lidia-cnt-testa h1 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+/* I due recapiti sono la ragione per cui si apre questa pagina: si leggono grossi. */
+.lidia-cnt-recapito {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: var(--wp--preset--font-size--scheda);
+	margin-block: 0 6px;
+}
+
+.lidia-cnt-recapito a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-cnt-recapito a:hover {
+	border-bottom-color: currentColor;
+}
+
+/* ---------- modulo commerciale ---------- */
+
+.lidia-cnt-modulo h2 {
+	margin-block-end: var(--wp--preset--spacing--30);
+}
+
+.lidia-cnt-modulo .lidia-misura-lettura {
+	margin-block: 0 var(--wp--preset--spacing--50);
+	color: var(--lidia-secondario);
+}
+
+.lidia-cnt-modulo .lidia-modulo-blocco {
+	max-width: 760px;
+}
+
+/* ---------- sedi ---------- */
+
+.lidia-cnt-fila {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--wp--preset--spacing--50);
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
+.lidia-cnt-fila > * {
+	margin-block-start: 0;
+}
+
+.lidia-cnt-sede > * {
+	margin-block: 0;
+}
+
+.lidia-cnt-sede h3 {
+	padding-block-end: 10px;
+	margin-block-end: 10px;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-cnt-sede p {
+	color: var(--lidia-secondario);
+	font-size: var(--wp--preset--font-size--riscontro);
+}
+
+@media (max-width: 780px) {
+	.lidia-cnt-fila {
+		grid-template-columns: 1fr;
+		gap: var(--wp--preset--spacing--40);
+	}
+}
+
+/* ---------- a chi scrivere ---------- */
+
+.lidia-cnt-elenco {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
+.lidia-cnt-voce {
+	padding-block: var(--wp--preset--spacing--40);
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	margin-block: 0;
+	max-width: 76ch;
+}
+
+.lidia-cnt-voce:last-child {
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-cnt-chi .lidia-freccia {
+	margin-block-start: var(--wp--preset--spacing--40);
+}

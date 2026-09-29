@@ -1,0 +1,148 @@
+# Traduzione inglese del tema Lidia (modulo). Approvata da Gianluca il 25/09/2026.
+# Si rigenera en_GB.mo da questo file.
+msgid ""
+msgstr ""
+"Project-Id-Version: Lidia\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid " e acconsento al trattamento dei dati per essere ricontattato."
+msgstr " and consent to the processing of my data in order to be contacted."
+
+msgid " e acconsento al trattamento dei dati per ricevere il documento ed essere ricontattato."
+msgstr " and consent to the processing of my data in order to receive the document and be contacted."
+
+msgid "(facoltativo)"
+msgstr "(optional)"
+
+msgid "Altro"
+msgstr "Other"
+
+msgid "Assicurazioni"
+msgstr "Insurance"
+
+msgid "Ateneo"
+msgstr "University"
+
+msgid "Avvocato"
+msgstr "Lawyer"
+
+msgid "Cognome"
+msgstr "Last name"
+
+msgid "Direzione legale d’impresa"
+msgstr "In-house legal"
+
+msgid "Email di lavoro"
+msgstr "Work email"
+
+msgid "Ho letto l’"
+msgstr "I have read the "
+
+msgid "Il documento richiesto non è disponibile. Ricaricate la pagina e riprovate, oppure scriveteci a lidia@lidiatech.ai."
+msgstr "The requested document is not available. Please reload the page and try again, or write to lidia@lidiatech.ai."
+
+msgid "Il download è partito"
+msgstr "Your download has started"
+
+msgid "Il modulo di contatto del tema. Scrive su Delera via webhook: nessun iframe, nessun cookie, si vede sempre."
+msgstr "The theme's contact form. Writes to Delera via webhook: no iframe, no cookies, always visible."
+
+msgid "Il team commerciale vi risponde al più presto all’indirizzo che ci avete lasciato. Se volete anticipare qualcosa, scrivete a "
+msgstr "Our sales team will get back to you as soon as possible at the address you gave us. If you'd like to share anything in advance, write to "
+
+msgid "In cima alla pagina"
+msgstr "Top of the page"
+
+msgid "In fondo alla pagina"
+msgstr "Bottom of the page"
+
+msgid "Invio in corso…"
+msgstr "Sending…"
+
+msgid "Modulo Lidia"
+msgstr "Lidia form"
+
+msgid "Ne abbiamo mandato copia anche al vostro indirizzo."
+msgstr "We've also sent a copy to your address."
+
+msgid "Nel corpo della pagina"
+msgstr "In the page body"
+
+msgid "Nome"
+msgstr "First name"
+
+msgid "Non indicata"
+msgstr "Not specified"
+
+msgid "Non siamo riusciti a inviare la richiesta. I dati sono ancora qui: riprovate, oppure scriveteci a lidia@lidiatech.ai."
+msgstr "We couldn't send your request. Your details are still here: please try again, or write to lidia@lidiatech.ai."
+
+msgid "Professione"
+msgstr "Role"
+
+msgid "Questo indirizzo non sembra valido."
+msgstr "This address doesn't look valid."
+
+msgid "Richiedi la prova gratuita"
+msgstr "Request your free trial"
+
+msgid "Richiesta ricevuta"
+msgstr "Request received"
+
+msgid "Scarica il whitepaper"
+msgstr "Download the white paper"
+
+msgid "Scegliete una voce"
+msgstr "Choose one"
+
+msgid "Scrivi al team commerciale"
+msgstr "Write to our sales team"
+
+msgid "Se non è partito, "
+msgstr "If it hasn't started, "
+
+msgid "Senza questo consenso non possiamo ricontattarvi."
+msgstr "Without this consent we can't get back to you."
+
+msgid "Serve anche questo."
+msgstr "This field is required."
+
+msgid "Sicurezza e trattamento dei dati →"
+msgstr "Security and data processing →"
+
+msgid "Sito web"
+msgstr "Website"
+
+msgid "Socio o titolare"
+msgstr "Partner or owner"
+
+msgid "Solo se preferite che vi chiamiamo."
+msgstr "Only if you'd prefer us to call you."
+
+msgid "Studio o azienda"
+msgstr "Firm or company"
+
+msgid "Telefono"
+msgstr "Phone"
+
+msgid "Troppe richieste da questa connessione. Riprovate fra qualche minuto."
+msgstr "Too many requests from this connection. Please try again in a few minutes."
+
+msgid "Usiamo questo indirizzo per gli accessi alla prova."
+msgstr "We'll use this address for your trial login."
+
+msgid "Vi ricontattiamo al più presto all’indirizzo che ci avete lasciato, con le credenziali e una nota su come partire."
+msgstr "We'll get back to you as soon as possible at the address you gave us, with your login details and a note on how to get started."
+
+msgid "Voglio ricevere aggiornamenti su normativa e AI legale. Ci si cancella con un clic."
+msgstr "I'd like to receive updates on regulation and legal AI. Unsubscribe with one click."
+
+msgid "eccolo qui"
+msgstr "here it is"
+
+msgid "informativa privacy"
+msgstr "privacy notice"

@@ -1,0 +1,80 @@
+/* Footer — registro notte, cinque colonne, riga legale in fondo. */
+
+.lidia-piede {
+	padding-block: 56px 0;
+	border-top: 0;
+}
+
+.lidia-piede .lidia-piede-alto {
+	display: grid;
+	grid-template-columns: minmax(0, 1.3fr) repeat(4, minmax(0, 1fr));
+	gap: 36px 32px;
+}
+
+.lidia-piede h4 {
+	margin: 0 0 14px;
+	color: var(--wp--preset--color--superficie);
+}
+
+.lidia-piede ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 9px;
+	font-size: 13.5px;
+}
+
+.lidia-piede a {
+	color: var(--lidia-secondario);
+	text-decoration: none;
+}
+
+.lidia-piede a:hover {
+	color: var(--wp--preset--color--superficie);
+	text-decoration: underline;
+}
+
+.lidia-piede .lidia-marchio img {
+	height: 28px;
+	width: auto;
+}
+
+.lidia-piede .lidia-piede-marchio p {
+	margin: 12px 0 16px;
+	font-size: 13.5px;
+	line-height: 1.6;
+	max-width: 34ch;
+}
+
+.lidia-piede .lidia-piede-legale {
+	margin-top: 44px;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	padding-block: 22px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 28px;
+	justify-content: space-between;
+	font-size: 12.5px;
+}
+
+.lidia-piede .lidia-piede-legale p {
+	margin: 0;
+}
+
+/* Segnaposto: dati societari ancora da fornire. */
+.lidia-piede .lidia-segnaposto {
+	opacity: 0.75;
+}
+
+@media (max-width: 980px) {
+	.lidia-piede .lidia-piede-alto {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 620px) {
+	.lidia-piede .lidia-piede-alto {
+		grid-template-columns: 1fr;
+	}
+}

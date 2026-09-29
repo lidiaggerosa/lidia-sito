@@ -1,0 +1,111 @@
+/*
+ * risorse.css — le sezioni dei due hub, /risorse/ e /risorse/whitepaper/.
+ * Si carica dove compare la classe `lidia-risorse`.
+ *
+ * Gli elenchi sono blocchi query, non testo: quello che si stila qui è la riga
+ * di un risultato, non un contenuto. Se un giorno cambia il numero di voci, il
+ * foglio non se ne accorge.
+ */
+
+/* ---------- intestazione ---------- */
+
+.lidia-ris-testa {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+}
+
+.lidia-ris-testa h1 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+/* ---------- elenchi generati ---------- */
+
+.lidia-ris-lista {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
+/*
+ * Una voce è un titolo e una riga, separati da un filetto: la stessa forma degli
+ * elenchi di affermazioni delle altre pagine. Niente schede, niente immagini di
+ * anteprima finché non ci sono copertine vere.
+ */
+.lidia-ris-lista .lidia-ris-titolo {
+	margin-block: 0 6px;
+	font-size: var(--wp--preset--font-size--scheda);
+}
+
+.lidia-ris-lista .lidia-ris-titolo a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.lidia-ris-lista .lidia-ris-titolo a:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.lidia-ris-lista .lidia-ris-sommario {
+	margin-block: 0;
+	max-width: 76ch;
+	color: var(--lidia-secondario);
+	font-size: var(--wp--preset--font-size--riscontro);
+}
+
+/* La riga la disegna il post-template, non il singolo blocco. */
+.lidia-ris-lista .wp-block-post {
+	padding-block: var(--wp--preset--spacing--40);
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-ris-lista .wp-block-post:last-child {
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+/* Il post-template è una lista: via il pallino e il rientro. */
+.lidia-ris-lista .wp-block-post-template {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lidia-ris-vuoto {
+	color: var(--lidia-secondario);
+	padding-block: var(--wp--preset--spacing--40);
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-ris-whitepaper .lidia-freccia {
+	margin-block-start: var(--wp--preset--spacing--40);
+}
+
+/* Il segnaposto sta in base.css: lo usa anche /prova-gratuita/. */
+
+
+/* ---------- paginazione ---------- */
+
+/*
+ * Compare solo quando serve: sotto la soglia della query il blocco non stampa
+ * niente. Sta sul filetto di chiusura dell'elenco, staccata.
+ */
+.lidia-ris-pagine {
+	margin-block-start: var(--wp--preset--spacing--40);
+	font-size: var(--wp--preset--font-size--riscontro);
+	gap: var(--wp--preset--spacing--40);
+	align-items: baseline;
+}
+
+.lidia-ris-pagine a {
+	color: var(--lidia-secondario);
+	text-decoration: none;
+}
+
+.lidia-ris-pagine a:hover {
+	color: var(--lidia-testo);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.lidia-ris-pagine .page-numbers.current {
+	color: var(--lidia-testo);
+	font-weight: 600;
+}

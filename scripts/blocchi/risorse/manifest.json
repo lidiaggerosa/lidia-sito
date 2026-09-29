@@ -1,0 +1,72 @@
+[
+ {
+  "slug": "odissea-digitale-ai-studi-legali",
+  "tipo": "risorsa",
+  "titolo": "Odissea digitale: la rotta dell'AI per gli studi legali",
+  "title_seo": "Odissea digitale: la rotta dell'AI per gli studi legali | Lidia",
+  "meta": "Paper in tre capitoli su come portare l'AI in produzione in uno studio legale: corpus AI-ready, competenze ibride, policy viva. Download gratuito.",
+  "gated": true,
+  "tipo_risorsa": "whitepaper",
+  "stato": "in-revisione"
+ },
+ {
+  "slug": "opinion-eiopa-governance-ai-assicurazioni",
+  "tipo": "risorsa",
+  "titolo": "Dall'Opinion EIOPA ai fatti: governance dell'AI nelle assicurazioni",
+  "title_seo": "Opinion EIOPA: governance dell'AI nelle assicurazioni | Lidia",
+  "meta": "Lettura operativa dell'Opinion EIOPA su AI governance e risk management: proporzionalità, impact assessment e selezione degli use case. Download gratuito.",
+  "gated": true,
+  "tipo_risorsa": "whitepaper",
+  "stato": "in-revisione"
+ },
+ {
+  "slug": "nuova-governance-dei-dati",
+  "tipo": "risorsa",
+  "titolo": "La nuova governance dei dati",
+  "title_seo": "La nuova governance dei dati: impatti legali dell'AI | Lidia",
+  "meta": "I quattro pilastri della governance AI: good data, partire dal problema, compliance by design e test del legittimo interesse per il training. Download gratuito.",
+  "gated": true,
+  "tipo_risorsa": "whitepaper",
+  "stato": "in-revisione"
+ },
+ {
+  "slug": "diritto-llm-e-ricerca",
+  "tipo": "risorsa",
+  "titolo": "Diritto, LLM e ricerca: fondamenti teorici, protocolli operativi e criteri di validità",
+  "title_seo": "Diritto, LLM e ricerca: protocolli e criteri di validità | Lidia",
+  "meta": "Quadro teorico, protocolli operativi e criteri di validità per l'uso degli LLM nella ricerca giuridica. La regola cite-or-silent. Download gratuito.",
+  "gated": true,
+  "tipo_risorsa": "whitepaper",
+  "stato": "in-revisione"
+ },
+ {
+  "slug": "responsabilita-value-chain-ai",
+  "tipo": "risorsa",
+  "titolo": "La responsabilità nella value chain dell'AI",
+  "title_seo": "La responsabilità nella value chain dell'AI | Lidia",
+  "meta": "Vigilanza umana, cerchi concentrici di responsabilità e diligenza professionale: il panel su chi risponde lungo la catena dell'AI. Download gratuito.",
+  "gated": true,
+  "tipo_risorsa": "whitepaper",
+  "stato": "in-revisione"
+ },
+ {
+  "slug": "legge-132-2025-studi-legali",
+  "tipo": "post",
+  "titolo": "Legge 132/2025: come cambia l'uso dell'AI negli studi legali",
+  "title_seo": "Legge 132/2025 e AI negli studi legali: cosa cambia | Lidia",
+  "meta": "La Legge 132/2025 disciplina l'uso dell'AI nelle professioni intellettuali: obblighi di trasparenza, supervisione umana, responsabilità e checklist operativa.",
+  "gated": false,
+  "tipo_risorsa": "articolo",
+  "stato": "in-revisione"
+ },
+ {
+  "slug": "agenti-ai-contesto-legale-enterprise",
+  "tipo": "post",
+  "titolo": "Agenti AI nel contesto legale ed enterprise: l'evoluzione a breve termine",
+  "title_seo": "Agenti AI nel contesto legale ed enterprise: cosa cambia | Lidia",
+  "meta": "Da assistenti passivi ad agenti autonomi: competenze, AI Act, sovranità digitale e adozione asimmetrica tra grandi imprese e PMI. Il resoconto del panel.",
+  "gated": false,
+  "tipo_risorsa": "articolo",
+  "stato": "in-revisione"
+ }
+]

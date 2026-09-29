@@ -1,0 +1,120 @@
+/*
+ * pagina.css — la cornice di una pagina che non è composta da sezioni:
+ * intestazione (occhiello, H1, data) e prosa lunga.
+ * Vale su pagine di testo, articoli, archivi, ricerca e 404. Non sulla home.
+ */
+
+/* ---------- la colonna ---------- */
+
+/*
+ * La misura di lettura è la colonna, non il singolo blocco.
+ * Motivo: il layout constrained di WordPress centra ogni figlio più stretto
+ * del contenitore con `margin-inline: auto !important`. Stringendo il singolo
+ * paragrafo il testo finiva centrato e disallineato dal titolo; stringendo
+ * `--wp--style--global--content-size` si sposta il vincolo sulla colonna e
+ * titolo, prosa e tabelle condividono lo stesso bordo sinistro.
+ * 62ch risolto sul corpo di Inter vale ~642 px, dentro i 680 di theme.json.
+ */
+.lidia-pagina {
+	--wp--style--global--content-size: var(--lidia-misura);
+}
+
+/* ---------- intestazione ---------- */
+
+.lidia-intestazione {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--50);
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	margin-block-end: var(--wp--preset--spacing--60);
+}
+
+.lidia-intestazione > * {
+	margin-block: 0;
+}
+
+.lidia-intestazione .lidia-occhiello + h1 {
+	margin-block-start: 6px;
+}
+
+.lidia-intestazione h1 + * {
+	margin-block-start: var(--wp--preset--spacing--40);
+}
+
+/* I termini sono link: nell'occhiello non si sottolineano. */
+.lidia-intestazione .lidia-occhiello a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.lidia-intestazione .lidia-occhiello a:hover {
+	color: var(--lidia-accento);
+}
+
+@media (max-width: 620px) {
+	.lidia-intestazione {
+		padding-block: var(--wp--preset--spacing--60) var(--wp--preset--spacing--40);
+		margin-block-end: var(--wp--preset--spacing--50);
+	}
+}
+
+/* ---------- prosa ---------- */
+
+.lidia-pagina {
+	padding-block-end: var(--wp--preset--spacing--80);
+}
+
+.lidia-prosa > h2 {
+	margin-block: var(--wp--preset--spacing--60) var(--wp--preset--spacing--30);
+}
+
+.lidia-prosa > h3 {
+	margin-block: var(--wp--preset--spacing--50) var(--wp--preset--spacing--20);
+}
+
+.lidia-prosa > h4 {
+	margin-block: var(--wp--preset--spacing--50) var(--wp--preset--spacing--20);
+	color: var(--lidia-secondario);
+}
+
+.lidia-prosa :is(ul, ol) {
+	padding-inline-start: 1.25em;
+}
+
+.lidia-prosa li + li {
+	margin-block-start: 8px;
+}
+
+.lidia-prosa blockquote {
+	border-inline-start: 2px solid var(--lidia-accento);
+	padding-inline-start: 20px;
+	margin-inline: 0;
+	font-size: var(--wp--preset--font-size--voce);
+}
+
+.lidia-prosa blockquote p:last-child {
+	margin-block-end: 0;
+}
+
+/* Nessuna tabella deve far scorrere la pagina: scorre lei. */
+.lidia-prosa .wp-block-table {
+	overflow-x: auto;
+}
+
+.lidia-prosa .wp-block-table table {
+	font-size: var(--wp--preset--font-size--riscontro);
+	border-collapse: collapse;
+}
+
+.lidia-prosa .wp-block-table :is(th, td) {
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	padding: 10px 14px;
+	text-align: start;
+}
+
+.lidia-prosa .wp-block-table th {
+	background-color: var(--lidia-fondo-alt);
+	font-weight: 600;
+}
+
+.lidia-prosa .wp-block-separator {
+	margin-block: var(--wp--preset--spacing--60);
+}

@@ -1,0 +1,219 @@
+<!-- wp:paragraph -->
+<p><em>Allegato A ai <a href="/legale/termini/">Termini e Condizioni Generali</a> — Ultimo aggiornamento: giugno 2026</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">1. Ambito di applicazione e definizioni</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>1.1. La presente Politica di Sicurezza costituisce parte integrante dell’Accordo stipulato tra LIDIA e l'Utente. Essa definisce le misure tecniche e organizzative adottate da LIDIA per garantire la sicurezza dei dati dell'Utente, in qualsiasi misura coinvolti nell'erogazione dei Servizi tramite la Piattaforma LIDIA Legal AI (i "Dati Utente").</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1.2. I termini con iniziale maiuscola utilizzati ma non definiti nella presente Politica di Sicurezza hanno il significato loro attribuito nella <a href="/legale/termini/">Clausola 2.2 dei T&amp;CG</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1.3. Definizioni:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>“Audit di Terze Parti" come indicato alla Clausola 2.3.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>“Certificazioni” avrà il significato di cui alla Clausola 2.4.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>“Dati Utente" avrà il significato di cui alla Clausola 1.1.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>“Revisore” avrà il significato di cui alla Clausola 8.1.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">2. Sistema di Gestione della Sicurezza delle Informazioni</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>2.1. La Piattaforma LIDIA Legal AI è ospitata ed erogata tramite Amazon Web Services ("AWS"), un'infrastruttura cloud concessa in licenza ad Amazon a LIDIA.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.2. Per l'erogazione dei Servizi, LIDIA si avvale del Sistema di Gestione della Sicurezza delle Informazioni ("SGSI") implementato da MESA, progettato e mantenuto in conformità alle migliori pratiche di settore al fine di garantire una solida protezione informatica e la tutela della titolarità dei dati.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.3. Il SGSI è soggetto a valutazione continua da parte di revisori indipendenti di terze parti ("Audit di Terze Parti"). I risultati degli Audit di Terze Parti sono messi a disposizione dell'Utente secondo quanto descritto alla Clausola 7.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.3.1. MESA è attualmente certificata secondo lo standard ISO/IEC 27001:2013 e detiene la certificazione CSA STAR Livello 1 (collettivamente, le "Certificazioni"), a testimonianza del proprio impegno nella gestione della sicurezza delle informazioni, della sicurezza cloud e della protezione dei dati personali.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.3.2. MESA manterrà le Certificazioni, o standard equivalenti riconosciuti dal settore, per tutta la durata dell’Accordo. Qualora MESA decidesse di interrompere uno specifico Audit di Terze Parti di cui alla Clausola 2.3, adotterà in sostituzione un framework equivalente e riconosciuto dal settore.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">3. Sicurezza dell’infrastruttura cloud</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">3.1. Cifratura dei dati</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>3.1.1. LIDIA implementa MongoDB Atlas con Transparent Data Encryption (TDE) per proteggere i Dati Utente a riposo. La TDE cifra database, log e backup mediante crittografia AES-256. I dati in transito sono protetti mediante HTTPS (protocolli SSL/TLS), garantendo la cifratura end-to-end nelle comunicazioni tra server. La combinazione di TDE e HTTPS assicura una protezione completa contro l'accesso non autorizzato e l'intercettazione dei dati. Ulteriori dettagli tecnici sono disponibili sul sito web di MongoDB Atlas, che è disponibile <a href="https://www.mongodb.com/docs/atlas/architecture/current/data-encryption/" rel="noopener" target="_blank">qui</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">3.2. Sicurezza del servizio di piattaforma</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>3.2.1. La Piattaforma LIDIA Legal AI opera su AWS Amazon Fargate e AWS Lambda, entrambi dotati di funzionalità di sicurezza integrate, tra cui l'isolamento di rete e il monitoraggio integrato. Tali servizi offrono un ambiente completamente gestito, scalabile e sicuro per il deployment delle applicazioni. Ulteriori dettagli tecnici sono disponibili sul sito web di AWS (<em>Fargate Security Considerations for Amazon ECS</em>), disponibile <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-security-considerations.html" rel="noopener" target="_blank">qui</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">3.3. Web Application Firewall (WAF)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>3.3.1. LIDIA adotta il Web Application Firewall (WAF) di Amazon per proteggere la Piattaforma dalle vulnerabilità e dagli attacchi web più comuni, tra cui SQL injection e cross-site scripting (XSS). Il WAF opera come livello di protezione centralizzato per le applicazioni web della Piattaforma. Ulteriori dettagli tecnici sono disponibili sul sito web di AWS (<em>Amazon Web Application Firewall</em>), disponibile <a href="https://aws.amazon.com/waf/" rel="noopener" target="_blank">qui</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">4. Continuità operativa e disaster recovery</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">4.1. Servizi di backup automatico</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>4.1.1. LIDIA si avvale dei servizi di backup automatico di AWS per garantire che i Dati Utente siano regolarmente salvati e ripristinabili in caso di perdita di dati. Tali servizi includono funzionalità di ripristino point-in-time e opzioni di conservazione a lungo termine. Ulteriori dettagli tecnici sono disponibili sul <a href="https://aws.amazon.com/backup/" rel="noopener" target="_blank">sito web di AWS</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">4.2. Archiviazione ridondante</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>4.2.1. I Dati Utente sono archiviati mediante storage geo-ridondante o con ridondanza di zona, con replica su più ubicazioni geografiche per garantire elevata disponibilità e durabilità. Tutti i dati sono conservati all'interno dell'Unione Europea, in conformità ai requisiti del Regolamento Generale sulla Protezione dei Dati (GDPR). Ulteriori dettagli tecnici sono disponibili sul <a href="https://aws.amazon.com/about-aws/global-infrastructure/regions_az/" rel="noopener" target="_blank">sito web di AWS</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">4.3. Piano di disaster recovery</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>4.3.1. LIDIA mantiene un piano di <em>disaster recovery</em> completo che si avvale dei servizi AWS per ridurre al minimo i tempi di inattività e la perdita di dati in caso di eventi disastrosi. Le procedure di ripristino sono soggette a test e validazione periodici per garantire la prontezza operativa.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">5. Pratiche di sviluppo sicuro</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">5.1. Linee guida OWASP</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>5.1.1. LIDIA e il suo Personale aderiscono alle linee guida OWASP Top Ten, che definiscono le best practice per l'identificazione e la mitigazione dei rischi di sicurezza più comuni nelle applicazioni web.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">5.2. Revisione del codice</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>5.2.1. Vengono condotte periodicamente revisioni del codice, sia manuali che automatizzate tramite analisi statica, al fine di identificare e correggere tempestivamente eventuali vulnerabilità di sicurezza.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">5.3. Valutazioni della vulnerabilità e test di profondità</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>5.3.1. MESA esegue annualmente valutazioni delle vulnerabilità e test di penetrazione, condotti da professionisti della sicurezza certificati, al fine di identificare e rimediare le debolezze di sicurezza dei sistemi e dell'infrastruttura di LIDIA.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">6. Impegno organizzativo per la sicurezza</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">6.1. Governance della sicurezza</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>6.1.1. LIDIA garantisce che il SGSI sia attivamente mantenuto su base continuativa dal proprio Personale, con chiara responsabilizzazione organizzativa in materia di sicurezza delle informazioni.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">6.2. Miglioramento continuo</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>6.2.1. LIDIA si impegna a monitorare e migliorare costantemente le proprie pratiche di sicurezza, al fine di fronteggiare le minacce emergenti, le vulnerabilità individuate e l'evoluzione degli standard di settore.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">6.3. Controllo degli accessi del Personale e formazione</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>6.3.1. L'accesso all'ambiente cloud da parte del Personale avviene tramite credenziali utente univoche ed è disciplinato dal principio del privilegio minimo. Ogni accesso richiede una connessione sicura, l'autenticazione a più fattori (MFA) e password conformi o superiori ai requisiti minimi di lunghezza e complessità applicabili.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>6.3.2. Il Personale non accederà ai Dati Utente se non: (i) nella misura necessaria all'erogazione o al supporto dei Servizi; ovvero (ii) per adempiere agli obblighi previsti dalla Legge Applicabile.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>6.3.3. Il Personale accederà all'ambiente cloud esclusivamente tramite dispositivi aziendali, dotati di controlli di cifratura nonché di strumenti di Endpoint Detection and Response (EDR) per il monitoraggio, il rilevamento di attività sospette e codice malevolo, e la gestione delle vulnerabilità.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>6.3.4. LIDIA mantiene programmi di formazione e sensibilizzazione alla sicurezza per tutto il Personale, erogati al momento dell'inserimento in azienda e con cadenza almeno annuale.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">7. Rilevamento e risposta agli incidenti</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>7.1. Qualora LIDIA venga a conoscenza di una violazione della sicurezza che comporti la distruzione, la perdita, l'alterazione, la divulgazione non autorizzata o l'accesso non autorizzato ai Dati Utente (un "Incidente di Sicurezza"), LIDIA notificherà l'Utente senza ingiustificato ritardo. La notifica sarà inviata all'indirizzo e-mail indicato nel Modulo d’Ordine, ovvero secondo le modalità ritenute appropriate da LIDIA.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>7.2. Non appena venga a conoscenza di un Incidente di Sicurezza, LIDIA adotterà prontamente tutte le misure ragionevoli per contenere, investigare e mitigare l'incidente. I log ritenuti rilevanti ai fini dell'Incidente di Sicurezza saranno conservati per un periodo minimo di un (1) anno.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>7.3. LIDIA manterrà l'Utente ragionevolmente informato nel corso dell'intero processo di risposta all'Incidente, fornendo tempestive informazioni in merito a: (i) la natura e le possibili conseguenze dell'Incidente di Sicurezza; (ii) lo stato dell'indagine in corso; e (iii) un punto di contatto designato per ulteriori richieste di informazioni. Al termine dell'indagine, LIDIA comunicherà le misure adottate o proposte per mitigare o contenere l'Incidente di Sicurezza. L'Utente prende atto che, non avendo il Personale accesso al contenuto dei Dati Utente, LIDIA potrebbe non essere in grado di fornire una caratterizzazione dettagliata dei Dati Utente specificamente interessati dall'Incidente di Sicurezza. Le comunicazioni relative a un Incidente di Sicurezza non costituiscono in alcun caso ammissione di responsabilità da parte di LIDIA.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">8. Diritti dell’Utente e responsabilità condivise</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>8.1. L'Utente è l'unico responsabile di garantire che: (i) sia debitamente autorizzato a trasmettere ai Servizi qualsiasi Input o Dato Utente; e (ii) il proprio utilizzo della Piattaforma LIDIA Legal AI sia conforme a tutta la Legge Applicabile.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>8.2. L'Utente è responsabile della gestione e della protezione delle proprie Credenziali di Accesso alla Piattaforma. Le credenziali devono essere mantenute strettamente riservate e non possono essere condivise con soggetti non autorizzati, in conformità a quanto previsto dall'Order Form applicabile.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>8.3. L'Utente è tenuto a segnalare prontamente a LIDIA qualsiasi attività sospetta relativa al proprio Account Utente, inclusa, a titolo esemplificativo e non esaustivo, ogni circostanza in cui l'Utente ritenga ragionevolmente che le proprie credenziali siano state compromesse.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>8.4. L'Utente è responsabile dell’aggiornamento e della corretta applicazione dei patch di sicurezza dei propri sistemi informatici utilizzati per accedere ai Servizi, ivi compresi browser e software correlati, contro le vulnerabilità note.</p>
+<!-- /wp:paragraph -->

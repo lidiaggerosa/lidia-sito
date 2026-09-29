@@ -1,0 +1,178 @@
+<!-- wp:group {"className":"lidia-sezione lidia-laboratorio-testa","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div class="wp-block-group alignfull lidia-sezione lidia-laboratorio-testa"><!-- wp:paragraph {"className":"lidia-occhiello"} -->
+<p class="lidia-occhiello">Laboratorio · pagina privata</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Banco di prova dei componenti</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Qui si compongono e si misurano i componenti nuovi prima di portarli in una pagina vera. Dall'editor: inserisci «Funzione · box» o «Funzione · box (invertito)» dalla categoria Lidia — sezioni, cambia testi, icona (classe del titolo) e mock. Niente di questa pagina è pubblico.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-sezione lidia-funzione-box","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div class="wp-block-group alignfull lidia-sezione lidia-funzione-box"><!-- wp:group {"className":"lidia-funzione-griglia","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-griglia"><!-- wp:group {"className":"lidia-funzione-testo","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-testo"><!-- wp:heading {"className":"lidia-icona lidia-icona-contesto"} -->
+<h2 class="wp-block-heading lidia-icona lidia-icona-contesto">Ricerca legale</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Norme, sentenze e prassi dalle fonti ufficiali, collegate tra loro con tecnologia GraphRAG. Ogni risposta arriva con i riferimenti ai testi usati, così la verifica è una lettura e non una ricostruzione.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"lidia-funzione-punti"} -->
+<ul class="wp-block-list lidia-funzione-punti"><!-- wp:list-item -->
+<li>Fonti ufficiali comprese nel canone</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Ricerca web tramite un agente interno</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Riferimenti puntuali in ogni risposta</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-funzione-mock","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-mock"><!-- wp:html -->
+<div class="lidia-mock lidia-mock-ricerca-legale">
+<style>
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap');
+.lidia-mock-ricerca-legale{ --navy:#0F133A; --blue:#303A99; --border:#E7E7EE; --text:#1E2030; --muted:#8A8CA0;
+  font-family:'Switzer','Segoe UI',-apple-system,Helvetica,Arial,sans-serif; display:flex; justify-content:center; }
+.lidia-mock-ricerca-legale *{box-sizing:border-box;}
+.lidia-mock-ricerca-legale .widget{ width:100%; max-width:380px; background:linear-gradient(180deg,#fff 0%,#FBFBFE 100%); border:1px solid var(--border);
+  border-radius:18px; padding:22px 22px 20px 22px; box-shadow:0 20px 50px rgba(15,19,58,.1); }
+.lidia-mock-ricerca-legale .badge{ display:inline-flex; align-items:center; gap:6px; background:#EEF3FF; color:var(--blue);
+  font-size:10.5px; font-weight:600; padding:4px 10px; border-radius:100px; margin-bottom:12px; }
+.lidia-mock-ricerca-legale .widget-title{ font-family:inherit; font-size:16px; font-weight:600; color:var(--navy); margin:0 0 16px 0; letter-spacing:-.01em; line-height:1.3; }
+.lidia-mock-ricerca-legale .searchbox{ border:1.5px solid var(--border); border-radius:12px; padding:12px 14px; background:#fff;
+  display:flex; align-items:flex-start; gap:8px; transition:border-color .3s, box-shadow .3s; min-height:16px; margin-bottom:14px; }
+.lidia-mock-ricerca-legale .searchbox.focus{ border-color:var(--blue); box-shadow:0 5px 16px rgba(48,58,153,.12); }
+.lidia-mock-ricerca-legale .searchbox-text{ flex:1; font-size:11.5px; line-height:1.5; color:var(--text); }
+.lidia-mock-ricerca-legale .caret{ display:inline-block; width:1.5px; height:13px; background:var(--blue); margin-left:1px; vertical-align:middle; animation:lidia-mock-blink 1s step-end infinite; }
+@keyframes lidia-mock-blink{ 50%{opacity:0;} }
+.lidia-mock-ricerca-legale .sendbtn{ width:24px; height:24px; border-radius:7px; background:var(--border); display:flex; align-items:center; justify-content:center; flex:none; transition:background .3s; }
+.lidia-mock-ricerca-legale .sendbtn.ready{ background:var(--blue); }
+.lidia-mock-ricerca-legale .result{ max-height:0; opacity:0; transition:max-height .55s ease, opacity .4s ease; position:relative; overflow:hidden; }
+.lidia-mock-ricerca-legale .result.show{ max-height:235px; opacity:1; }
+.lidia-mock-ricerca-legale .result-box{ position:relative; height:100%; border:1px solid var(--border); border-radius:12px; background:#FAFAFC; padding:14px 16px; overflow:hidden; }
+.lidia-mock-ricerca-legale .section-label{ font-size:9.5px; font-weight:600; color:var(--blue); text-transform:uppercase; letter-spacing:.04em; margin:0 0 7px 0; }
+.lidia-mock-ricerca-legale .ph{ height:6.5px; border-radius:3px; background:#E4E4EE; margin:6px 0; }
+.lidia-mock-ricerca-legale .a-text{ font-size:10.5px; line-height:1.6; color:#333; margin:0 0 8px 0; }
+.lidia-mock-ricerca-legale .loading{ display:flex; align-items:center; gap:7px; padding:4px 0; color:var(--muted); font-size:10.5px; }
+.lidia-mock-ricerca-legale .dots{ display:flex; gap:4px; }
+.lidia-mock-ricerca-legale .dots span{ width:4.5px; height:4.5px; border-radius:50%; background:var(--blue); animation:lidia-mock-bnc 1s infinite ease-in-out; }
+.lidia-mock-ricerca-legale .dots span:nth-child(2){ animation-delay:.15s; } .lidia-mock-ricerca-legale .dots span:nth-child(3){ animation-delay:.3s; }
+@keyframes lidia-mock-bnc{ 0%,80%,100%{ transform:scale(.6); opacity:.5; } 40%{ transform:scale(1); opacity:1; } }
+.lidia-mock-ricerca-legale .reveal-item{ opacity:0; transform:translateY(4px); transition:opacity .4s ease, transform .4s ease; }
+.lidia-mock-ricerca-legale .reveal-item.show{ opacity:1; transform:translateY(0); }
+.lidia-mock-ricerca-legale .fade-cue{ position:absolute; left:1px; right:1px; bottom:1px; height:44px; border-radius:0 0 11px 11px;
+  background:linear-gradient(180deg, rgba(250,250,252,0) 0%, #FAFAFC 70%); display:flex; align-items:flex-end;
+  justify-content:center; padding-bottom:7px; pointer-events:none; opacity:0; transition:opacity .4s ease; }
+.lidia-mock-ricerca-legale .fade-cue.show{ opacity:1; }
+.lidia-mock-ricerca-legale .fade-cue span{ font-size:15px; letter-spacing:3px; color:var(--blue); font-weight:700; line-height:1; }
+</style>
+<div class="widget">
+  <div class="badge">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#303A99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+    Ricerca Legale
+  </div>
+  <p class="widget-title">Banche dati normative e giurisprudenziali, interrogate direttamente.</p>
+  <div class="searchbox" data-box><div class="searchbox-text" data-text></div>
+    <div class="sendbtn" data-send><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19.5a.496.496 0 0 0-.635-.635l-19.5 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg></div>
+  </div>
+  <div class="result" data-result><div class="result-box">
+    <div class="loading" data-loading><span>Sto raccogliendo le fonti</span><div class="dots"><span></span><span></span><span></span></div></div>
+    <div data-answer style="display:none;">
+      <div class="section-label reveal-item">Risposta</div>
+      <p class="a-text reveal-item">Se i vizi emersi integrano la nozione di "gravi difetti" ex art. 1669 c.c., il committente può agire con l'azione extracontrattuale decennale, che prescinde dall'accettazione dell'opera.</p>
+      <div class="ph reveal-item" style="width:93%"></div>
+      <div class="ph reveal-item" style="width:76%"></div>
+      <div class="section-label reveal-item">Legislazione</div>
+      <div class="ph reveal-item" style="width:90%"></div>
+    </div>
+    <div class="fade-cue" data-fade><span>···</span></div>
+  </div></div>
+</div>
+<script>
+(function(){
+  var root=document.currentScript.closest('.lidia-mock');
+  if(!root) return;
+  var QUESTION="Termini di decadenza e prescrizione per i gravi difetti dell'opera in un appalto?";
+  var q=function(s){return root.querySelector(s);};
+  var box=q('[data-box]'),text=q('[data-text]'),send=q('[data-send]'),result=q('[data-result]'),
+      loading=q('[data-loading]'),answer=q('[data-answer]'),fadeCue=q('[data-fade]');
+  function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+  async function typeText(el,str,speed){ speed=speed||27; el.innerHTML='<span class="caret"></span>'; var acc='';
+    for(var i=0;i<str.length;i++){ acc+=str[i]; el.innerHTML=acc+'<span class="caret"></span>'; await wait(speed+Math.random()*16); }
+    await wait(250); var c=el.querySelector('.caret'); if(c) c.remove(); }
+  async function cycle(){
+    while(true){
+      result.classList.remove('show'); box.classList.remove('focus'); send.classList.remove('ready');
+      loading.style.display='flex'; answer.style.display='none'; text.innerHTML='';
+      fadeCue.classList.remove('show');
+      answer.querySelectorAll('.reveal-item').forEach(function(el){el.classList.remove('show');});
+      await wait(700);
+      box.classList.add('focus'); await typeText(text,QUESTION); send.classList.add('ready'); await wait(350);
+      box.classList.remove('focus');
+      result.classList.add('show'); await wait(1100);
+      loading.style.display='none'; answer.style.display='block';
+      var items=answer.querySelectorAll('.reveal-item');
+      for(var j=0;j<items.length;j++){ items[j].classList.add('show'); await wait(300); }
+      fadeCue.classList.add('show');
+      await wait(3800);
+    }
+  }
+  cycle();
+})();
+</script>
+</div>
+<!-- /wp:html --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-sezione lidia-funzione-box lidia-funzione-inverso","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div class="wp-block-group alignfull lidia-sezione lidia-funzione-box lidia-funzione-inverso"><!-- wp:group {"className":"lidia-funzione-griglia","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-griglia"><!-- wp:group {"className":"lidia-funzione-testo","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-testo"><!-- wp:heading {"className":"lidia-icona lidia-icona-output"} -->
+<h2 class="wp-block-heading lidia-icona lidia-icona-output">Add-in Word</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Redazione e revisione senza uscire da Word. Lidia propone il testo e lo confronta con i precedenti dello studio; l'avvocato rivede dove ha sempre scritto, con il controllo umano su ogni modifica.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"lidia-funzione-punti"} -->
+<ul class="wp-block-list lidia-funzione-punti"><!-- wp:list-item -->
+<li>Bozze e revisioni dentro il documento</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Confronto con i modelli dello studio</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Ogni modifica tracciata e revisionabile</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-funzione-mock","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-mock"><!-- wp:paragraph {"className":"lidia-mock-titolo"} -->
+<p class="lidia-mock-titolo">Word · Contratto di fornitura.docx</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"lidia-doc"} -->
+<p class="lidia-doc">Il Fornitore <s>potrà</s> <mark>dovrà</mark> consegnare entro 30 giorni <s>dalla richiesta</s> <mark>dalla ricezione dell'ordine scritto</mark>, salvo diverso accordo tra le parti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"lidia-demo-nota"} -->
+<p class="lidia-demo-nota">Confrontato con il modello dello studio</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+

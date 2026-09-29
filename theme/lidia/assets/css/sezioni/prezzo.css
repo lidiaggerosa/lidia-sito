@@ -1,0 +1,116 @@
+/*
+ * Prezzo — la soglia a sinistra, il rimando a destra. Una cifra per pagina.
+ * Su /prodotto/ resta così. Sulla home (`.lidia-prezzo-elenco`, 23/09) la colonna
+ * destra è il riquadro «cosa comprende»: la sezione prende struttura e il
+ * rimando scende sotto la cifra.
+ */
+
+.lidia-prezzo {
+	padding-block: 74px;
+}
+
+.lidia-prezzo .lidia-prezzo-griglia {
+	display: grid;
+	gap: 24px 64px;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	align-items: center;
+}
+
+/* Il trattamento di `.lidia-cifra` sta in base.css: lo usa anche /prezzi/. */
+
+.lidia-prezzo p:not(.lidia-cifra):not(.lidia-occhiello) {
+	margin: 0;
+	color: var(--lidia-secondario);
+}
+
+/* --- Variante con elenco (home) -------------------------------------------- */
+
+.lidia-prezzo-elenco {
+	padding-block: 88px;
+}
+
+.lidia-prezzo-elenco .lidia-prezzo-griglia {
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: 32px 72px;
+}
+
+.lidia-prezzo-elenco .lidia-prezzo-testo p:not(.lidia-cifra) {
+	max-width: 40ch;
+}
+
+/* 24/09: prima il bottone verso il modulo, poi il rimando a /prezzi/ come link. */
+.lidia-prezzo-elenco .lidia-prezzo-testo .wp-block-buttons {
+	margin-top: 30px;
+}
+
+/* `p.` serve: la regola `.lidia-prezzo p:not(…)` qui sopra azzerava il margine (25/09). */
+.lidia-prezzo-elenco .lidia-prezzo-testo p.lidia-freccia {
+	margin-top: 28px;
+}
+
+.lidia-prezzo-riquadro {
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-box);
+	background-color: var(--lidia-superficie);
+	padding: 30px 32px 32px;
+}
+
+.lidia-prezzo-riquadro .lidia-occhiello {
+	margin: 0 0 18px;
+}
+
+.lidia-prezzo-voci {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px 24px;
+}
+
+.lidia-prezzo-voci li {
+	list-style: none;
+	display: flex;
+	gap: 11px;
+	align-items: flex-start;
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.45;
+	color: var(--lidia-testo);
+	margin: 0;
+}
+
+/* Il segno di spunta: tondo pieno e segno in SVG inline, niente icon font. */
+.lidia-prezzo-voci li::before {
+	content: "";
+	flex: none;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--azione);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2 7 10.6l4.6-5' fill='none' stroke='%23fff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+}
+
+@media (max-width: 860px) {
+	.lidia-prezzo .lidia-prezzo-griglia {
+		grid-template-columns: 1fr;
+	}
+
+	.lidia-prezzo-riquadro {
+		padding: 24px 22px 26px;
+	}
+}
+
+@media (max-width: 560px) {
+	.lidia-prezzo-voci {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Niente margini di flusso di WordPress dentro la griglia. */
+.lidia-prezzo .lidia-prezzo-griglia > * {
+	margin-block: 0 !important;
+}

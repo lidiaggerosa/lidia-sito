@@ -1,0 +1,227 @@
+/*
+ * prezzi.css — le sezioni di /prezzi/.
+ * Si carica dove compare la classe `lidia-prezzi`, cioè su questa pagina sola.
+ * Da non confondere con `sezioni/prezzo.css`, che è la fascia prezzo della home.
+ * FAQ e cifra riusano i loro fogli (`lidia-faq`, `.lidia-cifra` in base.css).
+ *
+ * 25/09/2026: due piani a confronto, Lidia Professional e Lidia Enterprise, in due
+ * box a struttura identica. Le personalizzazioni sono dentro Enterprise.
+ */
+
+/* ---------- intestazione ---------- */
+
+.lidia-prz-testa {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+}
+
+.lidia-prz-testa h1 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+.lidia-prz-testa .wp-block-buttons {
+	margin-block-start: var(--wp--preset--spacing--40);
+}
+
+/* ---------- i due piani ---------- */
+
+.lidia-prz-piani h2 {
+	margin-block-end: var(--wp--preset--spacing--50);
+}
+
+.lidia-prz-coppia {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+	align-items: stretch;
+}
+
+.lidia-prz-coppia > *,
+.lidia-prz-piano > * {
+	margin-block: 0 !important;
+}
+
+/* I due box hanno la stessa struttura: nome, prezzo, descrizione, elenco, CTA in fondo. */
+.lidia-prz-piano {
+	display: flex;
+	flex-direction: column;
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-box);
+	background-color: var(--lidia-superficie);
+	padding: 32px 32px 34px;
+}
+
+.lidia-prz-piano h3 {
+	font-size: var(--wp--preset--font-size--voce);
+	line-height: 1.3;
+}
+
+/* Il prezzo nel box: stesso trattamento per la cifra e per «su richiesta». */
+.lidia-prz-prezzo {
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: calc(var(--wp--preset--font-size--scheda) * 1.5);
+	letter-spacing: -0.02em;
+	line-height: 1.15;
+	color: var(--lidia-testo);
+	margin-block-start: 10px !important;
+}
+
+.lidia-prz-piano-desc {
+	margin-block: 12px 24px !important;
+	color: var(--lidia-secondario);
+	max-width: 44ch;
+}
+
+.lidia-prz-etichetta {
+	margin-block: 20px 4px !important;
+	font-size: var(--wp--preset--font-size--riscontro);
+	font-weight: 600;
+	color: var(--lidia-testo);
+}
+
+.lidia-prz-piano .lidia-prz-desc + .lidia-prz-etichetta,
+.lidia-prz-piano-desc + .lidia-prz-etichetta {
+	margin-block-start: 0 !important;
+}
+
+/* La CTA sta in fondo al box, allineata fra i due box qualunque sia la lunghezza degli elenchi. */
+.lidia-prz-piano .wp-block-buttons {
+	margin-block-start: auto !important;
+	padding-block-start: 28px;
+}
+
+/* ---------- elenco con il segno di spunta ---------- */
+
+/*
+ * Niente flex sul `li`: con `<strong>` dentro, testo e grassetto diventerebbero
+ * due elementi affiancati. Il segno sta in `::before` posizionato, il testo scorre.
+ */
+.lidia-prz-voci {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lidia-prz-voci li {
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding-block: 11px;
+	padding-inline-start: 30px;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.45;
+	color: var(--lidia-testo);
+}
+
+.lidia-prz-voci li:first-child {
+	border-top: 0;
+}
+
+/* Il segno di spunta: tondo pieno e segno in SVG inline, niente icon font. */
+.lidia-prz-voci li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 13px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--azione);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2 7 10.6l4.6-5' fill='none' stroke='%23fff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 18px 18px;
+}
+
+/* Le voci su richiesta non sono comprese: segno vuoto con il «più», non la spunta. */
+.lidia-prz-voci-richiesta li::before {
+	background-color: transparent;
+	box-shadow: inset 0 0 0 1.5px var(--wp--preset--color--azione);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 4.8v6.4M4.8 8h6.4' fill='none' stroke='%23303A99' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* ---------- righe: tutto il diritto, la stessa sicurezza ---------- */
+
+/* Due sezioni consecutive che si leggono come due righe: titolo a sinistra, testo a destra. */
+.lidia-prz-riga-griglia {
+	display: grid;
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+	gap: 24px 64px;
+	align-items: start;
+}
+
+.lidia-prz-riga-griglia > *,
+.lidia-prz-riga-testo > * {
+	margin-block: 0 !important;
+}
+
+.lidia-prz-riga h2 {
+	font-size: calc(var(--wp--preset--font-size--scheda) * 1.3);
+	line-height: 1.25;
+	text-wrap: balance;
+	max-width: 18ch;
+}
+
+.lidia-prz-riga-testo p {
+	color: var(--lidia-secondario);
+	max-width: 60ch;
+}
+
+.lidia-prz-riga-testo .lidia-freccia {
+	margin-block-start: 16px !important;
+}
+
+/* La seconda riga sta attaccata alla prima: nessun filetto di sezione, respiro ridotto. */
+.lidia-prz-materie {
+	padding-block-end: var(--wp--preset--spacing--50);
+}
+
+.lidia-prz-riga-seconda {
+	border-top: 0;
+	padding-block-start: 0;
+}
+
+.lidia-prz-riga-seconda .lidia-prz-riga-griglia {
+	padding-block-start: var(--wp--preset--spacing--50);
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+/* ---------- chiusura ---------- */
+
+.lidia-prz-chiusura {
+	text-align: center;
+}
+
+.lidia-prz-chiusura h2 {
+	max-width: 26ch;
+	margin-inline: auto;
+	margin-block-end: var(--wp--preset--spacing--50);
+}
+
+.lidia-prz-chiusura .wp-block-buttons {
+	justify-content: center;
+}
+
+/* ---------- risposte ---------- */
+
+@media (max-width: 860px) {
+	.lidia-prz-coppia {
+		grid-template-columns: 1fr;
+	}
+
+	.lidia-prz-riga-griglia {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.lidia-prz-riga h2 {
+		max-width: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.lidia-prz-piano {
+		padding: 24px 20px 26px;
+	}
+}

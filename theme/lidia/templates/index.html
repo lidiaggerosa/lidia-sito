@@ -1,0 +1,39 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"lidia-pagina","layout":{"type":"constrained"}} -->
+<main class="wp-block-group lidia-pagina"><!-- wp:group {"className":"lidia-intestazione","layout":{"type":"constrained"}} -->
+<div class="wp-block-group lidia-intestazione"><!-- wp:heading {"level":1,"fontSize":"pagina","fontFamily":"display"} -->
+<h1 class="wp-block-heading has-display-font-family has-pagina-font-size">Articoli</h1>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"align":"wide","className":"lidia-elenco","layout":{"type":"default"}} -->
+<div class="wp-block-query alignwide lidia-elenco"><!-- wp:post-template {"className":"lidia-elenco-voci","layout":{"type":"grid","columnCount":2}} -->
+<!-- wp:group {"className":"lidia-scheda-articolo","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-scheda-articolo"><!-- wp:post-terms {"term":"category","className":"lidia-occhiello","fontSize":"micro"} /-->
+
+<!-- wp:post-title {"level":2,"isLink":true,"fontSize":"scheda","fontFamily":"display"} /-->
+
+<!-- wp:post-excerpt {"excerptLength":32,"showMoreOnNewLine":false,"fontSize":"riscontro"} /-->
+
+<!-- wp:post-date {"format":"j F Y","textColor":"secondario","fontSize":"minuto"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"className":"lidia-paginazione","fontSize":"minuto","layout":{"type":"flex","justifyContent":"space-between"}} -->
+<!-- wp:query-pagination-previous {"label":"← Più recenti"} /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next {"label":"Meno recenti →"} /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>Non c'è ancora nulla qui.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -1,0 +1,30 @@
+/*
+Theme Name: Lidia
+Theme URI: https://lidiatech.ai
+Author: LidiaTech
+Description: Block theme di Lidia. Scala blu: notte #0F133A per l'apertura e le fasce strumento, chiaro #F4F5FB per la lettura, #303A99 come colore dell'azione. Fraunces sui titoli, Inter sul testo. Costruito su misura: nessun tema padre, nessun page builder. I design token vivono in theme.json; gli stili delle sezioni in assets/css/sezioni/, caricati solo dove la sezione compare.
+Version: 1.0.0-alpha
+Requires at least: 6.7
+Tested up to: 7.0
+Requires PHP: 8.2
+License: Proprietaria — uso interno LidiaTech
+Text Domain: lidia
+Tags: block-theme
+*/
+
+/*
+ * Questo file NON è il posto degli stili.
+ * Serve solo all'intestazione del tema qui sopra e alle eccezioni che non trovano casa
+ * altrove — e le eccezioni vanno giustificate in docs/09-decision-log.md.
+ *
+ * Dove stanno gli stili:
+ *   theme.json                      design token (colori, tipografia, spaziature, larghezze)
+ *   assets/css/tokens.css           ciò che theme.json non esprime (raggi, filetti, registri)
+ *   assets/css/base.css             sezioni, occhiello, focus, bottoni, misure di lettura
+ *   assets/css/parti/*.css          testata e footer
+ *   assets/css/sezioni/*.css        una sezione per file, caricata solo dove la classe compare
+ *   assets/css/components/*.css     archivio: i tre gesti del 15/09, non caricati
+ *
+ * I registri di colore (chiaro, alterno, scuro, notte) stanno in tokens.css:
+ * si applicano alla sezione, non al singolo blocco.
+ */

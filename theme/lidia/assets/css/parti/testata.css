@@ -1,0 +1,117 @@
+/* Testata — barra notte, marchio a sinistra, voci e due azioni a destra. */
+
+/*
+ * 24/09: la barra resta fissa in alto su tutto il sito (sticky, nessun JS).
+ * Lo sticky sta sul contenitore che WordPress mette attorno alla parte
+ * (`.wp-block-template-part`), non su `.lidia-testata`: un elemento sticky dentro
+ * un contenitore alto quanto lui non si muove. Altezza misurata: 70,4 px (18 + 26 + 18 + filetto, più il line-height delle voci).
+ * `scroll-padding-top` fa sì che gli ancoraggi (#prova, FAQ) non finiscano sotto la barra.
+ */
+:root {
+	--lidia-testata-altezza: 71px;
+}
+
+html {
+	scroll-padding-top: var(--lidia-testata-altezza);
+}
+
+.wp-block-template-part:has(> .lidia-testata) {
+	position: sticky;
+	top: 0;
+	z-index: var(--lidia-z-testata);
+}
+
+.lidia-testata {
+	position: relative;
+	z-index: var(--lidia-z-testata);
+	padding-block: 18px;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-testata .lidia-marchio img {
+	height: 26px;
+	width: auto;
+}
+
+.lidia-testata .lidia-marchio {
+	margin: 0;
+}
+
+/* Voci di menu: testo minuto, niente sottolineatura, bianco al passaggio. */
+.lidia-testata .wp-block-navigation {
+	font-size: var(--wp--preset--font-size--minuto);
+	gap: 26px;
+}
+
+.lidia-testata .wp-block-navigation a {
+	color: var(--lidia-secondario);
+	text-decoration: none;
+}
+
+.lidia-testata .wp-block-navigation a:hover,
+.lidia-testata .wp-block-navigation .current-menu-item a {
+	color: var(--lidia-testo);
+}
+
+/* Log in: un link, non un bottone. */
+.lidia-testata .lidia-accesso a {
+	color: var(--wp--preset--color--superficie);
+	font-size: var(--wp--preset--font-size--minuto);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+/* Contattaci (25/09): pillola bianca, l'unica azione della barra. */
+.lidia-testata .wp-element-button {
+	font-size: var(--wp--preset--font-size--minuto);
+	padding: 9px 18px;
+}
+
+.lidia-testata .lidia-testata-destra {
+	gap: 26px;
+}
+
+/* Selettore di lingua (25/09): la lingua attuale in chiaro, l'altra come link. */
+.lidia-testata .lidia-lingua {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	font-size: var(--wp--preset--font-size--minuto);
+	font-weight: 500;
+	letter-spacing: 0.04em;
+}
+
+.lidia-testata .lidia-lingua a {
+	color: var(--lidia-secondario);
+	text-decoration: none;
+}
+
+.lidia-testata .lidia-lingua a:hover {
+	color: var(--wp--preset--color--superficie);
+}
+
+.lidia-testata .lidia-lingua-attuale {
+	color: var(--wp--preset--color--superficie);
+}
+
+.lidia-testata .lidia-lingua-sep {
+	color: var(--lidia-secondario);
+}
+
+@media (max-width: 620px) {
+	.lidia-testata .lidia-testata-destra {
+		gap: 16px;
+	}
+
+	/* Su mobile resta solo il link all'altra lingua: lo spazio della barra è poco. */
+	.lidia-testata .lidia-lingua-attuale,
+	.lidia-testata .lidia-lingua-sep {
+		display: none;
+	}
+}
+
+/* Con la barra admin di WordPress la testata si ferma sotto di essa. */
+.admin-bar .wp-block-template-part:has(> .lidia-testata) {
+	top: var(--wp-admin--admin-bar--height, 32px);
+}

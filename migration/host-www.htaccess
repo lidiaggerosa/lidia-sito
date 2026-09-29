@@ -1,0 +1,6 @@
+# 301 di host: www.lidiatech.ai -> lidiatech.ai (decision log 8/09 e 29/09). Va subito dopo le righe PHP di Site Tools.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.lidiatech\.ai$ [NC]
+RewriteRule ^(.*)$ https://lidiatech.ai/$1 [R=301,L]
+</IfModule>

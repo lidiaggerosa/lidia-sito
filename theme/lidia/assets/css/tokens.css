@@ -1,0 +1,77 @@
+/*
+ * tokens.css — solo ciò che theme.json non esprime.
+ * Colori, tipografia, spaziature e larghezze stanno in theme.json: qui stanno
+ * le forme, il focus e i "registri", cioè i set di variabili che una sezione
+ * passa ai componenti che contiene.
+ */
+
+:root {
+	/* Forme */
+	--lidia-raggio: 8px;
+	--lidia-raggio-scheda: 14px;
+	--lidia-raggio-box: 16px;
+	--lidia-raggio-pillola: 999px;
+	--lidia-filetto: 1px;
+	/* Il filetto di firma: il bordo spesso a sinistra della coppia. */
+	--lidia-firma: 2px;
+
+	/* Focus */
+	--lidia-focus-spessore: 2px;
+	--lidia-focus-offset: 3px;
+
+	/* Misure di lettura */
+	--lidia-colonna: 1040px;
+	--lidia-misura: 62ch;
+	--lidia-misura-stretta: 58ch;
+
+	/* Registro chiaro: è il valore di partenza di tutto il sito. */
+	--lidia-fondo: var(--wp--preset--color--base);
+	--lidia-fondo-alt: var(--wp--preset--color--alterno);
+	--lidia-superficie: var(--wp--preset--color--superficie);
+	--lidia-testo: var(--wp--preset--color--inchiostro);
+	--lidia-secondario: var(--wp--preset--color--secondario);
+	--lidia-filetto-colore: var(--wp--preset--color--filetto);
+	--lidia-accento: var(--wp--preset--color--azione);
+	--lidia-focus-colore: var(--wp--preset--color--azione);
+
+	--lidia-z-testata: 8;
+}
+
+/*
+ * Registro scuro — le fasce strumento (sicurezza, form) e il footer.
+ * Si applica alla sezione, non al singolo componente: quello che sta dentro
+ * cambia colore da solo.
+ * Regola di scarsità: al massimo due fasce scure per pagina, più il footer.
+ */
+.lidia-registro-scuro {
+	--lidia-fondo: var(--wp--preset--color--indaco);
+	--lidia-superficie: var(--wp--preset--color--indaco-form);
+	--lidia-testo: var(--wp--preset--color--chiaro);
+	--lidia-secondario: var(--wp--preset--color--chiaro-secondario);
+	--lidia-filetto-colore: var(--wp--preset--color--filetto-scuro);
+	--lidia-accento: var(--wp--preset--color--accento-scuro);
+	--lidia-focus-colore: var(--wp--preset--color--accento-scuro);
+
+	background-color: var(--lidia-fondo);
+	color: var(--lidia-testo);
+}
+
+/* Registro notte — la barra e il footer, il fondo più profondo della scala. */
+.lidia-registro-notte {
+	--lidia-fondo: var(--wp--preset--color--notte-fonda);
+	--lidia-superficie: var(--wp--preset--color--notte);
+	--lidia-testo: var(--wp--preset--color--chiaro);
+	--lidia-secondario: #9AA2D8;
+	--lidia-filetto-colore: #1A2158;
+	--lidia-accento: var(--wp--preset--color--accento-scuro);
+	--lidia-focus-colore: var(--wp--preset--color--accento-scuro);
+
+	background-color: var(--lidia-fondo);
+	color: var(--lidia-testo);
+}
+
+/* Registro alterno — la fascia chiara appena più fredda, per alternare. */
+.lidia-registro-alterno {
+	--lidia-fondo: var(--wp--preset--color--alterno);
+	background-color: var(--lidia-fondo);
+}

@@ -1,0 +1,106 @@
+/*
+ * azienda.css — le sezioni di /azienda/ e /azienda/lavora-con-noi/.
+ * Si carica dove compare la classe `lidia-azienda`.
+ *
+ * Le persone sono nomi e ruoli, senza foto: le foto arrivano dopo e la pagina
+ * deve reggere anche senza. Quando arriveranno, si aggiunge l'immagine dentro
+ * `.lidia-az-persona` senza toccare la griglia.
+ */
+
+.lidia-az-testa {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+}
+
+.lidia-az-testa h1 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+.lidia-az-avvocati h2,
+.lidia-az-persone h2,
+.lidia-az-posizioni h2,
+.lidia-az-candidature h2 {
+	margin-block-end: var(--wp--preset--spacing--40);
+}
+
+/* ---------- le persone ---------- */
+
+.lidia-az-fila {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 0 var(--wp--preset--spacing--50);
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
+.lidia-az-fila > * {
+	margin-block-start: 0;
+}
+
+/* nome e ruolo su due righe condivise: se un nome va a capo, i filetti restano allineati */
+.lidia-az-persona {
+	display: grid;
+	grid-row: span 2;
+	grid-template-rows: subgrid;
+	align-content: start;
+}
+
+.lidia-az-persona > * {
+	margin-block: 0;
+}
+
+.lidia-az-persona h3 {
+	align-self: end;
+}
+
+.lidia-az-persona h3 {
+	padding-block-end: 10px;
+	margin-block-end: 10px;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-az-persona p {
+	color: var(--lidia-secondario);
+	font-size: var(--wp--preset--font-size--riscontro);
+}
+
+@media (max-width: 980px) {
+	.lidia-az-fila {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+	}
+
+	/* tre sopra, due sotto: ogni persona occupa due sesti, le ultime due partono spostate */
+	.lidia-az-persona {
+		grid-column: span 2;
+	}
+
+	.lidia-az-persona:nth-child(4) {
+		grid-column: 2 / span 2;
+	}
+}
+
+@media (max-width: 480px) {
+	.lidia-az-fila {
+		grid-template-columns: 1fr;
+		gap: var(--wp--preset--spacing--40);
+	}
+
+	.lidia-az-persona,
+	.lidia-az-persona:nth-child(4) {
+		grid-column: auto;
+	}
+}
+
+/* ---------- chiusura ---------- */
+
+.lidia-az-chiusura {
+	text-align: center;
+}
+
+.lidia-az-chiusura h2 {
+	max-width: 22ch;
+	margin-inline: auto;
+	margin-block-end: var(--wp--preset--spacing--50);
+}
+
+.lidia-az-chiusura .wp-block-buttons {
+	justify-content: center;
+}

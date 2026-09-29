@@ -1,0 +1,110 @@
+# Redirect da lidiatech.ai (Joomla) al nuovo sito — generato da migration/mappa-301.csv il 2026-09-22, annex A/B attivati il 2026-09-24
+# Va in testa a .htaccess, sopra il blocco WordPress. Non modificare a mano: rigenerare dalla mappa.
+# Solo percorsi: il 301 di host da www a senza www si aggiunge al cutover (07-deploy-siteground.md).
+# Mai regole su /index.php: WordPress serve ogni pagina passando da lì.
+<IfModule mod_alias.c>
+RedirectMatch 301 ^/it/?$ /
+RedirectMatch 301 ^/it/chi\-siamo/?$ /azienda/
+RedirectMatch 301 ^/en/about\-us/?$ /en/company/
+RedirectMatch 301 ^/it/contatti/?$ /contatti/
+RedirectMatch 301 ^/privacy\-policy/?$ /legale/privacy/
+RedirectMatch 301 ^/it/lavora\-con\-noi/?$ /azienda/lavora-con-noi/
+RedirectMatch 301 ^/images/PDF/La\-responsabilita\-nella\-value\-chain\-dell\-AI_LIDIA_Paper\.pdf/?$ /risorse/whitepaper/responsabilita-value-chain-ai/
+RedirectMatch 301 ^/en/careers/?$ /en/company/careers/
+RedirectMatch 301 ^/it/security/?$ /sicurezza/
+RedirectMatch 301 ^/it/servizi/?$ /prodotto/
+RedirectMatch 301 ^/en/contacts/?$ /en/contact/
+RedirectMatch 301 ^/it/news/?$ /risorse/
+RedirectMatch 301 ^/images/PDF/Diritto\-LLM\-e\-ricerca\.pdf/?$ /risorse/whitepaper/diritto-llm-e-ricerca/
+RedirectMatch 301 ^/it/news/la\-responsabilita\-nella\-value\-chain\-dellai/?$ /risorse/whitepaper/responsabilita-value-chain-ai/
+RedirectMatch 301 ^/en/services/?$ /en/product/
+RedirectMatch 301 ^/it/news/scopri\-come\-lidia\-puo\-supportare\-il\-tuo\-studio\-con\-lentrata\-in\-vigore\-della\-legge\-ai\-132\-2025/?$ /risorse/legge-132-2025-studi-legali/
+RedirectMatch 301 ^/en/privacy\-policy/?$ /en/legal/privacy/
+RedirectMatch 301 ^/it/prodotto/?$ /prodotto/
+RedirectMatch 301 ^/it/news/diritto\-llm\-e\-ricerca/?$ /risorse/whitepaper/diritto-llm-e-ricerca/
+RedirectMatch 301 ^/it/news/odissea\-digitale\-la\-rotta\-dellai\-per\-gli\-studi\-legali/?$ /risorse/whitepaper/odissea-digitale-ai-studi-legali/
+RedirectMatch 301 ^/images/privacy\-policy_LIDIA\.pdf/?$ /legale/privacy/
+RedirectMatch 301 ^/images/privacy\-policy_LIDIA_en\.pdf/?$ /en/legal/privacy/
+RedirectMatch 301 ^/it/legalaiday\-iscriviti/?$ /prova-gratuita/
+RedirectMatch 410 ^/it/thank\-you/?$
+RedirectMatch 301 ^/it/privacy\-policy/?$ /legale/privacy/
+RedirectMatch 301 ^/it/addin\-word/?$ /prodotto/
+RedirectMatch 301 ^/it/legal\-aios/?$ /prodotto/
+RedirectMatch 301 ^/it/aws/?$ /sicurezza/
+RedirectMatch 410 ^/it/thankyou\-iscrizione/?$
+RedirectMatch 301 ^/it/cookies/?$ /legale/cookie/
+RedirectMatch 301 ^/it/news/dall\-opinion\-eiopa\-ai\-fatti\-guida\-pratica\-all\-adozione\-e\-alla\-governance\-dell\-ai\-nelle\-assicurazioni/?$ /risorse/whitepaper/opinion-eiopa-governance-ai-assicurazioni/
+RedirectMatch 301 ^/it/attivazione\-demo/?$ /prova-gratuita/
+RedirectMatch 410 ^/it/surveylegalaiday/?$
+RedirectMatch 301 ^/it/news/analisi\-strategica\-sull\-ai\-evoluzione\-degli\-agenti\-contesto\-legale\-enterprise/?$ /risorse/agenti-ai-contesto-legale-enterprise/
+RedirectMatch 301 ^/en/gtc/?$ /en/legal/terms/
+RedirectMatch 410 ^/it/lidia\-template/?$
+RedirectMatch 301 ^/it/news/governance\-dei\-dati/?$ /risorse/whitepaper/nuova-governance-dei-dati/
+RedirectMatch 301 ^/cookies/?$ /legale/cookie/
+RedirectMatch 410 ^/it/lidia\-ai\-insight\-hub/?$
+RedirectMatch 301 ^/servizi/?$ /prodotto/
+RedirectMatch 301 ^/en/cookies/?$ /en/legal/cookies/
+RedirectMatch 301 ^/it/gtc/?$ /legale/termini/
+RedirectMatch 410 ^/it/lidia\-prompt\-lab/?$
+RedirectMatch 301 ^/it/home/?$ /
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/assistente\-personale/?$
+RedirectMatch 301 ^/it/word\-it/?$ /prodotto/
+RedirectMatch 410 ^/it/almaviva/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/?$
+RedirectMatch 410 ^/it/index\.php/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/contratti/?$
+RedirectMatch 301 ^/it/legal\-ai\-day/?$ /risorse/
+RedirectMatch 410 ^/it/thankyou\-legalai/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/ricerche/?$
+RedirectMatch 410 ^/it/corso\-aiga/?$
+RedirectMatch 301 ^/security/?$ /sicurezza/
+RedirectMatch 301 ^/en/word\-en/?$ /en/product/
+RedirectMatch 301 ^/it/attiva\-demo/?$ /prova-gratuita/
+RedirectMatch 410 ^/en/lidia\-template/civil\-law/?$
+RedirectMatch 410 ^/en/lidia\-template/civil\-law/due\-diligence/?$
+RedirectMatch 301 ^/en/gtc\-en/?$ /en/legal/terms/
+RedirectMatch 301 ^/it/camera\-ra/?$ /prova-gratuita/
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/contenzioso/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/due\-diligence/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/diritto\-amministrativo/?$
+RedirectMatch 410 ^/en/lidia\-template/civil\-law/contracts/?$
+RedirectMatch 410 ^/it/component/sppagebuilder/page/113/?$
+RedirectMatch 410 ^/it/lidia\-video\-tutorial/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-penale/?$
+RedirectMatch 410 ^/en/lidia\-template/?$
+RedirectMatch 410 ^/it/component/users/login/?$
+RedirectMatch 301 ^/it/lidia\-privacy/?$ /legale/privacy/
+RedirectMatch 410 ^/en/lidia\-template/civil\-law/research/?$
+RedirectMatch 410 ^/it/component/sppagebuilder/page/114/?$
+RedirectMatch 410 ^/it/component/sppagebuilder/page/76/?$
+RedirectMatch 410 ^/it/gtc\-en/?$
+RedirectMatch 410 ^/en/lidia\-template/civil\-law/company\-secretary/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-penale/assistente\-personale/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-penale/consulenza/?$
+RedirectMatch 301 ^/en/attiva\-demo/?$ /en/free-trial/
+RedirectMatch 301 ^/it/annex\-a/?$ /legale/termini/annex-a/
+RedirectMatch 301 ^/it/annex\-b/?$ /legale/termini/annex-b/
+RedirectMatch 410 ^/it/component/sppagebuilder/page/112/?$
+RedirectMatch 410 ^/it/component/sppagebuilder/page/35/?$
+RedirectMatch 410 ^/it/component/sppagebuilder/page/48/?$
+RedirectMatch 410 ^/it/component/sppagebuilder/page/61/?$
+RedirectMatch 301 ^/it/dpa/?$ /legale/dpa/
+RedirectMatch 301 ^/it/home\-it/?$ /
+RedirectMatch 410 ^/it/prize/?$
+RedirectMatch 301 ^/it/blog/?$ /risorse/
+RedirectMatch 301 ^/it/blog/analisi\-strategica\-sull\-ai\-evoluzione\-degli\-agenti\-contesto\-legale\-enterprise/?$ /risorse/agenti-ai-contesto-legale-enterprise/
+RedirectMatch 410 ^/it/lidia\-video\-tutorial/diritto\-civile/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/recupero\-credito/?$
+RedirectMatch 410 ^/en/lidia\-template/civil\-law/administrative\-law/?$
+RedirectMatch 410 ^/en/lidia\-template/civil\-law/dispute\-resolution/?$
+RedirectMatch 410 ^/en/lidia\-template/civil\-law/personal\-assistant/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/consulenza\-ricerche/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/segreteria\-societaria/?$
+RedirectMatch 410 ^/en/lidia\-template/criminal\-law/?$
+RedirectMatch 301 ^/it/blog/eventi/analisi\-strategica\-sull\-ai\-evoluzione\-degli\-agenti\-contesto\-legale\-enterprise/?$ /risorse/agenti-ai-contesto-legale-enterprise/
+RedirectMatch 410 ^/it/lidia\-template/diritto\-penale/processo\-penale/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-penale/ricerche/?$
+RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/tax/?$
+RedirectMatch 410 ^/it/lidia\-video\-tutorial/diritto\-penale/?$
+RedirectMatch 410 ^/images/brand/logotype_blue2x\-\-\-copia\.png/?$
+</IfModule>

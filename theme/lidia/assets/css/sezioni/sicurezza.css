@@ -1,0 +1,95 @@
+/*
+ * Sicurezza — fascia scura, quattro riquadri identici, un solo link in uscita.
+ * 23/09: i riquadri hanno tutti la stessa misura; titolo e testo partono dalla
+ * stessa quota (spazio del titolo fisso a due righe), così il primo non è più
+ * «più grande» degli altri quando il suo titolo va a capo.
+ * Colonna singola centrata: titolo e sommario al centro.
+ */
+
+.lidia-sicurezza {
+	padding-block: var(--wp--preset--spacing--70) 80px;
+	border-top: 0;
+	text-align: center;
+}
+
+.lidia-sicurezza h2 {
+	max-width: 18ch;
+	margin-inline: auto;
+	text-wrap: balance;
+}
+
+.lidia-sicurezza .lidia-sicurezza-sommario {
+	max-width: var(--lidia-misura-stretta);
+	margin-inline: auto;
+	margin-bottom: 44px;
+}
+
+.lidia-riquadri {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-auto-rows: 1fr;
+	gap: 18px;
+	text-align: left;
+}
+
+/*
+ * WordPress mette `margin-block-start` a ogni figlio tranne il primo (layout a
+ * flusso): in una griglia sposta tutto di 20 px tranne il primo riquadro, che
+ * risultava «più grande». Qui i margini li governa la griglia.
+ */
+.lidia-riquadri > *,
+.lidia-riquadro > * {
+	margin-block: 0 !important;
+}
+
+.lidia-riquadro {
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-scheda);
+	padding: 24px 22px;
+	display: grid;
+	grid-template-rows: 22px minmax(2.6em, auto) 1fr;
+	align-items: start;
+	gap: 12px;
+	min-height: 200px;
+}
+
+.lidia-riquadro h3 {
+	font-size: 17px;
+	line-height: 1.3;
+	margin: 0;
+	letter-spacing: -0.01em;
+}
+
+.lidia-riquadro p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.55;
+	color: var(--lidia-secondario);
+}
+
+.lidia-riquadro::before {
+	width: 22px;
+	height: 22px;
+	background-color: var(--lidia-accento);
+}
+
+.lidia-sicurezza .lidia-freccia {
+	margin-top: 32px;
+}
+
+@media (max-width: 980px) {
+	.lidia-riquadri {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 620px) {
+	.lidia-riquadri {
+		grid-template-columns: 1fr;
+	}
+
+	.lidia-riquadro {
+		min-height: 0;
+		grid-template-rows: 22px auto auto;
+	}
+}

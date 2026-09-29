@@ -1,0 +1,30 @@
+/*
+ * prova.css — le sezioni di /prova-gratuita/.
+ * Si carica dove compare la classe `lidia-prova`.
+ *
+ * La pagina è una conversione, non una lettura: il modulo sta in cima e si
+ * ripete in fondo, e in mezzo c'è solo quello che serve a decidere.
+ */
+
+.lidia-prv-testa {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+}
+
+.lidia-prv-testa h1 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+/* Il modulo in cima ha aria sopra: non deve sembrare parte dell'apertura. */
+.lidia-prv-testa .lidia-segnaposto {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
+.lidia-prv-passi h2,
+.lidia-prv-garanzie h2 {
+	margin-block-end: var(--wp--preset--spacing--40);
+}
+
+/* La seconda istanza del modulo è la chiusura della pagina: sta da sola. */
+.lidia-prv-modulo {
+	padding-block: var(--wp--preset--spacing--60);
+}

@@ -1,0 +1,55 @@
+<!-- wp:paragraph -->
+<p>Questa pagina non è destinata al pubblico: serve a verificare la prosa del tema — misura di lettura, spaziature fra i blocchi, filetti, tabelle e citazioni. Si tiene in <code>scripts/blocchi/</code> e si ricrea con WP-CLI ogni volta che serve.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Un titolo di secondo livello</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Un paragrafo abbastanza lungo da arrivare al limite della misura di lettura: sessantadue caratteri per riga, il valore del token <code>--lidia-misura</code>. Serve a controllare che il testo non si allarghi oltre quel punto anche quando la finestra è molto larga, e che l'interlinea resti quella di <em>theme.json</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Un secondo paragrafo, per vedere lo stacco verticale fra due blocchi di testo consecutivi e un <a href="/prezzi/">collegamento dentro il testo</a> con la sua sottolineatura.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Un titolo di terzo livello</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Prima voce di un elenco non ordinato</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Seconda voce, un po' più lunga della prima, per vedere come va a capo dentro la misura di lettura</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Terza voce</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Una citazione, per verificare il filetto a sinistra e il corpo maggiorato.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Occhiello di quarto livello</h4>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Voce</th><th>Valore</th><th>Nota</th></tr></thead><tbody><tr><td>Prima riga</td><td>Uno</td><td>Testo di controllo</td></tr><tr><td>Seconda riga</td><td>Due</td><td>Testo di controllo</td></tr><tr><td>Terza riga</td><td>Tre</td><td>Testo di controllo</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph -->
+<p>Ultimo paragrafo dopo il separatore.</p>
+<!-- /wp:paragraph -->

@@ -1,0 +1,150 @@
+/*
+ * prodotto.css — le sezioni di /prodotto/ (versione del 24/09/2026, storytelling nuovo).
+ * Si carica dove compare la classe `lidia-prodotto`, cioè su questa pagina sola.
+ * La pagina riusa quasi tutto: come-funziona.css (le quattro azioni), funzione.css +
+ * demo.css (i box), faq.css, form.css. Qui stanno l'intestazione, l'indice fisso, le CTA
+ * intermedie e le file di voci (tre e due colonne).
+ */
+
+/* ---------- intestazione ---------- */
+
+/* Fondo chiaro come le altre pagine interne: la fascia notte resta alla home. */
+.lidia-prod-testa {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+}
+
+.lidia-prod-testa h1 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+.lidia-prod-testa .wp-block-buttons {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
+/* ---------- indice delle funzioni: fisso sotto la testata ---------- */
+
+/*
+ * Sei bottoni secondari in una riga. La sezione resta attaccata sotto la testata
+ * fissa per tutta la pagina (sticky, nessun JS): il suo contenitore è il contenuto
+ * della pagina, quindi non si stacca mai. Sotto la testata nello z-order.
+ * Su mobile la riga scorre in orizzontale senza barra visibile.
+ */
+.lidia-prod-indice {
+	position: sticky;
+	top: var(--lidia-testata-altezza);
+	z-index: 7;
+	padding-block: 12px;
+	border-top: 0;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	background-color: var(--lidia-fondo);
+}
+
+.lidia-prod-indice .wp-block-buttons {
+	flex-wrap: nowrap;
+	gap: 8px;
+	overflow-x: auto;
+	scrollbar-width: none;
+	-webkit-overflow-scrolling: touch;
+	margin: 0;
+}
+
+.lidia-prod-indice .wp-block-buttons::-webkit-scrollbar {
+	display: none;
+}
+
+.lidia-prod-indice .wp-block-button {
+	flex: none;
+}
+
+.lidia-prod-indice .wp-element-button {
+	font-size: var(--wp--preset--font-size--riscontro);
+	padding-block: 8px;
+	padding-inline: 14px;
+	white-space: nowrap;
+	background-color: var(--lidia-superficie);
+}
+
+.lidia-prod-indice .wp-element-button:hover {
+	background-color: var(--lidia-fondo-alt);
+}
+
+/*
+ * Le ancore si fermano sotto testata + indice, non solo sotto la testata
+ * (scroll-padding-top globale in testata.css). L'indice è alto 12 + 38 + 12 + 1 px.
+ */
+.lidia-prodotto[id] {
+	scroll-margin-top: 64px;
+}
+
+@media (max-width: 620px) {
+	.lidia-prod-indice .wp-block-buttons {
+		margin-inline: calc(-1 * var(--wp--style--root--padding-left, 16px));
+		padding-inline: var(--wp--style--root--padding-left, 16px);
+	}
+}
+
+/* ---------- CTA intermedie ---------- */
+
+/* In coda al quarto box: centrata sotto la griglia. */
+.lidia-prodotto .lidia-funzione-cta {
+	justify-content: center;
+	margin-block-start: 56px !important;
+}
+
+/* In coda alle due colonne. */
+.lidia-prod-misura .lidia-prod-cta {
+	justify-content: center;
+	margin-block-start: var(--wp--preset--spacing--60);
+}
+
+/* ---------- le file di voci: tre (altre funzioni) e due (su misura) ---------- */
+
+.lidia-prod-altre h2,
+.lidia-prod-misura h2 {
+	text-align: center;
+	max-width: 22ch;
+	margin-inline: auto;
+	text-wrap: balance;
+}
+
+.lidia-prod-fila {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--wp--preset--spacing--50);
+	margin-block-start: var(--wp--preset--spacing--60);
+}
+
+.lidia-prod-fila-due {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--wp--preset--spacing--60);
+}
+
+/* Niente margini di flusso di WordPress dentro la griglia (regola del 23/09). */
+.lidia-prod-fila > *,
+.lidia-prod-voce > * {
+	margin-block: 0 !important;
+}
+
+.lidia-prod-voce h3 {
+	padding-block-end: 10px;
+	margin-block-end: 12px !important;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-prod-voce p {
+	color: var(--lidia-secondario);
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.55;
+}
+
+.lidia-prod-fila-due .lidia-prod-voce p {
+	font-size: var(--wp--preset--font-size--corpo);
+}
+
+@media (max-width: 780px) {
+	.lidia-prod-fila,
+	.lidia-prod-fila-due {
+		grid-template-columns: 1fr;
+		gap: var(--wp--preset--spacing--50);
+	}
+}

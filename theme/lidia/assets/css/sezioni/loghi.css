@@ -1,0 +1,77 @@
+/* Loghi cliente — fascia bianca, nastro che scorre, grigio fino al passaggio del mouse. */
+
+/*
+ * 23/09: la fascia sta attaccata all'hero, senza filetto né spazio sopra: il
+ * passaggio notte → bianco è il solo stacco. Il filetto resta sotto.
+ */
+.lidia-loghi {
+	background-color: var(--wp--preset--color--superficie);
+	border-top: 0;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	margin-top: 0;
+	padding-block: 30px 44px;
+	padding-inline: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.lidia-loghi .lidia-occhiello {
+	margin-bottom: 26px;
+	padding-inline: clamp(20px, 5vw, 40px);
+}
+
+.lidia-nastro {
+	display: flex;
+	align-items: center;
+	gap: 0;
+	width: max-content;
+	animation: lidia-scorre 70s linear infinite;
+}
+
+.lidia-nastro:hover {
+	animation-play-state: paused;
+}
+
+.lidia-nastro > * {
+	flex: none;
+	width: 176px;
+	height: 44px;
+	margin-block: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lidia-nastro img {
+	max-height: 30px;
+	max-width: 136px;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	filter: grayscale(1);
+	opacity: 0.62;
+}
+
+.lidia-nastro > *:hover img {
+	filter: none;
+	opacity: 1;
+}
+
+@keyframes lidia-scorre {
+	from { transform: translateX(0); }
+	to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lidia-nastro {
+		animation: none;
+		flex-wrap: wrap;
+		width: auto;
+		justify-content: center;
+	}
+
+	/* Fermo il nastro, la seconda copia dei loghi non serve più. */
+	.lidia-nastro > *:nth-child(n + 19) {
+		display: none;
+	}
+}

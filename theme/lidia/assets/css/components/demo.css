@@ -1,0 +1,225 @@
+/*
+ * Le demo — gli idiomi che simulano il funzionamento di Lidia: fonti che si
+ * accendono, passaggi che si attivano, documenti, revisione in Word, domanda →
+ * risposta → fonte. Nati nella fila delle funzioni della home (23/09), dal 24/09
+ * stanno qui perché li usa anche il box funzione (`lidia-funzione-box`).
+ * Caricato dove compare la classe `lidia-demo` (enqueue.php, componenti).
+ * Sono illustrazioni con testi d'esempio, non contenuto.
+ */
+
+/* Nota «esempio da sostituire»: sempre in fondo alla demo. */
+.lidia-demo-nota,
+.lidia-doc-nota {
+	margin: auto 0 0;
+	padding-top: 10px;
+	font-size: var(--wp--preset--font-size--micro);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--lidia-secondario);
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.lidia-demo-nota::before,
+.lidia-doc-nota::before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--wp--preset--color--azione);
+	display: inline-block;
+	flex: none;
+}
+
+/* Ricerca legale — le fonti che si accendono a turno. */
+.lidia-fonti {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lidia-fonti li {
+	list-style: none;
+	display: flex;
+	gap: 9px;
+	align-items: baseline;
+	color: var(--lidia-secondario);
+	opacity: 0.35;
+	animation: lidia-accende 7.5s linear infinite;
+}
+
+.lidia-fonti li::before {
+	content: "";
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: var(--wp--preset--color--azione);
+	flex: none;
+	transform: translateY(-2px);
+}
+
+.lidia-fonti li:nth-child(1) { animation-delay: 0.4s; }
+.lidia-fonti li:nth-child(2) { animation-delay: 1.6s; }
+.lidia-fonti li:nth-child(3) { animation-delay: 2.8s; }
+
+@keyframes lidia-accende {
+	0%, 4% { opacity: 0.25; }
+	10%, 80% { opacity: 1; }
+	100% { opacity: 0.25; }
+}
+
+/* Workflow — i passaggi che si attivano in sequenza. */
+.lidia-passi {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lidia-passi li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	color: var(--lidia-secondario);
+	padding: 7px 12px;
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio);
+	animation: lidia-attivo 8s linear infinite;
+}
+
+.lidia-passi li::before {
+	content: "";
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--wp--preset--color--azione);
+	opacity: 0.3;
+	flex: none;
+}
+
+.lidia-passi li:nth-child(1) { animation-delay: 0s; }
+.lidia-passi li:nth-child(2) { animation-delay: 2s; }
+.lidia-passi li:nth-child(3) { animation-delay: 4s; }
+.lidia-passi li:nth-child(4) { animation-delay: 6s; }
+
+@keyframes lidia-attivo {
+	0%, 3% { border-color: var(--lidia-filetto-colore); color: var(--lidia-secondario); }
+	8%, 22% { border-color: var(--wp--preset--color--azione); color: var(--lidia-testo); }
+	30%, 100% { border-color: var(--lidia-filetto-colore); color: var(--lidia-secondario); }
+}
+
+/* Pratiche — l'elenco dei documenti, con le pagine a destra. */
+.lidia-documenti {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lidia-documenti li {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 12px;
+	color: var(--lidia-secondario);
+	padding: 7px 12px;
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio);
+	animation: lidia-attivo 9s linear infinite;
+}
+
+.lidia-documenti li:nth-child(1) { animation-delay: 0s; }
+.lidia-documenti li:nth-child(2) { animation-delay: 3s; }
+.lidia-documenti li:nth-child(3) { animation-delay: 6s; }
+
+.lidia-documenti-pagine {
+	flex: none;
+	font-variant-numeric: tabular-nums;
+	color: var(--wp--preset--color--azione);
+}
+
+/* Add-in Word — la revisione che si scrive da sola. */
+.lidia-doc {
+	font-size: var(--wp--preset--font-size--minuto);
+	line-height: 1.7;
+	color: var(--lidia-secondario);
+	margin: 0;
+}
+
+.lidia-doc s {
+	text-decoration: line-through;
+	opacity: 0.55;
+}
+
+.lidia-doc mark {
+	background: transparent;
+	color: var(--wp--preset--color--azione);
+	border-bottom: var(--lidia-filetto) solid var(--wp--preset--color--azione);
+	animation: lidia-inserisce 7s linear infinite;
+}
+
+/* Il cursore che lampeggia in coda al testo. */
+.lidia-doc::after {
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 1em;
+	background: var(--lidia-testo);
+	vertical-align: -2px;
+	margin-left: 1px;
+	animation: lidia-cursore 1.1s step-end infinite;
+}
+
+@keyframes lidia-inserisce {
+	0%, 10% { opacity: 0; }
+	18%, 88% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes lidia-cursore {
+	50% { opacity: 0; }
+}
+
+/* Smart Answer — domanda, risposta, fonte. */
+.lidia-risposta-domanda {
+	font-family: var(--wp--preset--font-family--display);
+	font-style: italic;
+	font-size: var(--wp--preset--font-size--riscontro);
+	color: var(--lidia-testo);
+	margin: 0 0 8px;
+}
+
+.lidia-risposta-testo {
+	color: var(--lidia-secondario);
+	padding-left: 10px;
+	border-left: var(--lidia-firma) solid var(--wp--preset--color--azione);
+	margin: 0 0 8px;
+	animation: lidia-accende 7s linear infinite;
+}
+
+.lidia-risposta-fonte {
+	font-size: var(--wp--preset--font-size--micro);
+	letter-spacing: 0.04em;
+	color: var(--wp--preset--color--azione);
+	margin: 0;
+	padding-left: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lidia-fonti li,
+	.lidia-passi li,
+	.lidia-documenti li,
+	.lidia-doc mark,
+	.lidia-doc::after,
+	.lidia-risposta-testo {
+		animation: none;
+		opacity: 1;
+	}
+}

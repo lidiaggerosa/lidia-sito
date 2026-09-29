@@ -1,0 +1,35 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"lidia-pagina","layout":{"type":"constrained"}} -->
+<main class="wp-block-group lidia-pagina"><!-- wp:group {"className":"lidia-intestazione","layout":{"type":"constrained"}} -->
+<div class="wp-block-group lidia-intestazione"><!-- wp:query-title {"type":"search","level":1,"fontSize":"sezione","fontFamily":"display"} /-->
+
+<!-- wp:search {"label":"Cerca nel sito","showLabel":false,"placeholder":"Cerca nel sito","buttonText":"Cerca","buttonPosition":"button-inside","className":"lidia-ricerca"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"className":"lidia-elenco","layout":{"type":"default"}} -->
+<div class="wp-block-query lidia-elenco"><!-- wp:post-template {"className":"lidia-elenco-voci","layout":{"type":"default"}} -->
+<!-- wp:group {"className":"lidia-riga-risultato","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-riga-risultato"><!-- wp:post-title {"level":2,"isLink":true,"fontSize":"scheda","fontFamily":"display"} /-->
+
+<!-- wp:post-excerpt {"excerptLength":28,"showMoreOnNewLine":false,"fontSize":"riscontro"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"className":"lidia-paginazione","fontSize":"minuto","layout":{"type":"flex","justifyContent":"space-between"}} -->
+<!-- wp:query-pagination-previous {"label":"← Precedenti"} /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next {"label":"Successivi →"} /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>Nessun risultato. Da qui si torna al <a href="/prodotto/">prodotto</a>, ai <a href="/prezzi/">prezzi</a> o alle <a href="/risorse/">risorse</a>.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

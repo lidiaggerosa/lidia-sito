@@ -1,0 +1,196 @@
+/*
+ * fiduciario.css — le sezioni di /sicurezza/.
+ * Si carica dove compare la classe `lidia-fiduciario`, cioè su questa pagina sola.
+ * FAQ e gesto del fatto isolato riusano i loro fogli (`lidia-faq`, `lidia-fatto`).
+ *
+ * 24/09: la pagina passa a riquadri. Due card affiancate per residenza e fornitori
+ * (sezione «Dove stanno i dati»), quattro sigilli in fila per le certificazioni.
+ * Le icone stanno nel CSS (`lidia-icona-*`, base.css): qui si dà loro solo misura e colore.
+ * Nelle griglie i margini di flusso di WordPress vanno azzerati (regola del 23/09).
+ */
+
+/* ---------- intestazione ---------- */
+
+.lidia-fid-testa {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+}
+
+.lidia-fid-testa h1 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+/* ---------- dove stanno i dati: due card ---------- */
+
+.lidia-fid-dati {
+	padding-block: 0 var(--wp--preset--spacing--70);
+	border-top: 0;
+}
+
+.lidia-fid-carte {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-auto-rows: 1fr;
+	gap: 24px;
+}
+
+.lidia-fid-carte > *,
+.lidia-fid-carta > * {
+	margin-block: 0 !important;
+}
+
+.lidia-fid-carta {
+	background-color: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-box);
+	padding: 36px 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.lidia-fid-carta::before {
+	width: 32px;
+	height: 32px;
+	color: var(--lidia-accento);
+	margin-block-end: 8px;
+}
+
+.lidia-fid-carta h2 {
+	font-size: 28px;
+	line-height: 1.15;
+	letter-spacing: -0.015em;
+	text-wrap: balance;
+}
+
+/*
+ * La riga d'attacco: l'affermazione che la card esiste per fare, nel corpo del display.
+ * Stesso trattamento di `.lidia-prod-dato` su /prodotto/: è lo stesso fatto detto nello
+ * stesso registro.
+ */
+.lidia-fid-affermazione {
+	font-family: var(--wp--preset--font-family--display);
+	color: var(--lidia-testo);
+}
+
+.lidia-fid-carta p:not(.lidia-fid-affermazione) {
+	color: var(--lidia-secondario);
+}
+
+/* ---------- le certificazioni: quattro sigilli ---------- */
+
+.lidia-fid-certificazioni h2 {
+	text-align: center;
+	max-width: 22ch;
+	margin-inline: auto;
+	margin-block-end: var(--wp--preset--spacing--50);
+	text-wrap: balance;
+}
+
+.lidia-fid-sigilli {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-auto-rows: 1fr;
+	gap: 18px;
+}
+
+.lidia-fid-sigilli > *,
+.lidia-fid-sigillo > * {
+	margin-block: 0 !important;
+}
+
+/*
+ * Il sigillo è la sigla stessa, in Fraunces: niente loghi da esporre.
+ * Tre righe a misura fissa — icona, sigla, testo — così icona, filetto e prima
+ * riga di testo stanno alla stessa quota in tutti e quattro i riquadri, anche
+ * quando una sigla va a capo («CSA STAR Level 1»). La riga della sigla è alta
+ * quanto due righe di Fraunces 26 px più filetto: 72 px.
+ */
+.lidia-fid-sigillo {
+	background-color: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-scheda);
+	padding: 26px 22px 28px;
+	display: grid;
+	grid-template-rows: 24px 72px 1fr;
+	align-items: start;
+	gap: 14px;
+	min-height: 220px;
+}
+
+.lidia-fid-sigillo::before {
+	width: 24px;
+	height: 24px;
+	color: var(--lidia-accento);
+}
+
+.lidia-fid-sigillo h3 {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 26px;
+	line-height: 1.1;
+	letter-spacing: -0.015em;
+	padding-block-end: 12px;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	align-self: end;
+}
+
+.lidia-fid-sigillo p {
+	font-size: 14.5px;
+	line-height: 1.55;
+	color: var(--lidia-secondario);
+}
+
+/* ---------- chiusura ---------- */
+
+.lidia-fid-chiusura {
+	text-align: center;
+}
+
+.lidia-fid-chiusura h2 {
+	max-width: 22ch;
+	margin-inline: auto;
+	margin-block-end: var(--wp--preset--spacing--40);
+}
+
+/* La prosa di chiusura è centrata come il titolo: la misura resta, l'ancoraggio no. */
+.lidia-fid-chiusura .lidia-misura-lettura {
+	margin-inline: auto !important;
+	margin-block-end: var(--wp--preset--spacing--50);
+}
+
+.lidia-fid-chiusura .wp-block-buttons {
+	justify-content: center;
+}
+
+/* ---------- breakpoint ---------- */
+
+@media (max-width: 980px) {
+	.lidia-fid-sigilli {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 760px) {
+	.lidia-fid-carte {
+		grid-template-columns: 1fr;
+	}
+
+	.lidia-fid-carta {
+		padding: 28px 24px;
+	}
+
+	.lidia-fid-carta h2 {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 620px) {
+	.lidia-fid-sigilli {
+		grid-template-columns: 1fr;
+	}
+
+	/* In colonna singola la sigla non va a capo: la riga torna a misura del contenuto. */
+	.lidia-fid-sigillo {
+		min-height: 0;
+		grid-template-rows: 24px auto auto;
+	}
+}

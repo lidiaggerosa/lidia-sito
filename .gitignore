@@ -1,0 +1,28 @@
+# Segreti e ambiente: i valori stanno in wp-config.php sul server
+*.env
+.env*
+wp-config.php
+**/secrets.*
+*.pem
+*.key
+
+# Build e dipendenze
+node_modules/
+theme/lidia/blocks/build/
+*.log
+
+# Archivi e dump
+*.zip
+*.sql
+*.sqlite
+*.tar.gz
+migration/_raw/
+migration/export/
+
+# Sistema ed editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp

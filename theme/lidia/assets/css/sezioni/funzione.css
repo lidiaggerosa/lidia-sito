@@ -1,0 +1,178 @@
+/*
+ * Funzione · box — un box a tutta larghezza per ogni funzione: testo da una
+ * parte (icona, titolo, descrizione, elenco facoltativo), mock dall'altra.
+ * `.lidia-funzione-inverso` specchia le colonne; su mobile il testo sta sempre
+ * sopra. Due colonne → titolo a sinistra. I box in sequenza sono separati dal
+ * filetto di `.lidia-sezione`, nessuna alternanza di fasce: il ritmo lo dà la
+ * disposizione. Gli idiomi del mock stanno in components/demo.css.
+ * Nato nel laboratorio il 24/09/2026.
+ */
+
+.lidia-funzione-box {
+	padding-block: 72px;
+}
+
+.lidia-funzione-box .lidia-funzione-griglia {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 32px 72px;
+	align-items: center;
+}
+
+/* Niente margini di flusso di WordPress dentro la griglia. */
+.lidia-funzione-box .lidia-funzione-griglia > * {
+	margin-block: 0 !important;
+}
+
+/* --- Colonna testo ---------------------------------------------------------- */
+
+.lidia-funzione-box .lidia-funzione-testo h2 {
+	font-size: clamp(26px, 2.6vw, 34px);
+	line-height: 1.15;
+	max-width: 16ch;
+	margin: 0 0 18px;
+	text-wrap: balance;
+}
+
+/* L'icona sopra il titolo: il glifo del tema, colore accento. */
+.lidia-funzione-box .lidia-funzione-testo h2.lidia-icona::before {
+	width: 30px;
+	height: 30px;
+	margin-bottom: 20px;
+	background-color: var(--lidia-accento);
+}
+
+.lidia-funzione-box .lidia-funzione-testo > p {
+	margin: 0;
+	color: var(--lidia-secondario);
+	max-width: var(--lidia-misura-stretta);
+}
+
+.lidia-funzione-box .lidia-funzione-punti {
+	list-style: none;
+	margin: 22px 0 0;
+	padding: 0;
+	display: grid;
+	gap: 10px;
+}
+
+.lidia-funzione-box .lidia-funzione-punti li {
+	list-style: none;
+	display: flex;
+	gap: 11px;
+	align-items: flex-start;
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.45;
+	color: var(--lidia-testo);
+	margin: 0;
+}
+
+.lidia-funzione-box .lidia-funzione-punti li::before {
+	content: "";
+	flex: none;
+	width: 6px;
+	height: 6px;
+	margin-top: 7px;
+	border-radius: 50%;
+	background-color: var(--lidia-accento);
+}
+
+/* --- Colonna mock ------------------------------------------------------------ */
+
+.lidia-funzione-box .lidia-funzione-mock {
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-box);
+	background-color: var(--lidia-superficie);
+	padding: 22px 28px 26px;
+	min-height: 320px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.5;
+}
+
+.lidia-funzione-box .lidia-funzione-mock > * {
+	margin-block: 0 !important;
+}
+
+/* La riga in testa al mock: il titolo della finestra. */
+.lidia-funzione-box .lidia-mock-titolo {
+	font-size: var(--wp--preset--font-size--minuto);
+	color: var(--lidia-secondario);
+	padding-bottom: 14px;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.lidia-funzione-box .lidia-mock-titolo::before {
+	content: "";
+	flex: none;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--lidia-accento);
+	opacity: 0.6;
+}
+
+/* La nota «esempio» chiude il mock in basso, qualunque sia il contenuto. */
+.lidia-funzione-box .lidia-funzione-mock .lidia-demo-nota {
+	margin-top: auto !important;
+}
+
+.lidia-funzione-box .lidia-funzione-mock .lidia-doc {
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.8;
+}
+
+/*
+ * Mock autonomi (24/09): la colonna destra può contenere un widget HTML completo
+ * (blocco HTML personalizzato, contenitore `.lidia-mock`, con CSS e script propri,
+ * generato fuori dal tema — vedi docs/10a-guida-box-funzione.md). In quel caso il
+ * riquadro del tema si toglie: il widget porta il suo.
+ */
+.lidia-funzione-box .lidia-funzione-mock:has(.lidia-mock) {
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	padding: 0;
+	min-height: 0;
+	display: block;
+}
+
+/* --- Variante specchiata ------------------------------------------------------ */
+
+.lidia-funzione-inverso .lidia-funzione-testo {
+	order: 2;
+}
+
+.lidia-funzione-inverso .lidia-funzione-mock {
+	order: 1;
+}
+
+@media (max-width: 860px) {
+	.lidia-funzione-box {
+		padding-block: 56px;
+	}
+
+	.lidia-funzione-box .lidia-funzione-griglia {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	/* Su una colonna il testo viene prima, in entrambe le varianti. */
+	.lidia-funzione-inverso .lidia-funzione-testo {
+		order: 1;
+	}
+
+	.lidia-funzione-inverso .lidia-funzione-mock {
+		order: 2;
+	}
+
+	.lidia-funzione-box .lidia-funzione-mock {
+		min-height: 0;
+		padding: 20px 20px 22px;
+	}
+}

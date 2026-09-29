@@ -1,0 +1,111 @@
+url_vecchio,lingua,tipo,status,title,keyword_principale,click_gsc_12m,impression_gsc_12m,posizione_media_gsc,sessioni_ga4_12m,referring_domains,decisione,url_nuovo,note
+https://www.lidiatech.ai/it/,it,home,200,Home,,5182,48481,6.08,93809,19,301,/,3 h1; fonti ga4-12m+ga4-2025+gsc+link+sitemap
+https://www.lidiatech.ai/it/chi-siamo,it,pagina,200,Chi siamo,,500,11725,4.96,1394,,301,/azienda/,fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/en/,en,home,200,Home,,491,19995,6.13,922,1,301,/en/,3 h1; fonti ga4-12m+ga4-2025+gsc+link+sitemap
+https://www.lidiatech.ai/en/about-us,en,pagina,200,About Us,,69,9443,7.41,184,,301,/en/company/,fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/it/contatti,it,pagina,200,Contatti,,47,5089,2.47,3169,1,301,/contatti/,fonti ga4-12m+ga4-2025+gsc+link
+https://www.lidiatech.ai/privacy-policy,it,legale,200,Privacy Policy,,33,4454,6.06,19,,301,/legale/privacy/,redirect -> /it/privacy-policy; fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/it/lavora-con-noi,it,pagina,200,Lavora con noi,,30,4693,2.35,477,,301,/azienda/lavora-con-noi/,fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/images/PDF/La-responsabilita-nella-value-chain-dell-AI_LIDIA_Paper.pdf,,asset,200,,,22,1021,8.74,,,301,/risorse/whitepaper/responsabilita-value-chain-ai/,fonti gsc
+https://www.lidiatech.ai/en/careers,en,pagina,200,Careers,,18,3342,5.58,124,,301,/en/company/careers/,fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/it/security,it,pagina,200,Security,,17,2841,2.26,442,,301,/sicurezza/,fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/it/servizi,it,pagina,404,404 Pagina non trovata,,16,1206,2.4,263,,301,/prodotto/,"GIA 404 OGGI, con traffico organico: da ricreare o rediretto; fonti ga4-12m+ga4-2025+gsc"
+https://www.lidiatech.ai/en/contacts,en,pagina,200,Contacts,,15,2357,5.75,80,,301,/en/contact/,fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/it/news,it,archivio,200,News,,11,5408,2.53,422,,301,/risorse/,senza meta robots; fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/en/product,en,pagina,404,404 Page not found,,11,740,5.37,27,,301,/en/product/,"GIA 404 OGGI, con traffico organico: da ricreare o rediretto; fonti ga4-12m+ga4-2025+gsc"
+https://www.lidiatech.ai/images/PDF/Diritto-LLM-e-ricerca.pdf,,asset,200,,,10,1172,12.2,,,301,/risorse/whitepaper/diritto-llm-e-ricerca/,fonti gsc
+https://www.lidiatech.ai/it/news/la-responsabilita-nella-value-chain-dellai,it,articolo,200,La responsabilita nella value chain dell'AI,,9,1003,3.11,41,,301,/risorse/whitepaper/responsabilita-value-chain-ai/,senza meta robots; fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/en/security,en,pagina,200,Security,,8,2002,6.3,84,,301,/en/security/,fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/en/services,en,pagina,404,404 Page not found,,7,701,5.64,49,,301,/en/product/,"GIA 404 OGGI, con traffico organico: da ricreare o rediretto; fonti ga4-12m+ga4-2025+gsc"
+https://www.lidiatech.ai/it/news/scopri-come-lidia-puo-supportare-il-tuo-studio-con-lentrata-in-vigore-della-legge-ai-132-2025,it,articolo,200,Scopri come Lidia puo supportare il tuo studio,,7,2823,2.36,35,,301,/risorse/legge-132-2025-studi-legali/,senza meta robots; fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/en/privacy-policy,en,legale,200,Privacy Policy,,6,685,6.84,72,,301,/en/legal/privacy/,fonti ga4-12m+ga4-2025+gsc
+https://www.lidiatech.ai/it/prodotto,it,pagina,404,404 Pagina non trovata,,3,374,3.15,193,,301,/prodotto/,"redirect -> /it/servizi; GIA 404 OGGI, con traffico organico: da ricreare o rediretto; fonti ga4-12m+ga4-2025+gsc"
+https://www.lidiatech.ai/it/news/diritto-llm-e-ricerca,it,articolo,200,"Diritto, LLM e ricerca",,1,27,8.33,77,,301,/risorse/whitepaper/diritto-llm-e-ricerca/,senza meta robots; fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/it/news/odissea-digitale-la-rotta-dellai-per-gli-studi-legali,it,articolo,200,Odissea digitale: la rotta dell'AI per gli studi legali,,1,83,6.77,65,,301,/risorse/whitepaper/odissea-digitale-ai-studi-legali/,senza meta robots; fonti ga4-12m+ga4-2025+gsc+sitemap
+https://www.lidiatech.ai/images/privacy-policy_LIDIA.pdf,,asset,200,,,1,79,7.11,,,301,/legale/privacy/,fonti gsc
+https://www.lidiatech.ai/images/privacy-policy_LIDIA_en.pdf,,asset,200,,,1,3,12.33,,,301,/en/legal/privacy/,fonti gsc
+https://www.lidiatech.ai/it/legalaiday-iscriviti,it,campagna,404,404 pagina non pubblicata o archiviata,,,,,1353,,301,/prova-gratuita/,"GIA 404 OGGI, con traffico diretto/adv; fonti ga4-12m"
+https://www.lidiatech.ai/it/thank-you,it,campagna,200,Thank You Page,,,,,142,,301,DA-CREARE-FASE-6,"noindex; nessun organico, traffico diretto/adv; fonti ga4-12m"
+https://www.lidiatech.ai/it/privacy-policy,it,legale,200,Privacy Policy,,,,,128,,301,/legale/privacy/,"nessun organico, traffico diretto/adv; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/addin-word,it,campagna,200,Addin,,,,,117,,301,/prodotto/,"nessun organico, traffico diretto/adv; fonti ga4-12m"
+https://www.lidiatech.ai/it/legal-aios,it,campagna,200,landing legal AIos,,,,,71,,301,/prodotto/,"nessun organico, traffico diretto/adv; fonti ga4-12m"
+https://www.lidiatech.ai/it/aws,it,campagna,404,404 pagina non pubblicata o archiviata,,,,,67,,301,/sicurezza/,"GIA 404 OGGI, con traffico diretto/adv; fonti ga4-12m"
+https://www.lidiatech.ai/it/thankyou-iscrizione,it,campagna,200,thankyou_iscrizione,,,,,62,,301,DA-CREARE-FASE-6,"nessun organico, traffico diretto/adv; fonti ga4-12m"
+https://www.lidiatech.ai/it/cookies,it,legale,200,Cookies,,,,,56,,301,/legale/cookie/,"nessun organico, traffico diretto/adv; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/news/dall-opinion-eiopa-ai-fatti-guida-pratica-all-adozione-e-alla-governance-dell-ai-nelle-assicurazioni,it,articolo,200,Dall'Opinion EIOPA ai fatti,,,28,8.64,37,,301,/risorse/whitepaper/opinion-eiopa-governance-ai-assicurazioni/,"senza meta robots; nessun organico, traffico diretto/adv; fonti ga4-12m+ga4-2025+gsc+sitemap"
+https://www.lidiatech.ai/it/attivazione-demo,it,campagna,404,404 Pagina non trovata,,,,,35,,301,/prova-gratuita/,"GIA 404 OGGI, con traffico diretto/adv; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/surveylegalaiday,it,campagna,200,Survey Legal AI DAY,,,,,29,,410,,"noindex; nessun organico, traffico diretto/adv; fonti ga4-12m"
+https://www.lidiatech.ai/it/news/analisi-strategica-sull-ai-evoluzione-degli-agenti-contesto-legale-enterprise,it,articolo,200,Analisi strategica sull'AI,,,68,6.78,27,,301,/risorse/agenti-ai-contesto-legale-enterprise/,"senza meta robots; nessun organico, traffico diretto/adv; fonti ga4-12m+ga4-2025+gsc+sitemap"
+https://www.lidiatech.ai/en/gtc,en,legale,200,GTC,,,,,25,,301,/en/legal/terms/,"nessun organico, traffico diretto/adv; fonti ga4-12m"
+https://www.lidiatech.ai/it/lidia-template,it,template,404,404 Pagina non trovata,,,,,23,,410,,"GIA 404 OGGI, con traffico diretto/adv; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/news/governance-dei-dati,it,articolo,200,La nuova governance dei dati,,,16,9.44,23,,301,/risorse/whitepaper/nuova-governance-dei-dati/,"senza meta robots; nessun organico, traffico diretto/adv; fonti ga4-12m+gsc+sitemap"
+https://www.lidiatech.ai/,it,home,200,Home,,,22,1,21,,301,/,"redirect -> /it/; 3 h1; nessun organico, traffico diretto/adv; fonti ga4-12m+ga4-2025+gsc"
+https://www.lidiatech.ai/cookies,it,legale,200,Cookies,,,,,17,,301,/legale/cookie/,redirect -> /it/cookies; fonti ga4-12m+ga4-2025+sitemap
+https://www.lidiatech.ai/it/lidia-ai-insight-hub,it,campagna,404,404 Pagina non trovata,,,,,15,,410,,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/servizi,it,pagina,404,404 Pagina non trovata,,,18,7.89,15,,301,/prodotto/,redirect -> /it/servizi; fonti ga4-12m+ga4-2025+gsc
+https://www.lidiatech.ai/en/cookies,en,legale,200,Cookies,,,,,15,,301,/en/legal/cookies/,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/contatti,it,pagina,200,Contatti,,,,,14,,301,/contatti/,redirect -> /it/contatti; fonti ga4-12m+ga4-2025+sitemap
+https://www.lidiatech.ai/it/gtc,it,legale,200,GTC,,,,,12,,301,/legale/termini/,fonti ga4-12m
+https://www.lidiatech.ai/it/lidia-prompt-lab,it,campagna,404,404 Pagina non trovata,,,,,10,,410,,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/it/home,it,home,200,Home,,,,,10,,301,/,3 h1; fonti ga4-12m
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/assistente-personale,it,template,404,404 Pagina non trovata,,,,,9,,410,,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/it/word-it,it,campagna,200,wordplugin-it,,,,,9,,301,/prodotto/,fonti ga4-12m
+https://www.lidiatech.ai/it/almaviva,it,campagna,404,404 Pagina non trovata,,,,,8,,410,,fonti ga4-12m
+https://www.lidiatech.ai/it/lidia-template/diritto-civile,it,template,404,404 Pagina non trovata,,,,,7,,410,,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/it/index.php,it,sistema,200,Home,,,,,7,,410,,"3 h1; URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/contratti,it,template,404,404 Pagina non trovata,,,,,6,,410,,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/it/legal-ai-day,it,campagna,404,404 pagina non pubblicata o archiviata,,,,,6,,301,/risorse/,fonti ga4-12m
+https://www.lidiatech.ai/it/thankyou-legalai,it,campagna,200,Thankyou_LegalAI,,,,,6,,301,DA-CREARE-FASE-6,noindex; fonti ga4-12m
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/ricerche,it,template,404,404 Pagina non trovata,,,,,5,,410,,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/it/corso-aiga,it,campagna,404,404 Pagina non trovata,,,,,5,,410,,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/security,it,pagina,200,Security,,,,,5,,301,/sicurezza/,redirect -> /it/security; fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/en/word-en,en,campagna,200,wordplugin-en,,,,,5,,301,/en/product/,fonti ga4-12m
+https://www.lidiatech.ai/it/attiva-demo,it,campagna,200,Attiva DEMO,,,,,5,,301,/prova-gratuita/,fonti ga4-12m
+https://www.lidiatech.ai/en/lidia-template/civil-law,en,template,404,404 Page not found,,,,,4,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/en/lidia-template/civil-law/due-diligence,en,template,404,404 Page not found,,,,,4,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/en/gtc-en,en,legale,200,gtc,,,,,4,,301,/en/legal/terms/,fonti ga4-12m
+https://www.lidiatech.ai/it/camera-ra,it,campagna,200,Camera Civile Ravenna,,,,,4,,301,/prova-gratuita/,fonti ga4-12m
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/contenzioso,it,template,404,404 Pagina non trovata,,,,,3,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/due-diligence,it,template,404,404 Pagina non trovata,,,,,3,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/diritto-amministrativo,it,template,404,404 Pagina non trovata,,,,,3,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/en/lidia-template/civil-law/contracts,en,template,404,404 Page not found,,,,,3,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/113,it,sistema,200,Home,,,,,3,,410,,"noindex; URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/lidia-video-tutorial,it,campagna,404,404 Pagina non trovata,,,,,2,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale,it,template,404,404 Pagina non trovata,,,,,2,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/en/lidia-template,en,template,404,404 Page not found,,,,,2,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/component/users/login,it,sistema,200,Home,,,,,2,,410,,"senza meta robots; URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/lidia-privacy,it,legale,200,Privacy,,,,,2,,301,/legale/privacy/,fonti ga4-12m+ga4-2025
+https://www.lidiatech.ai/en/lidia-template/civil-law/research,en,template,404,404 Page not found,,,,,2,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/114,it,sistema,200,Home,,,,,2,,410,,"URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/76,it,sistema,404,404 pagina non pubblicata o archiviata,,,,,2,,410,,"URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/gtc-en,it,legale,404,404 Pagina non trovata,,,,,2,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m"
+https://www.lidiatech.ai/en/lidia-template/civil-law/company-secretary,en,template,404,404 Page not found,,,,,1,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale/assistente-personale,it,template,404,404 Pagina non trovata,,,,,1,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale/consulenza,it,template,404,404 Pagina non trovata,,,,,1,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-12m+ga4-2025"
+https://www.lidiatech.ai/en/attiva-demo,en,campagna,200,Attiva DEMO,,,,,1,,301,/en/free-trial/,fonti ga4-12m
+https://www.lidiatech.ai/index.php,it,sistema,200,Home,,,,,1,,410,,"redirect -> /it/; 3 h1; URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/annex-a,it,legale,200,Annex A,,,,,1,,301,/legale/dpa/,noindex; fonti ga4-12m
+https://www.lidiatech.ai/it/annex-b,it,legale,200,Annex B,,,,,1,,301,/legale/dpa/,noindex; fonti ga4-12m
+https://www.lidiatech.ai/it/component/sppagebuilder/page/112,it,sistema,200,Home,,,,,1,,410,,"URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/35,it,sistema,200,Home,,,,,1,,410,,"URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/48,it,sistema,200,Home,,,,,1,,410,,"URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/61,it,sistema,404,404 pagina non pubblicata o archiviata,,,,,1,,410,,"URL tecnico Joomla, mai destinato agli utenti; fonti ga4-12m"
+https://www.lidiatech.ai/it/dpa,it,legale,200,dpa,,,,,1,,301,/legale/dpa/,noindex; fonti ga4-12m
+https://www.lidiatech.ai/it/home-it,it,home,200,Home,,,,,1,,301,/,3 h1; fonti ga4-12m
+https://www.lidiatech.ai/it/prize,it,campagna,200,prize,,,,,1,,410,,fonti ga4-12m
+https://www.lidiatech.ai/it/blog,it,archivio,404,404 Pagina non trovata,,,,,,,301,/risorse/,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/blog/analisi-strategica-sull-ai-evoluzione-degli-agenti-contesto-legale-enterprise,it,articolo,404,404 Pagina non trovata,,,,,,,301,/risorse/agenti-ai-contesto-legale-enterprise/,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/lidia-video-tutorial/diritto-civile,it,campagna,404,404 Pagina non trovata,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/recupero-credito,it,template,404,404 Pagina non trovata,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/en/lidia-template/civil-law/administrative-law,en,template,404,404 Page not found,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/en/lidia-template/civil-law/dispute-resolution,en,template,404,404 Page not found,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/en/lidia-template/civil-law/personal-assistant,en,template,404,404 Page not found,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/consulenza-ricerche,it,template,404,404 Pagina non trovata,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/segreteria-societaria,it,template,404,404 Pagina non trovata,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/en/lidia-template/criminal-law,en,template,404,404 Page not found,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/blog/eventi/analisi-strategica-sull-ai-evoluzione-degli-agenti-contesto-legale-enterprise,it,articolo,404,404 Pagina non trovata,,,,,,,301,/risorse/agenti-ai-contesto-legale-enterprise/,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale/processo-penale,it,template,404,404 Pagina non trovata,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale/ricerche,it,template,404,404 Pagina non trovata,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/tax,it,template,404,404 Pagina non trovata,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/it/lidia-video-tutorial/diritto-penale,it,campagna,404,404 Pagina non trovata,,,,,,,410,,"gia 404 oggi, nessun valore da conservare; fonti ga4-2025 — storico, nessun traffico negli ultimi 12 mesi"
+https://www.lidiatech.ai/images/brand/logotype_blue2x---copia.png,,asset,200,,,,2,21.5,,,410,,fonti gsc

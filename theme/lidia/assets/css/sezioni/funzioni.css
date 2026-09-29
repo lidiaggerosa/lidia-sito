@@ -1,0 +1,207 @@
+/*
+ * Funzioni — fila di schede identiche che scorre in orizzontale, tre per volta.
+ * 23/09: niente barra di scorrimento; si scorre con le frecce sotto la fila
+ * (aggiunte da assets/js/funzioni.js) o trascinando. Senza JavaScript la fila
+ * resta scorrevole e la barra torna visibile: nulla si perde.
+ * Colonna singola centrata: titolo centrato.
+ */
+
+.lidia-funzioni {
+	padding-block: var(--wp--preset--spacing--70) 78px;
+	padding-inline: 0;
+	position: relative;
+}
+
+.lidia-funzioni .lidia-funzioni-testa {
+	max-width: 1040px;
+	margin: 0 auto 40px;
+	padding-inline: clamp(20px, 5vw, 40px);
+	text-align: center;
+}
+
+.lidia-funzioni .lidia-funzioni-testa h2 {
+	margin: 0 auto;
+}
+
+/* --- La CTA in coda alla fila (24/09): sotto le frecce, centrata ------------ */
+
+.lidia-funzioni .lidia-funzioni-cta {
+	justify-content: center;
+	margin: 40px auto 0;
+	padding-inline: clamp(20px, 5vw, 40px);
+}
+
+/* --- Le frecce (create dallo script) --------------------------------------- */
+
+.lidia-frecce {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin: 18px auto 0;
+}
+
+.lidia-freccia-scorri {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	background: var(--lidia-superficie);
+	color: var(--wp--preset--color--azione);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 0;
+	transition: border-color 0.15s, color 0.15s, opacity 0.15s;
+}
+
+.lidia-freccia-scorri:hover {
+	border-color: var(--wp--preset--color--azione);
+}
+
+.lidia-freccia-scorri:focus-visible {
+	outline: var(--lidia-focus-spessore) solid var(--lidia-focus-colore);
+	outline-offset: var(--lidia-focus-offset);
+}
+
+.lidia-freccia-scorri[disabled] {
+	opacity: 0.35;
+	cursor: default;
+	border-color: var(--lidia-filetto-colore);
+}
+
+.lidia-freccia-scorri svg {
+	width: 18px;
+	height: 18px;
+	display: block;
+}
+
+/* --- La fila --------------------------------------------------------------- */
+
+.lidia-fila {
+	--lidia-fila-gap: 20px;
+	--lidia-fila-lato: clamp(20px, 5vw, 40px);
+	display: grid;
+	grid-auto-flow: column;
+	/* Tre schede nella colonna, qualunque sia il numero totale. */
+	grid-auto-columns: calc((100% - 2 * var(--lidia-fila-gap)) / 3);
+	gap: var(--lidia-fila-gap);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	/* Nella colonna, senza padding laterale: si vedono tre schede esatte, non la quarta a metà. */
+	max-width: calc(1040px - 2 * var(--lidia-fila-lato));
+	margin-inline: var(--lidia-fila-lato);
+	padding: 4px 0 8px;
+	scrollbar-width: thin;
+}
+
+@media (min-width: 1121px) {
+	.lidia-fila {
+		margin-inline: auto;
+	}
+}
+
+/* Niente margini di flusso di WordPress dentro la fila e dentro la scheda. */
+.lidia-fila > *,
+.lidia-scheda > *,
+.lidia-demo > * {
+	margin-block: 0 !important;
+}
+
+/* Con lo script attivo la barra sparisce: le frecce e il trascinamento la sostituiscono. */
+.lidia-fila.lidia-fila-js {
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	cursor: grab;
+	user-select: none;
+}
+
+.lidia-fila.lidia-fila-js::-webkit-scrollbar {
+	display: none;
+}
+
+.lidia-fila.lidia-fila-trascina {
+	cursor: grabbing;
+	scroll-snap-type: none;
+	scroll-behavior: auto;
+}
+
+.lidia-fila.lidia-fila-trascina * {
+	pointer-events: none;
+}
+
+.lidia-fila > * {
+	scroll-snap-align: start;
+	margin-block: 0;
+}
+
+/* --- La scheda: stessa struttura e stesse misure per tutte ----------------- */
+
+.lidia-scheda {
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-scheda);
+	padding: 26px 24px 24px;
+	background-color: var(--lidia-superficie);
+	display: grid;
+	grid-template-rows: auto minmax(4.7em, auto) 1fr;
+	gap: 14px;
+	min-height: 400px;
+}
+
+.lidia-scheda h3 {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--scheda);
+}
+
+.lidia-scheda > p {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.55;
+	color: var(--lidia-secondario);
+}
+
+/* La demo: illustrazione, non contenuto. Stessa altezza in ogni scheda. */
+.lidia-demo {
+	align-self: end;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	padding-top: 16px;
+	font-size: var(--wp--preset--font-size--minuto);
+	line-height: 1.45;
+	height: 176px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.lidia-demo > * {
+	margin-block: 0;
+}
+
+/* Gli idiomi delle demo (nota, fonti, passi, documenti, doc, risposta) stanno in components/demo.css (24/09). */
+
+@media (prefers-reduced-motion: reduce) {
+	.lidia-fila.lidia-fila-js {
+		scroll-behavior: auto;
+	}
+}
+
+@media (max-width: 980px) {
+	.lidia-fila {
+		grid-auto-columns: calc((100% - var(--lidia-fila-gap)) / 2);
+	}
+}
+
+@media (max-width: 620px) {
+	.lidia-fila {
+		grid-auto-columns: 86%;
+		margin-inline: 0;
+		padding-inline: var(--lidia-fila-lato);
+		scroll-padding-inline: var(--lidia-fila-lato);
+		max-width: none;
+	}
+
+	.lidia-scheda {
+		min-height: 380px;
+	}
+}

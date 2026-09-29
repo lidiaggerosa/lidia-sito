@@ -1,0 +1,111 @@
+da,a,tipo,motivo
+https://www.lidiatech.ai/it/,/,301,home IT alla radice
+https://www.lidiatech.ai/it/chi-siamo,/azienda/,301,pagina azienda
+https://www.lidiatech.ai/en/,/en/,nessuno,"stesso indirizzo nel nuovo sito: nessuna regola, eviterebbe solo la barra finale che WordPress aggiunge da solo"
+https://www.lidiatech.ai/en/about-us,/en/company/,301,EN provvisorio
+https://www.lidiatech.ai/it/contatti,/contatti/,301,contatti
+https://www.lidiatech.ai/privacy-policy,/legale/privacy/,301,legale
+https://www.lidiatech.ai/it/lavora-con-noi,/azienda/lavora-con-noi/,301,recruiting
+https://www.lidiatech.ai/images/PDF/La-responsabilita-nella-value-chain-dell-AI_LIDIA_Paper.pdf,/risorse/whitepaper/responsabilita-value-chain-ai/,301,PDF con organico: entra nel contenitore governato
+https://www.lidiatech.ai/en/careers,/en/company/careers/,301,EN provvisorio
+https://www.lidiatech.ai/it/security,/sicurezza/,301,pagina sicurezza
+https://www.lidiatech.ai/it/servizi,/prodotto/,301,404 con organico: il contenuto rinasce come /prodotto/
+https://www.lidiatech.ai/en/contacts,/en/contact/,301,EN provvisorio
+https://www.lidiatech.ai/it/news,/risorse/,301,archivio articoli
+https://www.lidiatech.ai/en/product,/en/product/,nessuno,"stesso indirizzo nel nuovo sito: nessuna regola, eviterebbe solo la barra finale che WordPress aggiunge da solo"
+https://www.lidiatech.ai/images/PDF/Diritto-LLM-e-ricerca.pdf,/risorse/whitepaper/diritto-llm-e-ricerca/,301,PDF con organico: entra nel contenitore governato
+https://www.lidiatech.ai/it/news/la-responsabilita-nella-value-chain-dellai,/risorse/whitepaper/responsabilita-value-chain-ai/,301,whitepaper con organico (era classificato articolo: corretto il 21/09)
+https://www.lidiatech.ai/en/security,/en/security/,nessuno,"stesso indirizzo nel nuovo sito: nessuna regola, eviterebbe solo la barra finale che WordPress aggiunge da solo"
+https://www.lidiatech.ai/en/services,/en/product/,301,404 con organico; EN provvisorio
+https://www.lidiatech.ai/it/news/scopri-come-lidia-puo-supportare-il-tuo-studio-con-lentrata-in-vigore-della-legge-ai-132-2025,/risorse/legge-132-2025-studi-legali/,301,articolo con organico; slug accorciato
+https://www.lidiatech.ai/en/privacy-policy,/en/legal/privacy/,301,EN provvisorio
+https://www.lidiatech.ai/it/prodotto,/prodotto/,301,404 con organico
+https://www.lidiatech.ai/it/news/diritto-llm-e-ricerca,/risorse/whitepaper/diritto-llm-e-ricerca/,301,whitepaper con organico (era classificato articolo: corretto il 21/09)
+https://www.lidiatech.ai/it/news/odissea-digitale-la-rotta-dellai-per-gli-studi-legali,/risorse/whitepaper/odissea-digitale-ai-studi-legali/,301,articolo con organico; slug accorciato
+https://www.lidiatech.ai/images/privacy-policy_LIDIA.pdf,/legale/privacy/,301,PDF legale sostituito dalla pagina
+https://www.lidiatech.ai/images/privacy-policy_LIDIA_en.pdf,/en/legal/privacy/,301,PDF legale sostituito dalla pagina EN
+https://www.lidiatech.ai/it/legalaiday-iscriviti,/prova-gratuita/,301,1.353 sessioni storiche da adv: non si butta sulla home
+https://www.lidiatech.ai/it/thank-you,,410,"thank-you temporanea, non rinasce (deciso il 22/09)"
+https://www.lidiatech.ai/it/privacy-policy,/legale/privacy/,301,legale
+https://www.lidiatech.ai/it/addin-word,/prodotto/,301,landing add-in Word
+https://www.lidiatech.ai/it/legal-aios,/prodotto/,301,landing di prodotto
+https://www.lidiatech.ai/it/aws,/sicurezza/,301,landing su infrastruttura
+https://www.lidiatech.ai/it/thankyou-iscrizione,,410,"thank-you temporanea, non rinasce (deciso il 22/09)"
+https://www.lidiatech.ai/it/cookies,/legale/cookie/,301,legale
+https://www.lidiatech.ai/it/news/dall-opinion-eiopa-ai-fatti-guida-pratica-all-adozione-e-alla-governance-dell-ai-nelle-assicurazioni,/risorse/whitepaper/opinion-eiopa-governance-ai-assicurazioni/,301,articolo con impression; slug accorciato
+https://www.lidiatech.ai/it/attivazione-demo,/prova-gratuita/,301,landing di conversione
+https://www.lidiatech.ai/it/surveylegalaiday,,410,"questionario di evento concluso, noindex"
+https://www.lidiatech.ai/it/news/analisi-strategica-sull-ai-evoluzione-degli-agenti-contesto-legale-enterprise,/risorse/agenti-ai-contesto-legale-enterprise/,301,articolo con impression; slug accorciato
+https://www.lidiatech.ai/en/gtc,/en/legal/terms/,301,EN provvisorio
+https://www.lidiatech.ai/it/lidia-template,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/news/governance-dei-dati,/risorse/whitepaper/nuova-governance-dei-dati/,301,articolo con impression
+https://www.lidiatech.ai/,/,nessuno,"stesso indirizzo nel nuovo sito: nessuna regola, eviterebbe solo la barra finale che WordPress aggiunge da solo"
+https://www.lidiatech.ai/cookies,/legale/cookie/,301,"legale, senza prefisso lingua"
+https://www.lidiatech.ai/it/lidia-ai-insight-hub,,410,"iniziativa conclusa, 404 oggi"
+https://www.lidiatech.ai/servizi,/prodotto/,301,"404 con organico, senza prefisso lingua"
+https://www.lidiatech.ai/en/cookies,/en/legal/cookies/,301,EN provvisorio
+https://www.lidiatech.ai/contatti,/contatti/,nessuno,"stesso indirizzo nel nuovo sito: nessuna regola, eviterebbe solo la barra finale che WordPress aggiunge da solo"
+https://www.lidiatech.ai/it/gtc,/legale/termini/,301,condizioni generali
+https://www.lidiatech.ai/it/lidia-prompt-lab,,410,"iniziativa conclusa, 404 oggi"
+https://www.lidiatech.ai/it/home,/,301,duplicato della home
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/assistente-personale,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/word-it,/prodotto/,301,landing add-in Word
+https://www.lidiatech.ai/it/almaviva,,410,landing partner conclusa
+https://www.lidiatech.ai/it/lidia-template/diritto-civile,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/index.php,,410,URL tecnico Joomla
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/contratti,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/legal-ai-day,/risorse/,301,evento concluso
+https://www.lidiatech.ai/it/thankyou-legalai,,410,"thank-you temporanea, non rinasce (deciso il 22/09)"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/ricerche,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/corso-aiga,,410,landing formativa conclusa
+https://www.lidiatech.ai/security,/sicurezza/,301,"sicurezza, senza prefisso lingua"
+https://www.lidiatech.ai/en/word-en,/en/product/,301,landing add-in Word; EN provvisorio
+https://www.lidiatech.ai/it/attiva-demo,/prova-gratuita/,301,landing di conversione
+https://www.lidiatech.ai/en/lidia-template/civil-law,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/lidia-template/civil-law/due-diligence,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/gtc-en,/en/legal/terms/,301,EN provvisorio
+https://www.lidiatech.ai/it/camera-ra,/prova-gratuita/,301,landing di evento locale
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/contenzioso,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/due-diligence,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/diritto-amministrativo,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/lidia-template/civil-law/contracts,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/113,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-video-tutorial,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/lidia-template,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/component/users/login,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-privacy,/legale/privacy/,301,duplicato della privacy
+https://www.lidiatech.ai/en/lidia-template/civil-law/research,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/114,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/76,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/gtc-en,,410,"404 oggi, duplicato errato di lingua"
+https://www.lidiatech.ai/en/lidia-template/civil-law/company-secretary,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale/assistente-personale,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale/consulenza,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/attiva-demo,/en/free-trial/,301,EN provvisorio
+https://www.lidiatech.ai/index.php,,nessuno,"front controller di WordPress: una regola su /index.php intercetta ogni pagina del sito (verificato il 22/09, staging in 410). Mostra la home: nessuna regola"
+https://www.lidiatech.ai/it/annex-a,/legale/termini/annex-a/,301,"pagina a sé, figlia dei termini; pagina creata il 24/09, redirect attivo"
+https://www.lidiatech.ai/it/annex-b,/legale/termini/annex-b/,301,"pagina a sé, figlia dei termini; pagina creata il 24/09, redirect attivo"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/112,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/35,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/48,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/component/sppagebuilder/page/61,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/dpa,/legale/dpa/,301,"DPA: destinazione noindex, deroga registrata"
+https://www.lidiatech.ai/it/home-it,/,301,duplicato della home
+https://www.lidiatech.ai/it/prize,,410,landing promozionale conclusa
+https://www.lidiatech.ai/it/blog,/risorse/,301,"archivio storico: 301 alla sezione padre, non 410"
+https://www.lidiatech.ai/it/blog/analisi-strategica-sull-ai-evoluzione-degli-agenti-contesto-legale-enterprise,/risorse/agenti-ai-contesto-legale-enterprise/,301,vecchio percorso dello stesso articolo
+https://www.lidiatech.ai/it/lidia-video-tutorial/diritto-civile,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/recupero-credito,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/lidia-template/civil-law/administrative-law,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/lidia-template/civil-law/dispute-resolution,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/lidia-template/civil-law/personal-assistant,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/consulenza-ricerche,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/segreteria-societaria,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/en/lidia-template/criminal-law,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/blog/eventi/analisi-strategica-sull-ai-evoluzione-degli-agenti-contesto-legale-enterprise,/risorse/agenti-ai-contesto-legale-enterprise/,301,vecchio percorso dello stesso articolo
+https://www.lidiatech.ai/it/lidia-template/diritto-penale/processo-penale,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-penale/ricerche,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-template/diritto-civile/tax,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/it/lidia-video-tutorial/diritto-penale,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
+https://www.lidiatech.ai/images/brand/logotype_blue2x---copia.png,,410,asset di brand obsoleto

@@ -1,0 +1,26 @@
+url,lingua,keyword_primaria,intento,keyword_secondarie,cta,step_funnel,pagina_padre
+/,it,intelligenza artificiale per avvocati,commerciale,"legal ai italia; ai studio legale; assistente ai avvocati; ai agentica legale; piattaforma ai agentica",Richiedi una prova gratuita,TOFU,—
+/prodotto/,it,software intelligenza artificiale studi legali,commerciale,"piattaforma legal ai; ai agentica legale; ai ricerca giuridica; analisi contratti intelligenza artificiale; integrazione word studi legali",Richiedi una prova gratuita,MOFU,/
+/soluzioni/studi-legali/,it,ai per studi legali,commerciale,"intelligenza artificiale studio legale associato; automazione studio legale",Richiedi una prova gratuita,MOFU,/
+/soluzioni/direzioni-legali/,it,ai per ufficio legale aziendale,commerciale,"legal operations intelligenza artificiale; direzione legale ai",Richiedi una prova gratuita,MOFU,/
+/soluzioni/assicurazioni/,it,intelligenza artificiale settore assicurativo legale,commerciale,"ai gestione sinistri documentale; governance ai assicurazioni",Richiedi una prova gratuita,MOFU,/
+/soluzioni/atenei/,it,intelligenza artificiale università giurisprudenza,commerciale,"ai biblioteche giuridiche; lidia campus; ai didattica diritto",Richiedi una prova gratuita,MOFU,/
+/sicurezza/,it,sicurezza dei dati ai studi legali,fiduciario,"segreto professionale intelligenza artificiale; gdpr ai legale; dove risiedono i dati",Richiedi una prova gratuita,BOFU,/
+/prezzi/,it,quanto costa un software ai per studi legali,commerciale,"prezzi legal ai; costo intelligenza artificiale studio legale; legal ai da 125 euro al mese",Richiedi una prova gratuita,BOFU,/
+/risorse/,it,— (hub: nessuna keyword propria),navigazionale,—,Iscriviti agli aggiornamenti,TOFU,/
+/risorse/whitepaper/,it,whitepaper intelligenza artificiale diritto,informazionale,"guida ai act studi legali; download guida legal ai",Scarica il whitepaper,TOFU,/risorse/
+/risorse/legge-132-2025-studi-legali/,it,legge 132 2025 intelligenza artificiale,informazionale,"ai act studi legali; obblighi trasparenza ai clienti; compliance ai avvocati",Richiedi una prova gratuita,TOFU,/risorse/
+/risorse/agenti-ai-contesto-legale-enterprise/,it,agenti ai contesto legale,informazionale,"ai agentica enterprise; human on the loop; ai act aziende",Richiedi una prova gratuita,TOFU,/risorse/
+/risorse/whitepaper/odissea-digitale-ai-studi-legali/,it,ai in produzione studi legali,informazionale,"corpus ai ready; roadmap 90 giorni ai",Scarica il whitepaper,TOFU,/risorse/whitepaper/
+/risorse/whitepaper/opinion-eiopa-governance-ai-assicurazioni/,it,opinion eiopa intelligenza artificiale,informazionale,"governance ai assicurazioni; ai risk management assicurativo",Scarica il whitepaper,TOFU,/risorse/whitepaper/
+/risorse/whitepaper/nuova-governance-dei-dati/,it,governance dei dati intelligenza artificiale,informazionale,"legittimo interesse training ai; edpb opinion 28 2024; data quality ai",Scarica il whitepaper,TOFU,/risorse/whitepaper/
+/risorse/whitepaper/diritto-llm-e-ricerca/,it,llm ricerca giuridica metodo,informazionale,"cite or silent; rag ricerca legale; audit trail ricerca giuridica",Scarica il whitepaper,TOFU,/risorse/whitepaper/
+/risorse/whitepaper/responsabilita-value-chain-ai/,it,responsabilità value chain ai,informazionale,"ai act responsabilità deployer; explainability studi legali",Scarica il whitepaper,TOFU,/risorse/whitepaper/
+/azienda/,it,lidia legal ai,navigazionale,"lidiatech; mesa group; chi siamo lidia",Richiedi una prova gratuita,TOFU,/
+/azienda/lavora-con-noi/,it,lavora con noi lidia,navigazionale,"posizioni aperte legal tech italia",Invia la candidatura,—,/azienda/
+/prova-gratuita/,it,prova gratuita software legal ai,transazionale,"demo software legal ai; provare ai studio legale; richiedi demo lidia",Richiedi una prova gratuita,BOFU,/
+/contatti/,it,contatti lidia,navigazionale,"lidiatech contatti; telefono lidia",Scrivici,BOFU,/
+/legale/privacy/,it,— (obbligo di legge),navigazionale,—,—,—,/
+/legale/cookie/,it,— (obbligo di legge),navigazionale,—,—,—,/
+/legale/termini/,it,— (obbligo di legge),navigazionale,—,—,—,/
+/legale/dpa/,it,— (noindex: non indicizzabile),—,—,—,—,/
