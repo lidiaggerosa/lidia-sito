@@ -23,12 +23,8 @@ defined( 'ABSPATH' ) || exit;
 <h2 class="wp-block-heading">In Unione Europea, e non si spostano</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"lidia-fid-affermazione","fontSize":"scheda"} -->
-<p class="lidia-fid-affermazione has-scheda-font-size">Infrastruttura <strong>AWS, regione di Milano</strong>. I documenti sono cifrati <strong>a riposo e in transito</strong> e non lasciano l’Unione Europea.</p>
-<!-- /wp:paragraph -->
-
 <!-- wp:paragraph -->
-<p>È la condizione minima perché uno studio italiano possa affidare a un sistema di AI materiale coperto da segreto professionale: i dati restano dove la legge europea li protegge.</p>
+<p>Infrastruttura <strong>AWS in Unione Europea</strong>. I documenti sono cifrati <strong>a riposo e in transito</strong> e non lasciano l’Unione Europea. È la condizione minima perché uno studio italiano possa affidare a un sistema di AI materiale coperto da segreto professionale: i dati restano dove la legge europea li protegge.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -37,12 +33,8 @@ defined( 'ABSPATH' ) || exit;
 <h2 class="wp-block-heading">I fornitori dei modelli non vedono niente</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"lidia-fid-affermazione","fontSize":"scheda"} -->
-<p class="lidia-fid-affermazione has-scheda-font-size"><strong>Nessun dato dello studio</strong> viene trasmesso o conservato dai fornitori dei modelli linguistici, e nessun dato viene usato per addestrarli.</p>
-<!-- /wp:paragraph -->
-
 <!-- wp:paragraph -->
-<p>È la differenza fra usare un assistente generalista e usare un sistema costruito per il lavoro legale: nel primo caso il vostro fascicolo esce dal vostro perimetro, nel secondo no.</p>
+<p><strong>Nessun dato dello studio</strong> viene trasmesso o conservato dai fornitori dei modelli linguistici, e nessun dato viene usato per addestrarli. È la differenza fra usare un assistente generalista e usare un sistema costruito per il lavoro legale: nel primo caso il vostro fascicolo esce dal vostro perimetro, nel secondo no.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

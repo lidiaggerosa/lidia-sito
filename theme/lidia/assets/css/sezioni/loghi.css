@@ -43,14 +43,36 @@
 }
 
 .lidia-nastro img {
-	max-height: 30px;
-	max-width: 136px;
+	height: 30px;
+	max-width: 150px;
 	width: auto;
-	height: auto;
 	object-fit: contain;
 	filter: grayscale(1);
 	opacity: 0.62;
 }
+
+/*
+ * 30/09: stessa area visiva per ogni logo (circa 3.000 px²), non stessa altezza.
+ * Altezza calcolata dal rapporto del disegno nel file: i loghi larghi scendono,
+ * quelli compatti salgono, fra 20 e 42 px. Un logo nuovo senza riga qui prende 30 px.
+ */
+.lidia-nastro img[src*="/andersen."] { height: 27px; }  /* 111×27 */
+.lidia-nastro img[src*="/bacciardi."] { height: 25px; }  /* 119×25 */
+.lidia-nastro img[src*="/benetton."] { height: 32px; }  /* 95×32 */
+.lidia-nastro img[src*="/bonellierede."] { height: 21px; }  /* 144×21 */
+.lidia-nastro img[src*="/camera-partners."] { height: 32px; }  /* 93×32 */
+.lidia-nastro img[src*="/carbonetti."] { height: 36px; }  /* 84×36 */
+.lidia-nastro img[src*="/cbb."] { height: 29px; }  /* 103×29 */
+.lidia-nastro img[src*="/comcreta."] { height: 35px; }  /* 87×35 */
+.lidia-nastro img[src*="/gitti-partners."] { height: 27px; }  /* 130×27 */
+.lidia-nastro img[src*="/global-assistance."] { height: 36px; }  /* 82×36 */
+.lidia-nastro img[src*="/lacroce."] { height: 42px; }  /* 69×42 */
+.lidia-nastro img[src*="/leading-law."] { height: 42px; }  /* 64×42 */
+.lidia-nastro img[src*="/mf-law."] { height: 31px; }  /* 97×31 */
+.lidia-nastro img[src*="/mucciarelli."] { height: 23px; }  /* 135×23 */
+.lidia-nastro img[src*="/nexia-audirevi."] { height: 43px; }  /* 97×43 */
+.lidia-nastro img[src*="/padovan."] { height: 29px; }  /* 105×29 */
+.lidia-nastro img[src*="/unipol."] { height: 35px; }  /* 87×35 */
 
 .lidia-nastro > *:hover img {
 	filter: none;

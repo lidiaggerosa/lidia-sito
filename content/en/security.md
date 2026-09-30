@@ -3,12 +3,13 @@ url: /en/security/
 lingua: en
 traduzione_di: /sicurezza/
 title: "Data security and AI in law firms — Lidia"
-meta_description: "Where the data lives, what model providers see, which certifications Lidia holds: AWS Milan, ISO 27001, CSA STAR Level 1, GDPR compliance."
+meta_description: "Where the data lives, what model providers see, which certifications Lidia holds: AWS in the European Union, ISO 27001, CSA STAR Level 1, GDPR compliance."
 keyword_primaria: "AI data security for law firms"
 stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-25
 pubblicazione: bozza finché non c'è l'informativa privacy in inglese (25/09/2026)
+revisione_30_09: "30/09/2026 — allineata alla revisione italiana del 30/09, approvata in chat da Gianluca."
 ---
 
 Security
@@ -20,7 +21,7 @@ It is the first question a partner asks, and the right one. A case file is not j
 
 ## In the European Union, and it stays there
 
-**AWS infrastructure, Milan region**. Documents are encrypted **at rest and in transit** and never leave the European Union.
+**AWS infrastructure in the European Union**. Documents are encrypted **at rest and in transit** and never leave the European Union.
 
 It is the minimum requirement for an Italian firm to entrust material covered by professional secrecy to an AI system: the data stays where European law protects it.
 
@@ -40,7 +41,7 @@ That is the difference between using a general-purpose assistant and using a sys
 The information security management system is certified by a third party, not self-declared.
 
 
-### CSA STAR Level 1
+### CSA STAR Lvl. 1
 
 Cloud infrastructure security is documented to the Cloud Security Alliance standard.
 
@@ -57,7 +58,7 @@ Processing compliant with Regulation (EU) 2016/679.
 
 ## Frequently asked questions
 
-It depends on the provider, and it should be checked before uploading any case file. Data processed by Lidia is stored on AWS infrastructure in the Milan region, encrypted at rest and in transit. EU data residency is the minimum requirement for an Italian firm to use an AI system on material covered by professional secrecy.
+It depends on the provider, and it should be checked before uploading any case file. Data processed by Lidia is stored on AWS infrastructure in the European Union, encrypted at rest and in transit. EU data residency is the minimum requirement for an Italian firm to use an AI system on material covered by professional secrecy.
 
 No, provided three conditions are met: the data does not leave the European Union; no third party, including language model providers, can access it; and the relationship with the provider is governed by a data processing agreement. With Lidia, the first two are properties of the architecture; the third is the Data Processing Agreement, which we provide before signing.
 

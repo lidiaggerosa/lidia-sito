@@ -3,12 +3,13 @@ url: /en/contact/
 lingua: en
 traduzione_di: /contatti/
 title: "Contact — Lidia"
-meta_description: "Contact Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Offices in Genoa, Milan and Savona. For free trials, please use the dedicated form."
+meta_description: "Contact Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Offices in Genoa and Milan. For free trials, please use the dedicated form."
 keyword_primaria: "Lidia contact"
 stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-25
 pubblicazione: pubblicata il 25/09/2026 (il consenso del modulo rimanda alla privacy italiana finché non c'è quella inglese)
+revisione_30_09: "30/09/2026 — allineata alla revisione italiana del 30/09, approvata in chat da Gianluca."
 ---
 
 Contact
@@ -39,10 +40,6 @@ Corso Andrea Podestà 8/3, 16128 — registered office
 
 Centro Direzionale Milanofiori, Strada 3, Palazzo B4, 20057 Assago
 
-
-### Savona
-
-Via Magliotto 2, 17100 — University Campus
 
 
 ## Who to write to

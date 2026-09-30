@@ -12,6 +12,7 @@ stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-24
 revisione: "24/09/2026 — H1 «Ogni funzione, un passo verso il risultato.» (la formula «sempre al tuo fianco» resta alla home); mock dei box rinviati a un secondo passaggio, riempitivo nella colonna. Pagina rifatta sul nuovo storytelling: un box per funzione (testo + mock), indice orizzontale, FAQ sulle fonti, CTA verso il modulo. Escono «I limiti, detti prima», «I dati» e il prezzo. Sostituisce la versione del 16/09."
+revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
 # Ogni funzione, un passo verso il risultato.
@@ -19,7 +20,7 @@ revisione: "24/09/2026 — H1 «Ogni funzione, un passo verso il risultato.» (l
 **Occhiello:** Prodotto
 
 Ogni funzione di Lidia nasce per il lavoro del professionista, dall'attività più semplice al
-processo più complesso. Il controllo su risposte e output resta suo, a ogni passaggio.
+processo più complesso. Il controllo su risposte e output resta tuo, a ogni passaggio.
 
 **CTA primaria:** Richiedi una prova gratuita → `#prova`
 
@@ -143,8 +144,7 @@ Costruisci i tuoi workflow sul modo in cui lavori: passaggi, controlli e conosce
 studio. Lidia esegue il tuo metodo, non uno standard.
 
 ### Pratiche
-Tutto il lavoro organizzato per pratica: documenti archiviati, OCR avanzato, fino a 1.000 pagine
-per singolo file. Documenti e conversazioni condivisi con i colleghi.
+Tutto il lavoro organizzato per pratica: documenti archiviati, OCR avanzato. Documenti e conversazioni condivisi con i colleghi.
 
 **CTA:** Richiedi una prova gratuita → `#prova`
 

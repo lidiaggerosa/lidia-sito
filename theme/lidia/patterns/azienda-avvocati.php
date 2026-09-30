@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className": "lidia-misura-lettura","fontSize": "scheda"} -->
-<p class="lidia-misura-lettura has-scheda-font-size">Il leadership team viene da <strong>grandi studi legali italiani e internazionali</strong>, e la conseguenza non è narrativa: è il modo in cui Lidia tratta la ricerca giuridica.</p>
+<p class="lidia-misura-lettura has-scheda-font-size">Il leadership team viene da <strong>grandi studi legali italiani e internazionali</strong>, e la conseguenza non è narrativa: è il modo in cui Lidia propone di integrare l’AI nei flussi di lavoro.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className": "lidia-misura-lettura"} -->

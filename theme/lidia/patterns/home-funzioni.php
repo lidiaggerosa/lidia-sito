@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- wp:group {"className":"lidia-sezione lidia-funzioni","align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull lidia-sezione lidia-funzioni"><!-- wp:group {"className":"lidia-funzioni-testa","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-funzioni-testa"><!-- wp:heading -->
-<h2 class="wp-block-heading">Le funzioni, senza giri di parole</h2>
+<h2 class="wp-block-heading">Il lavoro, funzione per funzione</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -86,7 +86,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Documenti raggruppati per cliente, operazione o causa, con OCR avanzato su PDF e scansioni. Fino a 1.000 pagine per singolo documento.</p>
+<p>Documenti raggruppati per cliente, operazione o causa, con OCR avanzato su PDF e scansioni.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"className":"lidia-demo","layout":{"type":"default"}} -->
@@ -100,7 +100,7 @@ defined( 'ABSPATH' ) || exit;
 <li><span>Allegati tecnici</span><span class="lidia-documenti-pagine">84 pp.</span></li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><span>Scansioni OCR</span><span class="lidia-documenti-pagine">1.000 pp.</span></li>
+<li><span>Scansioni OCR</span></li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->

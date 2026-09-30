@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"lidia-misura-lettura","fontSize":"voce"} -->
-<p class="lidia-misura-lettura has-voce-font-size">Ogni funzione di Lidia nasce per il lavoro del professionista, dall’attività più semplice al processo più complesso. Il controllo su risposte e output resta suo, a ogni passaggio.</p>
+<p class="lidia-misura-lettura has-voce-font-size">Ogni funzione di Lidia nasce per il lavoro del professionista, dall’attività più semplice al processo più complesso. Il controllo su risposte e output resta tuo, a ogni passaggio.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

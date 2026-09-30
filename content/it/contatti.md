@@ -2,7 +2,7 @@
 url: /contatti/
 lingua: it
 title: "Contatti — Lidia"
-meta_description: "Contatti di Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Sedi di Genova, Milano e Savona. Per le prove gratuite usate il form dedicato."
+meta_description: "Contatti di Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Sedi di Genova e Milano. Per le prove gratuite usate il form dedicato."
 h1: "Contatti"
 keyword_primaria: "contatti lidia"
 keyword_secondarie: "lidiatech contatti; telefono lidia"
@@ -12,6 +12,7 @@ stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-14
 revisione: "25/09/2026 — sezione «Personalizzare Lidia per lo studio» con il modulo commerciale; riga in «A chi scrivere». Approvato in chat."
+revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
 # Contatti
@@ -37,9 +38,6 @@ Corso Andrea Podestà 8/3, 16128
 
 ### Milano
 Centro Direzionale Milanofiori, Strada 3, Palazzo B4, 20057 Assago
-
-### Savona
-Via Magliotto 2, 17100 — Campus Universitario
 
 ---
 

@@ -9,13 +9,14 @@ stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-25
 pubblicazione: bozza finché non c'è l'informativa privacy in inglese (25/09/2026)
+revisione_30_09: "30/09/2026 — allineata alla revisione italiana del 30/09, approvata in chat da Gianluca."
 ---
 
 Product
 
 # Every feature, a step towards the outcome.
 
-Every Lidia feature is built around the professional's work, from the simplest task to the most complex process. Control over answers and outputs stays with them, at every step.
+Every Lidia feature is built around the professional's work, from the simplest task to the most complex process. Control over answers and outputs stays with you, at every step.
 
 
 ## Four kinds of action, one workspace
@@ -137,7 +138,7 @@ Build your own workflows around the way you work: the firm's steps, checks and k
 
 ### Matters
 
-All work organised by matter: archived documents, advanced OCR, up to 1,000 pages per file. Documents and conversations shared with colleagues.
+All work organised by matter: archived documents, advanced OCR. Documents and conversations shared with colleagues.
 
 
 ## Frequently asked questions

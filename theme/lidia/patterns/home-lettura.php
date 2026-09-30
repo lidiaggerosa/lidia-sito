@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Una risposta è solo l'inizio. Il lavoro legale è documenti da analizzare, fonti da collegare, passaggi da eseguire nell'ordine giusto: una due diligence, una revisione contrattuale, un parere. Lidia ricerca, analizza, redige e porta avanti questi processi fino in fondo, mostrando fonti e passaggi a ogni passo. L'AI esegue, il professionista verifica e decide.</p>
+<p>Una risposta è solo l'inizio. Il lavoro legale è documenti da analizzare, fonti da collegare, passaggi da eseguire nell'ordine giusto: una due diligence, una revisione contrattuale, un parere. Lidia ricerca, analizza, redige e porta avanti questi processi fino in fondo, mostrando fonti e passaggi a ogni passo. Gli agenti AI eseguono, il professionista verifica e decide.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

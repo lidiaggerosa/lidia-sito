@@ -32,7 +32,7 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:group {"className":"lidia-fid-sigillo lidia-icona lidia-icona-verifica","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-fid-sigillo lidia-icona lidia-icona-verifica"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">CSA STAR Level 1</h3>
+<h3 class="wp-block-heading">CSA STAR Lvl. 1</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->

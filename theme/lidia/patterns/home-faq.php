@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>L'intelligenza artificiale può analizzare e redigere contratti?</summary><!-- wp:paragraph -->
-<p>Sì, con un limite preciso: l'AI produce analisi e bozza, l'avvocato decide e firma. Lidia legge contratti anche molto lunghi — fino a <strong>1.000 pagine per singolo file</strong>, un milione di token di contesto, con OCR avanzato su PDF e scansioni — individua le clausole, le confronta con i precedenti dello studio e accompagna la redazione dentro Microsoft Word, dove il testo si rivede come sempre, con l'aiuto di Lidia.</p>
+<p>Sì, con un limite preciso: l'AI produce analisi e bozza, l'avvocato decide e firma. Lidia legge contratti anche molto lunghi, con OCR avanzato su PDF e scansioni, individua le clausole, le confronta con i precedenti dello studio e accompagna la redazione dentro Microsoft Word, dove il testo si rivede come sempre, con l'aiuto di Lidia. Con Smart Answer interroghi un singolo documento fino a <strong>1.000 pagine</strong>.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 

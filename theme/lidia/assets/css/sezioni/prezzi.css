@@ -41,13 +41,29 @@
 }
 
 /* I due box hanno la stessa struttura: nome, prezzo, descrizione, elenco, CTA in fondo. */
+/*
+ * 30/09: box più bassi. Nome e prezzo sulla stessa riga (`lidia-prz-piano-testa`),
+ * voci più strette, CTA in fondo e allineate fra i due box.
+ */
 .lidia-prz-piano {
 	display: flex;
 	flex-direction: column;
 	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
 	border-radius: var(--lidia-raggio-box);
 	background-color: var(--lidia-superficie);
-	padding: 32px 32px 34px;
+	padding: 24px 26px 26px;
+}
+
+.lidia-prz-piano-testa {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 4px 16px;
+}
+
+.lidia-prz-piano-testa > * {
+	margin-block: 0 !important;
 }
 
 .lidia-prz-piano h3 {
@@ -59,22 +75,24 @@
 .lidia-prz-prezzo {
 	font-family: var(--wp--preset--font-family--display);
 	font-weight: 500;
-	font-size: calc(var(--wp--preset--font-size--scheda) * 1.5);
+	font-size: calc(var(--wp--preset--font-size--scheda) * 1.2);
 	letter-spacing: -0.02em;
 	line-height: 1.15;
 	color: var(--lidia-testo);
-	margin-block-start: 10px !important;
+	white-space: nowrap;
+	text-align: end;
 }
 
 .lidia-prz-piano-desc {
-	margin-block: 12px 24px !important;
+	margin-block: 6px 14px !important;
 	color: var(--lidia-secondario);
-	max-width: 44ch;
+	font-size: var(--wp--preset--font-size--riscontro);
+	max-width: 52ch;
 }
 
 .lidia-prz-etichetta {
-	margin-block: 20px 4px !important;
-	font-size: var(--wp--preset--font-size--riscontro);
+	margin-block: 10px 0 !important;
+	font-size: var(--wp--preset--font-size--minuto);
 	font-weight: 600;
 	color: var(--lidia-testo);
 }
@@ -87,7 +105,7 @@
 /* La CTA sta in fondo al box, allineata fra i due box qualunque sia la lunghezza degli elenchi. */
 .lidia-prz-piano .wp-block-buttons {
 	margin-block-start: auto !important;
-	padding-block-start: 28px;
+	padding-block-start: 20px;
 }
 
 /* ---------- elenco con il segno di spunta ---------- */
@@ -106,8 +124,8 @@
 	list-style: none;
 	position: relative;
 	margin: 0;
-	padding-block: 11px;
-	padding-inline-start: 30px;
+	padding-block: 7px;
+	padding-inline-start: 26px;
 	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
 	font-size: var(--wp--preset--font-size--riscontro);
 	line-height: 1.45;
@@ -123,15 +141,15 @@
 	content: "";
 	position: absolute;
 	left: 0;
-	top: 13px;
-	width: 18px;
-	height: 18px;
+	top: 9px;
+	width: 16px;
+	height: 16px;
 	border-radius: 50%;
 	background-color: var(--wp--preset--color--azione);
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2 7 10.6l4.6-5' fill='none' stroke='%23fff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 18px 18px;
+	background-size: 16px 16px;
 }
 
 /* Le voci su richiesta non sono comprese: segno vuoto con il «più», non la spunta. */
@@ -222,6 +240,6 @@
 
 @media (max-width: 480px) {
 	.lidia-prz-piano {
-		padding: 24px 20px 26px;
+		padding: 20px 18px 22px;
 	}
 }

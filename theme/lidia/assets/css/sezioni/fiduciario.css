@@ -42,21 +42,21 @@
 	background-color: var(--lidia-superficie);
 	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
 	border-radius: var(--lidia-raggio-box);
-	padding: 36px 32px;
+	padding: 28px 28px 30px;
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 12px;
 }
 
 .lidia-fid-carta::before {
-	width: 32px;
-	height: 32px;
+	width: 28px;
+	height: 28px;
 	color: var(--lidia-accento);
-	margin-block-end: 8px;
+	margin-block-end: 4px;
 }
 
 .lidia-fid-carta h2 {
-	font-size: 28px;
+	font-size: 24px;
 	line-height: 1.15;
 	letter-spacing: -0.015em;
 	text-wrap: balance;
@@ -74,6 +74,11 @@
 
 .lidia-fid-carta p:not(.lidia-fid-affermazione) {
 	color: var(--lidia-secondario);
+}
+
+/* 30/09: l'affermazione è l'inizio del paragrafo, a corpo testo; i grassetti restano scuri. */
+.lidia-fid-carta p strong {
+	color: var(--lidia-testo);
 }
 
 /* ---------- le certificazioni: quattro sigilli ---------- */

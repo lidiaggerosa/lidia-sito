@@ -39,7 +39,7 @@ $pagine = array(
 	'/sicurezza/'      => array(
 		'file'  => 'security.html',
 		'title' => 'Data security and AI in law firms — Lidia',
-		'desc'  => 'Where the data lives, what model providers see, which certifications Lidia holds: AWS Milan, ISO 27001, CSA STAR Level 1, GDPR compliance.',
+		'desc'  => 'Where the data lives, what model providers see, which certifications Lidia holds: AWS in the European Union, ISO 27001, CSA STAR Level 1, GDPR compliance.',
 		'kw'    => 'AI data security for law firms',
 	),
 	'/prezzi/'         => array(
@@ -63,7 +63,7 @@ $pagine = array(
 	'/contatti/'       => array(
 		'file'  => 'contact.html',
 		'title' => 'Contact — Lidia',
-		'desc'  => 'Contact Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Offices in Genoa, Milan and Savona. For free trials, please use the dedicated form.',
+		'desc'  => 'Contact Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Offices in Genoa and Milan. For free trials, please use the dedicated form.',
 		'kw'    => 'Lidia contact',
 	),
 );

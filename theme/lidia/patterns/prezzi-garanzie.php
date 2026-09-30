@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:group {"className":"lidia-prz-riga-testo","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-prz-riga-testo"><!-- wp:paragraph -->
-<p>Infrastruttura AWS nella regione di Milano, dati in Unione Europea, ISO/IEC 27001, CSA STAR Level 1.</p>
+<p>Infrastruttura AWS in Unione Europea, ISO/IEC 27001, CSA STAR Level 1.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className": "lidia-freccia"} -->
