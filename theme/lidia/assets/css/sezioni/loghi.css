@@ -46,6 +46,7 @@
 	height: 30px;
 	max-width: 150px;
 	width: auto;
+	max-height: none;
 	object-fit: contain;
 	filter: grayscale(1);
 	opacity: 0.62;
@@ -53,26 +54,28 @@
 
 /*
  * 30/09: stessa area visiva per ogni logo (circa 3.000 px²), non stessa altezza.
- * Altezza calcolata dal rapporto del disegno nel file: i loghi larghi scendono,
- * quelli compatti salgono, fra 20 e 42 px. Un logo nuovo senza riga qui prende 30 px.
+ * Misure calcolate dal rapporto del disegno nel file: i loghi larghi scendono,
+ * quelli compatti salgono, fra 20 e 42 px. Larghezza e altezza tutte e due esplicite:
+ * Safari su iPhone sbaglia la larghezza calcolata di alcuni file (30/09).
+ * Un logo nuovo senza riga qui prende 30 px di altezza.
  */
-.lidia-nastro img[src*="/andersen."] { height: 27px; }  /* 111×27 */
-.lidia-nastro img[src*="/bacciardi."] { height: 25px; }  /* 119×25 */
-.lidia-nastro img[src*="/benetton."] { height: 32px; }  /* 95×32 */
-.lidia-nastro img[src*="/bonellierede."] { height: 21px; }  /* 144×21 */
-.lidia-nastro img[src*="/camera-partners."] { height: 32px; }  /* 93×32 */
-.lidia-nastro img[src*="/carbonetti."] { height: 36px; }  /* 84×36 */
-.lidia-nastro img[src*="/cbb."] { height: 29px; }  /* 103×29 */
-.lidia-nastro img[src*="/comcreta."] { height: 35px; }  /* 87×35 */
-.lidia-nastro img[src*="/gitti-partners."] { height: 27px; }  /* 130×27 */
-.lidia-nastro img[src*="/global-assistance."] { height: 36px; }  /* 82×36 */
-.lidia-nastro img[src*="/lacroce."] { height: 42px; }  /* 69×42 */
-.lidia-nastro img[src*="/leading-law."] { height: 42px; }  /* 64×42 */
-.lidia-nastro img[src*="/mf-law."] { height: 31px; }  /* 97×31 */
-.lidia-nastro img[src*="/mucciarelli."] { height: 23px; }  /* 135×23 */
-.lidia-nastro img[src*="/nexia-audirevi."] { height: 43px; }  /* 97×43 */
-.lidia-nastro img[src*="/padovan."] { height: 29px; }  /* 105×29 */
-.lidia-nastro img[src*="/unipol."] { height: 35px; }  /* 87×35 */
+.lidia-nastro img[src*="/bacciardi."] { width: 119px; height: 25px; }
+.lidia-nastro img[src*="/benetton."] { width: 95px; height: 32px; }
+.lidia-nastro img[src*="/bonellierede."] { width: 144px; height: 21px; }
+.lidia-nastro img[src*="/camera-partners."] { width: 93px; height: 32px; }
+.lidia-nastro img[src*="/carbonetti."] { width: 84px; height: 36px; }
+.lidia-nastro img[src*="/cbb."] { width: 103px; height: 29px; }
+.lidia-nastro img[src*="/comcreta."] { width: 87px; height: 35px; }
+.lidia-nastro img[src*="/gitti-partners."] { width: 130px; height: 27px; }
+.lidia-nastro img[src*="/global-assistance."] { width: 82px; height: 36px; }
+.lidia-nastro img[src*="/lacroce."] { width: 69px; height: 42px; }
+.lidia-nastro img[src*="/leading-law."] { width: 64px; height: 42px; }
+.lidia-nastro img[src*="/mf-law."] { width: 97px; height: 31px; }
+.lidia-nastro img[src*="/mucciarelli."] { width: 135px; height: 23px; }
+.lidia-nastro img[src*="/nexia-audirevi."] { width: 97px; height: 43px; }
+.lidia-nastro img[src*="/padovan."] { width: 105px; height: 29px; }
+.lidia-nastro img[src*="/unipol."] { width: 87px; height: 35px; }
+.lidia-nastro img[src*="/andersen-2026."] { width: 113px; height: 27px; }
 
 .lidia-nastro > *:hover img {
 	filter: none;
@@ -93,7 +96,7 @@
 	}
 
 	/* Fermo il nastro, la seconda copia dei loghi non serve più. */
-	.lidia-nastro > *:nth-child(n + 19) {
+	.lidia-nastro > *:nth-child(n + 18) {
 		display: none;
 	}
 }

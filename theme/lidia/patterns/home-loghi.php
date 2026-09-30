@@ -3,7 +3,7 @@
  * Title: Home · 2 Loghi cliente
  * Slug: lidia/home-loghi
  * Categories: lidia-home
- * Description: Sezione della home approvata il 16/09/2026. Loghi rifatti il 24/09/2026 (18 clienti; esce Armella, entra SLC La Croce; Bacciardi e BonelliErede in WebP dai file nuovi). La seconda serie, con alt vuoto, serve al nastro che scorre.
+ * Description: Sezione della home approvata il 16/09/2026. Loghi rifatti il 24/09/2026 (18 clienti; esce Armella, entra SLC La Croce; Bacciardi e BonelliErede in WebP dai file nuovi). 30/09: esce Alleva (manca il logo scuro), Andersen dal file nuovo: 17 clienti. La seconda serie, con alt vuoto, serve al nastro che scorre.
  *
  * @package Lidia
  */
@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:image -->
 
 <!-- wp:image {"className":"lidia-logo"} -->
-<figure class="wp-block-image lidia-logo"><img src="/wp-content/themes/lidia/assets/images/clienti/andersen.webp" alt="Andersen"/></figure>
+<figure class="wp-block-image lidia-logo"><img src="/wp-content/themes/lidia/assets/images/clienti/andersen-2026.webp" alt="Andersen"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"className":"lidia-logo"} -->
@@ -82,10 +82,6 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:image -->
 
 <!-- wp:image {"className":"lidia-logo"} -->
-<figure class="wp-block-image lidia-logo"><img src="/wp-content/themes/lidia/assets/images/clienti/alleva.webp" alt="Alleva"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:image {"className":"lidia-logo"} -->
 <figure class="wp-block-image lidia-logo"><img src="/wp-content/themes/lidia/assets/images/clienti/lacroce.webp" alt="SLC La Croce"/></figure>
 <!-- /wp:image -->
 
@@ -94,7 +90,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:image -->
 
 <!-- wp:image {"className":"lidia-logo"} -->
-<figure class="wp-block-image lidia-logo"><img src="/wp-content/themes/lidia/assets/images/clienti/andersen.webp" alt=""/></figure>
+<figure class="wp-block-image lidia-logo"><img src="/wp-content/themes/lidia/assets/images/clienti/andersen-2026.webp" alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"className":"lidia-logo"} -->
@@ -151,10 +147,6 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:image {"className":"lidia-logo"} -->
 <figure class="wp-block-image lidia-logo"><img src="/wp-content/themes/lidia/assets/images/clienti/mucciarelli.webp" alt=""/></figure>
-<!-- /wp:image -->
-
-<!-- wp:image {"className":"lidia-logo"} -->
-<figure class="wp-block-image lidia-logo"><img src="/wp-content/themes/lidia/assets/images/clienti/alleva.webp" alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"className":"lidia-logo"} -->
