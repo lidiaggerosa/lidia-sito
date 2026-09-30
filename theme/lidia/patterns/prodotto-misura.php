@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Tutto il lavoro organizzato per pratica: documenti archiviati, OCR avanzato, fino a 1.000 pagine per singolo file. Documenti e conversazioni condivisi con i colleghi.</p>
+<p>Tutto il lavoro organizzato per pratica: documenti archiviati, OCR avanzato. Documenti e conversazioni condivisi con i colleghi.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

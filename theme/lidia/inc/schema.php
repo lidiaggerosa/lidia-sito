@@ -45,11 +45,6 @@ function lidia_schema_organizzazione( $dati ) {
 		'addressCountry'  => 'IT',
 	);
 
-	$dati['parentOrganization'] = array(
-		'@type' => 'Organization',
-		'name'  => 'Gruppo MESA',
-	);
-
 	$profili        = isset( $dati['sameAs'] ) ? (array) $dati['sameAs'] : array();
 	$profili[]      = 'https://www.linkedin.com/company/lidiatech/';
 	$dati['sameAs'] = array_values( array_unique( $profili ) );

@@ -9,21 +9,22 @@ stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-25
 pubblicazione: bozza finché non c'è l'informativa privacy in inglese (25/09/2026)
+revisione_30_09: "30/09/2026 — allineata alla revisione italiana del 30/09, approvata in chat da Gianluca."
 ---
 
 # Legal intelligence that works with you.
 
-From answer to outcome: Lidia researches, analyses, drafts and automates your most complex processes. By your side, all the way to the decision.
+From answer to outcome: Lidia researches, analyses, drafts and automates your most complex processes with specialised agents. By your side, all the way to the decision.
 
 Our clients
 
 
 ## From research to decision, always by your side.
 
-An answer is only the beginning. Legal work means documents to analyse, sources to connect, steps to take in the right order: a due diligence, a contract review, a legal opinion. Lidia researches, analyses, drafts and carries these processes through to the end, showing sources and steps along the way. The AI executes; the professional checks and decides.
+An answer is only the beginning. Legal work means documents to analyse, sources to connect, steps to take in the right order: a due diligence, a contract review, a legal opinion. Lidia researches, analyses, drafts and carries these processes through to the end, showing sources and steps along the way. AI agents execute; the professional reviews and decides.
 
 
-## The features, plainly put
+## The work, feature by feature
 
 
 ### Legal research
@@ -52,13 +53,13 @@ Complex processes carried out in logical steps, traceable and verifiable: from c
 
 ### Matters
 
-Documents grouped by client, transaction or case, with advanced OCR on PDFs and scans. Up to 1,000 pages per document.
+Documents grouped by client, transaction or case, with advanced OCR on PDFs and scans.
 
 - Framework agreement312 pp.
 
 - Technical annexes84 pp.
 
-- OCR scans1,000 pp.
+- OCR scans
 
 Example
 
@@ -85,7 +86,7 @@ Framework agreement · p. 18
 Example
 
 
-## Five values, one way of working.
+## Five values, your way of working.
 
 01
 
@@ -153,7 +154,7 @@ From €125 a month
 
 The starting price already covers every area of law: no practice-area modules to buy, nothing left out.
 
-Pricing and what's included → (`/en/pricing/`)
+Explore Lidia's plans → `/en/pricing/`
 
 What's included
 
@@ -165,7 +166,6 @@ What's included
 
 - Advanced OCR
 
-- Context of up to 1,000 pages per document
 
 - Word add-in
 
@@ -180,7 +180,7 @@ A question produces an answer; legal work is made of steps (searching, comparing
 
 AI legal research starts from a natural-language question rather than Boolean strings. Lidia queries official legislative and case-law sources organised with **GraphRAG** technology, which connects legislation, judgments and documents, and Lidia's agents return the answer with references to the texts used. When research needs to go beyond official sources, an in-house web research agent extends the scope to online sources.
 
-Yes, within a clear limit: the AI produces the analysis and the draft; the lawyer decides and signs. Lidia reads even very long contracts (up to **1,000 pages per file**, one million tokens of context, with advanced OCR on PDFs and scans), identifies clauses, compares them with the firm's precedents and supports drafting inside Microsoft Word, where the text is reviewed as always, with Lidia's help.
+Yes, within a clear limit: the AI produces the analysis and the draft; the lawyer decides and signs. Lidia reads even very long contracts, with advanced OCR on PDFs and scans, identifies clauses, compares them with the firm's precedents and supports drafting inside Microsoft Word, where the text is reviewed as always, with Lidia's help. With Smart Answer you can query a single document of up to **1,000 pages**.
 
 It can, like any generative system. That is why the way the answer is delivered matters: Lidia cites the documents and sources it relied on and makes every step of its reasoning inspectable, so checking is a matter of reading, not reconstructing. Human review remains mandatory on every output.
 

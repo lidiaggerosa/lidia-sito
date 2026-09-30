@@ -24,12 +24,12 @@ defined( 'ABSPATH' ) || exit;
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#prova">Richiedi una prova gratuita</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons -->
+<!-- /wp:button -->
 
-<!-- wp:paragraph {"className":"lidia-freccia"} -->
-<p class="lidia-freccia"><a href="/prezzi/">Prezzi e cosa comprendono →</a></p>
-<!-- /wp:paragraph --></div>
+<!-- wp:button {"className":"is-style-secondario"} -->
+<div class="wp-block-button is-style-secondario"><a class="wp-block-button__link wp-element-button" href="/prezzi/">Scopri i piani di Lidia</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"lidia-prezzo-riquadro","layout":{"type":"default"}} -->
@@ -49,9 +49,6 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>OCR avanzato</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Contesto fino a 1.000 pagine per documento</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Add-in Word</li>

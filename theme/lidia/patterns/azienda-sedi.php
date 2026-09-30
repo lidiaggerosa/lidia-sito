@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className": "lidia-misura-lettura"} -->
-<p class="lidia-misura-lettura">Genova, Milano e Savona.</p>
+<p class="lidia-misura-lettura">Genova e Milano.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"lidia-freccia"} -->

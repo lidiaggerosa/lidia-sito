@@ -1,9 +1,9 @@
 # Lidia
 
-> Lidia è l'intelligenza artificiale legale italiana che lavora con te: ricerca su fonti ufficiali, analisi e redazione dei documenti, integrata in Word. Progettata da avvocati. Lidia S.r.l., Genova, parte del Gruppo MESA.
+> Lidia è l'intelligenza artificiale legale italiana che lavora con te: ricerca su fonti ufficiali, analisi e redazione dei documenti, integrata in Word. Progettata da avvocati. Lidia S.r.l., Genova.
 
 - Ricerca legale su fonti normative e giurisprudenziali ufficiali, con tecnologia GraphRAG. Accesso alle fonti compreso nel canone.
-- Documenti singoli fino a 1.000 pagine, con OCR avanzato.
+- OCR avanzato su PDF e scansioni; con Smart Answer si interroga un singolo documento fino a 1.000 pagine.
 - Redazione e revisione dentro Microsoft Word, sempre con controllo umano.
 - Prova gratuita di 7 giorni sui documenti reali dello studio. Da 125 € al mese.
 - Dati in Unione Europea su AWS. ISO/IEC 27001, CSA STAR Level 1, ISO 9001, GDPR. Nessun dato conservato dai fornitori dei modelli né usato per addestrarli.

@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"lidia-hero-sommario"} -->
-<p class="lidia-hero-sommario">Dalla risposta al risultato: Lidia ricerca, analizza, redige e automatizza i processi più complessi. Al tuo fianco, fino alla decisione.</p>
+<p class="lidia-hero-sommario">Dalla risposta al risultato: Lidia ricerca, analizza, redige e automatizza i processi più complessi con agenti specializzati. Al tuo fianco, fino alla decisione.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

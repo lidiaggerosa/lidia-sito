@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- wp:group {"className":"lidia-domande","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-domande"><!-- wp:details {"showContent":true} -->
 <details class="wp-block-details" open><summary>Dove risiedono i dati di un’AI legale?</summary><!-- wp:paragraph -->
-<p>Dipende dal fornitore, e va verificato prima di caricare qualsiasi fascicolo. I dati trattati da Lidia risiedono su infrastruttura AWS nella regione di Milano, cifrati a riposo e in transito. La residenza dei dati in Unione Europea è la condizione minima perché uno studio italiano possa usare un sistema di intelligenza artificiale su materiale coperto da segreto professionale.</p>
+<p>Dipende dal fornitore, e va verificato prima di caricare qualsiasi fascicolo. I dati trattati da Lidia risiedono su infrastruttura AWS in Unione Europea, cifrati a riposo e in transito. La residenza dei dati in Unione Europea è la condizione minima perché uno studio italiano possa usare un sistema di intelligenza artificiale su materiale coperto da segreto professionale.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 

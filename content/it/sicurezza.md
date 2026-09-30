@@ -2,7 +2,7 @@
 url: /sicurezza/
 lingua: it
 title: "Sicurezza dei dati e AI negli studi legali — Lidia"
-meta_description: "Dove risiedono i dati, cosa vedono i fornitori dei modelli, quali certificazioni ha Lidia: AWS Milano, ISO 27001, CSA STAR Level 1, conformità GDPR."
+meta_description: "Dove risiedono i dati, cosa vedono i fornitori dei modelli, quali certificazioni ha Lidia: AWS in Unione Europea, ISO 27001, CSA STAR Level 1, conformità GDPR."
 h1: "Dove finiscono i documenti dei vostri clienti"
 keyword_primaria: "sicurezza dei dati ai studi legali"
 keyword_secondarie: "segreto professionale intelligenza artificiale; gdpr ai legale; dove risiedono i dati"
@@ -12,6 +12,7 @@ step_loop: nessuno
 stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-14
+revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
 # Dove finiscono i documenti dei vostri clienti
@@ -24,10 +25,8 @@ senza rimandi a un'informativa da leggere dopo.
 
 ## In Unione Europea, e non si spostano
 
-Infrastruttura **AWS, regione di Milano**. I documenti sono cifrati **a riposo e in transito**
-e non lasciano l'Unione Europea.
-
-È la condizione minima perché uno studio italiano possa affidare a un sistema di AI materiale
+Infrastruttura **AWS in Unione Europea**. I documenti sono cifrati **a riposo e in transito**
+e non lasciano l'Unione Europea. È la condizione minima perché uno studio italiano possa affidare a un sistema di AI materiale
 coperto da segreto professionale: i dati restano dove la legge europea li protegge.
 
 ---
@@ -51,7 +50,7 @@ vostro perimetro, nel secondo no.
 Il sistema di gestione della sicurezza delle informazioni è certificato da un ente terzo, non
 autodichiarato.
 
-### CSA STAR Level 1
+### CSA STAR Lvl. 1
 La sicurezza dell'infrastruttura cloud è documentata secondo lo standard della Cloud Security
 Alliance.
 
@@ -69,7 +68,7 @@ Quattro risposte autoconsistenti, nel JSON-LD `FAQPage` con testo identico al vi
 
 ### Dove risiedono i dati di un'AI legale?
 Dipende dal fornitore, e va verificato prima di caricare qualsiasi fascicolo. I dati trattati da
-Lidia risiedono su infrastruttura AWS nella regione di Milano, cifrati a riposo e in transito.
+Lidia risiedono su infrastruttura AWS in Unione Europea, cifrati a riposo e in transito.
 La residenza dei dati in Unione Europea è la condizione minima perché uno studio italiano possa
 usare un sistema di intelligenza artificiale su materiale coperto da segreto professionale.
 

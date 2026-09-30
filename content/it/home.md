@@ -12,12 +12,13 @@ stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-23
 revisione: "24/09/2026 — title e meta description nuovi (Fase 7); FAQ 2 riscritta senza «chatbot» e «AI agentica». 24/09/2026 — CTA verso il modulo in coda alle funzioni e nel prezzo. 23/09/2026 — allineamento al nuovo storytelling (claim «Dalla risposta al risultato.», payoff «Lavora al tuo fianco.»). Sostituisce la versione del 14/09."
+revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
 # L'intelligenza legale che lavora con te.
 
 Dalla risposta al risultato: Lidia ricerca, analizza, redige e automatizza i processi più
-complessi. Al tuo fianco, fino alla decisione.
+complessi con agenti specializzati. Al tuo fianco, fino alla decisione.
 
 **CTA primaria:** Richiedi una prova gratuita → `/prova-gratuita/`
 
@@ -28,13 +29,13 @@ complessi. Al tuo fianco, fino alla decisione.
 Una risposta è solo l'inizio. Il lavoro legale è documenti da analizzare, fonti da collegare,
 passaggi da eseguire nell'ordine giusto: una due diligence, una revisione contrattuale, un
 parere. Lidia ricerca, analizza, redige e porta avanti questi processi fino in fondo, mostrando
-fonti e passaggi a ogni passo. L'AI esegue, il professionista verifica e decide.
+fonti e passaggi a ogni passo. Gli agenti AI eseguono, il professionista verifica e decide.
 
 *(Layout a due colonne: testo a sinistra, spazio per un'immagine a destra — asset da fornire.)*
 
 ---
 
-## Le funzioni, senza giri di parole
+## Il lavoro, funzione per funzione
 
 Cinque schede identiche nella struttura — titolo, descrizione, blocco che simula il
 funzionamento — in una fila che si scorre con le frecce o trascinando. Possono diventare di più.
@@ -49,7 +50,6 @@ contratto, dall'atto alla due diligence. Il professionista resta nel loop.
 
 ### Pratiche
 Documenti raggruppati per cliente, operazione o causa, con OCR avanzato su PDF e scansioni.
-Fino a 1.000 pagine per singolo documento.
 
 ### Add-in Word
 Redazione e revisione senza uscire da Word. Lidia propone il testo e lo confronta con i
@@ -63,7 +63,7 @@ la verifica è una lettura, non una ricostruzione.
 
 ---
 
-## Cinque valori, un modo di lavorare.
+## Cinque valori, il tuo modo di lavorare.
 
 ### Il giudizio resta umano.
 La tecnologia lavora, la persona decide.
@@ -107,13 +107,12 @@ Cosa comprende:
 - Libreria workflow multimateria
 - Gestione pratiche
 - OCR avanzato
-- Contesto fino a 1.000 pagine per documento
 - Add-in Word
 - Onboarding personalizzato
 
 **CTA:** Richiedi una prova gratuita → `#prova`
 
-→ Prezzi e cosa comprendono (`/prezzi/`)
+**CTA secondaria:** Scopri i piani di Lidia → `/prezzi/`
 
 ---
 
@@ -143,10 +142,10 @@ perimetro ufficiale, un agente di ricerca web interno estende il campo alle font
 
 ### L'intelligenza artificiale può analizzare e redigere contratti?
 Sì, con un limite preciso: l'AI produce analisi e bozza, l'avvocato decide e firma. Lidia legge
-contratti anche molto lunghi — fino a **1.000 pagine per singolo file**, un milione di token di
-contesto, con OCR avanzato su PDF e scansioni — individua le clausole, le confronta con i
-precedenti dello studio e accompagna la redazione dentro Microsoft Word, dove il testo si rivede
-come sempre, con l'aiuto di Lidia.
+contratti anche molto lunghi, con OCR avanzato su PDF e scansioni, individua le clausole, le
+confronta con i precedenti dello studio e accompagna la redazione dentro Microsoft Word, dove il
+testo si rivede come sempre, con l'aiuto di Lidia. Con Smart Answer interroghi un singolo
+documento fino a **1.000 pagine**.
 
 ### Un'AI legale può sbagliare? Come si verifica una risposta?
 Può sbagliare, come qualsiasi sistema generativo. Per questo conta il modo in cui la risposta

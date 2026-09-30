@@ -10,6 +10,7 @@ approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-25
 pubblicazione: pubblicata il 25/09/2026
 revisione: "25/09/2026 — allineata al nuovo /prezzi/: due piani a confronto (Lidia Professional / Lidia Enterprise). Approvata in chat."
+revisione_30_09: "30/09/2026 — allineata alla revisione italiana del 30/09, approvata in chat da Gianluca."
 ---
 
 Pricing
@@ -29,22 +30,19 @@ Lidia adapts to the way every firm works, without taking anything away: every fe
 
 All included, no limits. Just like the law. Onboarding included.
 
-- Legal research on official legislative and case-law sources, with GraphRAG technology
-- Access to official sources always included
+- Legal research, with access to official sources
 - Web research through an in-house agent
-- Smart Answer on the case file, with references to the documents used
+- Smart Answer on the case file
 - Lidia Workflow and Workflow Builder
-- Documents of up to 1,000 pages each
 - Advanced OCR on PDFs and scans
 - Microsoft Word add-in
-- Matter management
 - Tailored onboarding
 
 **CTA:** Request a free trial → `/en/free-trial/`
 
 ### Lidia Enterprise
 
-**Price on request**
+**On request**
 
 To build Lidia around the firm's needs.
 
@@ -70,7 +68,7 @@ You don't buy civil law and then corporate law separately. Lidia Professional co
 
 ## The same security on both plans
 
-AWS infrastructure in the Milan region, data in the European Union, ISO/IEC 27001, CSA STAR Level 1.
+AWS infrastructure in the European Union, ISO/IEC 27001, CSA STAR Level 1.
 
 Security and data processing → (`/en/security/`)
 

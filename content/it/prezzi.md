@@ -13,6 +13,7 @@ stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-14
 revisione: "25/09/2026 — restyling: nuova descrizione hero; «Cosa comprende» diventa due box a confronto (Lidia Professional / Lidia Enterprise); sezione «Personalizzazioni» assorbita da Enterprise (con Playbook); sicurezza riformulata sui due piani; CTA aggiunte in hero, box e chiusura. Approvato in chat il 25/09."
+revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
 # Quanto costa Lidia
@@ -35,22 +36,19 @@ descrizione, elenco, CTA.)*
 
 Tutto compreso, senza limitazioni. Come il diritto. Onboarding incluso.
 
-- Ricerca legale su fonti normative e giurisprudenziali ufficiali, con tecnologia GraphRAG
-- Accesso alle fonti ufficiali sempre compreso
+- Ricerca legale, con accesso alle fonti ufficiali
 - Ricerca web tramite agente interno
-- Smart Answer sul fascicolo, con i riferimenti ai documenti usati
+- Smart Answer sul fascicolo
 - Lidia Workflow e Workflow Builder
-- Documenti fino a 1.000 pagine ciascuno
 - OCR avanzato su PDF e scansioni
 - Add-in per Microsoft Word
-- Gestione pratiche
 - Onboarding personalizzato
 
 **CTA:** Richiedi una prova gratuita → `/prova-gratuita/`
 
 ### Lidia Enterprise
 
-**Prezzo su richiesta**
+**Su richiesta**
 
 Per costruire Lidia sulle esigenze dello studio.
 
@@ -92,8 +90,7 @@ su quali materie scommettere.
 
 *(Riga: titolo a sinistra, descrizione a destra.)*
 
-Infrastruttura AWS nella regione di Milano, dati in Unione Europea, ISO/IEC 27001, CSA STAR
-Level 1.
+Infrastruttura AWS in Unione Europea, ISO/IEC 27001, CSA STAR Level 1.
 
 → Sicurezza e trattamento dei dati (`/sicurezza/`)
 

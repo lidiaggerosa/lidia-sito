@@ -171,7 +171,7 @@ $pagine = array(
 	),
 	'/sicurezza/' => array(
 		'title' => 'Sicurezza dei dati e AI negli studi legali — Lidia',
-		'desc'  => 'Dove risiedono i dati, cosa vedono i fornitori dei modelli, quali certificazioni ha Lidia: AWS Milano, ISO 27001, CSA STAR Level 1, conformità GDPR.',
+		'desc'  => 'Dove risiedono i dati, cosa vedono i fornitori dei modelli, quali certificazioni ha Lidia: AWS in Unione Europea, ISO 27001, CSA STAR Level 1, conformità GDPR.',
 		'kw'    => 'sicurezza dei dati ai studi legali',
 	),
 	'/prezzi/' => array(
@@ -196,7 +196,7 @@ $pagine = array(
 	),
 	'/contatti/' => array(
 		'title' => 'Contatti — Lidia',
-		'desc'  => 'Contatti di Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Sedi di Genova, Milano e Savona. Per le prove gratuite usate il form dedicato.',
+		'desc'  => 'Contatti di Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Sedi di Genova e Milano. Per le prove gratuite usate il form dedicato.',
 		'kw'    => 'contatti lidia',
 	),
 	'/risorse/' => array(

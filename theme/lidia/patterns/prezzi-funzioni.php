@@ -20,13 +20,15 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:group {"className":"lidia-prz-coppia","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-prz-coppia"><!-- wp:group {"className":"lidia-prz-piano lidia-prz-piano-professional","layout":{"type":"default"}} -->
-<div class="wp-block-group lidia-prz-piano lidia-prz-piano-professional"><!-- wp:heading {"level": 3} -->
+<div class="wp-block-group lidia-prz-piano lidia-prz-piano-professional"><!-- wp:group {"className":"lidia-prz-piano-testa","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-prz-piano-testa"><!-- wp:heading {"level": 3} -->
 <h3 class="wp-block-heading">Lidia Professional</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className": "lidia-prz-prezzo"} -->
 <p class="lidia-prz-prezzo">Da €125 al mese</p>
-<!-- /wp:paragraph -->
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
 
 <!-- wp:paragraph {"className": "lidia-prz-piano-desc"} -->
 <p class="lidia-prz-piano-desc">Tutto compreso, senza limitazioni. Come il diritto. Onboarding incluso.</p>
@@ -34,31 +36,22 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:list {"className":"lidia-prz-voci"} -->
 <ul class="wp-block-list lidia-prz-voci"><!-- wp:list-item -->
-<li>Ricerca legale su fonti normative e giurisprudenziali ufficiali, con tecnologia GraphRAG</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Accesso alle fonti ufficiali sempre compreso</li>
+<li>Ricerca legale, con accesso alle fonti ufficiali</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Ricerca web tramite agente interno</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>Smart Answer sul fascicolo, con i riferimenti ai documenti usati</li>
+<li>Smart Answer sul fascicolo</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Lidia Workflow e Workflow Builder</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Documenti fino a 1.000 pagine ciascuno</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>OCR avanzato su PDF e scansioni</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Add-in per Microsoft Word</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Gestione pratiche</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Onboarding personalizzato</li>
@@ -73,13 +66,15 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"lidia-prz-piano lidia-prz-piano-enterprise","layout":{"type":"default"}} -->
-<div class="wp-block-group lidia-prz-piano lidia-prz-piano-enterprise"><!-- wp:heading {"level": 3} -->
+<div class="wp-block-group lidia-prz-piano lidia-prz-piano-enterprise"><!-- wp:group {"className":"lidia-prz-piano-testa","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-prz-piano-testa"><!-- wp:heading {"level": 3} -->
 <h3 class="wp-block-heading">Lidia Enterprise</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className": "lidia-prz-prezzo"} -->
-<p class="lidia-prz-prezzo">Prezzo su richiesta</p>
-<!-- /wp:paragraph -->
+<p class="lidia-prz-prezzo">Su richiesta</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
 
 <!-- wp:paragraph {"className": "lidia-prz-piano-desc"} -->
 <p class="lidia-prz-piano-desc">Per costruire Lidia sulle esigenze dello studio.</p>

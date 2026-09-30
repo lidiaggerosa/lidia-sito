@@ -6,8 +6,8 @@
  * del plugin cambia qualcosa, cade al massimo il ritocco, mai il funzionamento.
  * Niente nel campo «CSS personalizzato» di Complianz: il codice sta nel tema (CLAUDE.md §6.2).
  *
- * Regola del Garante: «Rifiuta» ha lo stesso peso visivo di «Accetta» — stesso stile, stessa
- * misura. «Preferenze» è secondario.
+ * 30/09: «Accetta» in blu pieno; «Rifiuta» e «Preferenze» bianchi con bordo e testo blu,
+ * stessa misura di «Accetta» (decisione dell'owner).
  * Si carica solo se Complianz è attivo (inc/enqueue.php). 25/09/2026.
  */
 
@@ -29,11 +29,11 @@
 	--cmplz_button_accept_background_color: var(--wp--preset--color--azione);
 	--cmplz_button_accept_border_color: var(--wp--preset--color--azione);
 	--cmplz_button_accept_text_color: var(--wp--preset--color--superficie);
-	--cmplz_button_deny_background_color: var(--wp--preset--color--azione);
+	--cmplz_button_deny_background_color: var(--wp--preset--color--superficie);
 	--cmplz_button_deny_border_color: var(--wp--preset--color--azione);
-	--cmplz_button_deny_text_color: var(--wp--preset--color--superficie);
+	--cmplz_button_deny_text_color: var(--wp--preset--color--azione);
 	--cmplz_button_settings_background_color: var(--wp--preset--color--superficie);
-	--cmplz_button_settings_border_color: var(--wp--preset--color--filetto);
+	--cmplz_button_settings_border_color: var(--wp--preset--color--azione);
 	--cmplz_button_settings_text_color: var(--wp--preset--color--azione);
 	--cmplz_slider_active_color: var(--wp--preset--color--azione);
 	/* Spento ma leggibile come comando (25/09). */
@@ -114,33 +114,34 @@
 	transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-/* Accetta e Rifiuta: identici. */
-#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-accept,
-#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-deny {
+/* Accetta: blu pieno. */
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-accept {
 	background-color: var(--wp--preset--color--azione);
 	border: 1px solid var(--wp--preset--color--azione);
 	color: var(--wp--preset--color--superficie);
 }
 
-#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover,
-#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-deny:hover {
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover {
 	background-color: var(--wp--preset--color--azione-attiva);
 	border-color: var(--wp--preset--color--azione-attiva);
 }
 
-/* Preferenze e Salva preferenze: secondari, come i bottoni con bordo del sito. */
+/* Rifiuta, Preferenze e Salva preferenze: bianchi, bordo e testo blu. */
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-deny,
 #cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-view-preferences,
 #cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-save-preferences,
 #cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-manage-options {
 	background-color: var(--wp--preset--color--superficie);
-	border: 1px solid var(--wp--preset--color--filetto);
+	border: 1px solid var(--wp--preset--color--azione);
 	color: var(--wp--preset--color--azione);
 }
 
+#cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-deny:hover,
 #cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-view-preferences:hover,
 #cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-save-preferences:hover,
 #cmplz-cookiebanner-container .cmplz-cookiebanner .cmplz-btn.cmplz-manage-options:hover {
-	border-color: var(--wp--preset--color--azione);
+	border-color: var(--wp--preset--color--azione-attiva);
+	color: var(--wp--preset--color--azione-attiva);
 }
 
 /* Focus visibile, come nel resto del sito. */

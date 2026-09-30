@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <!-- wp:group {"className":"lidia-sezione lidia-come lidia-registro-alterno","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
 <div class="wp-block-group alignfull lidia-sezione lidia-come lidia-registro-alterno"><!-- wp:heading -->
-<h2 class="wp-block-heading">Cinque valori, un modo di lavorare.</h2>
+<h2 class="wp-block-heading">Cinque valori, il tuo modo di lavorare.</h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"className":"lidia-passaggi lidia-valori","layout":{"type":"default"}} -->

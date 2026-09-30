@@ -4,7 +4,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"lidia-hero-sommario"} -->
-<p class="lidia-hero-sommario">Dalla risposta al risultato: Lidia ricerca, analizza, redige e automatizza i processi più complessi. Al tuo fianco, fino alla decisione.</p>
+<p class="lidia-hero-sommario">Dalla risposta al risultato: Lidia ricerca, analizza, redige e automatizza i processi più complessi con agenti specializzati. Al tuo fianco, fino alla decisione.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -176,7 +176,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Una risposta è solo l'inizio. Il lavoro legale è documenti da analizzare, fonti da collegare, passaggi da eseguire nell'ordine giusto: una due diligence, una revisione contrattuale, un parere. Lidia ricerca, analizza, redige e porta avanti questi processi fino in fondo, mostrando fonti e passaggi a ogni passo. L'AI esegue, il professionista verifica e decide.</p>
+<p>Una risposta è solo l'inizio. Il lavoro legale è documenti da analizzare, fonti da collegare, passaggi da eseguire nell'ordine giusto: una due diligence, una revisione contrattuale, un parere. Lidia ricerca, analizza, redige e porta avanti questi processi fino in fondo, mostrando fonti e passaggi a ogni passo. Gli agenti AI eseguono, il professionista verifica e decide.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -194,13 +194,17 @@
   overflow:hidden; opacity:0; transform:scale(.93) translateY(8px); transition:opacity .9s cubic-bezier(.2,.8,.3,1), transform .9s cubic-bezier(.2,.8,.3,1); }
 .lidia-mock-intro .win.show{ opacity:1; transform:scale(1) translateY(0); }
 .lidia-mock-intro .zoomwrap{ position:relative; width:100%; height:100%; transform-origin:0 0; transition:transform 1.15s cubic-bezier(.65,0,.35,1); display:flex; }
-.lidia-mock-intro .sidebar{ width:122px; min-width:122px; background:#fff; border-right:1px solid var(--lm-border); padding:13px 7px; display:flex; flex-direction:column;
+.lidia-mock-intro .sidebar{ width:122px; min-width:122px; background:#fff; border-right:1px solid var(--lm-border); padding:13px 7px; display:flex; flex-direction:column; overflow:hidden;
   opacity:0; transform:translateX(-10px); transition:opacity .6s ease, transform .6s ease; }
 .lidia-mock-intro .sidebar.show{ opacity:1; transform:translateX(0); }
-.lidia-mock-intro .sb-top{ padding:1px 3px 15px 3px; }
+.lidia-mock-intro .sb-top{ padding:1px 3px 15px 3px; position:relative; z-index:2; }
+.lidia-mock-intro .sb-top::before{ content:''; position:absolute; left:-7px; right:-7px; top:-13px; bottom:0; background:#fff; z-index:-1; }
 .lidia-mock-intro .sb-top svg{ width:34px; height:auto; }
 .lidia-mock-intro .nav-viewport{ overflow:visible; position:relative; }
-.lidia-mock-intro .nav-viewport.wheel-mode{ overflow:hidden; height:72px; padding:0 3px; margin:0 -3px; }
+.lidia-mock-intro .nav-lens{ position:absolute; left:0; right:0; top:0; height:24px;
+  background:#EEF3FF; border:1px solid #D9E1FB; border-radius:6px; z-index:0; opacity:0; transition:opacity .35s ease; }
+.lidia-mock-intro .nav-viewport.wheel-on .nav-lens{ opacity:1; }
+.lidia-mock-intro .nav-viewport.wheel-on .nav-item{ transition:color .2s ease; }
 .lidia-mock-intro .nav-track{ display:flex; flex-direction:column; position:relative; z-index:1; }
 .lidia-mock-intro .nav-item{ display:flex; align-items:center; gap:5px; padding:4px 6px; border-radius:6px; font-size:8.5px; color:#5b5b6b;
   height:24px; opacity:0; transform:translateX(-6px); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -231,9 +235,10 @@
     <div class="zoomwrap" data-zoomwrap>
 
       <div class="sidebar" data-sidebar>
-        <div class="sb-top"><svg viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.293 23.6572H34.5752V20.6074H34.4814C33.8984 21.6453 33.1015 22.4701 32.0918 23.082C31.0816 23.6937 29.9001 24 28.5469 24C27.0268 24 25.6835 23.6471 24.5176 22.9414C23.3515 22.2361 22.4357 21.2503 21.7695 19.9844C21.1029 18.7188 20.7696 17.2452 20.7695 15.5645C20.7695 13.9045 21.1136 12.4462 21.8008 11.1904C22.4879 9.93514 23.4193 8.95468 24.5957 8.24902C25.7718 7.5438 27.0995 7.19049 28.5781 7.19043C29.9315 7.19043 31.1138 7.48192 32.124 8.0625C33.1336 8.64374 33.9085 9.4634 34.4502 10.5215H34.5439V0H37.293V23.6572ZM53.5342 7.19043C55.0956 7.19043 56.3501 7.4347 57.2979 7.92188C58.2451 8.40962 58.9324 9.0895 59.3594 9.96094C59.7859 10.8325 60 11.86 60 13.043V23.6572H57.2197V21.1357C56.6366 21.9245 55.9291 22.5989 55.0967 23.1592C54.2636 23.7195 53.1593 24 51.7852 24C50.39 23.9999 49.224 23.6367 48.2871 22.9102C47.3503 22.184 46.8819 21.1361 46.8818 19.7666C46.8818 18.9782 47.0118 18.2985 47.2725 17.7275C47.5324 17.1572 47.9281 16.6849 48.459 16.3115C48.9901 15.9379 49.6459 15.6269 50.4268 15.3779C51.2075 15.1288 52.1295 14.9212 53.1914 14.7549C53.9611 14.6305 54.6166 14.4959 55.1582 14.3506C55.6995 14.2057 56.1583 14.0392 56.5332 13.8525C56.783 13.7281 56.9395 13.5873 57.002 13.4316C57.0643 13.2762 57.0957 13.0534 57.0957 12.7627C57.0957 11.9953 56.7983 11.3624 56.2051 10.8643C55.6117 10.3661 54.6273 10.1172 53.2529 10.1172C52.2537 10.1172 51.3113 10.2363 50.4268 10.4746C49.5414 10.7135 48.7866 10.9886 48.1621 11.2998L47.9121 8.49805C48.6198 8.10396 49.4585 7.78744 50.4268 7.54883C51.3947 7.31047 52.4303 7.19045 53.5342 7.19043ZM3.96191 0.244141C5.14477 8.20455 3.90343 16.377 3.10449 20.3662C6.99642 19.2455 10.6577 20.1913 12.4805 20.8477V23.6807C12.129 23.5151 6.76947 21.077 1.89355 23.6729L0 22.1846C0.029727 22.0707 2.95989 10.6932 1.30371 0.264648L1.43164 0.244141H3.96191ZM18.0527 23.6572H15.3037V7.5332H18.0527V23.6572ZM43.9766 23.6572H41.2285V7.5332H43.9766V23.6572ZM57.2197 15.4707C56.8448 15.6785 56.3295 15.8814 55.6738 16.0781C55.0179 16.2756 54.2836 16.4469 53.4717 16.5918C52.243 16.8203 51.3116 17.1364 50.6768 17.541C50.0412 17.9457 49.7236 18.6047 49.7236 19.5176C49.7236 20.3477 50.0257 20.9645 50.6299 21.3691C51.2334 21.774 51.9521 21.9766 52.7852 21.9766C53.5347 21.9765 54.2065 21.8368 54.7998 21.5566C55.3933 21.2765 55.8928 20.9024 56.2988 20.4355C56.705 19.9687 57.0114 19.476 57.2197 18.957V15.4707ZM28.9844 10.1162C27.9851 10.1162 27.0796 10.3559 26.2676 10.833C25.4555 11.3107 24.8142 11.9642 24.3457 12.7939C23.8774 13.624 23.6436 14.5891 23.6436 15.6885C23.6436 16.83 23.8718 17.8365 24.3301 18.708C24.7879 19.5794 25.4234 20.2545 26.2354 20.7314C27.0474 21.2091 27.9638 21.4472 28.9844 21.4473C30.0462 21.4473 30.9941 21.2036 31.8271 20.7158C32.6596 20.2285 33.3106 19.5482 33.7793 18.6768C34.2477 17.8053 34.4814 16.8091 34.4814 15.6885C34.4814 14.5681 34.2477 13.5928 33.7793 12.7627C33.3106 11.9331 32.6595 11.2843 31.8271 10.8174C30.9941 10.3505 30.0462 10.1162 28.9844 10.1162ZM16.6777 1.02734C17.24 1.02734 17.7038 1.20412 18.0684 1.55664C18.4322 1.90976 18.6152 2.36567 18.6152 2.92578C18.6152 3.48613 18.4324 3.94315 18.0684 4.2959C17.7038 4.64888 17.24 4.8252 16.6777 4.8252C16.1157 4.82511 15.6521 4.64876 15.2881 4.2959C14.9235 3.94314 14.7422 3.48615 14.7422 2.92578C14.7422 2.36567 14.9183 1.90976 15.2725 1.55664C15.6261 1.2042 16.0947 1.02742 16.6777 1.02734ZM42.6025 1.02734C43.1647 1.02738 43.6277 1.20415 43.9922 1.55664C44.3562 1.90979 44.539 2.36556 44.5391 2.92578C44.5391 3.48615 44.3563 3.94314 43.9922 4.2959C43.6277 4.64873 43.1646 4.82516 42.6025 4.8252C42.0403 4.8252 41.576 4.64888 41.2119 4.2959C40.8475 3.94316 40.666 3.48607 40.666 2.92578C40.6661 2.36555 40.8429 1.90979 41.1973 1.55664C41.551 1.20415 42.0193 1.02734 42.6025 1.02734Z" fill="#303A99"/></svg></div>
+        <div class="sb-top"><svg viewBox="27 20 162 65.5" fill="#333e91" xmlns="http://www.w3.org/2000/svg"><path  d="M 68.558594 40.664062 L 75.90625 40.664062 L 75.90625 83.925781 L 68.558594 83.925781 Z M 68.558594 40.664062 "/><path  d="M 127.363281 20.457031 L 127.363281 83.925781 L 120.09375 83.925781 L 120.09375 75.742188 L 119.84375 75.742188 C 118.285156 78.523438 116.15625 80.738281 113.453125 82.378906 C 110.753906 84.019531 107.59375 84.84375 103.972656 84.84375 C 99.910156 84.84375 96.316406 83.898438 93.199219 82.003906 C 90.078125 80.113281 87.628906 77.464844 85.847656 74.070312 C 84.066406 70.675781 83.175781 66.722656 83.175781 62.210938 C 83.175781 57.757812 84.09375 53.847656 85.929688 50.476562 C 87.769531 47.109375 90.261719 44.480469 93.40625 42.585938 C 96.554688 40.695312 100.101562 39.746094 104.058594 39.746094 C 107.675781 39.746094 110.835938 40.527344 113.539062 42.085938 C 116.238281 43.644531 118.3125 45.84375 119.761719 48.683594 L 120.011719 48.683594 L 120.011719 20.457031 Z M 105.144531 47.597656 C 102.46875 47.597656 100.046875 48.238281 97.875 49.515625 C 95.703125 50.796875 93.992188 52.550781 92.738281 54.777344 C 91.484375 57.007812 90.859375 59.59375 90.859375 62.546875 C 90.859375 65.609375 91.472656 68.308594 92.699219 70.644531 C 93.921875 72.984375 95.621094 74.792969 97.792969 76.074219 C 99.964844 77.355469 102.414062 77.996094 105.144531 77.996094 C 107.984375 77.996094 110.515625 77.339844 112.746094 76.03125 C 114.972656 74.726562 116.710938 72.902344 117.964844 70.5625 C 119.21875 68.222656 119.84375 65.550781 119.84375 62.546875 C 119.84375 59.539062 119.21875 56.921875 117.964844 54.695312 C 116.710938 52.46875 114.972656 50.726562 112.746094 49.476562 C 110.515625 48.222656 107.984375 47.597656 105.144531 47.597656 Z M 105.144531 47.597656 "/><path  d="M 137.886719 40.664062 L 145.238281 40.664062 L 145.238281 83.925781 L 137.886719 83.925781 Z M 137.886719 40.664062 "/><path  d="M 180.320312 54.695312 C 180.320312 52.636719 179.527344 50.9375 177.941406 49.601562 C 176.351562 48.265625 173.722656 47.597656 170.046875 47.597656 C 167.375 47.597656 164.851562 47.917969 162.488281 48.558594 C 160.117188 49.199219 158.101562 49.933594 156.429688 50.769531 L 155.761719 43.253906 C 157.65625 42.199219 159.898438 41.347656 162.488281 40.707031 C 165.074219 40.066406 167.84375 39.746094 170.796875 39.746094 C 174.976562 39.746094 178.328125 40.402344 180.863281 41.710938 C 183.398438 43.019531 185.234375 44.839844 186.375 47.179688 C 187.515625 49.519531 188.089844 52.273438 188.089844 55.445312 L 188.089844 83.925781 L 180.65625 83.925781 L 180.65625 77.160156 C 179.09375 79.277344 177.203125 81.085938 174.976562 82.589844 C 172.746094 84.089844 169.796875 84.84375 166.121094 84.84375 C 162.390625 84.84375 159.269531 83.871094 156.765625 81.921875 C 154.257812 79.972656 153.007812 77.160156 153.007812 73.484375 C 153.007812 71.371094 153.351562 69.546875 154.050781 68.015625 C 154.746094 66.484375 155.804688 65.21875 157.222656 64.214844 C 158.644531 63.214844 160.398438 62.378906 162.488281 61.710938 C 164.574219 61.042969 167.039062 60.488281 169.878906 60.039062 C 171.9375 59.707031 173.691406 59.34375 175.140625 58.953125 C 176.589844 58.566406 177.816406 58.121094 178.816406 57.617188 C 179.484375 57.285156 179.902344 56.910156 180.070312 56.492188 C 180.238281 56.074219 180.320312 55.476562 180.320312 54.695312 Z M 180.65625 61.960938 C 179.652344 62.519531 178.273438 63.0625 176.519531 63.589844 C 174.765625 64.117188 172.800781 64.578125 170.628906 64.96875 C 167.34375 65.582031 164.851562 66.429688 163.15625 67.515625 C 161.457031 68.601562 160.605469 70.367188 160.605469 72.816406 C 160.605469 75.042969 161.414062 76.699219 163.03125 77.785156 C 164.644531 78.871094 166.566406 79.414062 168.792969 79.414062 C 170.796875 79.414062 172.59375 79.039062 174.179688 78.285156 C 175.769531 77.535156 177.105469 76.535156 178.191406 75.28125 C 179.277344 74.027344 180.097656 72.707031 180.65625 71.3125 Z M 180.65625 61.960938 "/><path  d="M 61.003906 76.386719 C 56.128906 74.625 46.339844 72.089844 35.933594 75.09375 C 38.066406 64.390625 41.390625 42.46875 38.226562 21.113281 L 31.457031 21.113281 L 31.113281 21.164062 C 35.542969 49.144531 27.707031 79.667969 27.628906 79.972656 L 32.695312 83.96875 C 45.734375 77.003906 60.066406 83.542969 61.003906 83.984375 Z M 61.003906 76.386719 "/><path  d="M 72.230469 33.398438 C 70.730469 33.398438 69.488281 32.925781 68.515625 31.980469 C 67.539062 31.035156 67.054688 29.808594 67.054688 28.304688 C 67.054688 26.800781 67.527344 25.578125 68.472656 24.632812 C 69.417969 23.683594 70.671875 23.210938 72.230469 23.210938 C 73.734375 23.210938 74.972656 23.683594 75.949219 24.632812 C 76.921875 25.578125 77.410156 26.800781 77.410156 28.304688 C 77.410156 29.808594 76.921875 31.035156 75.949219 31.980469 C 74.972656 32.925781 73.734375 33.398438 72.230469 33.398438 Z M 72.230469 33.398438 "/><path  d="M 141.5625 33.398438 C 140.058594 33.398438 138.820312 32.925781 137.84375 31.980469 C 136.871094 31.035156 136.382812 29.808594 136.382812 28.304688 C 136.382812 26.800781 136.855469 25.578125 137.804688 24.632812 C 138.75 23.683594 140.003906 23.210938 141.5625 23.210938 C 143.066406 23.210938 144.304688 23.683594 145.277344 24.632812 C 146.253906 25.578125 146.742188 26.800781 146.742188 28.304688 C 146.742188 29.808594 146.253906 31.035156 145.277344 31.980469 C 144.304688 32.925781 143.066406 33.398438 141.5625 33.398438 Z M 141.5625 33.398438 "/></svg></div>
 
         <div class="nav-viewport" data-nav-viewport>
+          <div class="nav-lens"></div>
           <div class="nav-track" data-nav-track></div>
         </div>
       </div>
@@ -278,17 +283,15 @@ var NAV_ITEMS = [
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#5b5b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-3a2 2 0 0 1-2-2V2"/><path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z"/><path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8"/></svg> Archivio',
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#5b5b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg> Workflow'
 ];
-var ITEM_H = 24, REPEAT = 4;
+var ITEM_H = 24;
 var win=root.querySelector('[data-win]'), zoomwrap=root.querySelector('[data-zoomwrap]'), sidebar=root.querySelector('[data-sidebar]'),
   navViewport=root.querySelector('[data-nav-viewport]'), navTrack=root.querySelector('[data-nav-track]'),
   mascot=root.querySelector('[data-mascot]'), greet=root.querySelector('[data-greet]'), wfCard=root.querySelector('[data-wf-card]'), msgbar=root.querySelector('[data-msgbar]');
 
 function wait(ms){ return new Promise(function(r){ setTimeout(r,ms); }); }
-function zoomTo(cx, cy, scale, topY){
+function zoomTo(cx, cy, scale){
   var vw = win.clientWidth, vh = win.clientHeight;
   var tx = vw/2 - scale*cx, ty = vh/2 - scale*cy;
-  // Il logo in cima alla barra resta sempre intero dentro la finestra (25/09).
-  if(typeof topY === 'number'){ ty = Math.max(ty, 16 - scale*topY); }
   zoomwrap.style.transform = 'translate('+tx+'px,'+ty+'px) scale('+scale+')';
 }
 function zoomReset(){ zoomwrap.style.transform = 'translate(0,0) scale(1)'; }
@@ -299,47 +302,54 @@ function restoreStaticList(){
   navTrack.style.transform = '';
   navTrack.innerHTML = NAV_ITEMS.map(function(html){ return '<div class="nav-item in">'+html+'</div>'; }).join('');
 }
-function buildWheelList(){
-  var html = '';
-  for(var r=0;r<REPEAT;r++){
-    html += NAV_ITEMS.map(function(item){ return '<div class="nav-item">'+item+'</div>'; }).join('');
-  }
-  navTrack.innerHTML = html;
-}
-
 var wheelRAF = null;
-function startWheel(){
-  navViewport.classList.add('wheel-mode');
-  buildWheelList();
+function renderWheel(els, pos, k){
+  navTrack.style.transform = 'translateY('+(-pos)+'px)';
+  els.forEach(function(el,i){
+    var dist = Math.abs(i*ITEM_H - pos);
+    var target = Math.max(0.25, 1 - (dist/ITEM_H)*0.55);
+    el.style.opacity = 1 - k*(1-target);
+    var on = k > 0.5 && dist < ITEM_H*0.5;
+    el.style.fontWeight = on ? '600' : '400';
+    el.style.color = on ? '#0F133A' : '#5b5b6b';
+  });
+}
+function tween(dur, fn){
+  return new Promise(function(res){
+    var t0 = performance.now();
+    function f(now){
+      var p = Math.min(1, (now-t0)/dur);
+      var e = p<.5 ? 4*p*p*p : 1-Math.pow(-2*p+2,3)/2;
+      fn(e);
+      if(p<1) wheelRAF = requestAnimationFrame(f); else res();
+    }
+    wheelRAF = requestAnimationFrame(f);
+  });
+}
+async function runWheel(){
   var els = Array.prototype.slice.call(navTrack.children);
-  var center = navViewport.clientHeight/2;
-  var startIndex = NAV_ITEMS.length + 1;
-  var pos = startIndex*ITEM_H + ITEM_H/2 - center;
-  var speed = ITEM_H/0.55;
-  var last = performance.now();
-  function frame(now){
-    var dt = (now-last)/1000; last=now;
-    pos += speed*dt;
-    navTrack.style.transform = 'translateY('+(-pos)+'px)';
-    els.forEach(function(el,i){
-      var itemCenter = i*ITEM_H + ITEM_H/2 - pos;
-      var dist = Math.abs(itemCenter - center);
-      var op = 1 - (dist/ITEM_H)*0.62;
-      op = Math.max(0.1, Math.min(1, op));
-      el.style.opacity = op;
-      var isCenter = dist < ITEM_H*0.35;
-      el.style.fontWeight = isCenter ? '600' : '400';
-      el.style.color = isCenter ? '#0F133A' : '#5b5b6b';
-      el.style.background = isCenter ? '#EEF3FF' : 'transparent';
-    });
-    wheelRAF = requestAnimationFrame(frame);
+  navViewport.classList.add('wheel-on');
+  await tween(300, function(e){ renderWheel(els, 0, e); });
+  await wait(250);
+  var pos = 0;
+  for(var i=1;i<els.length;i++){
+    var from = pos, to = i*ITEM_H;
+    await tween(300, function(e){ renderWheel(els, from + (to-from)*e, 1); });
+    pos = to;
+    await wait(400);
   }
-  wheelRAF = requestAnimationFrame(frame);
+  return pos;
+}
+async function endWheel(pos){
+  var els = Array.prototype.slice.call(navTrack.children);
+  navViewport.classList.remove('wheel-on');
+  await tween(1150, function(e){ renderWheel(els, pos*(1-e), 1-e); });
+  stopWheel();
 }
 function stopWheel(){
   if(wheelRAF) cancelAnimationFrame(wheelRAF);
   wheelRAF = null;
-  navViewport.classList.remove('wheel-mode');
+  navViewport.classList.remove('wheel-on');
   restoreStaticList();
 }
 
@@ -367,23 +377,14 @@ async function demo(){
   msgbar.classList.add('in');
   await wait(1400);
 
-  var ricercaItem = root.querySelectorAll('.nav-item')[1];
-  var nr = rectInWindow(ricercaItem);
-  var lr = rectInWindow(root.querySelector('.sb-top svg'));
-  zoomTo(nr.x+nr.w/2, nr.y+nr.h/2, 2.1, lr.y);
-  await wait(1100);
-  startWheel();
-  await wait(5400);
-  stopWheel();
-  await wait(200);
-
+  var firstItem = root.querySelectorAll('.nav-item')[0];
+  var nr = rectInWindow(firstItem);
+  zoomTo(nr.x+nr.w/2, nr.y+nr.h/2, 2.1);
+  await wait(1150);
+  var endPos = await runWheel();
   zoomReset();
-  await wait(1200);
-
-  win.classList.remove('show');
-  await wait(800);
+  await endWheel(endPos);
 }
-async function loop(){ while(true){ await demo(); } }
 function startWhenVisible(el, cb){
   var started=false;
   function go(){
@@ -402,9 +403,9 @@ function startWhenVisible(el, cb){
   setTimeout(go, 2500);
 }
 if(document.readyState === 'loading'){
-  document.addEventListener('DOMContentLoaded', function(){ startWhenVisible(root, loop); });
+  document.addEventListener('DOMContentLoaded', function(){ startWhenVisible(root, demo); });
 } else {
-  startWhenVisible(root, loop);
+  startWhenVisible(root, demo);
 }
 })();
 </script>
@@ -417,7 +418,7 @@ if(document.readyState === 'loading'){
 <!-- wp:group {"className":"lidia-sezione lidia-funzioni","align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull lidia-sezione lidia-funzioni"><!-- wp:group {"className":"lidia-funzioni-testa","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-funzioni-testa"><!-- wp:heading -->
-<h2 class="wp-block-heading">Le funzioni, senza giri di parole</h2>
+<h2 class="wp-block-heading">Il lavoro, funzione per funzione</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -490,7 +491,7 @@ if(document.readyState === 'loading'){
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Documenti raggruppati per cliente, operazione o causa, con OCR avanzato su PDF e scansioni. Fino a 1.000 pagine per singolo documento.</p>
+<p>Documenti raggruppati per cliente, operazione o causa, con OCR avanzato su PDF e scansioni.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"className":"lidia-demo","layout":{"type":"default"}} -->
@@ -504,7 +505,7 @@ if(document.readyState === 'loading'){
 <li><span>Allegati tecnici</span><span class="lidia-documenti-pagine">84 pp.</span></li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><span>Scansioni OCR</span><span class="lidia-documenti-pagine">1.000 pp.</span></li>
+<li><span>Scansioni OCR</span></li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
@@ -582,7 +583,7 @@ if(document.readyState === 'loading'){
 
 <!-- wp:group {"className":"lidia-sezione lidia-come lidia-registro-alterno","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
 <div class="wp-block-group alignfull lidia-sezione lidia-come lidia-registro-alterno"><!-- wp:heading -->
-<h2 class="wp-block-heading">Cinque valori, un modo di lavorare.</h2>
+<h2 class="wp-block-heading">Cinque valori, il tuo modo di lavorare.</h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"className":"lidia-passaggi lidia-valori","layout":{"type":"default"}} -->
@@ -737,12 +738,12 @@ if(document.readyState === 'loading'){
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#prova">Richiedi una prova gratuita</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons -->
+<!-- /wp:button -->
 
-<!-- wp:paragraph {"className":"lidia-freccia"} -->
-<p class="lidia-freccia"><a href="/prezzi/">Prezzi e cosa comprendono →</a></p>
-<!-- /wp:paragraph --></div>
+<!-- wp:button {"className":"is-style-secondario"} -->
+<div class="wp-block-button is-style-secondario"><a class="wp-block-button__link wp-element-button" href="/prezzi/">Scopri i piani di Lidia</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"lidia-prezzo-riquadro","layout":{"type":"default"}} -->
@@ -762,9 +763,6 @@ if(document.readyState === 'loading'){
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>OCR avanzato</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Contesto fino a 1.000 pagine per documento</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Add-in Word</li>
@@ -804,7 +802,7 @@ if(document.readyState === 'loading'){
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>L'intelligenza artificiale può analizzare e redigere contratti?</summary><!-- wp:paragraph -->
-<p>Sì, con un limite preciso: l'AI produce analisi e bozza, l'avvocato decide e firma. Lidia legge contratti anche molto lunghi — fino a <strong>1.000 pagine per singolo file</strong>, un milione di token di contesto, con OCR avanzato su PDF e scansioni — individua le clausole, le confronta con i precedenti dello studio e accompagna la redazione dentro Microsoft Word, dove il testo si rivede come sempre, con l'aiuto di Lidia.</p>
+<p>Sì, con un limite preciso: l'AI produce analisi e bozza, l'avvocato decide e firma. Lidia legge contratti anche molto lunghi, con OCR avanzato su PDF e scansioni, individua le clausole, le confronta con i precedenti dello studio e accompagna la redazione dentro Microsoft Word, dove il testo si rivede come sempre, con l'aiuto di Lidia. Con Smart Answer interroghi un singolo documento fino a <strong>1.000 pagine</strong>.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
