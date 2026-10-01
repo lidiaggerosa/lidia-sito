@@ -30,6 +30,7 @@ foreach (
 		'legale',        // noindex, nofollow e fuori sitemap per il ramo /legale/
 		'schema',        // JSON-LD non coperto da Yoast: Organization, FAQPage, SoftwareApplication
 		'seo',           // robots.txt e llms.txt generati dal tema
+		'icona',         // favicon e icone dai file di assets/icone/, non dal pannello
 		'lingue',        // Polylang: hreflang, testata e footer per lingua
 		'forms',         // blocco lidia/modulo: markup, validazione, antispam, ricezione
 		'delera',        // consegna al webhook, riprove, coda, download firmato

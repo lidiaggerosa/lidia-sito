@@ -66,6 +66,12 @@ $pagine = array(
 		'desc'  => 'Contact Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Offices in Genoa and Milan. For free trials, please use the dedicated form.',
 		'kw'    => 'Lidia contact',
 	),
+	'/azienda/lavora-con-noi/' => array(
+		'file'  => 'careers.html',
+		'title' => 'Careers — Lidia',
+		'desc'  => 'Lidia S.r.l., an Italian legal tech company. There are no open positions right now, but we read every open application.',
+		'kw'    => 'Lidia careers',
+	),
 );
 
 foreach ( $pagine as $percorso => $p ) {
@@ -105,7 +111,7 @@ foreach ( $pagine as $percorso => $p ) {
 	update_post_meta( $inglese, '_yoast_wpseo_metadesc', $p['desc'] );
 	update_post_meta( $inglese, '_yoast_wpseo_focuskw', $p['kw'] );
 
-	WP_CLI::log( sprintf( '  %-17s → %d (%s) ← %s', $percorso, $inglese, get_post_status( $inglese ), $p['file'] ) );
+	WP_CLI::log( sprintf( '  %-26s → %d (%s) ← %s', $percorso, $inglese, get_post_status( $inglese ), $p['file'] ) );
 }
 
 WP_CLI::success( 'Pagine EN aggiornate. Lo stato non è cambiato.' );

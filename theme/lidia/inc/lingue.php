@@ -5,8 +5,9 @@
  * - hreflang: `it` e `en`, mai `en-GB` (la versione inglese non è per il solo Regno Unito),
  *   `x-default` sull'italiano (docs/06-seo-technical.md §3). Solo per le pagine con una
  *   traduzione pubblicata: una pagina senza EN, o con l'EN in bozza, non ha hreflang.
- * - Testata e footer: sulle pagine inglesi il tema usa `header-en` e `footer-en`, se
- *   esistono in parts/. I template restano uno solo per le due lingue.
+ * - Testata, footer e contenuto della 404: sulle pagine inglesi il tema usa `header-en`,
+ *   `footer-en` e `contenuto-404-en`, se esistono in parts/. I template restano uno solo per
+ *   le due lingue. Sulla 404 la lingua la dà il prefisso /en/ dell'indirizzo (Polylang).
  * - Selettore di lingua (25/09/2026): blocco `lidia/lingua` nella testata. Porta alla stessa
  *   pagina nell'altra lingua e compare solo se quella traduzione è pubblicata. Un link, niente
  *   JavaScript: dipende solo dall'URL, quindi convive con la cache di pagina.
@@ -86,7 +87,7 @@ function lidia_hreflang( $hreflang ) {
 add_filter( 'pll_rel_hreflang_attributes', 'lidia_hreflang' );
 
 /**
- * Testata e footer nella lingua della pagina.
+ * Testata, footer e contenuto della 404 nella lingua della pagina.
  *
  * @param array $blocco Blocco analizzato, prima del rendering.
  * @return array
@@ -98,7 +99,7 @@ function lidia_parti_per_lingua( $blocco ) {
 
 	$slug = $blocco['attrs']['slug'];
 
-	if ( ! in_array( $slug, array( 'header', 'footer' ), true ) ) {
+	if ( ! in_array( $slug, array( 'header', 'footer', 'contenuto-404' ), true ) ) {
 		return $blocco;
 	}
 

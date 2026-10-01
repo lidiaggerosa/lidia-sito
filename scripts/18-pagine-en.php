@@ -10,6 +10,7 @@
  * è approvato: `wp post update <ID> --post_status=publish`.
  *
  * Perimetro deciso il 24/09/2026: sette pagine. Risorse e legali restano solo in italiano.
+ * Il 01/10/2026 si aggiunge Careers, figlia di Company: è la destinazione del 301 da /en/careers.
  * Serve Polylang configurato (scripts/17-polylang.php).
  *
  * @package Lidia
@@ -32,6 +33,7 @@ $pagine = array(
 	'/prova-gratuita/' => array( 'Free trial', 'free-trial' ),
 	'/azienda/'       => array( 'Company', 'company' ),
 	'/contatti/'      => array( 'Contact', 'contact' ),
+	'/azienda/lavora-con-noi/' => array( 'Careers', 'careers' ),
 );
 
 foreach ( $pagine as $percorso => $dati ) {
@@ -56,11 +58,21 @@ foreach ( $pagine as $percorso => $dati ) {
 	$esistente = pll_get_post( $italiana, 'en' );
 
 	if ( $esistente ) {
-		WP_CLI::log( sprintf( '= %-17s → %d (%s), già presente', $percorso, $esistente, get_post_status( $esistente ) ) );
+		WP_CLI::log( sprintf( '= %-26s → %d (%s), già presente', $percorso, $esistente, get_post_status( $esistente ) ) );
 		continue;
 	}
 
 	$template = get_page_template_slug( $italiana );
+
+	// Una figlia italiana ha come genitore la traduzione inglese del suo genitore:
+	// /azienda/lavora-con-noi/ diventa /en/company/careers/. Le figlie vanno dopo il genitore.
+	$genitore_it = (int) wp_get_post_parent_id( $italiana );
+	$genitore_en = $genitore_it ? (int) pll_get_post( $genitore_it, 'en' ) : 0;
+
+	if ( $genitore_it && ! $genitore_en ) {
+		WP_CLI::warning( "Manca la pagina EN del genitore di {$percorso}: si salta" );
+		continue;
+	}
 
 	$id = wp_insert_post(
 		array(
@@ -69,6 +81,7 @@ foreach ( $pagine as $percorso => $dati ) {
 			'post_title'    => $titolo,
 			'post_name'     => $slug,
 			'post_content'  => '',
+			'post_parent'   => $genitore_en,
 			'page_template' => $template ? $template : '',
 		),
 		true
@@ -85,7 +98,7 @@ foreach ( $pagine as $percorso => $dati ) {
 	$traduzioni['en'] = $id;
 	pll_save_post_translations( $traduzioni );
 
-	WP_CLI::log( sprintf( '+ %-17s → %d, bozza, template «%s»', $percorso, $id, $template ? $template : 'default' ) );
+	WP_CLI::log( sprintf( '+ %-26s → %d, bozza, template «%s»', $percorso, $id, $template ? $template : 'default' ) );
 }
 
 WP_CLI::success( 'Pagine EN pronte in bozza.' );
