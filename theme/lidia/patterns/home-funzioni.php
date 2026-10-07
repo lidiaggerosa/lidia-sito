@@ -173,5 +173,9 @@ defined( 'ABSPATH' ) || exit;
 <div class="wp-block-buttons lidia-funzioni-cta"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#prova">Richiedi una prova gratuita</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph {"align":"center","className":"lidia-freccia"} -->
+<p class="has-text-align-center lidia-freccia"><a href="/prodotto/">Tutte le funzioni nel dettaglio →</a></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->

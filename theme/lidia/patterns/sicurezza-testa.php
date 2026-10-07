@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- wp:group {"className":"lidia-sezione lidia-fiduciario lidia-fid-testa","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
 <div class="wp-block-group alignfull lidia-sezione lidia-fiduciario lidia-fid-testa"><!-- wp:group {"className":"lidia-colonna","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-colonna"><!-- wp:paragraph {"className":"lidia-occhiello"} -->
-<p class="lidia-occhiello">Sicurezza</p>
+<p class="lidia-occhiello">Sicurezza dei dati e AI legale</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1,"fontSize":"pagina"} -->

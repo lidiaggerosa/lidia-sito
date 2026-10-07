@@ -2,7 +2,7 @@
 url: /risorse/legge-132-2025-studi-legali/
 lingua: it
 title: "Legge 132/2025 e AI negli studi legali: cosa cambia | Lidia"
-meta_description: "La Legge 132/2025 disciplina l'uso dell'AI nelle professioni intellettuali: obblighi di trasparenza, supervisione umana, responsabilità e checklist operativa."
+meta_description: "La Legge 132/2025 sull'AI nelle professioni intellettuali: trasparenza, supervisione umana, responsabilità e una checklist operativa per lo studio."
 h1: "Legge 132/2025: come cambia l'uso dell'AI negli studi legali"
 keyword_primaria: "legge 132 2025 intelligenza artificiale"
 keyword_secondarie: "ai act studi legali; obblighi trasparenza ai clienti; compliance ai avvocati"

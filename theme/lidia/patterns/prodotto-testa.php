@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- wp:group {"className":"lidia-sezione lidia-prodotto lidia-prod-testa","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
 <div class="wp-block-group alignfull lidia-sezione lidia-prodotto lidia-prod-testa"><!-- wp:group {"className":"lidia-colonna","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-colonna"><!-- wp:paragraph {"className":"lidia-occhiello"} -->
-<p class="lidia-occhiello">Prodotto</p>
+<p class="lidia-occhiello">Software AI per studi legali</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1,"fontSize":"pagina"} -->

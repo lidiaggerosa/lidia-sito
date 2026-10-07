@@ -1,17 +1,17 @@
 ---
 url: /
 lingua: it
-title: "Lidia — Intelligenza artificiale per avvocati e aziende"
+title: "Lidia AI — AI legale per avvocati e aziende"
 meta_description: "Lidia è l'intelligenza artificiale legale che lavora con te: ricerca su fonti ufficiali, analisi e redazione documenti, integrata in Word."
 h1: "L'intelligenza legale che lavora con te."
-keyword_primaria: "intelligenza artificiale per avvocati"
-keyword_secondarie: "legal ai italia; ai studio legale; assistente ai avvocati; ai agentica legale"
+keyword_primaria: "ai legale"
+keyword_secondarie: "intelligenza artificiale per avvocati; legal ai; legal ai italia; ai studio legale; assistente ai avvocati; ai agentica legale"
 cta_primaria: { testo: "Richiedi una prova gratuita", url: "/prova-gratuita/" }
 step_loop: nessuno
 stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-23
-revisione: "24/09/2026 — title e meta description nuovi (Fase 7); FAQ 2 riscritta senza «chatbot» e «AI agentica». 24/09/2026 — CTA verso il modulo in coda alle funzioni e nel prezzo. 23/09/2026 — allineamento al nuovo storytelling (claim «Dalla risposta al risultato.», payoff «Lavora al tuo fianco.»). Sostituisce la versione del 14/09."
+revisione: "07/10/2026 — title sulla query «ai legale» (dati GSC: 573 impressioni, pos. 8,8). 24/09/2026 — title e meta description nuovi (Fase 7); FAQ 2 riscritta senza «chatbot» e «AI agentica». 24/09/2026 — CTA verso il modulo in coda alle funzioni e nel prezzo. 23/09/2026 — allineamento al nuovo storytelling (claim «Dalla risposta al risultato.», payoff «Lavora al tuo fianco.»). Sostituisce la versione del 14/09."
 revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
@@ -173,7 +173,7 @@ studio.
 
 ## Richiedi subito una prova gratuita di 7 giorni.
 
-Compila il modulo e inizia a lavorare con Lidia sui tuoi documenti e sui tuoi flussi di lavoro.
+Compila il modulo: ti contattiamo per mostrarti la piattaforma e attivare la prova sui tuoi documenti e sui tuoi flussi di lavoro.
 
 - Prova gratuita di 7 giorni, sui documenti reali dello studio
 - Nessun dato trasmesso ai fornitori dei modelli

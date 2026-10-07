@@ -59,6 +59,10 @@ defined( 'ABSPATH' ) || exit;
 <p>Trattamento conforme al Regolamento (UE) 2016/679.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"lidia-freccia"} -->
+<p class="lidia-freccia"><a href="/prodotto/">Cosa fa Lidia, funzione per funzione →</a></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

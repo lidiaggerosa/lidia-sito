@@ -156,7 +156,7 @@ Yes. Documents are drafted and reviewed in Word through an add-in: Lidia's analy
 
 ## Request your free 7-day trial now.
 
-Fill in the form and start working with Lidia on your own documents and workflows.
+Fill in the form: we'll contact you to show you the platform and activate the trial on your own documents and workflows.
 
 - Free 7-day trial, on your firm's real documents
 

@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Compila il modulo e inizia a lavorare con Lidia sui tuoi documenti e sui tuoi flussi di lavoro.</p>
+<p>Compila il modulo: ti contattiamo per mostrarti la piattaforma e attivare la prova sui tuoi documenti e sui tuoi flussi di lavoro.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"lidia-elenco-argomenti"} -->

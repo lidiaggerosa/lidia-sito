@@ -83,3 +83,61 @@ function lidia_llms_txt() {
 	exit;
 }
 add_action( 'init', 'lidia_llms_txt', 0 );
+
+/* -------------------------------------------------------------------------
+ * Utenti non elencabili da fuori (07/10/2026)
+ *
+ * /wp-json/wp/v2/users mostrava a chiunque i nomi utente (anche quello dell'amministratore):
+ * è il primo dato che cerca chi prova a forzare l'accesso (docs/06-seo-technical.md §7).
+ * Per chi non ha effettuato l'accesso l'endpoint risponde 401; l'editor, che lo usa per
+ * scegliere l'autore, continua a funzionare. Stessa cosa per ?author=N, che altrimenti
+ * rimanda a /author/<nome-utente>/.
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Blocca /wp/v2/users ai visitatori anonimi.
+ *
+ * @param mixed           $risultato Risposta già pronta, o null.
+ * @param WP_REST_Server  $server    Server REST.
+ * @param WP_REST_Request $richiesta Richiesta.
+ * @return mixed
+ */
+function lidia_rest_utenti_privati( $risultato, $server, $richiesta ) {
+	if ( is_user_logged_in() ) {
+		return $risultato;
+	}
+
+	if ( 0 === strpos( $richiesta->get_route(), '/wp/v2/users' ) ) {
+		return new WP_Error( 'rest_forbidden', __( 'Non consentito.', 'lidia' ), array( 'status' => 401 ) );
+	}
+
+	return $risultato;
+}
+add_filter( 'rest_pre_dispatch', 'lidia_rest_utenti_privati', 10, 3 );
+
+/** ?author=N per i visitatori anonimi: alla home, senza passare dal nome utente. */
+function lidia_niente_author_query() {
+	if ( is_admin() || is_user_logged_in() || ! isset( $_GET['author'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return;
+	}
+
+	wp_safe_redirect( home_url( '/' ), 301 );
+	exit;
+}
+add_action( 'template_redirect', 'lidia_niente_author_query', 0 );
+
+/* -------------------------------------------------------------------------
+ * Autore nel feed (07/10/2026)
+ *
+ * Gli articoli sono firmati Lidia (decisione dell'owner): nel feed RSS `dc:creator`
+ * non deve mostrare l'utente WordPress che li ha caricati.
+ * ---------------------------------------------------------------------- */
+
+/**
+ * @param string $autore Nome dell'autore.
+ * @return string
+ */
+function lidia_autore_feed( $autore ) {
+	return is_feed() ? 'Lidia' : $autore;
+}
+add_filter( 'the_author', 'lidia_autore_feed' );

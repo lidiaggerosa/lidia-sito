@@ -1,29 +1,153 @@
 <!-- wp:paragraph -->
-<p>Si assume che gli LLM siano dispositivi di modellazione statistica del linguaggio. Ne consegue che l'impiego è legittimo solo entro un impianto metodologico che subordini ogni affermazione rilevante a fonti identificabili, verificabili e correttamente citate: la regola <strong>cite-or-silent</strong>.</p>
+<p>Un modello linguistico scrive bene anche quando sbaglia. Nella ricerca giuridica questo è il problema centrale: un testo fluido, con citazioni formalmente corrette, può sostenere conclusioni sbagliate. Il paper propone un metodo per usare gli LLM nella ricerca senza confondere la plausibilità con la validità. La regola di fondo è <em>cite-or-silent</em>: ogni affermazione rilevante deve poggiare su una fonte identificabile e verificabile, altrimenti non si fa.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Plausibilità non è validità</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Un LLM è un predittore di parole. È addestrato a produrre il testo più probabile, non a distinguere una norma vigente da una abrogata, una ratio decidendi da un obiter dictum, un orientamento consolidato da uno minoritario. Per questo può citare correttamente una massima e applicarla nel contesto sbagliato. Il paper chiama il risultato <em>pseudo-conoscenza</em>: enunciati ben scritti ma deboli sul piano della prova.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Il contributo si articola in tre direttrici.</p>
+<p>Sul piano pratico ci sono altri due limiti:</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>la tendenza ad assecondare le premesse della domanda, anche quando sono sbagliate;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>la fiducia che un'interfaccia conversazionale ispira, anche nei professionisti esperti.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Cosa dicono i test</h2>
+<!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><strong>Un quadro teorico</strong> che distingue competenza apparente, inferenza probabilistica e giustificazione normativa.</p>
+<p>Gli studi indipendenti degli ultimi diciotto mesi convergono:</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>buoni risultati su compiti semplici e strutturati;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>calo marcato quando servono ragionamento in più passaggi, contesto normativo denso o il riconoscimento di un overruling.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p><strong>Protocolli operativi</strong> per issue spotting, governance delle fonti — primarie, secondarie, giurisprudenza — impiego di sistemi RAG e tracciabilità mediante audit trail.</p>
+<p>Anche gli strumenti specializzati, collegati a banche dati proprietarie, producono citazioni errate, irrilevanti o superate in una quota significativa delle risposte. Manca inoltre una metrica condivisa per misurare la precisione giuridica, che non va confusa con l'aderenza lessicale.</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Più contesto non significa più ragionamento</h2>
+<!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><strong>Criteri di validità e metriche di qualità</strong>, sia ex ante (idoneità e copertura delle fonti) sia ex post (replicabilità, controllo degli errori, accountability).</p>
+<p>Una finestra di contesto ampia trasporta più testo, ma non garantisce che il modello lo tenga insieme. Quando le evidenze sono sparse, gerarchiche o legate da rinvii, la qualità cala. I risultati migliori arrivano da quello che si fa prima di interrogare il modello: selezione, segmentazione e indicizzazione del materiale.</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Il metodo: un workflow evidence-first in nove fasi</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li>Formulazione del quesito e issue spotting, a cura del professionista.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Raccolta delle fonti su più canali; l'output senza fonte primaria si scarta.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Esplorazione delle fonti una per una, con richieste vincolate a giurisdizione, data e materia.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Riassunto e indicizzazione: una base di conoscenza tracciabile, arricchita dal giurista.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Estrazione di contenuti neutri: norme, fatti, argomenti, citazioni.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Ragionamento giuridico, solo umano: dai documenti ai blocchi argomentativi validati.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Confronto con l'LLM sulle contro-tesi e sulle obiezioni possibili.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Architettura del documento: ogni sezione collegata alle sue fonti.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Stesura e controllo: ogni citazione verificata, il giurista resta l'autore.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>Ne risulta un'architettura della fiducia fondata sulla separazione dei ruoli: definizione dell'oggetto, delle ipotesi e dell'interpretazione alla competenza del giurista; supporto esplorativo e organizzativo all'LLM — classificazione, deduplicazione, normalizzazione, sintesi con citazioni.</p>
+<p>Il principio è costruire intelligenza, non chiederla. L'LLM accelera la lettura, l'organizzazione e la scrittura. Qualificare e validare restano compiti del professionista.</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Chi fa cosa</h2>
+<!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>L'obiettivo finale è un metodo trasparente, replicabile e professionalmente esigente, capace di coniugare efficienza tecnica e rigore epistemico nella comunità legale.</p>
+<p>Il paper distribuisce i compiti per fase:</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:lidia/modulo {"tipo":"whitepaper"} /-->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>l'impostazione della ricerca è interamente umana;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>la raccolta e l'organizzazione delle fonti sono una collaborazione;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>la valutazione interpretativa resta al giurista;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>nella redazione l'LLM ha funzioni ancillari: coerenza interna, obiezioni, stile.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Cosa trovate nel paper completo</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Il quadro teorico: competenza apparente, inferenza probabilistica, giustificazione normativa.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>I risultati dei test indipendenti, con riferimenti bibliografici.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>I nove passaggi del workflow, con appendici operative.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>I criteri di validità ex ante (idoneità e copertura delle fonti) ed ex post (replicabilità, controllo degli errori, accountability).</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:group {"anchor":"scarica","className":"lidia-scarica","layout":{"type":"default"}} -->
+<div id="scarica" class="wp-block-group lidia-scarica"><!-- wp:lidia/modulo {"tipo":"whitepaper"} /--></div>
+<!-- /wp:group -->

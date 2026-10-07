@@ -7,37 +7,45 @@
   "meta": "Paper in tre capitoli su come portare l'AI in produzione in uno studio legale: corpus AI-ready, competenze ibride, policy viva. Download gratuito.",
   "gated": true,
   "tipo_risorsa": "whitepaper",
-  "stato": "in-revisione"
+  "stato": "in-revisione",
+  "data": "2025-08",
+  "autori": "Marco Pagani"
  },
  {
   "slug": "opinion-eiopa-governance-ai-assicurazioni",
   "tipo": "risorsa",
   "titolo": "Dall'Opinion EIOPA ai fatti: governance dell'AI nelle assicurazioni",
-  "title_seo": "Opinion EIOPA: governance dell'AI nelle assicurazioni | Lidia",
+  "title_seo": "Opinion EIOPA e governance dell'AI assicurativa | Lidia",
   "meta": "Lettura operativa dell'Opinion EIOPA su AI governance e risk management: proporzionalità, impact assessment e selezione degli use case. Download gratuito.",
   "gated": true,
   "tipo_risorsa": "whitepaper",
-  "stato": "in-revisione"
+  "stato": "in-revisione",
+  "data": "2025-09",
+  "autori": "Alessandro Musella"
  },
  {
   "slug": "nuova-governance-dei-dati",
   "tipo": "risorsa",
   "titolo": "La nuova governance dei dati",
   "title_seo": "La nuova governance dei dati: impatti legali dell'AI | Lidia",
-  "meta": "I quattro pilastri della governance AI: good data, partire dal problema, compliance by design e test del legittimo interesse per il training. Download gratuito.",
+  "meta": "I quattro pilastri della governance AI: good data, partire dal problema, compliance by design, legittimo interesse nel training. Download gratuito.",
   "gated": true,
   "tipo_risorsa": "whitepaper",
-  "stato": "in-revisione"
+  "stato": "in-revisione",
+  "data": "2026-01",
+  "autori": "Marco Pagani, Anna Lanza, Francesco Cartabia, Fabio Capasso, Mario Cucciarrè"
  },
  {
   "slug": "diritto-llm-e-ricerca",
   "tipo": "risorsa",
   "titolo": "Diritto, LLM e ricerca: fondamenti teorici, protocolli operativi e criteri di validità",
-  "title_seo": "Diritto, LLM e ricerca: protocolli e criteri di validità | Lidia",
+  "title_seo": "Diritto, LLM e ricerca: protocolli e validità | Lidia",
   "meta": "Quadro teorico, protocolli operativi e criteri di validità per l'uso degli LLM nella ricerca giuridica. La regola cite-or-silent. Download gratuito.",
   "gated": true,
   "tipo_risorsa": "whitepaper",
-  "stato": "in-revisione"
+  "stato": "in-revisione",
+  "data": "2025-10",
+  "autori": "Marco Pagani"
  },
  {
   "slug": "responsabilita-value-chain-ai",
@@ -47,14 +55,16 @@
   "meta": "Vigilanza umana, cerchi concentrici di responsabilità e diligenza professionale: il panel su chi risponde lungo la catena dell'AI. Download gratuito.",
   "gated": true,
   "tipo_risorsa": "whitepaper",
-  "stato": "in-revisione"
+  "stato": "in-revisione",
+  "data": "2025-06",
+  "autori": "Marco Pagani, Sabrina Chibbaro, Anna Lanza, Emanuela Semino"
  },
  {
   "slug": "legge-132-2025-studi-legali",
   "tipo": "post",
   "titolo": "Legge 132/2025: come cambia l'uso dell'AI negli studi legali",
   "title_seo": "Legge 132/2025 e AI negli studi legali: cosa cambia | Lidia",
-  "meta": "La Legge 132/2025 disciplina l'uso dell'AI nelle professioni intellettuali: obblighi di trasparenza, supervisione umana, responsabilità e checklist operativa.",
+  "meta": "La Legge 132/2025 sull'AI nelle professioni intellettuali: trasparenza, supervisione umana, responsabilità e una checklist operativa per lo studio.",
   "gated": false,
   "tipo_risorsa": "articolo",
   "stato": "in-revisione"
@@ -63,7 +73,7 @@
   "slug": "agenti-ai-contesto-legale-enterprise",
   "tipo": "post",
   "titolo": "Agenti AI nel contesto legale ed enterprise: l'evoluzione a breve termine",
-  "title_seo": "Agenti AI nel contesto legale ed enterprise: cosa cambia | Lidia",
+  "title_seo": "Agenti AI nel contesto legale ed enterprise | Lidia",
   "meta": "Da assistenti passivi ad agenti autonomi: competenze, AI Act, sovranità digitale e adozione asimmetrica tra grandi imprese e PMI. Il resoconto del panel.",
   "gated": false,
   "tipo_risorsa": "articolo",

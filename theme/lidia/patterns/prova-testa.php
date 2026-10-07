@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className": "lidia-misura-lettura","fontSize": "voce"} -->
-<p class="lidia-misura-lettura has-voce-font-size">Compila il modulo e inizia a lavorare con Lidia sui tuoi documenti e sui tuoi flussi di lavoro. Tutte le funzioni attive, per una settimana.</p>
+<p class="lidia-misura-lettura has-voce-font-size">Compila il modulo: ti contattiamo per mostrarti la piattaforma e attivare la prova sui tuoi documenti e sui tuoi flussi di lavoro. Tutte le funzioni attive, per una settimana.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:lidia/modulo {"tipo":"prova"} /--></div>

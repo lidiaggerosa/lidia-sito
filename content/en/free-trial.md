@@ -15,12 +15,12 @@ Free trial
 
 # Request your free 7-day trial now.
 
-Fill in the form and start working with Lidia on your own documents and workflows. Every feature enabled, for a week.
+Fill in the form: we'll contact you to show you the platform and activate the trial on your own documents and workflows. Every feature enabled, for a week.
 
 
 ## Three steps, and you're in
 
-Fill in the form. We'll send your access details as soon as possible. Upload the documents you're working on and get started.
+Fill in the form. We'll call you to show you the platform and activate your trial. Upload the documents you're working on and get started.
 
 For seven days, use it however you like: research on the sources, questions on the case file, a workflow, a draft in Word. There's no set path to follow.
 

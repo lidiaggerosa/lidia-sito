@@ -5,11 +5,15 @@
  * Yoast costruisce il grafo (WebSite, Organization, WebPage, BreadcrumbList, Article):
  * qui lo si completa, non lo si duplica (docs/06-seo-technical.md §4).
  *
- * - Organization: ragione sociale, P. IVA, sede legale, contatti, LinkedIn, gruppo.
+ * - Organization: ragione sociale, P. IVA, sede legale, contatti, profili. Nessun riferimento
+ *   al gruppo (decisione del 30/09, applicata il 07/10).
  * - FAQPage: su ogni pagina con una sezione `lidia-faq`, costruito leggendo le domande
  *   della pagina. Il testo dello schema è quello visibile per costruzione: non esiste una
  *   seconda copia da tenere allineata, e una FAQ nuova entra nello schema da sola.
  * - SoftwareApplication: su /prodotto/, con il prezzo di partenza già pubblico.
+ * - Article sui whitepaper (CPT `risorsa`), con gli autori del campo `lidia_autori`.
+ * - Briciole: Home › Risorse › Articoli|Whitepaper › titolo, anche nella BreadcrumbList.
+ * - Articoli: autore Lidia (l'Organization), non l'utente WordPress che li ha caricati.
  *
  * Tutto passa dai filtri di Yoast: se Yoast è spento, questo file non stampa niente.
  *
@@ -45,13 +49,48 @@ function lidia_schema_organizzazione( $dati ) {
 		'addressCountry'  => 'IT',
 	);
 
+	// Nomi con cui il brand viene cercato (query di Search Console, 07/10/2026): aiutano a
+	// distinguere Lidia dalle omonime.
+	$dati['alternateName'] = array( 'Lidia AI', 'LidiaTech' );
+
+	// I profili ufficiali stanno qui, non nei campi social di Yoast (database).
 	$profili        = isset( $dati['sameAs'] ) ? (array) $dati['sameAs'] : array();
-	$profili[]      = 'https://www.linkedin.com/company/lidiatech/';
+	$profili        = array_merge( $profili, lidia_profili_ufficiali() );
 	$dati['sameAs'] = array_values( array_unique( $profili ) );
 
 	return $dati;
 }
 add_filter( 'wpseo_schema_organization', 'lidia_schema_organizzazione' );
+
+/**
+ * Profili ufficiali di Lidia, confermati dall'owner il 07/10/2026.
+ *
+ * @return string[]
+ */
+function lidia_profili_ufficiali() {
+	return array(
+		'https://www.linkedin.com/company/lidiatech/',
+		'https://www.facebook.com/profile.php?id=61586216139896',
+		'https://www.youtube.com/@LIDIA_TechAI',
+		'https://marketplace.microsoft.com/en-us/product/web-apps/mesa.lidia_nocosell',
+		'https://www.hublegaltech.com/glth-members-2025/lidia',
+		'https://www.instagram.com/lidiatech.ai/',
+	);
+}
+
+/**
+ * Anche il nodo WebSite porta i nomi alternativi: è quello che Google legge per il nome
+ * del sito nei risultati.
+ *
+ * @param array $dati Nodo WebSite di Yoast.
+ * @return array
+ */
+function lidia_schema_sito( $dati ) {
+	$dati['alternateName'] = array( 'Lidia AI', 'LidiaTech' );
+
+	return $dati;
+}
+add_filter( 'wpseo_schema_website', 'lidia_schema_sito' );
 
 /* -------------------------------------------------------------------------
  * FAQPage
@@ -293,3 +332,156 @@ function lidia_schema_software( $grafo, $contesto ) {
 	return $grafo;
 }
 add_filter( 'wpseo_schema_graph', 'lidia_schema_software', 10, 2 );
+
+/* -------------------------------------------------------------------------
+ * Article sui whitepaper
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Un whitepaper è un documento con autori e data: Yoast lo marca solo come WebPage.
+ *
+ * Gli autori vengono da `lidia_autori`, gli stessi mostrati in pagina da
+ * `single-risorsa.html`. Senza autori il nodo non si aggiunge: meglio nessun Article
+ * che uno con l'autore sbagliato. (07/10/2026)
+ *
+ * @param array  $grafo    Nodi del grafo Yoast.
+ * @param object $contesto Meta_Tags_Context di Yoast.
+ * @return array
+ */
+function lidia_schema_whitepaper( $grafo, $contesto ) {
+	if ( ! is_singular( 'risorsa' ) ) {
+		return $grafo;
+	}
+
+	$id     = get_queried_object_id();
+	$autori = array_filter( array_map( 'trim', explode( ',', (string) get_post_meta( $id, 'lidia_autori', true ) ) ) );
+
+	if ( ! $autori ) {
+		return $grafo;
+	}
+
+	$sito   = isset( $contesto->site_url ) ? $contesto->site_url : trailingslashit( home_url() );
+	$pagina = get_permalink( $id );
+	$testo  = (string) get_post_meta( $id, '_yoast_wpseo_metadesc', true );
+
+	$nodo = array(
+		'@type'            => 'Article',
+		'@id'              => $pagina . '#article',
+		'isPartOf'         => array( '@id' => $pagina ),
+		'mainEntityOfPage' => array( '@id' => $pagina ),
+		'headline'         => wp_strip_all_tags( html_entity_decode( get_the_title( $id ), ENT_QUOTES, 'UTF-8' ) ),
+		'datePublished'    => get_the_date( 'c', $id ),
+		'dateModified'     => get_the_modified_date( 'c', $id ),
+		'articleSection'   => 'Whitepaper',
+		'inLanguage'       => 'it-IT',
+		'publisher'        => array( '@id' => $sito . '#organization' ),
+		'author'           => array_map(
+			function ( $nome ) {
+				return array(
+					'@type' => 'Person',
+					'name'  => $nome,
+				);
+			},
+			array_values( $autori )
+		),
+	);
+
+	if ( '' !== $testo ) {
+		$nodo['description'] = $testo;
+	}
+
+	$grafo[] = $nodo;
+
+	return $grafo;
+}
+add_filter( 'wpseo_schema_graph', 'lidia_schema_whitepaper', 10, 2 );
+
+/* -------------------------------------------------------------------------
+ * Briciole
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Articoli e whitepaper stanno sotto /risorse/: le briciole lo dicono.
+ *
+ * Senza filtro Yoast scrive Home › titolo. Il filtro vale anche per la BreadcrumbList
+ * dello schema, che Yoast costruisce dalle stesse briciole. (07/10/2026)
+ *
+ * @param array $briciole Briciole di Yoast.
+ * @return array
+ */
+function lidia_briciole( $briciole ) {
+	if ( is_singular( 'post' ) ) {
+		$percorsi = array( 'risorse', 'risorse/articoli' );
+	} elseif ( is_singular( 'risorsa' ) ) {
+		$percorsi = array( 'risorse', 'risorse/whitepaper' );
+	} else {
+		return $briciole;
+	}
+
+	$intermedie = array();
+
+	foreach ( $percorsi as $percorso ) {
+		$pagina = get_page_by_path( $percorso );
+
+		if ( $pagina && 'publish' === $pagina->post_status ) {
+			$nome         = (string) get_post_meta( $pagina->ID, '_yoast_wpseo_bctitle', true );
+			$intermedie[] = array(
+				'url'  => get_permalink( $pagina ),
+				'text' => '' !== $nome ? $nome : get_the_title( $pagina ),
+			);
+		}
+	}
+
+	if ( ! $intermedie || count( $briciole ) < 2 ) {
+		return $briciole;
+	}
+
+	// Dopo la home, prima del contenuto.
+	array_splice( $briciole, 1, count( $briciole ) - 2, $intermedie );
+
+	return $briciole;
+}
+add_filter( 'wpseo_breadcrumb_links', 'lidia_briciole' );
+
+/* -------------------------------------------------------------------------
+ * Autore degli articoli
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Gli articoli sono firmati Lidia: l'autore nello schema è l'Organization, non l'utente
+ * WordPress che li ha caricati (decisione dell'owner del 07/10/2026). I whitepaper hanno
+ * invece autori con nome, da `lidia_autori`.
+ *
+ * @param array $dati Nodo Article di Yoast.
+ * @return array
+ */
+function lidia_schema_autore_articolo( $dati ) {
+	if ( is_singular( 'post' ) ) {
+		$dati['author'] = array( '@id' => trailingslashit( home_url() ) . '#organization' );
+	}
+
+	return $dati;
+}
+add_filter( 'wpseo_schema_article', 'lidia_schema_autore_articolo' );
+
+/**
+ * Senza autore persona, il nodo Person dell'utente WordPress non serve: si toglie.
+ *
+ * @param array $pezzi Generatori del grafo Yoast.
+ * @return array
+ */
+function lidia_schema_senza_persona( $pezzi ) {
+	if ( ! is_singular( 'post' ) ) {
+		return $pezzi;
+	}
+
+	return array_values(
+		array_filter(
+			$pezzi,
+			function ( $pezzo ) {
+				return ! ( $pezzo instanceof \Yoast\WP\SEO\Generators\Schema\Author );
+			}
+		)
+	);
+}
+add_filter( 'wpseo_schema_graph_pieces', 'lidia_schema_senza_persona', 20 );

@@ -2,7 +2,7 @@
 url: /prodotto/
 lingua: it
 title: "Funzioni di Lidia — software AI per studi legali"
-meta_description: "Le funzioni di Lidia, software AI per studi legali: ricerca su fonti ufficiali con GraphRAG, workflow per materia, add-in Word, AI Assistant, Smart Answer, pratiche."
+meta_description: "Le funzioni di Lidia, software AI per studi legali: ricerca su fonti ufficiali con GraphRAG, workflow, add-in Word, AI Assistant, Smart Answer."
 h1: "Ogni funzione, un passo verso il risultato."
 keyword_primaria: "software intelligenza artificiale studi legali"
 keyword_secondarie: "piattaforma legal ai; ai agentica legale; ai ricerca giuridica; analisi contratti intelligenza artificiale; integrazione word studi legali; fonti giurisprudenziali ai"
@@ -17,7 +17,7 @@ revisione_30_09: "30/09/2026 — revisione testi prima della messa online, appro
 
 # Ogni funzione, un passo verso il risultato.
 
-**Occhiello:** Prodotto
+**Occhiello:** Software AI per studi legali
 
 Ogni funzione di Lidia nasce per il lavoro del professionista, dall'attività più semplice al
 processo più complesso. Il controllo su risposte e output resta tuo, a ogni passaggio.
@@ -188,7 +188,7 @@ né copia-incolla.
 
 ## Richiedi subito una prova gratuita di 7 giorni. {#prova}
 
-Compila il modulo e inizia a lavorare con Lidia sui tuoi documenti e sui tuoi flussi di lavoro.
+Compila il modulo: ti contattiamo per mostrarti la piattaforma e attivare la prova sui tuoi documenti e sui tuoi flussi di lavoro.
 
 - Prova gratuita di 7 giorni, sui documenti reali dello studio
 - Nessun dato trasmesso ai fornitori dei modelli

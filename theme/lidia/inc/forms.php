@@ -344,6 +344,11 @@ function lidia_modulo_valida( $dati ) {
 		}
 	}
 
+	// 05/10: il telefono è obbligatorio nel modulo prova (anche intento commerciale), non nel whitepaper.
+	if ( 'prova' === $dati['tipo'] && '' === $dati['telefono'] ) {
+		$errori['telefono'] = $manca;
+	}
+
 	if ( '' !== $dati['email'] && ! is_email( $dati['email'] ) ) {
 		$errori['email'] = __( 'Questo indirizzo non sembra valido.', 'lidia' );
 	}
@@ -552,9 +557,9 @@ function lidia_modulo_form( $tipo, $istanza, $posizione = '', $dati = array(), $
 			'nome'         => 'telefono',
 			'etichetta'    => __( 'Telefono', 'lidia' ),
 			'tipo'         => 'tel',
-			'obbligatorio' => false,
+			'obbligatorio' => true,
 			'autocomplete' => 'tel',
-			'aiuto'        => __( 'Solo se preferite che vi chiamiamo.', 'lidia' ),
+			'aiuto'        => 'prova' === $intento ? __( "Per fissare la presentazione.", 'lidia' ) : '',
 		);
 	}
 
@@ -656,7 +661,7 @@ function lidia_modulo_conferma( $esito ) {
 		return $html . '</div>';
 	}
 
-	$html .= '<p>' . esc_html__( 'Vi ricontattiamo al più presto all’indirizzo che ci avete lasciato, con le credenziali e una nota su come partire.', 'lidia' ) . '</p>';
+	$html .= '<p>' . esc_html__( 'Vi contattiamo a breve per fissare una presentazione della piattaforma. In quell’occasione attiviamo la prova gratuita.', 'lidia' ) . '</p>';
 	$html .= '<p><a href="' . esc_url( home_url( lidia_modulo_en() ? '/en/security/' : '/sicurezza/' ) ) . '">' . esc_html__( 'Sicurezza e trattamento dei dati →', 'lidia' ) . '</a></p>';
 
 	return $html . '</div>';
