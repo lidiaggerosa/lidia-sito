@@ -1,7 +1,7 @@
 ---
 url: /risorse/whitepaper/
 lingua: it
-title: "Whitepaper su intelligenza artificiale e diritto — Lidia"
+title: "Whitepaper su intelligenza artificiale e diritto | Lidia"
 meta_description: "Cinque documenti operativi su governance dei dati, metodo della ricerca giuridica, responsabilità nella filiera dell'AI e adozione nelle assicurazioni."
 h1: "Whitepaper"
 keyword_primaria: "whitepaper intelligenza artificiale diritto"

@@ -10,7 +10,7 @@
  * - FAQPage: su ogni pagina con una sezione `lidia-faq`, costruito leggendo le domande
  *   della pagina. Il testo dello schema è quello visibile per costruzione: non esiste una
  *   seconda copia da tenere allineata, e una FAQ nuova entra nello schema da sola.
- * - SoftwareApplication: su /prodotto/, con il prezzo di partenza già pubblico.
+ * - SoftwareApplication: su /prodotto/ e /prezzi/ (IT ed EN), con il prezzo di partenza già pubblico.
  * - Article sui whitepaper (CPT `risorsa`), con gli autori del campo `lidia_autori`.
  * - Briciole: Home › Risorse › Articoli|Whitepaper › titolo, anche nella BreadcrumbList.
  * - Articoli: autore Lidia (l'Organization), non l'utente WordPress che li ha caricati.
@@ -266,24 +266,28 @@ add_filter( 'wpseo_schema_webpage', 'lidia_schema_faq' );
  * ---------------------------------------------------------------------- */
 
 /**
- * Il prodotto, su /prodotto/.
+ * Il prodotto, su /prodotto/ e /prezzi/ e sulle due pagine inglesi corrispondenti.
  *
  * Il prezzo è quello pubblico, «da 125 € al mese» (decision log 14/09): nessun altro
  * dato del listino. Nessuna valutazione aggregata: non ce ne sono di pubbliche, e una
  * inventata è esattamente ciò che lo schema non deve contenere.
+ *
+ * 07/10/2026: anche su /prezzi/, /en/product/ e /en/pricing/: il prezzo si legge
+ * soprattutto in /prezzi/. Stesso @id ovunque, perché è lo stesso prodotto.
  *
  * @param array  $grafo    Nodi del grafo Yoast.
  * @param object $contesto Meta_Tags_Context di Yoast.
  * @return array
  */
 function lidia_schema_software( $grafo, $contesto ) {
-	if ( ! is_page( 'prodotto' ) ) {
+	if ( ! is_page( array( 'prodotto', 'prezzi', 'product', 'pricing' ) ) ) {
 		return $grafo;
 	}
 
-	$sito   = isset( $contesto->site_url ) ? $contesto->site_url : trailingslashit( home_url() );
-	$pagina = get_queried_object_id();
-	$testo  = (string) get_post_meta( $pagina, '_yoast_wpseo_metadesc', true );
+	$sito    = isset( $contesto->site_url ) ? $contesto->site_url : trailingslashit( home_url() );
+	$pagina  = get_queried_object_id();
+	$testo   = (string) get_post_meta( $pagina, '_yoast_wpseo_metadesc', true );
+	$inglese = function_exists( 'pll_get_post_language' ) && 'en' === pll_get_post_language( $pagina );
 
 	$nodo = array(
 		'@type'                  => 'SoftwareApplication',
@@ -291,25 +295,36 @@ function lidia_schema_software( $grafo, $contesto ) {
 		'name'                   => 'Lidia',
 		'url'                    => get_permalink( $pagina ),
 		'applicationCategory'    => 'BusinessApplication',
-		'applicationSubCategory' => 'Intelligenza artificiale legale',
+		'applicationSubCategory' => $inglese ? 'Legal artificial intelligence' : 'Intelligenza artificiale legale',
 		'operatingSystem'        => 'Web',
-		'inLanguage'             => 'it-IT',
-		'featureList'            => array(
-			'Ricerca legale su fonti ufficiali (GraphRAG)',
-			'Lidia Workflow',
-			'Add-in per Word',
-			'AI Assistant',
-			'Smart Answer',
-			'Workflow Builder',
-			'Pratiche',
-			'OCR avanzato',
-		),
+		'inLanguage'             => $inglese ? 'en' : 'it-IT',
+		'featureList'            => $inglese
+			? array(
+				'Legal research on official sources (GraphRAG)',
+				'Lidia Workflow',
+				'Word add-in',
+				'AI Assistant',
+				'Smart Answer',
+				'Workflow Builder',
+				'Matters',
+				'Advanced OCR',
+			)
+			: array(
+				'Ricerca legale su fonti ufficiali (GraphRAG)',
+				'Lidia Workflow',
+				'Add-in per Word',
+				'AI Assistant',
+				'Smart Answer',
+				'Workflow Builder',
+				'Pratiche',
+				'OCR avanzato',
+			),
 		'publisher'              => array( '@id' => $sito . '#organization' ),
 		'offers'                 => array(
 			'@type'              => 'Offer',
 			'price'              => '125',
 			'priceCurrency'      => 'EUR',
-			'url'                => home_url( '/prezzi/' ),
+			'url'                => home_url( $inglese ? '/en/pricing/' : '/prezzi/' ),
 			'priceSpecification' => array(
 				'@type'             => 'UnitPriceSpecification',
 				'price'             => '125',

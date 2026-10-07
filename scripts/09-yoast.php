@@ -160,22 +160,22 @@ foreach ( $impostazioni as $chiave => $valore ) {
 
 $pagine = array(
 	'/' => array(
-		'title' => 'Lidia AI — AI legale per avvocati e aziende',
-		'desc'  => 'Lidia è l\'intelligenza artificiale legale che lavora con te: ricerca su fonti ufficiali, analisi e redazione documenti, integrata in Word.',
+		'title' => 'AI legale per avvocati e aziende | Lidia AI',
+		'desc'  => 'Lidia è l\'AI legale che lavora con te: ricerca su fonti ufficiali, analisi e redazione di documenti, integrata in Word. Prova gratuita di 7 giorni.',
 		'kw'    => 'ai legale',
 	),
 	'/prodotto/' => array(
-		'title' => 'Funzioni di Lidia — software AI per studi legali',
+		'title' => 'Software AI per studi legali: le funzioni | Lidia',
 		'desc'  => 'Le funzioni di Lidia, software AI per studi legali: ricerca su fonti ufficiali con GraphRAG, workflow, add-in Word, AI Assistant, Smart Answer.',
-		'kw'    => 'software intelligenza artificiale studi legali',
+		'kw'    => 'software ai per studi legali',
 	),
 	'/sicurezza/' => array(
-		'title' => 'Sicurezza dei dati e AI negli studi legali — Lidia',
-		'desc'  => 'Dove risiedono i dati, cosa vedono i fornitori dei modelli, quali certificazioni ha Lidia: AWS in Unione Europea, ISO 27001, CSA STAR Level 1, conformità GDPR.',
+		'title' => 'Sicurezza dei dati e AI negli studi legali | Lidia',
+		'desc'  => 'Sicurezza dei dati negli studi legali che usano l\'AI: dati su AWS in Unione Europea, nessun accesso dei fornitori dei modelli, ISO 27001, CSA STAR, GDPR.',
 		'kw'    => 'sicurezza dei dati ai studi legali',
 	),
 	'/prezzi/' => array(
-		'title' => 'Quanto costa un software AI per studi legali — Prezzi Lidia',
+		'title' => 'Quanto costa un software AI per studi legali | Lidia',
 		'desc'  => 'Lidia parte da 125 € al mese. Lidia Professional comprende tutte le funzioni, tutte le materie del diritto e l\'accesso alle fonti ufficiali.',
 		'kw'    => 'quanto costa un software ai per studi legali',
 	),
@@ -185,32 +185,32 @@ $pagine = array(
 		'kw'    => 'prova gratuita software legal ai',
 	),
 	'/azienda/' => array(
-		'title' => 'Lidia — Chi progetta l\'AI legale italiana',
+		'title' => 'Chi progetta l\'AI legale italiana | Lidia',
 		'desc'  => 'Lidia S.r.l. costruisce l\'intelligenza legale che lavora al fianco dello studio. Progettata da avvocati dei grandi studi italiani e internazionali.',
 		'kw'    => 'lidia legal ai',
 	),
 	'/azienda/lavora-con-noi/' => array(
-		'title' => 'Lavora con noi — Lidia',
+		'title' => 'Lavora con noi | Lidia',
 		'desc'  => 'Lidia S.r.l., legal tech italiana. Al momento non ci sono posizioni aperte, ma le candidature spontanee si leggono tutte.',
 		'kw'    => 'lavora con noi lidia',
 	),
 	'/contatti/' => array(
-		'title' => 'Contatti — Lidia',
+		'title' => 'Contatti | Lidia',
 		'desc'  => 'Contatti di Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Sedi di Genova e Milano. Per le prove gratuite usate il form dedicato.',
 		'kw'    => 'contatti lidia',
 	),
 	'/risorse/' => array(
-		'title' => 'Risorse su AI e diritto — Lidia',
+		'title' => 'Risorse su AI e diritto | Lidia',
 		'desc'  => 'Paper, analisi e resoconti su come l\'intelligenza artificiale entra nel lavoro legale. Scritti da avvocati, con le fonti in chiaro.',
 		'kw'    => '',
 	),
 	'/risorse/whitepaper/' => array(
-		'title' => 'Whitepaper su intelligenza artificiale e diritto — Lidia',
+		'title' => 'Whitepaper su intelligenza artificiale e diritto | Lidia',
 		'desc'  => 'Cinque documenti operativi su governance dei dati, metodo della ricerca giuridica, responsabilità nella filiera dell\'AI e adozione nelle assicurazioni.',
 		'kw'    => 'whitepaper intelligenza artificiale diritto',
 	),
 	'/risorse/articoli/' => array(
-		'title' => 'Articoli su AI e diritto — Lidia',
+		'title' => 'Articoli su AI e diritto | Lidia',
 		'desc'  => 'Analisi e resoconti su come l\'intelligenza artificiale cambia il lavoro legale: normativa, metodo, casi. Scritti da avvocati, con le fonti in chiaro.',
 		'kw'    => '',
 	),
@@ -325,6 +325,38 @@ foreach ( $pagine as $percorso => $meta ) {
 
 if ( $mancanti ) {
 	WP_CLI::warning( "{$mancanti} percorsi senza contenuto." );
+}
+
+/* -------------------------------------------------------------------------
+ * 3ter. Contenuti principali (Cornerstone) (07/10/2026)
+ *
+ * Le pagine che devono posizionarsi per le keyword commerciali: Yoast le marca come
+ * Cornerstone e applica un'analisi più severa. Anche le traduzioni inglesi, se esistono.
+ * ---------------------------------------------------------------------- */
+
+$principali = array( '/', '/prodotto/', '/prezzi/', '/prova-gratuita/' );
+
+foreach ( $principali as $percorso ) {
+	$id = lidia_yoast_trova( $percorso );
+
+	if ( ! $id ) {
+		WP_CLI::warning( "Cornerstone: nessun contenuto a {$percorso}" );
+		continue;
+	}
+
+	$ids = array( $id );
+
+	if ( function_exists( 'pll_get_post' ) ) {
+		$inglese = (int) pll_get_post( $id, 'en' );
+		if ( $inglese ) {
+			$ids[] = $inglese;
+		}
+	}
+
+	foreach ( $ids as $da_marcare_id ) {
+		update_post_meta( $da_marcare_id, '_yoast_wpseo_is_cornerstone', '1' );
+		WP_CLI::log( sprintf( '  cornerstone %-17s → %d', $percorso, $da_marcare_id ) );
+	}
 }
 
 /* -------------------------------------------------------------------------

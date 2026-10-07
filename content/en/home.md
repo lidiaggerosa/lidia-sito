@@ -2,19 +2,20 @@
 url: /en/
 lingua: en
 traduzione_di: /
-title: "Lidia — Legal AI for law firms and companies"
-meta_description: "Lidia is the legal AI that works with you: research on official sources, document analysis and drafting, built into Word."
+title: "Legal AI for law firms and companies | Lidia AI"
+meta_description: "Lidia is the legal AI that works with you: research on official sources, document analysis and drafting, built into Word. 7-day free trial."
 keyword_primaria: "legal AI"
 stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-25
 pubblicazione: bozza finché non c'è l'informativa privacy in inglese (25/09/2026)
+revisione_07_10: "07/10/2026 — SEO, allineata alla revisione italiana del 07/10, approvata in chat da Gianluca."
 revisione_30_09: "30/09/2026 — allineata alla revisione italiana del 30/09, approvata in chat da Gianluca."
 ---
 
-# Legal intelligence that works with you.
+# The legal AI that works with you.
 
-From answer to outcome: Lidia researches, analyses, drafts and automates your most complex processes with specialised agents. By your side, all the way to the decision.
+From answer to outcome: Lidia is the legal AI for lawyers and in-house legal teams that researches, analyses, drafts and automates your most complex processes with specialised agents. By your side, all the way to the decision.
 
 Our clients
 
@@ -24,7 +25,7 @@ Our clients
 An answer is only the beginning. Legal work means documents to analyse, sources to connect, steps to take in the right order: a due diligence, a contract review, a legal opinion. Lidia researches, analyses, drafts and carries these processes through to the end, showing sources and steps along the way. AI agents execute; the professional reviews and decides.
 
 
-## The work, feature by feature
+## Legal AI, feature by feature
 
 
 ### Legal research
@@ -172,7 +173,7 @@ What's included
 - Tailored onboarding
 
 
-## Frequently asked questions
+## Frequently asked questions about legal AI
 
 Legal AI is an artificial intelligence system designed for legal work: research on official legislative and case-law sources, analysis of documents and contracts, assisted drafting. It differs from general-purpose AI in three ways: its sources are verifiable and cited; its context is the firm's case file, official sources and selected web sources; every step remains traceable. Lidia is an Italian legal AI platform, with data kept in the European Union.
 

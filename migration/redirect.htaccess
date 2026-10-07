@@ -1,4 +1,4 @@
-# Redirect da lidiatech.ai (Joomla) al nuovo sito — generato da migration/mappa-301.csv il 2026-09-22, annex A/B attivati il 2026-09-24
+# Redirect da lidiatech.ai (Joomla) al nuovo sito — generato da migration/mappa-301.csv il 2026-09-22, annex A/B attivati il 2026-09-24, legali EN verso le pagine IT il 2026-10-07
 # Va in testa a .htaccess, sopra il blocco WordPress. Non modificare a mano: rigenerare dalla mappa.
 # Solo percorsi: il 301 di host da www a senza www si aggiunge al cutover (07-deploy-siteground.md).
 # Mai regole su /index.php: WordPress serve ogni pagina passando da lì.
@@ -19,12 +19,12 @@ RedirectMatch 301 ^/images/PDF/Diritto\-LLM\-e\-ricerca\.pdf/?$ /risorse/whitepa
 RedirectMatch 301 ^/it/news/la\-responsabilita\-nella\-value\-chain\-dellai/?$ /risorse/whitepaper/responsabilita-value-chain-ai/
 RedirectMatch 301 ^/en/services/?$ /en/product/
 RedirectMatch 301 ^/it/news/scopri\-come\-lidia\-puo\-supportare\-il\-tuo\-studio\-con\-lentrata\-in\-vigore\-della\-legge\-ai\-132\-2025/?$ /risorse/legge-132-2025-studi-legali/
-RedirectMatch 301 ^/en/privacy\-policy/?$ /en/legal/privacy/
+RedirectMatch 301 ^/en/privacy\-policy/?$ /legale/privacy/
 RedirectMatch 301 ^/it/prodotto/?$ /prodotto/
 RedirectMatch 301 ^/it/news/diritto\-llm\-e\-ricerca/?$ /risorse/whitepaper/diritto-llm-e-ricerca/
 RedirectMatch 301 ^/it/news/odissea\-digitale\-la\-rotta\-dellai\-per\-gli\-studi\-legali/?$ /risorse/whitepaper/odissea-digitale-ai-studi-legali/
 RedirectMatch 301 ^/images/privacy\-policy_LIDIA\.pdf/?$ /legale/privacy/
-RedirectMatch 301 ^/images/privacy\-policy_LIDIA_en\.pdf/?$ /en/legal/privacy/
+RedirectMatch 301 ^/images/privacy\-policy_LIDIA_en\.pdf/?$ /legale/privacy/
 RedirectMatch 301 ^/it/legalaiday\-iscriviti/?$ /prova-gratuita/
 RedirectMatch 410 ^/it/thank\-you/?$
 RedirectMatch 301 ^/it/privacy\-policy/?$ /legale/privacy/
@@ -37,13 +37,13 @@ RedirectMatch 301 ^/it/news/dall\-opinion\-eiopa\-ai\-fatti\-guida\-pratica\-all
 RedirectMatch 301 ^/it/attivazione\-demo/?$ /prova-gratuita/
 RedirectMatch 410 ^/it/surveylegalaiday/?$
 RedirectMatch 301 ^/it/news/analisi\-strategica\-sull\-ai\-evoluzione\-degli\-agenti\-contesto\-legale\-enterprise/?$ /risorse/agenti-ai-contesto-legale-enterprise/
-RedirectMatch 301 ^/en/gtc/?$ /en/legal/terms/
+RedirectMatch 301 ^/en/gtc/?$ /legale/termini/
 RedirectMatch 410 ^/it/lidia\-template/?$
 RedirectMatch 301 ^/it/news/governance\-dei\-dati/?$ /risorse/whitepaper/nuova-governance-dei-dati/
 RedirectMatch 301 ^/cookies/?$ /legale/cookie/
 RedirectMatch 410 ^/it/lidia\-ai\-insight\-hub/?$
 RedirectMatch 301 ^/servizi/?$ /prodotto/
-RedirectMatch 301 ^/en/cookies/?$ /en/legal/cookies/
+RedirectMatch 301 ^/en/cookies/?$ /legale/cookie/
 RedirectMatch 301 ^/it/gtc/?$ /legale/termini/
 RedirectMatch 410 ^/it/lidia\-prompt\-lab/?$
 RedirectMatch 301 ^/it/home/?$ /
@@ -62,7 +62,7 @@ RedirectMatch 301 ^/en/word\-en/?$ /en/product/
 RedirectMatch 301 ^/it/attiva\-demo/?$ /prova-gratuita/
 RedirectMatch 410 ^/en/lidia\-template/civil\-law/?$
 RedirectMatch 410 ^/en/lidia\-template/civil\-law/due\-diligence/?$
-RedirectMatch 301 ^/en/gtc\-en/?$ /en/legal/terms/
+RedirectMatch 301 ^/en/gtc\-en/?$ /legale/termini/
 RedirectMatch 301 ^/it/camera\-ra/?$ /prova-gratuita/
 RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/contenzioso/?$
 RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/due\-diligence/?$

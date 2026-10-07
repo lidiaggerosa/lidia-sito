@@ -1,7 +1,7 @@
 ---
 url: /prezzi/
 lingua: it
-title: "Quanto costa un software AI per studi legali — Prezzi Lidia"
+title: "Quanto costa un software AI per studi legali | Lidia"
 meta_description: "Lidia parte da 125 € al mese. Lidia Professional comprende tutte le funzioni, tutte le materie del diritto e l'accesso alle fonti ufficiali."
 h1: "Quanto costa Lidia"
 keyword_primaria: "quanto costa un software ai per studi legali"

@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <!-- wp:group {"className":"lidia-sezione lidia-faq lidia-faq-centrata lidia-registro-alterno","align":"full","anchor":"domande-frequenti","layout":{"type":"constrained","contentSize":"1040px"}} -->
 <div id="domande-frequenti" class="wp-block-group alignfull lidia-sezione lidia-faq lidia-faq-centrata lidia-registro-alterno"><!-- wp:heading -->
-<h2 class="wp-block-heading">Domande frequenti</h2>
+<h2 class="wp-block-heading">Domande frequenti sull’AI legale</h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"className":"lidia-domande","layout":{"type":"default"}} -->

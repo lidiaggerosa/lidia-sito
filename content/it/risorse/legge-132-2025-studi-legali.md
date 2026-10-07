@@ -7,7 +7,7 @@ h1: "Legge 132/2025: come cambia l'uso dell'AI negli studi legali"
 keyword_primaria: "legge 132 2025 intelligenza artificiale"
 keyword_secondarie: "ai act studi legali; obblighi trasparenza ai clienti; compliance ai avvocati"
 tipo: articolo
-data_originale: 2025
+data_originale: 2025-10
 url_originale: https://www.lidiatech.ai/it/news/scopri-come-lidia-puo-supportare-il-tuo-studio-con-lentrata-in-vigore-della-legge-ai-132-2025
 cta_primaria: { testo: "Richiedi una prova gratuita", url: "/prova-gratuita/" }
 stato: in-revisione

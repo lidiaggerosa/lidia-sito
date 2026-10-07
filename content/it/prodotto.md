@@ -1,10 +1,10 @@
 ---
 url: /prodotto/
 lingua: it
-title: "Funzioni di Lidia — software AI per studi legali"
+title: "Software AI per studi legali: le funzioni | Lidia"
 meta_description: "Le funzioni di Lidia, software AI per studi legali: ricerca su fonti ufficiali con GraphRAG, workflow, add-in Word, AI Assistant, Smart Answer."
-h1: "Ogni funzione, un passo verso il risultato."
-keyword_primaria: "software intelligenza artificiale studi legali"
+h1: "Software AI per studi legali: ogni funzione, un passo verso il risultato."
+keyword_primaria: "software ai per studi legali"
 keyword_secondarie: "piattaforma legal ai; ai agentica legale; ai ricerca giuridica; analisi contratti intelligenza artificiale; integrazione word studi legali; fonti giurisprudenziali ai"
 cta_primaria: { testo: "Richiedi una prova gratuita", url: "#prova" }
 step_loop: nessuno
@@ -12,15 +12,16 @@ stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-24
 revisione: "24/09/2026 — H1 «Ogni funzione, un passo verso il risultato.» (la formula «sempre al tuo fianco» resta alla home); mock dei box rinviati a un secondo passaggio, riempitivo nella colonna. Pagina rifatta sul nuovo storytelling: un box per funzione (testo + mock), indice orizzontale, FAQ sulle fonti, CTA verso il modulo. Escono «I limiti, detti prima», «I dati» e il prezzo. Sostituisce la versione del 16/09."
+revisione_07_10: "07/10/2026 — SEO: keyword «software ai per studi legali», H1 e sommario con la keyword, occhiello «Funzioni di Lidia», H2 delle quattro azioni. Approvato in chat da Gianluca."
 revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
-# Ogni funzione, un passo verso il risultato.
+# Software AI per studi legali: ogni funzione, un passo verso il risultato.
 
-**Occhiello:** Software AI per studi legali
+**Occhiello:** Funzioni di Lidia
 
-Ogni funzione di Lidia nasce per il lavoro del professionista, dall'attività più semplice al
-processo più complesso. Il controllo su risposte e output resta tuo, a ogni passaggio.
+Ogni funzione di Lidia, software AI per studi legali e direzioni legali, nasce per il lavoro del
+professionista, dall'attività più semplice al processo più complesso. Il controllo su risposte e output resta tuo, a ogni passaggio.
 
 **CTA primaria:** Richiedi una prova gratuita → `#prova`
 
@@ -32,7 +33,7 @@ AI Assistant `#ai-assistant` · Altre funzioni `#altre-funzioni` · FAQ `#faq`
 
 ---
 
-## Quattro tipi di azione, un solo spazio di lavoro
+## Quattro tipi di azione, un solo software per lo studio
 
 *(Linea che congiunge le quattro voci, schema dei cinque valori della home.)*
 
@@ -208,7 +209,7 @@ Compila il modulo: ti contattiamo per mostrarti la piattaforma e attivare la pro
 - Indice: bottoni **secondari** (bianco con bordo), una riga; su mobile scorre in orizzontale,
   senza barra visibile. Gli ancoraggi si fermano sotto la testata fissa (`scroll-padding-top`).
 - I box funzione usano i pattern **Funzione · box** / **Funzione · box (invertito)** e i mock
-  HTML della cartella `mock/` (regole in `docs/redazione/box-funzione.md`). **Secondo passaggio:**
+  HTML della cartella `mock/` (regole in `docs/10a-guida-box-funzione.md`). **Secondo passaggio:**
   al primo montaggio la colonna mock porta il riempitivo indicato nel box; i widget si incollano
   dopo come blocco HTML personalizzato. Da produrre: `workflow`, `add-in-word`, `ai-assistant`
   (`ricerca-legale` esiste).

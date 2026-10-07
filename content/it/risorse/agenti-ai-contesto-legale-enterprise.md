@@ -7,6 +7,7 @@ h1: "Agenti AI nel contesto legale ed enterprise: l'evoluzione a breve termine"
 keyword_primaria: "agenti ai contesto legale"
 keyword_secondarie: "ai agentica enterprise; human on the loop; ai act aziende"
 tipo: articolo
+data_originale: 2026-01
 url_originale: https://www.lidiatech.ai/it/news/analisi-strategica-sull-ai-evoluzione-degli-agenti-contesto-legale-enterprise
 cta_primaria: { testo: "Richiedi una prova gratuita", url: "/prova-gratuita/" }
 stato: in-revisione

@@ -2,7 +2,7 @@
 url: /en/contact/
 lingua: en
 traduzione_di: /contatti/
-title: "Contact — Lidia"
+title: "Contact | Lidia"
 meta_description: "Contact Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Offices in Genoa and Milan. For free trials, please use the dedicated form."
 keyword_primaria: "Lidia contact"
 stato: approvato

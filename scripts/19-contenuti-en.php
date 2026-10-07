@@ -26,20 +26,20 @@ $cartella = __DIR__ . '/blocchi/en/';
 $pagine = array(
 	'/'                => array(
 		'file'  => 'home.html',
-		'title' => 'Lidia AI — Legal AI for law firms and companies',
-		'desc'  => 'Lidia is the legal AI that works with you: research on official sources, document analysis and drafting, built into Word.',
+		'title' => 'Legal AI for law firms and companies | Lidia AI',
+		'desc'  => 'Lidia is the legal AI that works with you: research on official sources, document analysis and drafting, built into Word. 7-day free trial.',
 		'kw'    => 'legal AI',
 	),
 	'/prodotto/'       => array(
 		'file'  => 'product.html',
-		'title' => 'Lidia features — AI software for law firms',
+		'title' => 'AI software for law firms: features | Lidia',
 		'desc'  => "Lidia's features, AI software for law firms: official-source research with GraphRAG, workflows, Word add-in, AI Assistant, Smart Answer.",
 		'kw'    => 'AI software for law firms',
 	),
 	'/sicurezza/'      => array(
 		'file'  => 'security.html',
-		'title' => 'Data security and AI in law firms — Lidia',
-		'desc'  => 'Where the data lives, what model providers see, which certifications Lidia holds: AWS in the European Union, ISO 27001, CSA STAR Level 1, GDPR compliance.',
+		'title' => 'Data security and AI in law firms | Lidia',
+		'desc'  => 'Data security for law firms using AI: data on AWS in the European Union, no access for model providers, ISO 27001, CSA STAR, GDPR.',
 		'kw'    => 'AI data security for law firms',
 	),
 	'/prezzi/'         => array(
@@ -56,13 +56,13 @@ $pagine = array(
 	),
 	'/azienda/'        => array(
 		'file'  => 'company.html',
-		'title' => 'Lidia — The team behind Italian legal AI',
+		'title' => 'The team behind Italian legal AI | Lidia',
 		'desc'  => 'Lidia S.r.l. builds legal intelligence that works alongside your firm. Designed by lawyers with experience at leading Italian and international firms.',
 		'kw'    => 'Lidia legal AI',
 	),
 	'/contatti/'       => array(
 		'file'  => 'contact.html',
-		'title' => 'Contact — Lidia',
+		'title' => 'Contact | Lidia',
 		'desc'  => 'Contact Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Offices in Genoa and Milan. For free trials, please use the dedicated form.',
 		'kw'    => 'Lidia contact',
 	),

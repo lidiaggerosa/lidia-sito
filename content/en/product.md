@@ -2,24 +2,25 @@
 url: /en/product/
 lingua: en
 traduzione_di: /prodotto/
-title: "Lidia features — AI software for law firms"
+title: "AI software for law firms: features | Lidia"
 meta_description: "Lidia's features, AI software for law firms: official-source research with GraphRAG, practice-area workflows, Word add-in, AI Assistant, Smart Answer, matters."
 keyword_primaria: "AI software for law firms"
 stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-25
 pubblicazione: bozza finché non c'è l'informativa privacy in inglese (25/09/2026)
+revisione_07_10: "07/10/2026 — SEO, allineata alla revisione italiana del 07/10, approvata in chat da Gianluca."
 revisione_30_09: "30/09/2026 — allineata alla revisione italiana del 30/09, approvata in chat da Gianluca."
 ---
 
 Product
 
-# Every feature, a step towards the outcome.
+# AI software for law firms: every feature, a step towards the outcome.
 
-Every Lidia feature is built around the professional's work, from the simplest task to the most complex process. Control over answers and outputs stays with you, at every step.
+Every feature of Lidia, AI software for law firms and in-house legal teams, is built around the professional's work, from the simplest task to the most complex process. Control over answers and outputs stays with you, at every step.
 
 
-## Four kinds of action, one workspace
+## Four kinds of action, one software for your firm
 
 01
 
