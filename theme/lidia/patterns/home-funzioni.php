@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- wp:group {"className":"lidia-sezione lidia-funzioni","align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull lidia-sezione lidia-funzioni"><!-- wp:group {"className":"lidia-funzioni-testa","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-funzioni-testa"><!-- wp:heading -->
-<h2 class="wp-block-heading">Il lavoro, funzione per funzione</h2>
+<h2 class="wp-block-heading">L’AI legale, funzione per funzione</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 

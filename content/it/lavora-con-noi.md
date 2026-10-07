@@ -1,7 +1,7 @@
 ---
 url: /azienda/lavora-con-noi/
 lingua: it
-title: "Lavora con noi — Lidia"
+title: "Lavora con noi | Lidia"
 meta_description: "Lidia S.r.l., legal tech italiana. Al momento non ci sono posizioni aperte, ma le candidature spontanee si leggono tutte."
 h1: "Lavora con noi"
 keyword_primaria: "lavora con noi lidia"

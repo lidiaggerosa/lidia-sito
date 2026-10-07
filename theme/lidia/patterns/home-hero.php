@@ -12,11 +12,11 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <!-- wp:group {"className":"lidia-sezione lidia-hero lidia-cta-chiara","align":"full","gradient":"notte","layout":{"type":"constrained","contentSize":"1040px"}} -->
 <div class="wp-block-group alignfull lidia-sezione lidia-hero lidia-cta-chiara has-notte-gradient-background has-background"><!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">L'intelligenza legale che lavora con te.</h1>
+<h1 class="wp-block-heading">L'AI legale che lavora con te.</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"lidia-hero-sommario"} -->
-<p class="lidia-hero-sommario">Dalla risposta al risultato: Lidia ricerca, analizza, redige e automatizza i processi più complessi con agenti specializzati. Al tuo fianco, fino alla decisione.</p>
+<p class="lidia-hero-sommario">Dalla risposta al risultato: Lidia è l’AI legale per avvocati e direzioni legali che ricerca, analizza, redige e automatizza i processi più complessi con agenti specializzati. Al tuo fianco, fino alla decisione.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

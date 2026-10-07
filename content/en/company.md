@@ -2,7 +2,7 @@
 url: /en/company/
 lingua: en
 traduzione_di: /azienda/
-title: "Lidia — The team behind Italian legal AI"
+title: "The team behind Italian legal AI | Lidia"
 meta_description: "Lidia S.r.l. builds legal intelligence that works alongside your firm. Designed by lawyers with experience at leading Italian and international firms."
 keyword_primaria: "Lidia legal AI"
 stato: approvato

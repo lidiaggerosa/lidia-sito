@@ -1,7 +1,7 @@
 ---
 url: /risorse/
 lingua: it
-title: "Risorse su AI e diritto — Lidia"
+title: "Risorse su AI e diritto | Lidia"
 meta_description: "Paper, analisi e resoconti su come l'intelligenza artificiale entra nel lavoro legale. Scritti da avvocati, con le fonti in chiaro."
 h1: "Risorse"
 keyword_primaria: "— (hub: nessuna keyword propria)"

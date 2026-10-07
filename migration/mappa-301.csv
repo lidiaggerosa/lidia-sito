@@ -18,12 +18,12 @@ https://www.lidiatech.ai/it/news/la-responsabilita-nella-value-chain-dellai,/ris
 https://www.lidiatech.ai/en/security,/en/security/,nessuno,"stesso indirizzo nel nuovo sito: nessuna regola, eviterebbe solo la barra finale che WordPress aggiunge da solo"
 https://www.lidiatech.ai/en/services,/en/product/,301,404 con organico; EN provvisorio
 https://www.lidiatech.ai/it/news/scopri-come-lidia-puo-supportare-il-tuo-studio-con-lentrata-in-vigore-della-legge-ai-132-2025,/risorse/legge-132-2025-studi-legali/,301,articolo con organico; slug accorciato
-https://www.lidiatech.ai/en/privacy-policy,/en/legal/privacy/,301,EN provvisorio
+https://www.lidiatech.ai/en/privacy-policy,/legale/privacy/,301,legali solo in IT (decisione 24/09)
 https://www.lidiatech.ai/it/prodotto,/prodotto/,301,404 con organico
 https://www.lidiatech.ai/it/news/diritto-llm-e-ricerca,/risorse/whitepaper/diritto-llm-e-ricerca/,301,whitepaper con organico (era classificato articolo: corretto il 21/09)
 https://www.lidiatech.ai/it/news/odissea-digitale-la-rotta-dellai-per-gli-studi-legali,/risorse/whitepaper/odissea-digitale-ai-studi-legali/,301,articolo con organico; slug accorciato
 https://www.lidiatech.ai/images/privacy-policy_LIDIA.pdf,/legale/privacy/,301,PDF legale sostituito dalla pagina
-https://www.lidiatech.ai/images/privacy-policy_LIDIA_en.pdf,/en/legal/privacy/,301,PDF legale sostituito dalla pagina EN
+https://www.lidiatech.ai/images/privacy-policy_LIDIA_en.pdf,/legale/privacy/,301,PDF legale sostituito dalla pagina IT (legali solo in IT)
 https://www.lidiatech.ai/it/legalaiday-iscriviti,/prova-gratuita/,301,1.353 sessioni storiche da adv: non si butta sulla home
 https://www.lidiatech.ai/it/thank-you,,410,"thank-you temporanea, non rinasce (deciso il 22/09)"
 https://www.lidiatech.ai/it/privacy-policy,/legale/privacy/,301,legale
@@ -36,14 +36,14 @@ https://www.lidiatech.ai/it/news/dall-opinion-eiopa-ai-fatti-guida-pratica-all-a
 https://www.lidiatech.ai/it/attivazione-demo,/prova-gratuita/,301,landing di conversione
 https://www.lidiatech.ai/it/surveylegalaiday,,410,"questionario di evento concluso, noindex"
 https://www.lidiatech.ai/it/news/analisi-strategica-sull-ai-evoluzione-degli-agenti-contesto-legale-enterprise,/risorse/agenti-ai-contesto-legale-enterprise/,301,articolo con impression; slug accorciato
-https://www.lidiatech.ai/en/gtc,/en/legal/terms/,301,EN provvisorio
+https://www.lidiatech.ai/en/gtc,/legale/termini/,301,legali solo in IT (decisione 24/09)
 https://www.lidiatech.ai/it/lidia-template,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
 https://www.lidiatech.ai/it/news/governance-dei-dati,/risorse/whitepaper/nuova-governance-dei-dati/,301,articolo con impression
 https://www.lidiatech.ai/,/,nessuno,"stesso indirizzo nel nuovo sito: nessuna regola, eviterebbe solo la barra finale che WordPress aggiunge da solo"
 https://www.lidiatech.ai/cookies,/legale/cookie/,301,"legale, senza prefisso lingua"
 https://www.lidiatech.ai/it/lidia-ai-insight-hub,,410,"iniziativa conclusa, 404 oggi"
 https://www.lidiatech.ai/servizi,/prodotto/,301,"404 con organico, senza prefisso lingua"
-https://www.lidiatech.ai/en/cookies,/en/legal/cookies/,301,EN provvisorio
+https://www.lidiatech.ai/en/cookies,/legale/cookie/,301,legali solo in IT (decisione 24/09)
 https://www.lidiatech.ai/contatti,/contatti/,nessuno,"stesso indirizzo nel nuovo sito: nessuna regola, eviterebbe solo la barra finale che WordPress aggiunge da solo"
 https://www.lidiatech.ai/it/gtc,/legale/termini/,301,condizioni generali
 https://www.lidiatech.ai/it/lidia-prompt-lab,,410,"iniziativa conclusa, 404 oggi"
@@ -63,7 +63,7 @@ https://www.lidiatech.ai/en/word-en,/en/product/,301,landing add-in Word; EN pro
 https://www.lidiatech.ai/it/attiva-demo,/prova-gratuita/,301,landing di conversione
 https://www.lidiatech.ai/en/lidia-template/civil-law,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
 https://www.lidiatech.ai/en/lidia-template/civil-law/due-diligence,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
-https://www.lidiatech.ai/en/gtc-en,/en/legal/terms/,301,EN provvisorio
+https://www.lidiatech.ai/en/gtc-en,/legale/termini/,301,legali solo in IT (decisione 24/09)
 https://www.lidiatech.ai/it/camera-ra,/prova-gratuita/,301,landing di evento locale
 https://www.lidiatech.ai/it/lidia-template/diritto-civile/contenzioso,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"
 https://www.lidiatech.ai/it/lidia-template/diritto-civile/due-diligence,,410,"pagina template/tecnica: 404 oggi, nessun valore da conservare"

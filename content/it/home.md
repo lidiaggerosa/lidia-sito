@@ -1,9 +1,9 @@
 ---
 url: /
 lingua: it
-title: "Lidia AI — AI legale per avvocati e aziende"
-meta_description: "Lidia è l'intelligenza artificiale legale che lavora con te: ricerca su fonti ufficiali, analisi e redazione documenti, integrata in Word."
-h1: "L'intelligenza legale che lavora con te."
+title: "AI legale per avvocati e aziende | Lidia AI"
+meta_description: "Lidia è l'AI legale che lavora con te: ricerca su fonti ufficiali, analisi e redazione di documenti, integrata in Word. Prova gratuita di 7 giorni."
+h1: "L'AI legale che lavora con te."
 keyword_primaria: "ai legale"
 keyword_secondarie: "intelligenza artificiale per avvocati; legal ai; legal ai italia; ai studio legale; assistente ai avvocati; ai agentica legale"
 cta_primaria: { testo: "Richiedi una prova gratuita", url: "/prova-gratuita/" }
@@ -12,13 +12,15 @@ stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-23
 revisione: "07/10/2026 — title sulla query «ai legale» (dati GSC: 573 impressioni, pos. 8,8). 24/09/2026 — title e meta description nuovi (Fase 7); FAQ 2 riscritta senza «chatbot» e «AI agentica». 24/09/2026 — CTA verso il modulo in coda alle funzioni e nel prezzo. 23/09/2026 — allineamento al nuovo storytelling (claim «Dalla risposta al risultato.», payoff «Lavora al tuo fianco.»). Sostituisce la versione del 14/09."
+revisione_07_10: "07/10/2026 — SEO: H1, sommario dell'hero, H2 delle funzioni e delle FAQ con «AI legale»; title con la keyword in testa. Approvato in chat da Gianluca."
 revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
-# L'intelligenza legale che lavora con te.
+# L'AI legale che lavora con te.
 
-Dalla risposta al risultato: Lidia ricerca, analizza, redige e automatizza i processi più
-complessi con agenti specializzati. Al tuo fianco, fino alla decisione.
+Dalla risposta al risultato: Lidia è l'AI legale per avvocati e direzioni legali che ricerca,
+analizza, redige e automatizza i processi più complessi con agenti specializzati. Al tuo fianco,
+fino alla decisione.
 
 **CTA primaria:** Richiedi una prova gratuita → `/prova-gratuita/`
 
@@ -35,7 +37,7 @@ fonti e passaggi a ogni passo. Gli agenti AI eseguono, il professionista verific
 
 ---
 
-## Il lavoro, funzione per funzione
+## L'AI legale, funzione per funzione
 
 Cinque schede identiche nella struttura — titolo, descrizione, blocco che simula il
 funzionamento — in una fila che si scorre con le frecce o trascinando. Possono diventare di più.
@@ -116,11 +118,11 @@ Cosa comprende:
 
 ---
 
-## Domande frequenti
+## Domande frequenti sull'AI legale
 
 Le otto risposte sono scritte per essere autoconsistenti: ognuna definisce, cita un fatto
 verificabile e regge fuori dal contesto della pagina. Vanno replicate identiche nel JSON-LD
-`FAQPage` (vedi `docs/tecnico/seo-e-redirect.md`).
+`FAQPage` (vedi `docs/06-seo-technical.md`).
 
 ### Che cos'è un'AI legale?
 Un'AI legale è un sistema di intelligenza artificiale progettato per il lavoro giuridico:

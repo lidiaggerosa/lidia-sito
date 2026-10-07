@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- wp:group {"className":"lidia-sezione lidia-fiduciario lidia-faq lidia-faq-centrata","align":"full","anchor":"domande-frequenti","layout":{"type":"constrained","contentSize":"1040px"}} -->
 <div id="domande-frequenti" class="wp-block-group alignfull lidia-sezione lidia-fiduciario lidia-faq lidia-faq-centrata"><!-- wp:group {"className":"lidia-colonna","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-colonna"><!-- wp:heading -->
-<h2 class="wp-block-heading">Domande frequenti</h2>
+<h2 class="wp-block-heading">Domande frequenti sulla sicurezza dei dati</h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"className":"lidia-domande","layout":{"type":"default"}} -->

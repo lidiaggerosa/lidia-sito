@@ -67,7 +67,8 @@
   "meta": "La Legge 132/2025 sull'AI nelle professioni intellettuali: trasparenza, supervisione umana, responsabilità e una checklist operativa per lo studio.",
   "gated": false,
   "tipo_risorsa": "articolo",
-  "stato": "in-revisione"
+  "stato": "in-revisione",
+  "data": "2025-10"
  },
  {
   "slug": "agenti-ai-contesto-legale-enterprise",
@@ -77,6 +78,7 @@
   "meta": "Da assistenti passivi ad agenti autonomi: competenze, AI Act, sovranità digitale e adozione asimmetrica tra grandi imprese e PMI. Il resoconto del panel.",
   "gated": false,
   "tipo_risorsa": "articolo",
-  "stato": "in-revisione"
+  "stato": "in-revisione",
+  "data": "2026-01"
  }
 ]

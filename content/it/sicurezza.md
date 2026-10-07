@@ -1,9 +1,9 @@
 ---
 url: /sicurezza/
 lingua: it
-title: "Sicurezza dei dati e AI negli studi legali — Lidia"
-meta_description: "Dove risiedono i dati, cosa vedono i fornitori dei modelli, quali certificazioni ha Lidia: AWS in Unione Europea, ISO 27001, CSA STAR Level 1, conformità GDPR."
-h1: "Dove finiscono i documenti dei vostri clienti"
+title: "Sicurezza dei dati e AI negli studi legali | Lidia"
+meta_description: "Sicurezza dei dati negli studi legali che usano l'AI: dati su AWS in Unione Europea, nessun accesso dei fornitori dei modelli, ISO 27001, CSA STAR, GDPR."
+h1: "Sicurezza dei dati: dove finiscono i documenti dei vostri clienti"
 keyword_primaria: "sicurezza dei dati ai studi legali"
 keyword_secondarie: "segreto professionale intelligenza artificiale; gdpr ai legale; dove risiedono i dati"
 intento: fiduciario
@@ -12,18 +12,19 @@ step_loop: nessuno
 stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-14
+revisione_07_10: "07/10/2026 — SEO: occhiello, H1, sommario e due H2 con «sicurezza dei dati»; title e description nuovi. Approvato in chat da Gianluca."
 revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
-# Dove finiscono i documenti dei vostri clienti
+# Sicurezza dei dati: dove finiscono i documenti dei vostri clienti
 
-È la prima domanda che fa un socio, ed è quella giusta. Un fascicolo non è un file: è materiale
-coperto da segreto professionale, e chi lo tratta risponde. Questa pagina risponde per punti,
-senza rimandi a un'informativa da leggere dopo.
+È la prima domanda che fa un socio quando lo studio legale valuta un'AI, ed è quella giusta. Un
+fascicolo non è un file: è materiale coperto da segreto professionale, e chi lo tratta risponde.
+Questa pagina spiega la sicurezza dei dati per punti, senza rimandi a un'informativa da leggere dopo.
 
 ---
 
-## In Unione Europea, e non si spostano
+## Dati in Unione Europea, e non si spostano
 
 Infrastruttura **AWS in Unione Europea**. I documenti sono cifrati **a riposo e in transito**
 e non lasciano l'Unione Europea. È la condizione minima perché uno studio italiano possa affidare a un sistema di AI materiale
@@ -62,7 +63,7 @@ Trattamento conforme al Regolamento (UE) 2016/679.
 
 ---
 
-## Domande frequenti
+## Domande frequenti sulla sicurezza dei dati
 
 Quattro risposte autoconsistenti, nel JSON-LD `FAQPage` con testo identico al visibile.
 

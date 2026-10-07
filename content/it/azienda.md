@@ -1,7 +1,7 @@
 ---
 url: /azienda/
 lingua: it
-title: "Lidia — Chi progetta l'AI legale italiana"
+title: "Chi progetta l'AI legale italiana | Lidia"
 meta_description: "Lidia S.r.l. costruisce l'intelligenza legale che lavora al fianco dello studio. Progettata da avvocati dei grandi studi italiani e internazionali."
 h1: "Chi c'è dietro Lidia"
 keyword_primaria: "lidia legal ai"

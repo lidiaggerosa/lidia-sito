@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="wp-block-group lidia-colonna"><!-- wp:group {"className":"lidia-fid-carte","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-fid-carte"><!-- wp:group {"className":"lidia-fid-carta lidia-icona lidia-icona-europa","layout":{"type":"default"}} -->
 <div class="wp-block-group lidia-fid-carta lidia-icona lidia-icona-europa"><!-- wp:heading -->
-<h2 class="wp-block-heading">In Unione Europea, e non si spostano</h2>
+<h2 class="wp-block-heading">Dati in Unione Europea, e non si spostano</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
