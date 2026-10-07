@@ -120,8 +120,8 @@ msgstr "Website"
 msgid "Socio o titolare"
 msgstr "Partner or owner"
 
-msgid "Solo se preferite che vi chiamiamo."
-msgstr "Only if you'd prefer us to call you."
+msgid "Per fissare la presentazione."
+msgstr "So we can book your walkthrough."
 
 msgid "Studio o azienda"
 msgstr "Firm or company"
@@ -135,8 +135,8 @@ msgstr "Too many requests from this connection. Please try again in a few minute
 msgid "Usiamo questo indirizzo per gli accessi alla prova."
 msgstr "We'll use this address for your trial login."
 
-msgid "Vi ricontattiamo al più presto all’indirizzo che ci avete lasciato, con le credenziali e una nota su come partire."
-msgstr "We'll get back to you as soon as possible at the address you gave us, with your login details and a note on how to get started."
+msgid "Vi contattiamo a breve per fissare una presentazione della piattaforma. In quell’occasione attiviamo la prova gratuita."
+msgstr "We'll be in touch shortly to book a walkthrough of the platform. That's when we'll activate your free trial."
 
 msgid "Voglio ricevere aggiornamenti su normativa e AI legale. Ci si cancella con un clic."
 msgstr "I'd like to receive updates on regulation and legal AI. Unsubscribe with one click."

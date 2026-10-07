@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className": "lidia-misura-lettura","fontSize": "scheda"} -->
-<p class="lidia-misura-lettura has-scheda-font-size">Compilate il form. Vi diamo gli accessi quanto prima. Caricate i documenti su cui state lavorando e cominciate.</p>
+<p class="lidia-misura-lettura has-scheda-font-size">Compilate il form. Vi chiamiamo per mostrarvi la piattaforma e attivare la prova. Caricate i documenti su cui state lavorando e cominciate.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className": "lidia-misura-lettura"} -->

@@ -40,6 +40,10 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
+<!-- wp:paragraph {"className":"lidia-freccia"} -->
+<p class="lidia-freccia"><a href="/prezzi/">Piani e prezzi →</a></p>
+<!-- /wp:paragraph -->
+
 <!-- wp:buttons {"className":"lidia-prod-cta"} -->
 <div class="wp-block-buttons lidia-prod-cta"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#prova">Richiedi una prova gratuita</a></div>

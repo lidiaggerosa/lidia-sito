@@ -16,7 +16,7 @@ revisione: 2026-09-24 (H1 e apertura allineati al modulo della home)
 
 # Richiedi subito una prova gratuita di 7 giorni.
 
-Compila il modulo e inizia a lavorare con Lidia sui tuoi documenti e sui tuoi flussi di lavoro. Tutte le funzioni attive, per una settimana.
+Compila il modulo: ti contattiamo per mostrarti la piattaforma e attivare la prova sui tuoi documenti e sui tuoi flussi di lavoro. Tutte le funzioni attive, per una settimana.
 
 **FORM — in cima, accanto all'apertura.** Modulo del tema (`lidia/modulo`, `tipo: prova`).
 Campi e consensi stanno in `docs/tecnico/moduli-delera.md`, non in questo file.
@@ -25,7 +25,7 @@ Campi e consensi stanno in `docs/tecnico/moduli-delera.md`, non in questo file.
 
 ## Tre cose, poi siete dentro
 
-Compilate il form. Vi diamo gli accessi quanto prima. Caricate i documenti su cui state
+Compilate il form. Vi chiamiamo per mostrarvi la piattaforma e attivare la prova. Caricate i documenti su cui state
 lavorando e cominciate.
 
 Per sette giorni la usate come volete: ricerca sulle fonti, domande sul fascicolo, un workflow,

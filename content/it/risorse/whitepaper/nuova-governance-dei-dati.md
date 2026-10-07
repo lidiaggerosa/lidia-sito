@@ -10,58 +10,61 @@ tipo: whitepaper
 gated: true
 url_originale: https://www.lidiatech.ai/it/news/governance-dei-dati
 cta_primaria: { testo: "Scarica il whitepaper", url: "#form" }
-stato: in-revisione
+stato: approvato
+approvato_da: Gianluca Gerosa
+approvato_il: 2026-10-07
+revisione: "07/10/2026 — sintesi nuova scritta dal PDF completo (SEO: pagina sottile), approvata in chat."
 ---
 # La nuova governance dei dati
 
-## I quattro pilastri della governance AI
+Adottare l'AI in ambito legale è prima di tutto una questione di governance, metodo e competenze. Il paper raccoglie quattro contributi su come progettare sistemi AI affidabili e conformi, dalla qualità del dato alle frizioni tra le norme europee e la Legge 132/2025.
 
-### 1. Dai big data ai good data
+## Dai big data ai good data
 
-Le organizzazioni credono di aver bisogno di più dati. Serve invece qualità, non quantità.
-L'efficacia dei modelli AI dipende da consistenza, integrità e tracciabilità delle fonti: le
-aziende non soffrono la scarsità di big data, ma l'assenza di *good data* realmente
-utilizzabili.
+Il fattore abilitante non è la quantità dei dati, ma la loro qualità. Quattro condizioni:
 
-### 2. Partire dal problema, non dal dataset
+- sapere quali fonti si hanno e dove stanno;
+- un responsabile per ogni dataset;
+- qualità verificabile;
+- processi formalizzati di validazione e versioning.
 
-L'errore comune suona così: «abbiamo 10.000 contratti, cosa ci facciamo con l'AI?». L'approccio
-corretto è l'opposto: «come possiamo ridurre del 40% il tempo di ricerca giurisprudenziale
-mantenendo la qualità?». La sequenza giusta è sempre problema → soluzione → dati necessari.
+E un errore ricorrente da evitare: partire dal dataset invece che dal problema. I progetti nati da «cosa possiamo fare con i nostri dati?» raramente producono valore.
 
-### 3. La compliance è il fattore abilitante, non l'ostacolo
+## La compliance come fattore abilitante
 
-La componente più trascurata, e più determinante, è il ruolo della compliance nella fase di
-design. Se la funzione legale interviene a valle, il progetto può essere già irrimediabilmente
-compromesso, con settimane di lavoro vanificate. La compliance non è un ostacolo: è il
-prerequisito che rende scalabile ogni iniziativa AI.
+I legali vanno coinvolti all'inizio, non a valle. Il loro compito è tradurre le regole in requisiti di progetto: quali dati si possono usare, su quale base giuridica, con quale documentazione. Se intervengono a progetto finito, settimane di lavoro possono andare perse. La governance poi continua per tutta la vita del modello.
 
-### 4. Il test del legittimo interesse per il training
+## Fonti lecite e modelli sovrani
 
-Il consenso non funziona per il training dei modelli: è revocabile, e non si può «disaddestrare»
-un modello. L'Opinion 28/2024 dell'European Data Protection Board ha definito il test tripartito
-del legittimo interesse, oggi essenziale per costruire modelli AI conformi in Europa.
+Il caso di un modello linguistico addestrato interamente in Italia mostra come si costruisce un'AI controllata:
+
+- fonti licenziate o lecitamente accessibili;
+- dati personali rimossi prima dell'addestramento;
+- nessun riuso dei dati degli utenti;
+- documentazione completa.
+
+Il punto chiave: una volta dentro il modello, un dato non si può più togliere. La liceità va verificata prima.
+
+## Basi giuridiche per il training
+
+Il consenso raramente funziona: è difficile da raccogliere su larga scala ed è revocabile, mentre un modello non si può «disaddestrare». Si va verso il legittimo interesse, con il test in tre passaggi indicato dall'EDPB (Opinion 28/2024): interesse legittimo, necessità, bilanciamento. Resta poco regolata la responsabilità di chi usa il modello, cioè lo studio.
+
+## Tassonomie e frizioni normative
+
+Quattro categorie di dato con regimi diversi:
+
+- dati personali;
+- dati protetti da proprietà intellettuale;
+- dati riservati;
+- dati generati da macchine.
+
+Spesso un dato rientra in più categorie insieme. A questo si aggiungono le tensioni tra GDPR, copyright, Data Act e AI Act, e i punti in cui la Legge 132/2025 si discosta dal quadro europeo.
 
 ## Cosa trovate nel paper completo
 
-*La nuova governance dei dati — Impatti legali e organizzativi dell'AI* è un documento operativo
-curato da Marco Pagani, Anna Lanza, Francesco Cartabia, Federico Capasso e Mario Cucciarrè.
-
-- Framework operativo completo per la governance dei dati nei progetti AI
-- Il caso FastwebMIIA: come costruire un modello sovrano con compliance by design — fonti lecite,
-  infrastruttura italiana, separazione funzionale
-- Tassonomia del dato: le quattro categorie fondamentali e le intersezioni normative fra GDPR,
-  copyright, Data Act e AI Act
-- Basi giuridiche per il training: quando e come utilizzare il legittimo interesse, con test
-  tripartito EDPB
-- Pre-processing e qualità del dataset: labeling, competenze integrate, rischi tecnici
-  (underfitting e overfitting)
-- Frizioni normative: analisi della legge italiana 132/2025 e conflitti con l'AI Act
-- Casi applicativi concreti: modello legale interno, aggiornamento normativo automatizzato,
-  simulazioni con dati sintetici
-- Il ruolo del deployer: responsabilità sottovalutata ma centrale
-- Aree di ulteriore indagine: standardizzazione della data quality, architetture organizzative,
-  metodologie operative
+- I quattro contributi per esteso, con due casi applicativi aziendali.
+- Il test del legittimo interesse, passaggio per passaggio.
+- La mappa delle intersezioni normative e le aree di ulteriore indagine.
 
 **FORM DI DOWNLOAD** — modulo del tema (`lidia/modulo`, `tipo: whitepaper`). Campi e consensi
 in `docs/tecnico/moduli-delera.md`.
@@ -70,8 +73,8 @@ in `docs/tecnico/moduli-delera.md`.
 
 ## Note per la build (non sono copy)
 
-- **Testo migrato alla lettera** da `/it/news/governance-dei-dati` il 14/09/2026, con la CTA
-  «Richiedi una demo gratuita» sostituita dal form di download. `stato: in-revisione`.
+- 07/10/2026: sintesi sostituita (prima: **testo migrato alla lettera** da `/it/news/governance-dei-dati` il 14/09/2026, con la CTA
+  «Richiedi una demo gratuita» sostituita dal form di download. `stato: in-revisione`).
 - **Firma di Marco Pagani confermata** (14/09), senza qualifica. Citazione dei quattro coautori
   esterni **autorizzata** (14/09).
 - Contenuto **gated**: CPT `risorsa` con `lidia_gated = true`.

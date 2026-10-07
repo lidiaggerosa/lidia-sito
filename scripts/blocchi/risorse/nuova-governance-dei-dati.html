@@ -1,83 +1,131 @@
+<!-- wp:paragraph -->
+<p>Adottare l'AI in ambito legale è prima di tutto una questione di governance, metodo e competenze. Il paper raccoglie quattro contributi su come progettare sistemi AI affidabili e conformi, dalla qualità del dato alle frizioni tra le norme europee e la Legge 132/2025.</p>
+<!-- /wp:paragraph -->
+
 <!-- wp:heading -->
-<h2 class="wp-block-heading">I quattro pilastri della governance AI</h2>
-<!-- /wp:heading -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">1. Dai big data ai good data</h3>
+<h2 class="wp-block-heading">Dai big data ai good data</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Le organizzazioni credono di aver bisogno di più dati. Serve invece qualità, non quantità. L'efficacia dei modelli AI dipende da consistenza, integrità e tracciabilità delle fonti: le aziende non soffrono la scarsità di big data, ma l'assenza di <em>good data</em> realmente utilizzabili.</p>
+<p>Il fattore abilitante non è la quantità dei dati, ma la loro qualità. Quattro condizioni:</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">2. Partire dal problema, non dal dataset</h3>
-<!-- /wp:heading -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>sapere quali fonti si hanno e dove stanno;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>un responsabile per ogni dataset;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>qualità verificabile;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>processi formalizzati di validazione e versioning.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>L'errore comune suona così: «abbiamo 10.000 contratti, cosa ci facciamo con l'AI?». L'approccio corretto è l'opposto: «come possiamo ridurre del 40% il tempo di ricerca giurisprudenziale mantenendo la qualità?». La sequenza giusta è sempre problema → soluzione → dati necessari.</p>
+<p>E un errore ricorrente da evitare: partire dal dataset invece che dal problema. I progetti nati da «cosa possiamo fare con i nostri dati?» raramente producono valore.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">3. La compliance è il fattore abilitante, non l'ostacolo</h3>
+<!-- wp:heading -->
+<h2 class="wp-block-heading">La compliance come fattore abilitante</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>La componente più trascurata, e più determinante, è il ruolo della compliance nella fase di design. Se la funzione legale interviene a valle, il progetto può essere già irrimediabilmente compromesso, con settimane di lavoro vanificate. La compliance non è un ostacolo: è il prerequisito che rende scalabile ogni iniziativa AI.</p>
+<p>I legali vanno coinvolti all'inizio, non a valle. Il loro compito è tradurre le regole in requisiti di progetto: quali dati si possono usare, su quale base giuridica, con quale documentazione. Se intervengono a progetto finito, settimane di lavoro possono andare perse. La governance poi continua per tutta la vita del modello.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">4. Il test del legittimo interesse per il training</h3>
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Fonti lecite e modelli sovrani</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Il consenso non funziona per il training dei modelli: è revocabile, e non si può «disaddestrare» un modello. L'Opinion 28/2024 dell'European Data Protection Board ha definito il test tripartito del legittimo interesse, oggi essenziale per costruire modelli AI conformi in Europa.</p>
+<p>Il caso di un modello linguistico addestrato interamente in Italia mostra come si costruisce un'AI controllata:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>fonti licenziate o lecitamente accessibili;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>dati personali rimossi prima dell'addestramento;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>nessun riuso dei dati degli utenti;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>documentazione completa.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Il punto chiave: una volta dentro il modello, un dato non si può più togliere. La liceità va verificata prima.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Basi giuridiche per il training</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Il consenso raramente funziona: è difficile da raccogliere su larga scala ed è revocabile, mentre un modello non si può «disaddestrare». Si va verso il legittimo interesse, con il test in tre passaggi indicato dall'EDPB (Opinion 28/2024): interesse legittimo, necessità, bilanciamento. Resta poco regolata la responsabilità di chi usa il modello, cioè lo studio.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Tassonomie e frizioni normative</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quattro categorie di dato con regimi diversi:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>dati personali;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>dati protetti da proprietà intellettuale;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>dati riservati;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>dati generati da macchine.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Spesso un dato rientra in più categorie insieme. A questo si aggiungono le tensioni tra GDPR, copyright, Data Act e AI Act, e i punti in cui la Legge 132/2025 si discosta dal quadro europeo.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
 <h2 class="wp-block-heading">Cosa trovate nel paper completo</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph -->
-<p><em>La nuova governance dei dati — Impatti legali e organizzativi dell'AI</em> è un documento operativo curato da Marco Pagani, Anna Lanza, Francesco Cartabia, Federico Capasso e Mario Cucciarrè.</p>
-<!-- /wp:paragraph -->
-
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li>Framework operativo completo per la governance dei dati nei progetti AI</li>
+<li>I quattro contributi per esteso, con due casi applicativi aziendali.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Il caso FastwebMIIA: come costruire un modello sovrano con compliance by design — fonti lecite, infrastruttura italiana, separazione funzionale</li>
+<li>Il test del legittimo interesse, passaggio per passaggio.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Tassonomia del dato: le quattro categorie fondamentali e le intersezioni normative fra GDPR, copyright, Data Act e AI Act</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Basi giuridiche per il training: quando e come utilizzare il legittimo interesse, con test tripartito EDPB</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Pre-processing e qualità del dataset: labeling, competenze integrate, rischi tecnici (underfitting e overfitting)</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Frizioni normative: analisi della legge italiana 132/2025 e conflitti con l'AI Act</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Casi applicativi concreti: modello legale interno, aggiornamento normativo automatizzato, simulazioni con dati sintetici</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Il ruolo del deployer: responsabilità sottovalutata ma centrale</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Aree di ulteriore indagine: standardizzazione della data quality, architetture organizzative, metodologie operative</li>
+<li>La mappa delle intersezioni normative e le aree di ulteriore indagine.</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
-<!-- wp:lidia/modulo {"tipo":"whitepaper"} /-->
+<!-- wp:group {"anchor":"scarica","className":"lidia-scarica","layout":{"type":"default"}} -->
+<div id="scarica" class="wp-block-group lidia-scarica"><!-- wp:lidia/modulo {"tipo":"whitepaper"} /--></div>
+<!-- /wp:group -->

@@ -160,13 +160,13 @@ foreach ( $impostazioni as $chiave => $valore ) {
 
 $pagine = array(
 	'/' => array(
-		'title' => 'Lidia — Intelligenza artificiale per avvocati e aziende',
+		'title' => 'Lidia AI — AI legale per avvocati e aziende',
 		'desc'  => 'Lidia è l\'intelligenza artificiale legale che lavora con te: ricerca su fonti ufficiali, analisi e redazione documenti, integrata in Word.',
-		'kw'    => 'intelligenza artificiale per avvocati',
+		'kw'    => 'ai legale',
 	),
 	'/prodotto/' => array(
 		'title' => 'Funzioni di Lidia — software AI per studi legali',
-		'desc'  => 'Le funzioni di Lidia, software AI per studi legali: ricerca su fonti ufficiali con GraphRAG, workflow per materia, add-in Word, AI Assistant, Smart Answer, pratiche.',
+		'desc'  => 'Le funzioni di Lidia, software AI per studi legali: ricerca su fonti ufficiali con GraphRAG, workflow, add-in Word, AI Assistant, Smart Answer.',
 		'kw'    => 'software intelligenza artificiale studi legali',
 	),
 	'/sicurezza/' => array(
@@ -186,7 +186,7 @@ $pagine = array(
 	),
 	'/azienda/' => array(
 		'title' => 'Lidia — Chi progetta l\'AI legale italiana',
-		'desc'  => 'Lidia S.r.l. costruisce l\'intelligenza legale che lavora al fianco dello studio. Progettata da avvocati con esperienza nei grandi studi italiani e internazionali.',
+		'desc'  => 'Lidia S.r.l. costruisce l\'intelligenza legale che lavora al fianco dello studio. Progettata da avvocati dei grandi studi italiani e internazionali.',
 		'kw'    => 'lidia legal ai',
 	),
 	'/azienda/lavora-con-noi/' => array(
@@ -216,11 +216,11 @@ $pagine = array(
 	),
 	'/risorse/legge-132-2025-studi-legali/' => array(
 		'title' => 'Legge 132/2025 e AI negli studi legali: cosa cambia | Lidia',
-		'desc'  => 'La Legge 132/2025 disciplina l\'uso dell\'AI nelle professioni intellettuali: obblighi di trasparenza, supervisione umana, responsabilità e checklist operativa.',
+		'desc'  => 'La Legge 132/2025 sull\'AI nelle professioni intellettuali: trasparenza, supervisione umana, responsabilità e una checklist operativa per lo studio.',
 		'kw'    => 'legge 132 2025 intelligenza artificiale',
 	),
 	'/risorse/agenti-ai-contesto-legale-enterprise/' => array(
-		'title' => 'Agenti AI nel contesto legale ed enterprise: cosa cambia | Lidia',
+		'title' => 'Agenti AI nel contesto legale ed enterprise | Lidia',
 		'desc'  => 'Da assistenti passivi ad agenti autonomi: competenze, AI Act, sovranità digitale e adozione asimmetrica tra grandi imprese e PMI. Il resoconto del panel.',
 		'kw'    => 'agenti ai contesto legale',
 	),
@@ -230,17 +230,17 @@ $pagine = array(
 		'kw'    => 'ai in produzione studi legali',
 	),
 	'/risorse/whitepaper/opinion-eiopa-governance-ai-assicurazioni/' => array(
-		'title' => 'Opinion EIOPA: governance dell\'AI nelle assicurazioni | Lidia',
+		'title' => 'Opinion EIOPA e governance dell\'AI assicurativa | Lidia',
 		'desc'  => 'Lettura operativa dell\'Opinion EIOPA su AI governance e risk management: proporzionalità, impact assessment e selezione degli use case. Download gratuito.',
 		'kw'    => 'opinion eiopa intelligenza artificiale',
 	),
 	'/risorse/whitepaper/nuova-governance-dei-dati/' => array(
 		'title' => 'La nuova governance dei dati: impatti legali dell\'AI | Lidia',
-		'desc'  => 'I quattro pilastri della governance AI: good data, partire dal problema, compliance by design e test del legittimo interesse per il training. Download gratuito.',
+		'desc'  => 'I quattro pilastri della governance AI: good data, partire dal problema, compliance by design, legittimo interesse nel training. Download gratuito.',
 		'kw'    => 'governance dei dati intelligenza artificiale',
 	),
 	'/risorse/whitepaper/diritto-llm-e-ricerca/' => array(
-		'title' => 'Diritto, LLM e ricerca: protocolli e criteri di validità | Lidia',
+		'title' => 'Diritto, LLM e ricerca: protocolli e validità | Lidia',
 		'desc'  => 'Quadro teorico, protocolli operativi e criteri di validità per l\'uso degli LLM nella ricerca giuridica. La regola cite-or-silent. Download gratuito.',
 		'kw'    => 'llm ricerca giuridica metodo',
 	),
@@ -326,5 +326,80 @@ foreach ( $pagine as $percorso => $meta ) {
 if ( $mancanti ) {
 	WP_CLI::warning( "{$mancanti} percorsi senza contenuto." );
 }
+
+/* -------------------------------------------------------------------------
+ * 3bis. Tagline e categoria degli articoli (07/10/2026)
+ *
+ * La tagline di WordPress è la `description` del nodo WebSite nello schema di Yoast:
+ * era ancora «Non risponde. Pensa con te.», superata dallo storytelling 2026.
+ * La categoria predefinita si chiamava «Uncategorized» e finiva in `articleSection`:
+ * diventa «Articoli». L'archivio di categoria resta noindex (impostazioni sopra).
+ * ---------------------------------------------------------------------- */
+
+// Apostrofo tipografico: quello dritto WordPress lo salva come &#039; e Yoast lo stampa così.
+update_option( 'blogdescription', 'L’AI legale che pensa con te' );
+WP_CLI::log( '  tagline aggiornata' );
+
+$categoria = (int) get_option( 'default_category' );
+
+if ( $categoria ) {
+	wp_update_term(
+		$categoria,
+		'category',
+		array(
+			'name' => 'Articoli',
+			'slug' => 'articoli',
+		)
+	);
+	WP_CLI::log( "  categoria {$categoria} → Articoli" );
+}
+
+/* -------------------------------------------------------------------------
+ * 4. Immagine in evidenza di default
+ *
+ * Senza immagine in evidenza Yoast prende la prima immagine del contenuto: in home è
+ * il logo BonelliErede del nastro clienti, che finiva in og:image, nello schema e
+ * nell'anteprima di ricerca. L'og_default_image da sola non basta, perché Yoast la usa
+ * solo se la pagina non ha alcuna immagine.
+ *
+ * Si assegna og-lidia.png a ogni pagina pubblicata (IT ed EN) e ai contenuti di
+ * $pagine che non hanno già un'immagine in evidenza propria. Nessun template del tema
+ * mostra l'immagine in evidenza: a schermo non cambia niente. (1/10/2026)
+ * ---------------------------------------------------------------------- */
+
+$da_marcare = get_posts(
+	array(
+		'post_type'        => 'page',
+		'post_status'      => 'publish',
+		'fields'           => 'ids',
+		'numberposts'      => -1,
+		'lang'             => '', // Polylang: tutte le lingue.
+		'suppress_filters' => false,
+	)
+);
+
+foreach ( array_keys( $pagine ) as $percorso ) {
+	$id = lidia_yoast_trova( $percorso );
+	if ( $id ) {
+		$da_marcare[] = $id;
+	}
+}
+
+$assegnate = 0;
+
+foreach ( array_unique( array_map( 'intval', $da_marcare ) ) as $id ) {
+	$attuale = (int) get_post_thumbnail_id( $id );
+
+	if ( $attuale && $attuale !== $social ) {
+		continue; // Immagine propria: non si tocca.
+	}
+
+	if ( $attuale !== $social ) {
+		set_post_thumbnail( $id, $social );
+		++$assegnate;
+	}
+}
+
+WP_CLI::log( "  immagine in evidenza di default assegnata a {$assegnate} contenuti" );
 
 WP_CLI::success( 'Yoast configurato. In produzione: wp yoast index --reindex --skip-confirmation' );

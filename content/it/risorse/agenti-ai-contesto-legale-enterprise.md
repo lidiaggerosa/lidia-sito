@@ -1,7 +1,7 @@
 ---
 url: /risorse/agenti-ai-contesto-legale-enterprise/
 lingua: it
-title: "Agenti AI nel contesto legale ed enterprise: cosa cambia | Lidia"
+title: "Agenti AI nel contesto legale ed enterprise | Lidia"
 meta_description: "Da assistenti passivi ad agenti autonomi: competenze, AI Act, sovranità digitale e adozione asimmetrica tra grandi imprese e PMI. Il resoconto del panel."
 h1: "Agenti AI nel contesto legale ed enterprise: l'evoluzione a breve termine"
 keyword_primaria: "agenti ai contesto legale"

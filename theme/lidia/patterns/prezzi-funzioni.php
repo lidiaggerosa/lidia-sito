@@ -118,6 +118,10 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"lidia-freccia"} -->
+<p class="lidia-freccia"><a href="/prodotto/">Tutte le funzioni nel dettaglio →</a></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

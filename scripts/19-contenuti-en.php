@@ -26,14 +26,14 @@ $cartella = __DIR__ . '/blocchi/en/';
 $pagine = array(
 	'/'                => array(
 		'file'  => 'home.html',
-		'title' => 'Lidia — Legal AI for law firms and companies',
+		'title' => 'Lidia AI — Legal AI for law firms and companies',
 		'desc'  => 'Lidia is the legal AI that works with you: research on official sources, document analysis and drafting, built into Word.',
 		'kw'    => 'legal AI',
 	),
 	'/prodotto/'       => array(
 		'file'  => 'product.html',
 		'title' => 'Lidia features — AI software for law firms',
-		'desc'  => "Lidia's features, AI software for law firms: official-source research with GraphRAG, practice-area workflows, Word add-in, AI Assistant, Smart Answer, matters.",
+		'desc'  => "Lidia's features, AI software for law firms: official-source research with GraphRAG, workflows, Word add-in, AI Assistant, Smart Answer.",
 		'kw'    => 'AI software for law firms',
 	),
 	'/sicurezza/'      => array(
@@ -44,7 +44,7 @@ $pagine = array(
 	),
 	'/prezzi/'         => array(
 		'file'  => 'pricing.html',
-		'title' => 'How much does AI software for law firms cost? — Lidia pricing',
+		'title' => 'What does AI software for law firms cost? | Lidia',
 		'desc'  => 'Lidia starts at €125 a month. Lidia Professional includes every feature, every area of law and access to official sources.',
 		'kw'    => 'legal AI pricing',
 	),

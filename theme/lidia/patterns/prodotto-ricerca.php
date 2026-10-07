@@ -33,7 +33,11 @@ defined( 'ABSPATH' ) || exit;
 <!-- wp:list-item -->
 <li>Riferimenti puntuali in ogni risposta</li>
 <!-- /wp:list-item --></ul>
-<!-- /wp:list --></div>
+<!-- /wp:list -->
+
+<!-- wp:paragraph {"className":"lidia-freccia"} -->
+<p class="lidia-freccia"><a href="/sicurezza/">Dove stanno i dati e chi può vederli →</a></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"lidia-funzione-mock","layout":{"type":"default"}} -->

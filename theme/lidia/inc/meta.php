@@ -16,6 +16,8 @@ defined( 'ABSPATH' ) || exit;
  * - `lidia_gated`      il documento richiede il modulo prima del download
  * - `lidia_file`       ID dell'allegato in media library
  * - `lidia_delera_tag` etichetta con cui il lead entra in Delera
+ * - `lidia_autori`     autori del documento, in chiaro («Nome Cognome, Nome Cognome»): li
+ *                      mostra `single-risorsa.html` e li legge lo schema Article (07/10/2026)
  *
  * `lidia_file` non è esposto nella REST API pubblica: con l'ID dell'allegato chiunque
  * ricava l'indirizzo del file da /wp/v2/media, e il modulo non serve più a niente.
@@ -58,6 +60,21 @@ function lidia_registra_meta() {
 			'type'              => 'string',
 			'single'            => true,
 			'show_in_rest'      => false,
+			'sanitize_callback' => 'sanitize_text_field',
+			'auth_callback'     => function () {
+				return current_user_can( 'edit_posts' );
+			},
+		)
+	);
+
+	register_post_meta(
+		'risorsa',
+		'lidia_autori',
+		array(
+			'type'              => 'string',
+			'single'            => true,
+			'default'           => '',
+			'show_in_rest'      => true,
 			'sanitize_callback' => 'sanitize_text_field',
 			'auth_callback'     => function () {
 				return current_user_can( 'edit_posts' );
