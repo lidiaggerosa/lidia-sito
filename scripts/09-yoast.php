@@ -190,17 +190,17 @@ $pagine = array(
 		'kw'    => 'lidia legal ai',
 	),
 	'/azienda/lavora-con-noi/' => array(
-		'title' => 'Lavora con noi | Lidia',
+		'title' => 'Lavora con noi nella legal tech AI italiana | Lidia',
 		'desc'  => 'Lidia S.r.l., legal tech italiana. Al momento non ci sono posizioni aperte, ma le candidature spontanee si leggono tutte.',
 		'kw'    => 'lavora con noi lidia',
 	),
 	'/contatti/' => array(
-		'title' => 'Contatti | Lidia',
+		'title' => 'Contatta Lidia, l\'AI legale per studi e aziende | Lidia',
 		'desc'  => 'Contatti di Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Sedi di Genova e Milano. Per le prove gratuite usate il form dedicato.',
 		'kw'    => 'contatti lidia',
 	),
 	'/risorse/' => array(
-		'title' => 'Risorse su AI e diritto | Lidia',
+		'title' => 'Whitepaper e articoli su AI e diritto | Lidia',
 		'desc'  => 'Paper, analisi e resoconti su come l\'intelligenza artificiale entra nel lavoro legale. Scritti da avvocati, con le fonti in chiaro.',
 		'kw'    => '',
 	),
@@ -210,7 +210,7 @@ $pagine = array(
 		'kw'    => 'whitepaper intelligenza artificiale diritto',
 	),
 	'/risorse/articoli/' => array(
-		'title' => 'Articoli su AI e diritto | Lidia',
+		'title' => 'Articoli su AI legale, normativa e studi legali | Lidia',
 		'desc'  => 'Analisi e resoconti su come l\'intelligenza artificiale cambia il lavoro legale: normativa, metodo, casi. Scritti da avvocati, con le fonti in chiaro.',
 		'kw'    => '',
 	),
