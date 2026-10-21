@@ -1,6 +1,6 @@
-# Redirect da lidiatech.ai (Joomla) al nuovo sito — generato da migration/mappa-301.csv il 2026-09-22, annex A/B attivati il 2026-09-24, legali EN verso le pagine IT il 2026-10-07
-# Va in testa a .htaccess, sopra il blocco WordPress. Non modificare a mano: rigenerare dalla mappa.
-# Solo percorsi: il 301 di host da www a senza www si aggiunge al cutover (07-deploy-siteground.md).
+# Redirect da lidiatech.ai (Joomla) al nuovo sito — generato da migration/mappa-301.csv con scripts/24-genera-redirect.ps1 il 2026-10-21
+# Va in testa a .htaccess, sopra il blocco WordPress. Non modificare a mano: cambiare la mappa e rigenerare.
+# Solo percorsi: il 301 di host da www a senza www sta in migration/host-www.htaccess.
 # Mai regole su /index.php: WordPress serve ogni pagina passando da lì.
 <IfModule mod_alias.c>
 RedirectMatch 301 ^/it/?$ /
@@ -107,4 +107,5 @@ RedirectMatch 410 ^/it/lidia\-template/diritto\-penale/ricerche/?$
 RedirectMatch 410 ^/it/lidia\-template/diritto\-civile/tax/?$
 RedirectMatch 410 ^/it/lidia\-video\-tutorial/diritto\-penale/?$
 RedirectMatch 410 ^/images/brand/logotype_blue2x\-\-\-copia\.png/?$
+RedirectMatch 301 ^/chi\-siamo/?$ /azienda/
 </IfModule>
