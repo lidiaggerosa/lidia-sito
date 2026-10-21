@@ -1,7 +1,7 @@
 ---
 url: /contatti/
 lingua: it
-title: "Contatti | Lidia"
+title: "Contatta Lidia, l'AI legale per studi e aziende | Lidia"
 meta_description: "Contatti di Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Sedi di Genova e Milano. Per le prove gratuite usate il form dedicato."
 h1: "Contatti"
 keyword_primaria: "contatti lidia"
