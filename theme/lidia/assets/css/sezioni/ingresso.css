@@ -1,0 +1,48 @@
+/*
+ * Ingresso a una pagina offerta — un riquadro bianco con la firma a sinistra e un link.
+ * Primo uso: /prodotto/ → /prodotto/integrazione-mcp/ (22/10/2026). Classe guida `lidia-ingresso`.
+ */
+
+.lidia-ingresso-scheda {
+	background: var(--wp--preset--color--superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-left: var(--lidia-firma) solid var(--wp--preset--color--azione);
+	border-radius: var(--lidia-raggio-box);
+	padding: 40px 44px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px 48px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.lidia-ingresso-testo {
+	flex: 1 1 520px;
+	min-width: 0;
+}
+
+.lidia-ingresso-testo > *,
+.lidia-ingresso-scheda > * {
+	margin-block: 0;
+}
+
+.lidia-ingresso .lidia-occhiello {
+	color: var(--wp--preset--color--azione);
+	margin-bottom: 12px;
+}
+
+.lidia-ingresso h2 {
+	font-size: clamp(24px, 2.6vw, 30px);
+	line-height: 1.15;
+	margin-bottom: 10px;
+}
+
+.lidia-ingresso-testo p:not(.lidia-occhiello) {
+	color: var(--lidia-secondario);
+}
+
+@media (max-width: 620px) {
+	.lidia-ingresso-scheda {
+		padding: 28px 24px;
+	}
+}

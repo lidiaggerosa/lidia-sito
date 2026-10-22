@@ -49,6 +49,8 @@ function lidia_sezioni() {
 		'lidia-contatti'   => 'assets/css/sezioni/contatti.css',
 		'lidia-azienda'    => 'assets/css/sezioni/azienda.css',
 		'lidia-funzione-box' => 'assets/css/sezioni/funzione.css',
+		'lidia-mcp'        => 'assets/css/sezioni/mcp.css',
+		'lidia-ingresso'   => 'assets/css/sezioni/ingresso.css',
 		'wp:lidia/modulo'  => 'assets/css/sezioni/modulo.css',
 	);
 }
@@ -91,8 +93,9 @@ function lidia_enqueue_base() {
 	);
 
 	// Lo script del modulo gira su tutte le pagine, non solo dove c'è il modulo: al primo
-	// arrivo legge i parametri di campagna dall'indirizzo e li tiene per la sessione, così
-	// chi atterra sulla home e compila su /prova-gratuita/ arriva in Delera con la campagna.
+	// arrivo riconosce il contatto (campagna, organic, referral) e lo tiene per la visita, o per
+	// 90 giorni con il consenso marketing, così chi atterra sulla home e compila su
+	// /prova-gratuita/ arriva in Delera con la campagna.
 	// Pesa meno di 5 KB e non tocca il DOM se non trova moduli.
 	wp_enqueue_script( 'lidia-modulo' );
 
@@ -209,6 +212,18 @@ function lidia_enqueue_sezioni() {
 			true
 		);
 	}
+
+	// L'animazione «Lidia in Claude» della testa di /prodotto/integrazione-mcp/ (22/10).
+	// Solo dove c'è; ~8 KB, nessuna dipendenza, in fondo alla pagina.
+	if ( false !== strpos( $contenuto, 'lidia-mcp-visivo' ) ) {
+		wp_enqueue_script(
+			'lidia-mcp-animazione',
+			LIDIA_URI . '/assets/js/mcp-animazione.js',
+			array(),
+			lidia_versione_file( 'assets/js/mcp-animazione.js' ),
+			true
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'lidia_enqueue_sezioni', 11 );
 
@@ -288,6 +303,8 @@ function lidia_editor_styles() {
 			'assets/css/sezioni/azienda.css',
 			'assets/css/sezioni/modulo.css',
 			'assets/css/sezioni/funzione.css',
+			'assets/css/sezioni/mcp.css',
+			'assets/css/sezioni/ingresso.css',
 			'assets/css/components/coppia.css',
 			'assets/css/components/fatto-isolato.css',
 			'assets/css/components/demo.css',

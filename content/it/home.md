@@ -65,6 +65,19 @@ la verifica è una lettura, non una ricostruzione.
 
 ---
 
+## Lidia, ora anche dentro Claude e ChatGPT. {#server-mcp}
+
+*Box verso `/prodotto/integrazione-mcp/`, fondo indaco, animazione a destra (22/10/2026).*
+
+*Occhiello:* Server MCP di Lidia
+
+Con il server MCP richiami Lidia dalla chat del tuo assistente AI: ricerca sulle fonti ufficiali,
+pratiche e workflow, con le fonti sempre citate.
+
+**CTA:** Scopri il server MCP → `/prodotto/integrazione-mcp/` · Loghi: Claude · ChatGPT
+
+---
+
 ## Cinque valori, il tuo modo di lavorare.
 
 ### Il giudizio resta umano.
