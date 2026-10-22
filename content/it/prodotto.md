@@ -136,6 +136,19 @@ studio.
 
 ---
 
+## Server MCP di Lidia {#server-mcp}
+
+*Riquadro di ingresso a `/prodotto/integrazione-mcp/` (22/10/2026).*
+
+*Occhiello:* Server MCP di Lidia
+
+**Richiama Lidia dal tuo assistente AI.**
+Norme, sentenze e le tue pratiche, dalla chat di Claude, ChatGPT e degli altri assistenti compatibili con MCP.
+
+→ Scopri il server MCP (`/prodotto/integrazione-mcp/`)
+
+---
+
 ## Su misura dello studio
 
 *(Due colonne affiancate.)*

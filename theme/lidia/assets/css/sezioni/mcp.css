@@ -1,0 +1,636 @@
+/*
+ * Integrazione MCP — /prodotto/integrazione-mcp/ (22/10/2026). Classe guida `lidia-mcp`.
+ *
+ * Sezioni: testa (sfumatura notte + animazione), cos'è, fonti, cosa puoi fare, come si usa,
+ * esempi, i tuoi dati (fascia scura), per chi, FAQ (faq.css), chiusura.
+ * In fondo l'animazione «Lidia in Claude» (`.ldc`): deroga al §7 del 22/10, vedi sotto.
+ */
+
+/* Nelle griglie della pagina l'aria la dà il gap: via il margine del flusso di WordPress. */
+.lidia-mcp-testa-griglia > *,
+.lidia-mcp-schede > *,
+.lidia-mcp-punti > *,
+.lidia-mcp-griglia > *,
+.lidia-mcp-uso-griglia > *,
+.lidia-mcp-dati-griglia > *,
+.lidia-mcp-target > *,
+.lidia-mcp-chiusura-griglia > * {
+	margin-block: 0;
+}
+
+/* ---------- testa ---------- */
+
+.lidia-mcp-testa {
+	position: relative;
+	overflow: hidden;
+	padding-block: var(--wp--preset--spacing--80) 104px;
+	border-top: 0;
+	color: var(--wp--preset--color--chiaro);
+}
+
+/* Il reticolo di punti della notte, come nell'hero della home. */
+.lidia-mcp-testa::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, rgba(255, 255, 255, 0.14) 1.1px, transparent 1.1px);
+	background-size: 26px 26px;
+	-webkit-mask-image: radial-gradient(120% 90% at 30% 15%, #000 0%, rgba(0, 0, 0, 0.35) 55%, transparent 85%);
+	mask-image: radial-gradient(120% 90% at 30% 15%, #000 0%, rgba(0, 0, 0, 0.35) 55%, transparent 85%);
+}
+
+.lidia-mcp-testa > * {
+	position: relative;
+	z-index: 1;
+}
+
+.lidia-mcp-testa-griglia {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: var(--wp--preset--spacing--60);
+	align-items: center;
+}
+
+.lidia-mcp-testa .lidia-occhiello {
+	color: var(--wp--preset--color--accento-scuro);
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.lidia-mcp-testa h1 {
+	color: var(--wp--preset--color--chiaro);
+	max-width: 16ch;
+	margin-block: 0 26px;
+	text-wrap: balance;
+}
+
+.lidia-mcp-sommario {
+	color: var(--wp--preset--color--chiaro-secondario);
+	font-size: var(--wp--preset--font-size--voce);
+	line-height: 1.55;
+	max-width: 46ch;
+	margin-block: 0 38px;
+}
+
+@media (max-width: 900px) {
+	.lidia-mcp-testa-griglia {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 48px;
+	}
+}
+
+@media (max-width: 620px) {
+	.lidia-mcp-testa {
+		padding-block: var(--wp--preset--spacing--60) 72px;
+	}
+}
+
+/* ---------- «Funziona con» ---------- */
+
+.lidia-mcp-con {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px 22px;
+	margin-top: var(--wp--preset--spacing--50);
+}
+
+.lidia-mcp-con > * {
+	margin: 0;
+}
+
+.lidia-mcp-con .lidia-occhiello {
+	margin: 0;
+}
+
+.lidia-mcp-voce {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--20);
+}
+
+.lidia-mcp-voce > * {
+	margin: 0;
+}
+
+.lidia-mcp-voce p {
+	font-size: var(--wp--preset--font-size--riscontro);
+	font-weight: 500;
+	color: var(--lidia-testo);
+}
+
+.lidia-mcp-logo {
+	width: 22px;
+	height: 22px;
+	flex: none;
+}
+
+.lidia-mcp-logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	display: block;
+}
+
+.lidia-mcp-testa .lidia-mcp-voce p {
+	color: var(--wp--preset--color--chiaro);
+}
+
+/* Sul fondo chiaro le voci diventano pillole. */
+.lidia-mcp-cos .lidia-mcp-con {
+	gap: 10px;
+}
+
+.lidia-mcp-cos .lidia-mcp-voce {
+	background: var(--wp--preset--color--superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-pillola);
+	padding: 6px 16px 6px 8px;
+}
+
+.lidia-mcp-cos .lidia-mcp-voce-testo {
+	padding-left: 16px;
+}
+
+.lidia-mcp-cos .lidia-mcp-logo {
+	width: 20px;
+	height: 20px;
+}
+
+/* ---------- testo comune ---------- */
+
+.lidia-mcp h2 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+.lidia-mcp .lidia-colonna > p.has-voce-font-size {
+	color: var(--lidia-secondario);
+	margin-block: 0;
+}
+
+/* ---------- fonti ---------- */
+
+.lidia-mcp-schede {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--wp--preset--spacing--40);
+	margin-top: var(--wp--preset--spacing--50);
+}
+
+.lidia-mcp-scheda {
+	background: var(--wp--preset--color--superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-scheda);
+	padding: 32px;
+}
+
+.lidia-mcp-scheda > * {
+	margin-block: 0;
+}
+
+.lidia-mcp-scheda .lidia-occhiello {
+	margin-bottom: 12px;
+}
+
+.lidia-mcp-scheda h3 {
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+.lidia-mcp-scheda p:not(.lidia-occhiello) {
+	color: var(--lidia-secondario);
+}
+
+.lidia-mcp-rischio .lidia-occhiello {
+	color: var(--wp--preset--color--errore);
+}
+
+.lidia-mcp-con-lidia {
+	border-left: var(--lidia-firma) solid var(--wp--preset--color--azione);
+}
+
+.lidia-mcp-con-lidia .lidia-occhiello {
+	color: var(--wp--preset--color--azione);
+}
+
+.lidia-mcp-punti {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px 48px;
+	margin-top: var(--wp--preset--spacing--50);
+}
+
+.lidia-mcp-punti p {
+	margin: 0;
+	padding-top: 16px;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	color: var(--lidia-secondario);
+}
+
+.lidia-mcp-punti strong {
+	color: var(--lidia-testo);
+}
+
+@media (max-width: 780px) {
+	.lidia-mcp-schede,
+	.lidia-mcp-punti {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.lidia-mcp-scheda {
+		padding: 24px;
+	}
+}
+
+/* ---------- cosa puoi fare ---------- */
+
+.lidia-mcp-griglia {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	gap: 16px;
+	margin-top: var(--wp--preset--spacing--50);
+}
+
+.lidia-mcp-funzione {
+	background: var(--wp--preset--color--superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-scheda);
+	padding: 22px;
+}
+
+.lidia-mcp-funzione > * {
+	margin-block: 0;
+}
+
+.lidia-mcp-funzione h3 {
+	margin-bottom: 6px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.lidia-mcp-funzione p {
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.55;
+	color: var(--lidia-secondario);
+}
+
+/* ---------- come si usa ---------- */
+
+.lidia-mcp-uso-griglia {
+	display: grid;
+	grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
+	gap: 48px;
+	align-items: center;
+}
+
+.lidia-mcp-uso-testo > * {
+	margin-block: 0;
+}
+
+.lidia-mcp-uso-testo h2 {
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.lidia-mcp-uso-testo p {
+	color: var(--lidia-secondario);
+	max-width: 46ch;
+}
+
+.lidia-mcp-uso-testo strong {
+	color: var(--lidia-testo);
+}
+
+.lidia-mcp-citazione {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--display);
+	font-style: italic;
+	font-size: clamp(24px, 2.6vw, 32px);
+	line-height: 1.3;
+	color: var(--lidia-testo);
+}
+
+.lidia-mcp-citazione strong,
+.lidia-mcp-elenco-esempi strong {
+	font-style: normal;
+	font-weight: 600;
+	color: var(--wp--preset--color--azione);
+}
+
+@media (max-width: 780px) {
+	.lidia-mcp-uso-griglia {
+		grid-template-columns: minmax(0, 1fr);
+		gap: var(--wp--preset--spacing--50);
+	}
+}
+
+/* ---------- esempi ---------- */
+
+.lidia-mcp-elenco-esempi {
+	list-style: none;
+	margin: var(--wp--preset--spacing--50) 0 0;
+	padding: 0;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-mcp-elenco-esempi li {
+	padding-block: 22px;
+	margin: 0;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	font-family: var(--wp--preset--font-family--display);
+	font-size: var(--wp--preset--font-size--scheda);
+	line-height: 1.4;
+}
+
+/* ---------- i tuoi dati ---------- */
+
+.lidia-mcp-dati-griglia {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+	gap: 48px;
+}
+
+.lidia-mcp-dati-testa > * {
+	margin-block: 0;
+}
+
+.lidia-mcp-dati-testa h2 {
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.lidia-mcp-elenco-dati {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-mcp-elenco-dati li {
+	margin: 0;
+	padding-block: 18px;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	color: var(--lidia-secondario);
+}
+
+.lidia-mcp-elenco-dati strong {
+	color: var(--lidia-testo);
+	font-weight: 600;
+}
+
+@media (max-width: 780px) {
+	.lidia-mcp-dati-griglia {
+		grid-template-columns: minmax(0, 1fr);
+		gap: var(--wp--preset--spacing--50);
+	}
+}
+
+/* ---------- per chi ---------- */
+
+.lidia-mcp-target {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px 48px;
+	margin-top: var(--wp--preset--spacing--50);
+}
+
+.lidia-mcp-target-voce {
+	padding-top: 20px;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-mcp-target-voce > * {
+	margin-block: 0;
+}
+
+.lidia-mcp-target-voce h3 {
+	margin-bottom: 6px;
+	font-weight: 500;
+}
+
+.lidia-mcp-target-voce p {
+	color: var(--lidia-secondario);
+}
+
+@media (max-width: 780px) {
+	.lidia-mcp-target {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+/* ---------- chiusura ---------- */
+
+.lidia-mcp-chiusura-griglia {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 34px 56px;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.lidia-mcp-chiusura-testo {
+	flex: 1 1 480px;
+	min-width: 0;
+}
+
+.lidia-mcp-chiusura-testo > * {
+	margin-block: 0;
+}
+
+.lidia-mcp-chiusura-testo h2 {
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.lidia-mcp-chiusura-testo p {
+	color: var(--lidia-secondario);
+}
+
+.lidia-mcp-chiusura .wp-block-buttons {
+	margin: 0;
+}
+
+/* ---------- animazione «Lidia in Claude» ---------- */
+
+/*
+ * Deroga al §7 (decisione dell'owner del 22/10/2026): l'animazione riproduce l'interfaccia
+ * di Claude, quindi porta i suoi colori e il font del saluto (Iowan/Georgia, non caricato:
+ * è quello di sistema). I colori sono tutti variabili locali `--ldc-*`, dichiarate qui sotto:
+ * nessun valore sciolto nelle regole.
+ */
+.lidia-mcp-visivo {
+	min-width: 0;
+}
+
+.lidia-mcp-visivo > * {
+	margin: 0;
+}
+
+/* ---------- box in home (22/10) ---------- */
+
+/* La testa della pagina MCP su fondo indaco: la sfumatura notte in home è già dell'hero. */
+.lidia-mcp-home .lidia-occhiello {
+	color: var(--wp--preset--color--accento-scuro);
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.lidia-mcp-home h2 {
+	max-width: 18ch;
+	text-wrap: balance;
+}
+
+.lidia-mcp-home .lidia-mcp-voce p {
+	color: var(--wp--preset--color--chiaro);
+}
+
+.ldc{--ldc-navy:#0F133A;--ldc-blue:#303A99;--ldc-tint:#EEEFF8;--ldc-ui:#141413;--ldc-mut:#898781;--ldc-ln:rgba(0,0,0,.1);--ldc-ph:#C9C8C1;--ldc-ph2:#DEDDD7;--ldc-clay:#D97757;--ldc-fondo:#FAF9F5;--ldc-c1:rgba(0,0,0,.08);--ldc-c2:rgba(15,19,58,.14);--ldc-bianco:#fff;--ldc-c3:rgba(0,0,0,.12);--ldc-c4:rgba(0,0,0,.035);--ldc-etichetta:#6D6B67;--ldc-c5:rgba(48,58,153,.15);--ldc-hover:#F0EFEC;--ldc-secondario:#52514E;--ldc-c6:rgba(48,58,153,.22);--ldc-c7:rgba(48,58,153,.18);--ldc-c8:rgba(48,58,153,.2);--ldc-c9:rgba(48,58,153,.28);--ldc-c10:rgba(48,58,153,.3);--ldc-c11:rgba(0,0,0,.25);--ldc-c12:rgba(15,19,58,.18);--ldc-cerca:#F4F4F2;--ldc-grigio:#E9E8E3;--ldc-c13:rgba(0,0,0,.2);
+  position:relative;width:100%;max-width:560px;aspect-ratio:560/440;margin:0 auto;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ldc-ui);-webkit-font-smoothing:antialiased}
+
+.ldc *{box-sizing:border-box}
+
+.ldc-stage{position:absolute;left:0;top:0;width:560px;height:440px;transform-origin:0 0}
+
+.ldc-win{position:absolute;inset:0;background:var(--ldc-fondo);border:1px solid var(--ldc-c1);border-radius:18px;box-shadow:0 18px 50px var(--ldc-c2);overflow:hidden}
+
+.ldc svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+.ldc-tile{width:var(--s);height:var(--s);border-radius:calc(var(--s)*.24);background:var(--ldc-navy);display:inline-flex;align-items:center;justify-content:center;overflow:hidden;flex:none}
+
+.ldc .ldc-lg{width:calc(var(--s)*1.02);height:auto;stroke:none}
+
+.ldc-name{font-weight:600;color:var(--ldc-navy)}
+
+/* home */
+.ldc-gr{position:absolute;left:0;right:0;top:128px;text-align:center;font-family:"Iowan Old Style","Charter","Georgia",serif;font-size:31px;letter-spacing:-.01em;color:var(--ldc-ui);display:flex;align-items:center;justify-content:center;gap:10px}
+
+.ldc-spark:empty{display:none}
+ .ldc-spark{width:28px;height:28px;display:inline-flex;margin-top:2px}
+ .ldc-spark img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* composer */
+.ldc-comp{position:absolute;background:var(--ldc-bianco);border:1px solid var(--ldc-c3);border-radius:18px;padding:12px 12px 10px;box-shadow:0 4px 20px var(--ldc-c4)}
+
+.ldc-catt{display:flex;gap:8px;overflow:hidden;height:0}
+
+.ldc-att{position:relative;display:flex;align-items:center;gap:8px;height:36px;padding:0 10px 0 5px;border-radius:10px;background:var(--ldc-bianco);border:1px solid var(--ldc-c3)}
+
+.ldc-atti{width:26px;height:26px;border-radius:7px;background:var(--ldc-tint);color:var(--ldc-blue);display:flex;align-items:center;justify-content:center}
+
+.ldc-attt{display:flex;flex-direction:column;gap:4px}
+ .ldc-attt i{display:block;height:8px;border-radius:4px;background:var(--ldc-ph)}
+ .ldc-attt b{font-size:8.5px;font-weight:600;letter-spacing:.06em;color:var(--ldc-etichetta);line-height:1}
+
+.ldc-prog{position:absolute;left:6px;right:6px;bottom:3px;height:2px;border-radius:1px;background:var(--ldc-c5);overflow:hidden}
+ .ldc-prog i{display:block;height:100%;background:var(--ldc-blue);transform-origin:0 50%;transform:scaleX(0)}
+
+.ldc-input{position:relative;height:22px;padding-left:4px;font-size:14px;color:var(--ldc-mut);overflow:hidden}
+
+.ldc-ph{position:absolute;left:4px;top:2px;white-space:nowrap}
+
+.ldc-ut{position:absolute;left:4px;top:2px;color:var(--ldc-ui);white-space:nowrap}
+
+.ldc-typ{position:absolute;left:78px;top:6px;width:250px;height:10px;border-radius:5px;background:var(--ldc-ph);transform-origin:0 50%;transform:scaleX(0)}
+
+.ldc-typ2{left:4px;top:28px;width:180px}
+
+.ldc-caret{position:absolute;left:4px;top:2px;width:1.5px;height:18px;background:var(--ldc-ui);opacity:0}
+
+.ldc-bot{display:flex;align-items:center;gap:8px;margin-top:22px;font-size:12.5px}
+
+.ldc-plus{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center}
+ .ldc-plus svg{width:17px;height:17px;stroke-width:1.6}
+
+.ldc-seg{display:flex;gap:2px;padding:2px;border-radius:9px;background:var(--ldc-hover);font-size:12.5px}
+ .ldc-seg b,.ldc-seg span{padding:4px 9px;border-radius:7px;font-weight:400}
+ .ldc-seg b{background:var(--ldc-bianco);box-shadow:0 1px 2px var(--ldc-c1)}
+ .ldc-seg span{color:var(--ldc-secondario)}
+
+.ldc-model{margin-left:auto;color:var(--ldc-secondario)}
+ .ldc-model em{font-style:normal;color:var(--ldc-mut);margin-left:3px}
+
+.ldc-mic{color:var(--ldc-secondario);margin:0 4px}
+
+.ldc-end{position:relative;width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:var(--ldc-secondario)}
+
+.ldc-send{position:absolute;inset:0;border-radius:9px;background:var(--ldc-clay);color:var(--ldc-bianco);display:flex;align-items:center;justify-content:center;opacity:0}
+ .ldc-send svg{stroke-width:2.2;width:15px;height:15px}
+
+/* menu */
+.ldc-menu{position:absolute;left:40px;width:230px;background:var(--ldc-bianco);border:1px solid var(--ldc-ln);border-radius:14px;box-shadow:0 12px 34px var(--ldc-c2);padding:6px;font-size:13px;transform-origin:0 100%;opacity:0}
+
+.ldc-row{position:relative;display:flex;align-items:center;gap:10px;height:30px;padding:0 9px;border-radius:8px}
+ .ldc-row>span{flex:1;white-space:nowrap}
+ .ldc-row>svg:last-child:not(:first-child){color:var(--ldc-mut);width:13px}
+
+.ldc-hl{position:absolute;left:6px;right:6px;height:30px;border-radius:8px;background:var(--ldc-hover);opacity:0}
+
+.ldc-sep{height:1px;background:var(--ldc-ln);margin:4px 9px}
+
+/* chat */
+.ldc-q{position:absolute;right:22px;top:20px;width:330px;background:var(--ldc-hover);border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;opacity:0}
+
+.ldc-qatt{display:flex;gap:8px;margin-bottom:2px}
+
+.ldc-ql{display:flex;align-items:center;gap:7px;font-size:14px}
+ .ldc-ql i,.ldc-qb{display:block;flex:1;height:10px;border-radius:5px;background:var(--ldc-ph)}
+
+.ldc-tool{position:absolute;left:22px;top:146px;display:flex;align-items:center;gap:8px;height:34px;padding:0 11px 0 6px;background:var(--ldc-bianco);border:1px solid var(--ldc-c6);border-radius:10px;font-size:12.5px;opacity:0}
+
+.ldc-tb{width:110px;height:8px;border-radius:4px;background:var(--ldc-c7)}
+
+.ldc-st{position:relative;width:15px;height:15px;color:var(--ldc-blue)}
+ .ldc-spin{position:absolute;inset:1px;border-radius:50%;border:2px solid var(--ldc-c8);border-top-color:var(--ldc-blue)}
+ .ldc-ok{position:absolute;inset:0;opacity:0}
+ .ldc-ok svg{width:15px;height:15px;stroke-width:2.4}
+
+.ldc-ans{position:absolute;left:22px;top:196px;width:470px;display:flex;flex-direction:column;gap:8px}
+ .ldc-ans>i{display:block;height:10px;border-radius:5px;background:var(--ldc-ph2);transform-origin:0 50%;transform:scaleX(0)}
+ .ldc-ans>i.ldc-gap{margin-bottom:10px}
+
+.ldc-srcs{position:absolute;left:22px;top:282px;display:flex;gap:7px}
+
+.ldc-src{display:flex;align-items:center;gap:6px;height:24px;padding:0 8px;border-radius:7px;background:var(--ldc-tint);color:var(--ldc-blue);opacity:0}
+ .ldc-src svg{width:12px;height:12px}
+ .ldc-src svg:last-child{width:10px;height:10px;opacity:.7}
+ .ldc-src i{display:block;height:7px;border-radius:4px;background:var(--ldc-c9)}
+
+.ldc-save{position:absolute;right:22px;top:282px;display:flex;align-items:center;gap:6px;height:24px;padding:0 10px 0 8px;border-radius:7px;background:var(--ldc-bianco);border:1px solid var(--ldc-c10);color:var(--ldc-blue);font-size:11.5px;font-weight:600;opacity:0}
+ .ldc-save svg{width:13px;height:13px}
+
+.ldc-ring{position:absolute;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:2px solid var(--ldc-blue);opacity:0;pointer-events:none}
+
+.ldc-cur{position:absolute;left:0;top:0;width:18px!important;height:22px!important;fill:var(--ldc-ui)!important;stroke:var(--ldc-bianco)!important;stroke-width:1.6!important;filter:drop-shadow(0 1px 2px var(--ldc-c11));pointer-events:none}
+
+.ldc-qt{font-size:12.5px;line-height:1.45;color:var(--ldc-ui)}
+
+.ldc-q{width:400px!important}
+
+.ldc-tool{top:176px!important}
+ .ldc-ans{top:218px!important;gap:6px!important}
+ .ldc-ans>i.ldc-gap{margin-bottom:6px!important}
+ .ldc-srcs,.ldc-save{top:288px!important}
+
+.ldc .ldc-tile{flex:none!important}
+
+.ldc-input{height:auto!important;min-height:22px;max-height:84px}
+
+.ldc-ut{position:relative!important;display:block;left:auto!important;top:auto!important;white-space:normal!important;padding-top:2px;line-height:20px;font-size:13.5px}
+
+.ldc-caret{position:relative!important;display:inline-block;vertical-align:-3px;margin-left:1px;left:auto!important;top:auto!important}
+
+.ldc-ph{z-index:1}
+
+.ldc-chip{display:flex;align-items:center;gap:6px;height:28px;padding:0 9px 0 4px;border-radius:8px;background:var(--ldc-tint);color:var(--ldc-blue);font-size:12px;font-weight:600;opacity:0}
+
+.ldc-sub{position:absolute;left:250px;width:270px;background:var(--ldc-bianco);border:1px solid var(--ldc-ln);border-radius:14px;box-shadow:0 16px 40px var(--ldc-c12);padding:6px;font-size:13px;opacity:0;transform-origin:0 100%}
+
+.ldc-srch{background:var(--ldc-cerca);color:var(--ldc-mut);margin-bottom:4px}
+
+.ldc-tall{height:40px}
+ .ldc-lid{border-radius:10px}
+ .ldc-lid .ldc-name{font-size:14px;flex:1}
+
+.ldc-gt{width:26px;height:26px;border-radius:7px;background:var(--ldc-grigio);flex:none!important}
+ .ldc-gbar{flex:none!important;width:90px;height:9px;border-radius:5px;background:var(--ldc-ph2);margin-right:auto}
+
+.ldc-tog{position:relative;width:34px;height:20px;border-radius:10px;background:var(--ldc-ph2);flex:none!important}
+ .ldc-tog i{position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:var(--ldc-bianco);box-shadow:0 1px 2px var(--ldc-c13)}
+
+.ldc-conn.on{background:var(--ldc-tint);box-shadow:inset 0 0 0 1.5px var(--ldc-blue);color:var(--ldc-blue);font-weight:600}

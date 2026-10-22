@@ -169,6 +169,11 @@ $pagine = array(
 		'desc'  => 'Le funzioni di Lidia, software AI per studi legali: ricerca su fonti ufficiali con GraphRAG, workflow, add-in Word, AI Assistant, Smart Answer.',
 		'kw'    => 'software ai per studi legali',
 	),
+	'/prodotto/integrazione-mcp/' => array(
+		'title' => 'Server MCP di Lidia: Lidia dentro Claude e ChatGPT | Lidia',
+		'desc'  => 'Con il server MCP di Lidia richiami Lidia dalla chat di Claude, ChatGPT o di un altro assistente AI: ricerca legale sulle fonti ufficiali, pratiche e workflow.',
+		'kw'    => 'mcp server legale',
+	),
 	'/sicurezza/' => array(
 		'title' => 'Sicurezza dei dati e AI negli studi legali | Lidia',
 		'desc'  => 'Sicurezza dei dati negli studi legali che usano l\'AI: dati su AWS in Unione Europea, nessun accesso dei fornitori dei modelli, ISO 27001, CSA STAR, GDPR.',
@@ -287,6 +292,7 @@ function lidia_yoast_trova( $percorso ) {
  */
 $briciole = array(
 	'/prodotto/' => 'Prodotto',
+	'/prodotto/integrazione-mcp/' => 'Server MCP',
 	'/sicurezza/' => 'Sicurezza',
 	'/prezzi/' => 'Prezzi',
 	'/prova-gratuita/' => 'Prova gratuita',
