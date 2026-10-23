@@ -53,6 +53,185 @@ html {
 	color: var(--lidia-testo);
 }
 
+/*
+ * Pannello di «Prodotto» (23/10, proposta C): si apre sotto tutta la barra.
+ * Colonne: Funzioni (Panoramica, poi le pagine funzione), Dove usi Lidia (Word, assistenti AI),
+ * a destra la novità del momento. Le voci sono navigation-link con descrizione; la colonna e
+ * l'icona arrivano dalla classe della voce (lidia-menu-funzioni / -canali / -promo, lidia-menu-ico-*).
+ * Titoli di colonna e «Novità» stanno qui, in due lingue: sono etichette, non contenuto.
+ * Solo nella barra (600 px in su): su mobile il menu a schermo intero di WordPress elenca le voci.
+ * Le regole sulla voce usano `li.lidia-menu-prodotto`: WordPress mette la classe anche sulla `ul`
+ * del pannello, che deve restare `position: absolute`.
+ */
+
+/* Il pannello si aggancia alla testata, non alla voce: i contenitori intermedi tornano statici. */
+.lidia-testata .wp-block-navigation,
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open),
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__responsive-dialog,
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__responsive-container-content,
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) li.lidia-menu-prodotto {
+	position: static;
+}
+
+/* La voce occupa tutta l'altezza della barra: il mouse arriva al pannello senza chiuderlo. */
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) li.lidia-menu-prodotto {
+	padding-block: 25px;
+	margin-block: -25px;
+}
+
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-prodotto > .wp-block-navigation__submenu-container {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.1fr);
+	grid-auto-flow: dense;
+	align-content: start;
+	column-gap: var(--wp--preset--spacing--40);
+	row-gap: 2px;
+	left: 0;
+	right: 0;
+	top: 100%;
+	padding: 32px max(var(--wp--preset--spacing--50), calc((100% - var(--lidia-colonna)) / 2)) 36px;
+	background-color: var(--lidia-fondo);
+	color: var(--lidia-testo);
+	border: 0;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-bottom: var(--lidia-filetto) solid var(--wp--preset--color--filetto-scuro);
+	border-radius: 0;
+}
+
+.lidia-testata .lidia-menu-prodotto .lidia-menu-funzioni { grid-column: 1; }
+.lidia-testata .lidia-menu-prodotto .lidia-menu-canali { grid-column: 2; }
+.lidia-testata .lidia-menu-prodotto .lidia-menu-promo { grid-column: 3; grid-row: 1 / span 8; margin-block: 8px; }
+
+/* Titoli di colonna sopra la prima voce. */
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-primo {
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-primo::before {
+	font-size: var(--wp--preset--font-size--micro);
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--lidia-accento);
+	padding: 0 12px 8px;
+}
+
+.lidia-testata .lidia-menu-funzioni.lidia-menu-primo::before { content: "Funzioni"; }
+.lidia-testata .lidia-menu-canali.lidia-menu-primo::before { content: "Dove usi Lidia"; }
+:lang(en) .lidia-testata .lidia-menu-funzioni.lidia-menu-primo::before { content: "Features"; }
+:lang(en) .lidia-testata .lidia-menu-canali.lidia-menu-primo::before { content: "Where you use Lidia"; }
+
+/* Voce: icona, nome, una riga di descrizione. */
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-voce > .wp-block-navigation-item__content {
+	display: grid;
+	grid-template-columns: 18px minmax(0, 1fr);
+	column-gap: 12px;
+	padding: 9px 12px;
+	border-radius: var(--lidia-raggio);
+	color: var(--lidia-testo);
+}
+
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-voce > .wp-block-navigation-item__content:hover,
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-voce > .wp-block-navigation-item__content:focus-visible {
+	background-color: var(--wp--preset--color--indaco);
+	color: var(--lidia-testo);
+}
+
+.lidia-testata .lidia-menu-voce > .wp-block-navigation-item__content::before {
+	content: "";
+	grid-row: 1 / span 2;
+	width: 18px;
+	height: 18px;
+	margin-top: 1px;
+	background-color: var(--lidia-accento);
+	-webkit-mask: var(--lidia-menu-icona) center / contain no-repeat;
+	mask: var(--lidia-menu-icona) center / contain no-repeat;
+}
+
+.lidia-testata .lidia-menu-ico-panoramica { --lidia-menu-icona: url("../../images/icone/menu-panoramica.svg"); }
+.lidia-testata .lidia-menu-ico-ricerca { --lidia-menu-icona: url("../../images/icone/menu-ricerca.svg"); }
+.lidia-testata .lidia-menu-ico-workflow { --lidia-menu-icona: url("../../images/icone/menu-workflow.svg"); }
+.lidia-testata .lidia-menu-ico-archivio { --lidia-menu-icona: url("../../images/icone/menu-archivio.svg"); }
+.lidia-testata .lidia-menu-ico-word { --lidia-menu-icona: url("../../images/icone/menu-word.svg"); }
+.lidia-testata .lidia-menu-ico-assistente { --lidia-menu-icona: url("../../images/icone/menu-assistente.svg"); }
+
+.lidia-testata .lidia-menu-prodotto > .wp-block-navigation__submenu-container .wp-block-navigation-item__label {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-prodotto .wp-block-navigation-item__description {
+	display: block;
+	grid-column: 2;
+	margin-top: 2px;
+	font-size: 12.5px;
+	line-height: 1.4;
+	color: var(--lidia-secondario);
+}
+
+/* La novità: scheda indaco con la firma a sinistra. */
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-promo > .wp-block-navigation-item__content {
+	display: block;
+	height: 100%;
+	padding: 20px;
+	background-color: var(--wp--preset--color--indaco);
+	border: var(--lidia-filetto) solid var(--wp--preset--color--filetto-scuro);
+	border-left: var(--lidia-firma) solid var(--lidia-accento);
+	border-radius: var(--lidia-raggio-scheda);
+	color: var(--lidia-testo);
+}
+
+.lidia-testata .lidia-menu-promo > .wp-block-navigation-item__content::before {
+	content: "Novità";
+	display: block;
+	margin-bottom: 10px;
+	font-size: var(--wp--preset--font-size--micro);
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--lidia-accento);
+}
+
+:lang(en) .lidia-testata .lidia-menu-promo > .wp-block-navigation-item__content::before { content: "New"; }
+
+.lidia-testata .lidia-menu-prodotto > .wp-block-navigation__submenu-container .lidia-menu-promo .wp-block-navigation-item__label {
+	display: block;
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 20px;
+	line-height: 1.2;
+	margin-bottom: 8px;
+}
+
+.lidia-testata .lidia-menu-promo .wp-block-navigation-item__label::after {
+	content: " →";
+	font-family: var(--wp--preset--font-family--testo);
+	font-size: 16px;
+}
+
+.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-promo .wp-block-navigation-item__description {
+	grid-column: auto;
+	font-size: 13px;
+	line-height: 1.5;
+	color: var(--wp--preset--color--chiaro-secondario);
+}
+
+/* Fra 600 e 900 px: due colonne, la novità resta fuori (è un doppione della voce). */
+@media (max-width: 900px) {
+	.lidia-testata .wp-block-navigation__responsive-container:not(.is-menu-open) .lidia-menu-prodotto > .wp-block-navigation__submenu-container {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	}
+
+	.lidia-testata .lidia-menu-prodotto .lidia-menu-promo {
+		display: none;
+	}
+}
+
+/* Menu a schermo intero (mobile): solo l'elenco, la novità non si ripete. */
+.lidia-testata .wp-block-navigation__responsive-container.is-menu-open .lidia-menu-promo {
+	display: none;
+}
+
 /* Log in: un link, non un bottone. */
 .lidia-testata .lidia-accesso a {
 	color: var(--wp--preset--color--superficie);
