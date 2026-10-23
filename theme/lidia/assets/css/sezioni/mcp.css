@@ -634,3 +634,7 @@
  .ldc-tog i{position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:var(--ldc-bianco);box-shadow:0 1px 2px var(--ldc-c13)}
 
 .ldc-conn.on{background:var(--ldc-tint);box-shadow:inset 0 0 0 1.5px var(--ldc-blue);color:var(--ldc-blue);font-weight:600}
+
+/* Versione inglese (23/10): la domanda va a capo una riga in più, strumento e risposta scendono. */
+.ldc-en .ldc-tool { top: 192px !important; }
+.ldc-en .ldc-ans { top: 232px !important; }

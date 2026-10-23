@@ -213,9 +213,17 @@ function lidia_enqueue_sezioni() {
 		);
 	}
 
-	// L'animazione «Lidia in Claude» della testa di /prodotto/integrazione-mcp/ (22/10).
-	// Solo dove c'è; ~8 KB, nessuna dipendenza, in fondo alla pagina.
-	if ( false !== strpos( $contenuto, 'lidia-mcp-visivo' ) ) {
+	// L'animazione «Lidia in Claude»: pagina server MCP e box in home (22/10), inglese dal 23/10.
+	// Solo dove c'è; ~8 KB, nessuna dipendenza, in fondo alla pagina. Una sola versione per pagina.
+	if ( false !== strpos( $contenuto, 'lidia-mcp-visivo-en' ) ) {
+		wp_enqueue_script(
+			'lidia-mcp-animazione',
+			LIDIA_URI . '/assets/js/mcp-animazione-en.js',
+			array(),
+			lidia_versione_file( 'assets/js/mcp-animazione-en.js' ),
+			true
+		);
+	} elseif ( false !== strpos( $contenuto, 'lidia-mcp-visivo' ) ) {
 		wp_enqueue_script(
 			'lidia-mcp-animazione',
 			LIDIA_URI . '/assets/js/mcp-animazione.js',
