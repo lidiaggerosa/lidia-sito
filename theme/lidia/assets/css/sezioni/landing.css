@@ -1,0 +1,225 @@
+/*
+ * Landing di campagna — solo ciò che le sezioni del sito non hanno già.
+ * Caricato da inc/landing.php sulle pagine del tipo `landing` (12/10/2026).
+ */
+
+/* Hero: sulla home i loghi gli stanno attaccati sotto; qui no, quindi respiro pari. */
+.lidia-lp .lidia-hero {
+	padding-block: var(--wp--preset--spacing--80);
+}
+
+/* ---------- Tre punti: immagine del prodotto a sinistra, titolo ed elenco a destra ---------- */
+
+.lidia-lp-punti .lidia-lp-punti-griglia {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	gap: 40px 64px;
+	align-items: center;
+}
+
+.lidia-lp-punti-griglia > *,
+.lidia-lp-visual > * {
+	margin-block: 0 !important; /* niente blockGap nelle griglie: i pezzi partono alla stessa quota */
+}
+
+.lidia-lp-punti h2 {
+	margin: 0 0 24px;
+	max-width: 16ch;
+	text-wrap: balance;
+}
+
+.lidia-lp-punti .lidia-lp-elenco {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lidia-lp-punti .lidia-lp-elenco li {
+	padding-block: 16px;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.55;
+	color: var(--lidia-secondario);
+}
+
+.lidia-lp-punti .lidia-lp-elenco li:last-child {
+	padding-bottom: 0;
+}
+
+.lidia-lp-punti .lidia-lp-elenco strong {
+	display: block;
+	margin-bottom: 4px;
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: var(--wp--preset--font-size--voce);
+	color: var(--lidia-testo);
+}
+
+/* Le immagini del prodotto (dal deck «Lidia AI»): PNG trasparenti convertiti in WebP. */
+.lidia-lp-immagine {
+	margin: 0;
+}
+
+.lidia-lp-immagine img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Rapporti dichiarati: niente salto di layout mentre l'immagine arriva. */
+.lidia-lp-immagine img[src*="lp-piattaforma."] { aspect-ratio: 1140 / 606; }
+.lidia-lp-immagine img[src*="lp-ricerca-legale."] { aspect-ratio: 920 / 860; }
+.lidia-lp-immagine img[src*="lp-conversazione."] { aspect-ratio: 920 / 760; }
+.lidia-lp-immagine img[src*="lp-add-in-word."] { aspect-ratio: 920 / 1000; }
+
+/* Due schede sovrapposte (Attività legali): la seconda scende e si appoggia a destra. */
+.lidia-lp-visual-doppia {
+	display: grid;
+	grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.lidia-lp-visual-doppia .lidia-lp-immagine:first-child {
+	grid-column: 1 / 9;
+	grid-row: 1;
+}
+
+.lidia-lp-visual-doppia .lidia-lp-immagine:last-child {
+	grid-column: 4 / 11;
+	grid-row: 1;
+	margin-top: 30% !important;
+	position: relative;
+	z-index: 1;
+}
+
+/* ---------- Come funziona: la riga degli esempi sotto i passi ---------- */
+
+.lidia-lp .lidia-lp-esempi {
+	margin-top: 52px;
+	max-width: 70ch;
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.55;
+	color: var(--lidia-secondario);
+}
+
+.lidia-lp .lidia-lp-esempi strong {
+	color: var(--lidia-testo);
+	font-weight: 600;
+}
+
+/* ---------- Come funziona a tre passi (L1, L2) ---------- */
+
+.lidia-passaggi.lidia-tre {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	max-width: 840px;
+	margin-inline: auto;
+}
+
+.lidia-passaggi.lidia-tre::before {
+	left: 16%;
+	right: 16%;
+}
+
+/* ---------- Fonti ufficiali: tre colonne di elenchi (L2) ---------- */
+
+/*
+ * Un solo contenitore largo dentro la sezione: il constrained di WordPress lo centra
+ * a 1040 px, e dentro titolo, colonne e riga finale condividono lo stesso bordo
+ * sinistro a qualunque larghezza della finestra.
+ */
+.lidia-lp-fonti h2 {
+	margin: 0 0 40px;
+	max-width: 22ch;
+	text-wrap: balance;
+}
+
+.lidia-lp-fonti .lidia-lp-fonti-griglia {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 32px 40px;
+	align-items: start;
+}
+
+.lidia-lp-fonti-griglia > *,
+.lidia-lp-fonti-colonna > * {
+	margin-block: 0 !important; /* niente blockGap fra le colonne: partono alla stessa quota */
+}
+
+.lidia-lp-fonti-colonna h3 {
+	padding-bottom: 12px;
+	margin-bottom: 14px !important;
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	font-size: var(--wp--preset--font-size--voce);
+}
+
+.lidia-lp-fonti-colonna ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 8px;
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.45;
+	color: var(--lidia-secondario);
+}
+
+.lidia-lp-fonti .lidia-lp-esempi {
+	margin: 36px 0 0;
+}
+
+/* ---------- Fiducia: loghi non attaccati all'hero, più la riga sicurezza ---------- */
+
+.lidia-lp .lidia-loghi {
+	padding-block: 48px;
+	border-bottom: 0;
+}
+
+.lidia-lp .lidia-lp-garanzia {
+	margin: 30px auto 0;
+	padding-inline: clamp(20px, 5vw, 40px);
+	max-width: 62ch;
+	font-size: var(--wp--preset--font-size--riscontro);
+	color: var(--lidia-secondario);
+}
+
+/* ---------- Footer ridotto: la sola riga legale ---------- */
+
+.lidia-piede-lp {
+	padding-block: 0;
+}
+
+.lidia-piede-lp .lidia-piede-legale {
+	margin-top: 0;
+	border-top: 0;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 860px) {
+	.lidia-lp-punti .lidia-lp-punti-griglia,
+	.lidia-lp-fonti .lidia-lp-fonti-griglia {
+		grid-template-columns: 1fr;
+	}
+
+	/* Su una colonna prima il testo, poi l'immagine. */
+	.lidia-lp-punti .lidia-lp-visual {
+		order: 2;
+		max-width: 520px;
+	}
+}
+
+@media (max-width: 720px) {
+	.lidia-passaggi.lidia-tre {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 620px) {
+	.lidia-lp .lidia-hero {
+		padding-block: var(--wp--preset--spacing--60);
+	}
+
+	/* Testata: logo e bottone devono stare in una riga a 390 px. */
+	.lidia-testata-lp .wp-element-button {
+		padding: 8px 14px;
+	}
+}

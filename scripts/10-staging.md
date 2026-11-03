@@ -53,6 +53,9 @@
 
 ## Rilascio (ogni volta che cambia il tema, il mu-plugin o un file di blocchi)
 
+> **Dal 22/10/2026 pagine e file del tema si pubblicano con `scripts/26-pubblica.ps1`** (vedi
+> `26-pubblica.md`). I comandi sotto restano per il tema intero e per il mu-plugin.
+
 Da PowerShell, nella cartella del progetto:
 
 ```powershell

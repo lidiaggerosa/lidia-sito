@@ -22,5 +22,6 @@ nel file della pagina in `scripts/blocchi/`: altrimenti al rilascio successivo l
 
 ## Landing di campagna
 
-Il modello per le landing isolate (senza menu, `noindex`, modulo verso Delera) **non è ancora
-disponibile**. Fino ad allora, una landing si chiede come pagina nuova.
+Il modello esiste dal 12/10/2026: tipo di contenuto `landing`, URL `/lp/{slug}/`, testata con solo logo,
+`noindex`, modulo verso Delera. Una landing nuova si chiede come una pagina nuova (testi approvati,
+gruppi Ads, data); lo sviluppo la crea con `scripts/23-landing.md`.

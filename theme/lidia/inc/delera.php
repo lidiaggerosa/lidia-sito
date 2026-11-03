@@ -62,6 +62,8 @@ function lidia_delera_payload( $dati ) {
 	$professioni = lidia_modulo_professioni();
 
 	return array(
+		'form_origine'       => lidia_modulo_form_origine( $dati['tipo'], $dati['intento'] ),
+		'lingua'             => isset( $dati['lingua'] ) ? $dati['lingua'] : 'it',
 		'tipo'               => $dati['tipo'],
 		'intento'            => $dati['intento'],
 		'nome'               => $dati['nome'],
@@ -83,9 +85,57 @@ function lidia_delera_payload( $dati ) {
 		),
 		'origine'            => $dati['origine'],
 		'posizione'          => isset( $dati['posizione'] ) ? $dati['posizione'] : '',
-		'campagna'           => isset( $dati['campagna'] ) ? $dati['campagna'] : array(),
+		'campagna'           => isset( $dati['campagna'] ) ? $dati['campagna'] : lidia_modulo_campagna( null ),
 		'documento'          => $documento,
-	);
+	) + lidia_delera_attribuzione( isset( $dati['attribuzione'] ) ? $dati['attribuzione'] : array() );
+}
+
+/**
+ * L'attribuzione in chiavi piatte, una per campo personalizzato di Delera. Sempre tutte le chiavi:
+ * quelle che non si conoscono partono vuote.
+ *
+ * @param array $attribuzione primo, intermedi, ultimo, totali (lidia_modulo_attribuzione()).
+ * @return array<string, string>
+ */
+function lidia_delera_attribuzione( $attribuzione ) {
+	$piatte = array();
+	$voci   = array( 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'pagina', 'data' );
+
+	foreach ( array( 'primo', 'ultimo' ) as $quale ) {
+		$contatto = ! empty( $attribuzione[ $quale ] ) ? $attribuzione[ $quale ] : array();
+
+		foreach ( $voci as $voce ) {
+			$piatte[ $quale . '_' . $voce ] = isset( $contatto[ $voce ] ) ? (string) $contatto[ $voce ] : '';
+		}
+	}
+
+	// Gli intermedi in un solo testo: source/medium/campaign/content, dal più vecchio.
+	$passi = array();
+
+	if ( ! empty( $attribuzione['intermedi'] ) && is_array( $attribuzione['intermedi'] ) ) {
+		foreach ( $attribuzione['intermedi'] as $passo ) {
+			$parti   = array( $passo['utm_source'], $passo['utm_medium'], $passo['utm_campaign'], $passo['utm_content'] );
+			$passi[] = rtrim( implode( '/', $parti ), '/' );
+		}
+	}
+
+	$piatte['contatti_intermedi'] = implode( ' › ', $passi );
+
+	$totali = ! empty( $attribuzione['totali'] ) ? (int) $attribuzione['totali'] : 0;
+
+	$piatte['contatti_totali']         = $totali ? (string) $totali : '';
+	$piatte['giorni_alla_conversione'] = '';
+
+	if ( $totali && ! empty( $attribuzione['primo']['data'] ) ) {
+		$primo  = date_create_immutable( $attribuzione['primo']['data'], wp_timezone() );
+		$adesso = date_create_immutable( current_time( 'Y-m-d' ), wp_timezone() );
+
+		if ( $primo && $adesso && $primo <= $adesso ) {
+			$piatte['giorni_alla_conversione'] = (string) $primo->diff( $adesso )->days;
+		}
+	}
+
+	return $piatte;
 }
 
 /**
@@ -245,7 +295,9 @@ function lidia_delera_allarme( $payload, $motivo ) {
 
 	if ( ! empty( $payload['campagna'] ) && is_array( $payload['campagna'] ) ) {
 		foreach ( $payload['campagna'] as $chiave => $valore ) {
-			$righe[] = $chiave . ': ' . $valore;
+			if ( '' !== (string) $valore ) {
+				$righe[] = $chiave . ': ' . $valore;
+			}
 		}
 	}
 

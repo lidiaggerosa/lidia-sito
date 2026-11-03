@@ -7,12 +7,12 @@ theme/lidia/
 ├── theme.json            token: colori, tipografia, spaziature, larghezze
 ├── style.css             solo intestazione del tema
 ├── functions.php         carica i file di inc/
-├── templates/            front-page, page, page-composta, single, archive, search, 404, index
-├── parts/                header, footer (+ versioni -en)
+├── templates/            front-page, page, page-composta, page-feedback, single, single-landing, archive, search, 404, index
+├── parts/                header, footer (+ versioni -en), lp-testata, lp-piede, fb-testata
 ├── patterns/             le sezioni, un file per sezione
 ├── inc/                  la logica PHP
 ├── assets/css/           tokens.css, base.css, parti/, sezioni/, components/
-├── assets/js/            modulo, consenso, tracking, funzioni, editor
+├── assets/js/            modulo, consenso, tracking, funzioni, feedback, editor
 ├── assets/fonts/         Fraunces e Inter, woff2 self-hosted
 └── languages/            en_GB.po / .mo
 ```
@@ -33,6 +33,8 @@ theme/lidia/
 | `schema.php` | JSON-LD: Organization, FAQPage, SoftwareApplication |
 | `seo.php` | robots.txt e llms.txt |
 | `legale.php` | `noindex` del ramo `/legale/` |
+| `landing.php` | CPT `landing` (`/lp/{slug}/`): template isolato, `noindex, nofollow`, fuori sitemap |
+| `feedback.php` | blocco `lidia/feedback` (questionario `/feedback/`), `noindex, nofollow`, invio a Notion |
 
 ## Pagine
 

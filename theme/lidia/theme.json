@@ -212,6 +212,11 @@
       "name": "page-composta",
       "title": "Pagina composta (senza titolo)",
       "postTypes": [ "page" ]
+    },
+    {
+      "name": "page-feedback",
+      "title": "Questionario (solo logo e riga legale)",
+      "postTypes": [ "page" ]
     }
   ],
   "templateParts": [
