@@ -2,12 +2,14 @@
 /**
  * Il modulo di contatto: blocco, markup, validazione, antispam, ricezione.
  *
- * Form nativo del tema. Nessun iframe, nessuno script di terza parte, nessun cookie: il
- * modulo si vede sempre, anche con tutti i consensi rifiutati. La consegna a Delera sta in
- * inc/delera.php, il disegno in assets/css/sezioni/modulo.css.
+ * Form nativo del tema. Nessun iframe, nessuno script di terza parte, nessun cookie tecnico: il
+ * modulo si vede sempre, anche con tutti i consensi rifiutati. L'unico cookie che il modulo
+ * legge è quello di attribuzione (primo, intermedi, ultimo contatto), scritto dal browser solo
+ * con il consenso marketing di Complianz. Senza consenso arriva solo il contatto della visita.
+ * La consegna a Delera sta in inc/delera.php, il disegno in assets/css/sezioni/modulo.css.
  *
  * Il modulo convive con la cache di pagina (SiteGround). Tutto ciò che cambia da un
- * visitatore all'altro — marca temporale, parametri di campagna, URL di partenza — lo scrive
+ * visitatore all'altro — marca temporale, URL di partenza, contatto della visita — lo scrive
  * il browser, non il server: l'HTML in cache è uguale per tutti e resta valido.
  *
  * Specifica: docs/11-form-delera.md
@@ -82,9 +84,165 @@ function lidia_modulo_professioni() {
 	);
 }
 
-/** Le chiavi di campagna che ribaltiamo dentro il payload. Le compila il browser. */
+/** Le chiavi di campagna che ribaltiamo dentro il payload (`campagna`). */
 function lidia_modulo_chiavi_campagna() {
 	return array( 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'wbraid', 'gbraid', 'fbclid', 'li_fat_id', 'msclkid' );
+}
+
+/* -------------------------------------------------------------------------
+ * Attribuzione: primo, intermedi, ultimo contatto
+ *
+ * Il browser (assets/js/modulo.js) riconosce i contatti. Con il consenso marketing la storia sta
+ * nel cookie `lidia_attribuzione` (90 giorni); senza, arriva solo il contatto della visita, nel
+ * campo nascosto `contatto`. Specifica: docs/11-form-delera.md §2 «Attribuzione».
+ * ---------------------------------------------------------------------- */
+
+/** Il cookie di attribuzione: first-party, 90 giorni, lo scrive assets/js/modulo.js. */
+const LIDIA_COOKIE_ATTRIBUZIONE = 'lidia_attribuzione';
+
+/** Il cookie di Complianz che dice se c'è il consenso marketing. */
+const LIDIA_COOKIE_CONSENSO_MARKETING = 'cmplz_marketing';
+
+/** Quanti contatti intermedi si tengono, al massimo. */
+const LIDIA_MAX_INTERMEDI = 5;
+
+/**
+ * C'è il consenso marketing di Complianz?
+ *
+ * @return bool
+ */
+function lidia_modulo_consenso_marketing() {
+	return isset( $_COOKIE[ LIDIA_COOKIE_CONSENSO_MARKETING ] ) && 'allow' === sanitize_text_field( wp_unslash( $_COOKIE[ LIDIA_COOKIE_CONSENSO_MARKETING ] ) );
+}
+
+/**
+ * Un contatto ripulito. Arriva dal browser: non ci si fida di niente.
+ *
+ * @param mixed $grezzo Contatto decodificato.
+ * @return array|null
+ */
+function lidia_modulo_pulisci_contatto( $grezzo ) {
+	if ( ! is_array( $grezzo ) ) {
+		return null;
+	}
+
+	$prendi = static function ( $chiave, $quanto = 100 ) use ( $grezzo ) {
+		return isset( $grezzo[ $chiave ] ) && is_scalar( $grezzo[ $chiave ] ) ? substr( sanitize_text_field( (string) $grezzo[ $chiave ] ), 0, $quanto ) : '';
+	};
+
+	$contatto = array(
+		'utm_source'   => $prendi( 'utm_source' ),
+		'utm_medium'   => $prendi( 'utm_medium' ),
+		'utm_campaign' => $prendi( 'utm_campaign' ),
+		'utm_content'  => $prendi( 'utm_content' ),
+		'utm_term'     => $prendi( 'utm_term' ),
+		'pagina'       => $prendi( 'pagina' ),
+		'data'         => preg_match( '/^\d{4}-\d{2}-\d{2}$/', $prendi( 'data', 10 ) ) ? $prendi( 'data', 10 ) : '',
+		'click'        => array(),
+	);
+
+	if ( isset( $grezzo['click'] ) && is_array( $grezzo['click'] ) ) {
+		foreach ( lidia_modulo_chiavi_campagna() as $chiave ) {
+			if ( 0 !== strpos( $chiave, 'utm_' ) && ! empty( $grezzo['click'][ $chiave ] ) && is_scalar( $grezzo['click'][ $chiave ] ) ) {
+				$contatto['click'][ $chiave ] = substr( sanitize_text_field( (string) $grezzo['click'][ $chiave ] ), 0, 200 );
+			}
+		}
+	}
+
+	return '' === $contatto['utm_source'] ? null : $contatto;
+}
+
+/**
+ * L'attribuzione del lead.
+ *
+ * Con il consenso e il cookie: la storia completa. Altrimenti solo l'ultimo contatto, quello
+ * della visita, dal campo nascosto del modulo.
+ *
+ * @param mixed $contatto_visita Il campo `contatto` del modulo (JSON).
+ * @return array primo, intermedi, ultimo (array o null), totali (int, 0 = sconosciuto).
+ */
+function lidia_modulo_attribuzione( $contatto_visita ) {
+	$vuota = array(
+		'primo'     => null,
+		'intermedi' => array(),
+		'ultimo'    => null,
+		'totali'    => 0,
+	);
+
+	if ( lidia_modulo_consenso_marketing() && ! empty( $_COOKIE[ LIDIA_COOKIE_ATTRIBUZIONE ] ) && is_string( $_COOKIE[ LIDIA_COOKIE_ATTRIBUZIONE ] ) ) {
+		$storia = json_decode( wp_unslash( $_COOKIE[ LIDIA_COOKIE_ATTRIBUZIONE ] ), true );
+
+		if ( is_array( $storia ) && isset( $storia['primo'] ) ) {
+			$intermedi = array();
+
+			if ( isset( $storia['intermedi'] ) && is_array( $storia['intermedi'] ) ) {
+				foreach ( array_slice( $storia['intermedi'], -LIDIA_MAX_INTERMEDI ) as $passo ) {
+					$passo = lidia_modulo_pulisci_contatto( $passo );
+
+					if ( $passo ) {
+						$intermedi[] = $passo;
+					}
+				}
+			}
+
+			$primo  = lidia_modulo_pulisci_contatto( $storia['primo'] );
+			$ultimo = isset( $storia['ultimo'] ) ? lidia_modulo_pulisci_contatto( $storia['ultimo'] ) : null;
+
+			if ( $primo ) {
+				return array(
+					'primo'     => $primo,
+					'intermedi' => $intermedi,
+					'ultimo'    => $ultimo ? $ultimo : $primo,
+					'totali'    => isset( $storia['totali'] ) ? max( 1, absint( $storia['totali'] ) ) : 1,
+				);
+			}
+		}
+	}
+
+	if ( is_string( $contatto_visita ) && '' !== $contatto_visita ) {
+		$vuota['ultimo'] = lidia_modulo_pulisci_contatto( json_decode( wp_unslash( $contatto_visita ), true ) );
+	}
+
+	return $vuota;
+}
+
+/**
+ * `campagna` (il campo storico del payload): l'ultimo contatto, tutte le chiavi, vuote se mancano.
+ *
+ * @param array|null $ultimo Ultimo contatto.
+ * @return array<string, string>
+ */
+function lidia_modulo_campagna( $ultimo ) {
+	$campagna = array_fill_keys( lidia_modulo_chiavi_campagna(), '' );
+
+	if ( ! $ultimo ) {
+		return $campagna;
+	}
+
+	foreach ( array_keys( $campagna ) as $chiave ) {
+		if ( isset( $ultimo[ $chiave ] ) ) {
+			$campagna[ $chiave ] = $ultimo[ $chiave ];
+		} elseif ( isset( $ultimo['click'][ $chiave ] ) ) {
+			$campagna[ $chiave ] = $ultimo['click'][ $chiave ];
+		}
+	}
+
+	return $campagna;
+}
+
+/**
+ * Da quale modulo arriva il lead, con il nome che usa Delera.
+ *
+ * @param string $tipo    prova o whitepaper.
+ * @param string $intento prova o commerciale.
+ * @return string
+ */
+function lidia_modulo_form_origine( $tipo, $intento ) {
+	if ( 'whitepaper' === $tipo ) {
+		return 'Paper';
+	}
+
+	return 'commerciale' === $intento ? 'Richiesta contatto' : 'Prova gratuita';
 }
 
 /**
@@ -297,15 +455,8 @@ function lidia_modulo_raccogli( $grezzo ) {
 		return isset( $grezzo[ $chiave ] ) && is_scalar( $grezzo[ $chiave ] ) ? sanitize_text_field( (string) $grezzo[ $chiave ] ) : '';
 	};
 
-	$campagna = array();
-
-	if ( isset( $grezzo['campagna'] ) && is_array( $grezzo['campagna'] ) ) {
-		foreach ( lidia_modulo_chiavi_campagna() as $chiave ) {
-			if ( ! empty( $grezzo['campagna'][ $chiave ] ) && is_scalar( $grezzo['campagna'][ $chiave ] ) ) {
-				$campagna[ $chiave ] = substr( sanitize_text_field( (string) $grezzo['campagna'][ $chiave ] ), 0, 200 );
-			}
-		}
-	}
+	// L'attribuzione: dal cookie con il consenso marketing, altrimenti il contatto della visita.
+	$attribuzione = lidia_modulo_attribuzione( isset( $grezzo['contatto'] ) && is_scalar( $grezzo['contatto'] ) ? substr( (string) $grezzo['contatto'], 0, 2000 ) : '' );
 
 	$posizione = $prendi( 'posizione' );
 
@@ -324,7 +475,9 @@ function lidia_modulo_raccogli( $grezzo ) {
 		'origine'            => esc_url_raw( isset( $grezzo['origine'] ) && is_scalar( $grezzo['origine'] ) ? (string) $grezzo['origine'] : '' ),
 		'istanza'            => substr( $prendi( 'istanza' ), 0, 40 ),
 		'posizione'          => array_key_exists( $posizione, lidia_modulo_posizioni() ) ? $posizione : '',
-		'campagna'           => $campagna,
+		'lingua'             => 'en' === $prendi( 'lingua' ) ? 'en' : 'it',
+		'attribuzione'       => $attribuzione,
+		'campagna'           => lidia_modulo_campagna( $attribuzione['ultimo'] ),
 	);
 }
 
@@ -487,7 +640,6 @@ function lidia_modulo_form( $tipo, $istanza, $posizione = '', $dati = array(), $
 			'professione'        => '',
 			'consenso_privacy'   => false,
 			'consenso_marketing' => false,
-			'campagna'           => array(),
 		)
 	);
 
@@ -509,12 +661,9 @@ function lidia_modulo_form( $tipo, $istanza, $posizione = '', $dati = array(), $
 	$html .= '<input type="hidden" name="origine" value="' . esc_url( lidia_modulo_url_corrente() ) . '" data-lidia="origine">';
 	$html .= '<input type="hidden" name="marca" value="' . esc_attr( lidia_modulo_marca() ) . '" data-lidia="marca">';
 
-	// I parametri di campagna: campi vuoti che il browser riempie leggendo il proprio indirizzo.
-	// Il server non li legge dall'URL: quel valore finirebbe in cache e arriverebbe a tutti.
-	foreach ( lidia_modulo_chiavi_campagna() as $chiave ) {
-		$valore = isset( $dati['campagna'][ $chiave ] ) ? $dati['campagna'][ $chiave ] : '';
-		$html  .= '<input type="hidden" name="campagna[' . esc_attr( $chiave ) . ']" value="' . esc_attr( $valore ) . '" data-lidia-campagna="' . esc_attr( $chiave ) . '">';
-	}
+	// Il contatto della visita: lo scrive il browser all'invio. Il server non legge mai l'URL della
+	// pagina (finirebbe in cache); la storia completa la legge dal cookie, con il consenso.
+	$html .= '<input type="hidden" name="contatto" value="" data-lidia="contatto">';
 
 	// L'esca: fuori schermo, non display:none, che i bot leggono nel CSS.
 	$html .= '<div class="lidia-esca" aria-hidden="true"><label for="lm-' . esc_attr( $istanza ) . '-sito">' . esc_html__( 'Sito web', 'lidia' ) . '</label>';

@@ -17,11 +17,15 @@ li dà l'owner: non si scrivono nel repo.
 
 `LIDIA_ENV` · `LIDIA_GTM_ID` · `LIDIA_DELERA_WEBHOOK_PROVA` · `LIDIA_DELERA_WEBHOOK_WHITEPAPER` ·
 `LIDIA_FORM_ALERT_EMAIL` · `LIDIA_DIETRO_PROXY` · `LIDIA_WHITEPAPER_MAIL_DELERA` ·
+`LIDIA_NOTION_TOKEN` · `LIDIA_NOTION_DB_UTENTI` ·
 `DISALLOW_FILE_EDIT` · `DISABLE_WP_CRON` · `AUTOMATIC_UPDATER_DISABLED`
 
 ## Rilascio
 
 Sempre prima su staging, poi in produzione con OK dell'owner.
+
+Dal 22/10/2026 il locale non si usa: pagine e file del tema si pubblicano con lo script di rilascio
+dell'owner (`scripts/26-pubblica.md`). I passi sotto restano per il tema intero e per il mu-plugin.
 
 **0. Backup del database**
 

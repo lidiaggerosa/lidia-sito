@@ -1,0 +1,359 @@
+/*
+ * Questionari di feedback (29/10/2026) — /feedback/ e /feedback-prova/.
+ * Markup: inc/feedback.php. Colori, font e misure dai token (theme.json, tokens.css).
+ * Template page-feedback: testata con il solo logo, footer con la sola riga legale.
+ */
+
+.lidia-feedback [hidden] {
+	display: none !important;
+}
+
+.lidia-feedback-pagina {
+	padding-block: var(--wp--preset--spacing--60) var(--wp--preset--spacing--70);
+}
+
+.lidia-feedback {
+	/* Scala ridotta del questionario (03/11/2026): vale solo qui, non sul resto del sito. */
+	--lidia-fb-titolo: clamp(26px, 4vw, 30px);
+	--lidia-fb-intro: 16px;
+	--lidia-fb-passo: 18px;
+	--lidia-fb-testo: 15px;
+	--lidia-fb-scelta: 14px;
+
+	max-width: var(--wp--style--global--content-size, 680px);
+	margin-inline: auto;
+	color: var(--lidia-testo);
+	font-size: var(--lidia-fb-testo);
+}
+
+/* --- Intestazione ------------------------------------------------------- */
+
+.lidia-fb-intro {
+	margin-bottom: var(--wp--preset--spacing--50);
+}
+
+.lidia-feedback h1 {
+	margin: 0 0 var(--wp--preset--spacing--30);
+	font-size: var(--lidia-fb-titolo);
+}
+
+.lidia-fb-intro p,
+.lidia-fb-grazie p {
+	margin: 0;
+	max-width: var(--lidia-misura);
+	font-size: var(--lidia-fb-intro);
+	color: var(--lidia-secondario);
+}
+
+/* --- Avanzamento -------------------------------------------------------- */
+
+.lidia-fb-avanzamento {
+	display: flex;
+	gap: var(--wp--preset--spacing--20);
+	align-items: baseline;
+	margin-bottom: var(--wp--preset--spacing--20);
+	font-size: var(--wp--preset--font-size--minuto);
+	color: var(--lidia-secondario);
+}
+
+.lidia-fb-avanzamento b {
+	font-weight: 600;
+	color: var(--lidia-testo);
+}
+
+.lidia-fb-barra {
+	height: var(--lidia-firma);
+	margin-bottom: var(--wp--preset--spacing--40);
+	background: var(--lidia-filetto-colore);
+	overflow: hidden;
+}
+
+.lidia-fb-barra i {
+	display: block;
+	width: 0;
+	height: 100%;
+	background: var(--lidia-accento);
+	transition: width 0.3s;
+}
+
+/* --- Sezioni ------------------------------------------------------------ */
+
+.lidia-fb-sezione {
+	padding-block: var(--wp--preset--spacing--50);
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	transition: opacity 0.2s;
+}
+
+.lidia-fb-sezione.is-passata {
+	opacity: 0.6;
+}
+
+.lidia-fb-sezione.is-passata:hover,
+.lidia-fb-sezione.is-passata:focus-within {
+	opacity: 1;
+}
+
+.lidia-fb-sezione h2 {
+	margin: 0 0 var(--wp--preset--spacing--40);
+	font-size: var(--lidia-fb-passo);
+}
+
+.lidia-fb-sezione h2:focus {
+	outline: none;
+}
+
+.lidia-fb-sezione h3 {
+	margin: var(--wp--preset--spacing--50) 0 var(--wp--preset--spacing--30);
+	font-size: var(--wp--preset--font-size--voce);
+}
+
+.lidia-fb-nota {
+	margin: 0 0 var(--wp--preset--spacing--40);
+	font-size: var(--wp--preset--font-size--riscontro);
+	color: var(--lidia-secondario);
+}
+
+.lidia-fb-domanda .lidia-fb-nota {
+	margin: var(--wp--preset--spacing--20) 0 0;
+}
+
+/* --- Domande ------------------------------------------------------------ */
+
+.lidia-fb-domanda {
+	margin: 0 0 var(--wp--preset--spacing--50);
+	padding: 0;
+	border: 0;
+	min-width: 0;
+}
+
+.lidia-fb-domanda legend,
+.lidia-fb-etichetta {
+	display: block;
+	margin: 0 0 var(--wp--preset--spacing--30);
+	padding: 0;
+	font-weight: 500;
+	color: var(--lidia-testo);
+}
+
+.lidia-fb-nota-domanda {
+	display: block;
+	font-weight: 400;
+	font-size: var(--wp--preset--font-size--minuto);
+	color: var(--lidia-secondario);
+}
+
+/* --- Pillole (radio e checkbox) ----------------------------------------- */
+
+.lidia-fb-opzioni {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--20);
+}
+
+.lidia-fb-pillola {
+	position: relative;
+	display: inline-flex;
+	cursor: pointer;
+}
+
+.lidia-fb-pillola input {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.lidia-fb-pillola span {
+	display: inline-block;
+	min-width: 2.5em;
+	padding: 7px 14px;
+	text-align: center;
+	font-size: var(--lidia-fb-scelta);
+	line-height: 1.4;
+	color: var(--lidia-testo);
+	background: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio);
+	transition: background-color 0.15s, border-color 0.15s;
+}
+
+.lidia-fb-pillola:hover span {
+	border-color: var(--lidia-accento);
+}
+
+.lidia-fb-pillola input:checked + span {
+	color: var(--lidia-accento);
+	background: var(--lidia-fondo-alt);
+	border-color: var(--lidia-accento);
+	box-shadow: inset 0 0 0 var(--lidia-filetto) var(--lidia-accento);
+}
+
+.lidia-fb-pillola input:focus-visible + span {
+	outline: var(--lidia-focus-spessore) solid var(--lidia-focus-colore);
+	outline-offset: var(--lidia-focus-offset);
+}
+
+/* --- Righe di voto 1–5 -------------------------------------------------- */
+
+.lidia-fb-voti {
+	margin-bottom: var(--wp--preset--spacing--50);
+}
+
+/*
+ * Desktop: due colonne condivise da tutte le righe del gruppo (subgrid), così le caselle
+ * partono tutte dallo stesso punto anche quando una riga ha «Non ne ho usufruito».
+ */
+@media (min-width: 601px) {
+	.lidia-fb-voti {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) max-content;
+		column-gap: var(--wp--preset--spacing--40);
+	}
+
+	.lidia-fb-voto {
+		display: grid;
+		grid-column: 1 / -1;
+		grid-template-columns: subgrid;
+		align-items: center;
+	}
+}
+
+.lidia-fb-voto {
+	padding-block: var(--wp--preset--spacing--30);
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-fb-voto:last-child {
+	border-bottom: 0;
+}
+
+.lidia-fb-voto .lidia-fb-opzioni {
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: var(--wp--preset--spacing--10);
+}
+
+.lidia-fb-voto .lidia-fb-pillola span {
+	min-width: 2.25em;
+	padding: 5px 9px;
+	white-space: nowrap;
+}
+
+.lidia-fb-voto [data-non-uso] + span {
+	margin-left: var(--wp--preset--spacing--20);
+	color: var(--lidia-secondario);
+	font-size: var(--wp--preset--font-size--minuto);
+}
+
+@media (max-width: 600px) {
+	.lidia-fb-voto {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: var(--wp--preset--spacing--20);
+	}
+
+	.lidia-fb-voto .lidia-fb-opzioni {
+		flex-wrap: wrap;
+	}
+}
+
+/* --- NPS: 0–10 sempre su una riga, caselle di pari larghezza ------------ */
+
+.lidia-fb-nps .lidia-fb-opzioni {
+	flex-wrap: nowrap;
+	gap: var(--wp--preset--spacing--10);
+}
+
+.lidia-fb-nps .lidia-fb-pillola {
+	flex: 1 1 0;
+	min-width: 0;
+}
+
+.lidia-fb-nps .lidia-fb-pillola span {
+	width: 100%;
+	min-width: 0;
+	padding: 9px 0;
+}
+
+/* --- Campi di testo ----------------------------------------------------- */
+
+.lidia-feedback textarea,
+.lidia-feedback input[type="text"],
+.lidia-feedback input[type="email"] {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 12px 14px;
+	/* 16px pieni: sotto questa soglia iOS ingrandisce la pagina al focus. */
+	font-size: 16px;
+	font-family: inherit;
+	line-height: 1.5;
+	color: var(--lidia-testo);
+	background: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio);
+}
+
+.lidia-feedback textarea {
+	min-height: 5.5em;
+	resize: vertical;
+}
+
+/* --- Errori, invio, privacy --------------------------------------------- */
+
+.lidia-fb-errore {
+	margin: 0 0 var(--wp--preset--spacing--30);
+	font-size: var(--wp--preset--font-size--riscontro);
+	font-weight: 600;
+	color: var(--wp--preset--color--errore);
+}
+
+.lidia-fb-errore:empty {
+	display: none;
+}
+
+.lidia-feedback button {
+	border: 0;
+	cursor: pointer;
+}
+
+.lidia-feedback button[disabled] {
+	opacity: 0.6;
+	cursor: progress;
+}
+
+.lidia-fb-privacy {
+	margin: var(--wp--preset--spacing--40) 0 0;
+	padding-top: var(--wp--preset--spacing--40);
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	font-size: var(--wp--preset--font-size--minuto);
+	color: var(--lidia-secondario);
+}
+
+.lidia-fb-grazie {
+	padding-block: var(--wp--preset--spacing--50);
+}
+
+.lidia-fb-grazie:focus {
+	outline: none;
+}
+
+/* L'esca: fuori schermo, non display:none, che i bot leggono nel CSS. */
+.lidia-fb-esca {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lidia-fb-barra i,
+	.lidia-fb-sezione,
+	.lidia-fb-pillola span {
+		transition: none;
+	}
+}
