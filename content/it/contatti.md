@@ -2,63 +2,27 @@
 url: /contatti/
 lingua: it
 title: "Contatta Lidia, l'AI legale per studi e aziende | Lidia"
-meta_description: "Contatti di Lidia S.r.l.: lidia@lidiatech.ai, +39 010 8991141. Sedi di Genova e Milano. Per le prove gratuite usate il form dedicato."
-h1: "Contatti"
+meta_description: "Richiedi un appuntamento con il team di Lidia: lascia i tuoi riferimenti e ti ricontattiamo."
+h1: "Richiedi un appuntamento"
 keyword_primaria: "contatti lidia"
 keyword_secondarie: "lidiatech contatti; telefono lidia"
-cta_primaria: { testo: "Scrivici", url: "mailto:lidia@lidiatech.ai" }
+cta_primaria: { testo: "Scrivi al team commerciale", url: "#modulo" }
 step_loop: nessuno
 stato: approvato
 approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-14
 revisione: "25/09/2026 — sezione «Personalizzare Lidia per lo studio» con il modulo commerciale; riga in «A chi scrivere». Approvato in chat."
 revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
+revisione_26_11: "26/11/2026 — testata: tolti email e telefono, H1 «Richiedi un appuntamento», modulo commerciale in testata (sezione «Personalizzare Lidia per lo studio» assorbita). Poi tolte anche Dove siamo, A chi scrivere e Dati societari: la pagina è solo il form. Approvato in chat."
 ---
 
-# Contatti
+*Contatti*
 
-**lidia@lidiatech.ai**
-**+39 010 8991141**
+# Richiedi un appuntamento
 
----
+Lascia i tuoi riferimenti e verrai ricontattato dal nostro team per fissare un appuntamento.
 
-## Personalizzare Lidia per lo studio
-
-Formazione, workflow, playbook, integrazioni: l'offerta Enterprise si costruisce insieme, a partire
-da un incontro. Lasciateci i vostri riferimenti e vi ricontattiamo per fissarlo.
-
-*(Modulo Lidia, intento «commerciale» · pulsante «Scrivi al team commerciale».)*
-
----
-
-## Dove siamo
-
-### Genova
-Corso Andrea Podestà 8/3, 16128
-
-### Milano
-Centro Direzionale Milanofiori, Strada 3, Palazzo B4, 20057 Assago
-
----
-
-## A chi scrivere
-
-**Volete provare Lidia** — usate il form della prova gratuita: arriva direttamente a chi segue
-le prove ed è la strada più rapida.
-→ Prova gratuita di sette giorni (`/prova-gratuita/`)
-
-**Volete personalizzare Lidia per lo studio** — usate il modulo qui sopra.
-
-**Tutto il resto** — lidia@lidiatech.ai
-
-**Comunicazioni formali** — lidiapec@pec.it
-
----
-
-## Dati societari
-
-Lidia S.r.l. — P. IVA 02976860995
-PEC lidiapec@pec.it
+*(Modulo Lidia, intento «commerciale» · pulsante «Scrivi al team commerciale». Ancora `#modulo`.)*
 
 ---
 
