@@ -7,6 +7,10 @@
  * `noindex, nofollow`, fuori dalla sitemap di Yoast e dalla ricerca interna.
  * Spec: docs/05-landing-pages.md. Contenuti: scripts/23-landing.md.
  *
+ * 26/11/2026: il testo del bottone in testata si può cambiare per singola landing con il
+ * campo `lidia_lp_cta` (es. /lp/appuntamento/ → «Richiedi un appuntamento»). Senza campo
+ * resta «Richiedi una prova gratuita».
+ *
  * Il CSS delle sezioni lo carica già enqueue.php leggendo il contenuto; qui si aggiunge
  * solo landing.css e si toglie la cornice delle pagine di testo, che sulle landing non serve.
  *
@@ -119,3 +123,33 @@ function lidia_editor_landing() {
 	add_editor_style( 'assets/css/sezioni/landing.css' );
 }
 add_action( 'after_setup_theme', 'lidia_editor_landing', 11 );
+
+/**
+ * Testo del bottone in testata per singola landing (26/11/2026).
+ *
+ * La testata (parts/lp-testata.html) è la stessa per tutte le landing e il bottone dice
+ * «Richiedi una prova gratuita». Se la landing ha il campo `lidia_lp_cta`, il testo si
+ * sostituisce solo lì. Il link (#prova) non cambia: ogni landing ha il modulo su #prova.
+ * Il campo si scrive con 26-pubblica.ps1 -Campi @{ lidia_lp_cta = '…' }.
+ *
+ * @param string $html  HTML del blocco.
+ * @param array  $block Blocco.
+ * @return string
+ */
+function lidia_cta_testata_landing( $html, $block ) {
+	if ( 'core/template-part' !== $block['blockName'] || 'lp-testata' !== ( $block['attrs']['slug'] ?? '' ) ) {
+		return $html;
+	}
+
+	if ( ! is_singular( 'landing' ) ) {
+		return $html;
+	}
+
+	$testo = trim( (string) get_post_meta( get_queried_object_id(), 'lidia_lp_cta', true ) );
+	if ( '' === $testo ) {
+		return $html;
+	}
+
+	return str_replace( '>Richiedi una prova gratuita</a>', '>' . esc_html( $testo ) . '</a>', $html );
+}
+add_filter( 'render_block', 'lidia_cta_testata_landing', 10, 2 );
