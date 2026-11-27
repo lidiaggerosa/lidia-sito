@@ -30,12 +30,12 @@ Sorgenti in `pagine/`.
 - Overview: `/aziende/`, `/studi-professionali/`
 
 ## Aperti
-- Jetpack attivo in produzione dal 27/11 (MCP: lettura completa, scrittura solo contenuti). Manca il connettore WordPress.com in Claude
+- Jetpack attivo in produzione dal 27/11 (MCP: lettura completa, scrittura solo contenuti), connettore WordPress.com collegato in Claude
 - Privacy policy: aggiungere Automattic (Jetpack) e SiteGround Spain S.L. tra i fornitori; confermare Microsoft Ireland Operations Limited
 - `/lp/appuntamento/`: riquadro webinar del 9/12 da togliere o aggiornare dopo il 9/12
 - Pipeline Delera «Webinar»: dopo il 9/12 spostare Ha partecipato / Non ha partecipato e passare a sales
 - Webinar 9/12: se la riunione Teams cambia, aggiornare le due mail Delera e l’allegato `.ics`
-- Teams: ruotare client secret e token passati in chat il 25–26/11; chiedere all’IT Gianluca come proprietario dell’app
+- Teams: chiedere all’IT Gianluca come proprietario dell’app
 - `/contatti/` senza email e telefono: verificare il JSON-LD `Organization` (contactPoint)
 - Audit SEO/GEO del 23/11: interventi residui in `docs/audit-seo-geo-2026-11.md`
 - `/prodotto/ricerca-legale/`: indicizzazione in Search Console; schermata di esempio ripetuta due volte, da decidere
