@@ -4,6 +4,10 @@ Le righe le scrive `strumenti/pubblica.ps1`; i rilasci col connettore WordPress.
 
 | Data | Ambiente | Cosa | Pagine / file | Backup |
 |---|---|---|---|---|
+| 27/11/2026 17:22 | staging | Aggiornamento WordPress, plugin e traduzioni (ok, verifica nel browser) | `docs/versioni-installate.md` | `~/backup-aggiornamenti/staging-20261127-172152` |
+| 27/11/2026 17:19 | produzione | Aggiornamento WordPress, plugin e traduzioni (ok, verifica nel browser) | `docs/versioni-installate.md` | `~/backup-aggiornamenti/produzione-20261127-171900` |
+| 27/11/2026 17:17 | produzione | Aggiornamento WordPress, plugin e traduzioni (ok, verifica nel browser) | `docs/versioni-installate.md` | `~/backup-aggiornamenti/produzione-20261127-171644` |
+| 27/11/2026 17:16 | staging | Aggiornamento WordPress, plugin e traduzioni (ok, verifica nel browser) | `docs/versioni-installate.md` | `~/backup-aggiornamenti/staging-20261127-171523` |
 | 27/11/2026 | — | Riorganizzazione del progetto: una sola cartella collegata a GitHub, `strumenti/`, `pagine/`, `DISALLINEAMENTI.md`. Archivio su OneDrive (GESTIONE SITO) | tutto il repo | `archivio-progetto-2026-11-27` |
 
 ## Fino al 26/11/2026 (formato precedente)
