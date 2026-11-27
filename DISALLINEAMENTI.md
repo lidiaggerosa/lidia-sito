@@ -21,4 +21,4 @@ Tipo: `page`, `landing`, `webinar`, `tema`, `yoast`. File: blocchi in `pagine/`.
 |---|---|---|
 | Iscrizione automatica Teams | costanti Teams presenti | spenta (`LIDIA_TEAMS_TENANT_ID` tolta il 26/11) |
 | Versioni plugin | più indietro | più avanti (autoupdate SiteGround) |
-| Jetpack (connettore WordPress.com) | assente | da installare |
+| Jetpack (connettore WordPress.com) | assente | attivo dal 27/11: moduli IA, JSON API, Log attività, Brute Force Protection; MCP in scrittura solo Content Authoring |

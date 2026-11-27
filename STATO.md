@@ -30,7 +30,7 @@ Sorgenti in `pagine/`.
 - Overview: `/aziende/`, `/studi-professionali/`
 
 ## Aperti
-- Jetpack: installare in produzione e collegare il connettore WordPress.com (`docs/jetpack.md`)
+- Jetpack attivo in produzione dal 27/11 (MCP: lettura completa, scrittura solo contenuti). Manca il connettore WordPress.com in Claude
 - Privacy policy: aggiungere Automattic (Jetpack) e SiteGround Spain S.L. tra i fornitori; confermare Microsoft Ireland Operations Limited
 - `/lp/appuntamento/`: riquadro webinar del 9/12 da togliere o aggiornare dopo il 9/12
 - Pipeline Delera «Webinar»: dopo il 9/12 spostare Ha partecipato / Non ha partecipato e passare a sales
