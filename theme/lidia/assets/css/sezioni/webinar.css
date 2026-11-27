@@ -1,0 +1,193 @@
+/*
+ * webinar.css — le pagine /risorse/webinar/{slug}/ (24/11/2026, layout del 26/11).
+ * Si carica dove compare la classe `lidia-webinar`.
+ *
+ * Due sezioni:
+ * 1. apertura su due colonne — a sinistra titolo, descrizione e dettagli pratici
+ *    (data, orario, dove…); a destra il modulo di iscrizione. Su mobile il modulo
+ *    scende sotto i dettagli.
+ * 2. «Cosa vedremo» — righe numerate in una scheda sola.
+ */
+
+/* ---------- apertura ---------- */
+
+.lidia-wbn-testa {
+	padding-block: var(--wp--preset--spacing--70);
+}
+
+.lidia-wbn-griglia {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+	gap: var(--wp--preset--spacing--60) 64px;
+	align-items: start;
+}
+
+.lidia-wbn-griglia > *,
+.lidia-wbn-apertura > * {
+	margin-block: 0;
+}
+
+.lidia-wbn-apertura h1 {
+	margin-block: 0 var(--wp--preset--spacing--40);
+}
+
+/* I dettagli pratici: due colonne di voci sotto la descrizione, divise da filetti. */
+.lidia-wbn-scheda {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	column-gap: var(--wp--preset--spacing--50);
+	margin-block-start: var(--wp--preset--spacing--50) !important;
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-wbn-voce {
+	display: grid;
+	gap: 2px;
+	align-content: start;
+	padding-block: var(--wp--preset--spacing--30);
+	border-bottom: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	margin-block: 0 !important;
+}
+
+.lidia-wbn-voce > * {
+	margin-block: 0 !important;
+}
+
+.lidia-wbn-etichetta {
+	font-size: var(--wp--preset--font-size--micro);
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--lidia-secondario);
+}
+
+.lidia-wbn-valore {
+	font-size: var(--wp--preset--font-size--corpo);
+	line-height: 1.45;
+	color: var(--lidia-testo);
+}
+
+/* La data con la maiuscola: «Mercoledì 9 dicembre 2026». */
+.lidia-wbn-valore::first-letter {
+	text-transform: uppercase;
+}
+
+/* Il modulo: riquadro chiaro a destra, con titolo e una riga sopra i campi. */
+.lidia-wbn-modulo {
+	background-color: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-box);
+	padding: var(--wp--preset--spacing--50) var(--wp--preset--spacing--50) var(--wp--preset--spacing--40);
+	scroll-margin-top: 96px;
+}
+
+.lidia-wbn-modulo > * {
+	margin-block: 0;
+}
+
+.lidia-wbn-modulo h2 {
+	font-size: var(--wp--preset--font-size--scheda);
+	line-height: 1.3;
+}
+
+.lidia-wbn-modulo > p {
+	margin-block: 6px var(--wp--preset--spacing--40);
+	font-size: var(--wp--preset--font-size--riscontro);
+	color: var(--lidia-secondario);
+}
+
+/* ---------- cosa vedremo ---------- */
+
+.lidia-wbn-programma h2 {
+	margin-block: 0 var(--wp--preset--spacing--50);
+}
+
+.lidia-wbn-passi {
+	background-color: var(--lidia-superficie);
+	border: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+	border-radius: var(--lidia-raggio-box);
+	padding-inline: var(--wp--preset--spacing--50);
+}
+
+.lidia-wbn-passi > * {
+	margin-block: 0 !important;
+}
+
+.lidia-wbn-passo {
+	display: grid;
+	grid-template-columns: 56px minmax(0, 1fr);
+	gap: var(--wp--preset--spacing--40);
+	align-items: baseline;
+	padding-block: var(--wp--preset--spacing--40);
+}
+
+.lidia-wbn-passo + .lidia-wbn-passo {
+	border-top: var(--lidia-filetto) solid var(--lidia-filetto-colore);
+}
+
+.lidia-wbn-passo > *,
+.lidia-wbn-testo > * {
+	margin-block: 0 !important;
+}
+
+.lidia-wbn-testo {
+	display: grid;
+	gap: 6px;
+	max-width: var(--lidia-misura);
+}
+
+.lidia-wbn-numero {
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: var(--wp--preset--font-size--scheda);
+	font-variant-numeric: tabular-nums;
+	color: var(--wp--preset--color--azione);
+}
+
+.lidia-wbn-passo h3 {
+	font-size: var(--wp--preset--font-size--scheda);
+	line-height: 1.3;
+}
+
+.lidia-wbn-testo p {
+	font-size: var(--wp--preset--font-size--riscontro);
+	line-height: 1.55;
+	color: var(--lidia-secondario);
+}
+
+.lidia-wbn-chiusa {
+	margin-block: var(--wp--preset--spacing--50) 0;
+	max-width: var(--lidia-misura);
+	color: var(--lidia-secondario);
+}
+
+/* ---------- misure ---------- */
+
+@media (max-width: 900px) {
+	.lidia-wbn-griglia {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 620px) {
+	.lidia-wbn-testa {
+		padding-block: var(--wp--preset--spacing--60);
+	}
+
+	.lidia-wbn-scheda {
+		column-gap: var(--wp--preset--spacing--40);
+	}
+
+	.lidia-wbn-modulo {
+		padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--40) var(--wp--preset--spacing--30);
+	}
+
+	.lidia-wbn-passi {
+		padding-inline: var(--wp--preset--spacing--40);
+	}
+
+	.lidia-wbn-passo {
+		grid-template-columns: 1fr;
+		gap: 4px;
+	}
+}

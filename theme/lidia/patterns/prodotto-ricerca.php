@@ -3,7 +3,7 @@
  * Title: Prodotto · 3 Ricerca legale
  * Slug: lidia/prodotto-ricerca
  * Categories: lidia-sezioni
- * Description: Box funzione (testo a sinistra, mock a destra): icona, titolo, descrizione, tre punti. La colonna mock porta il riempitivo finché il widget `mock/ricerca-legale.html` non viene incollato come blocco HTML personalizzato (regole in docs/10a-guida-box-funzione.md).
+ * Description: Box funzione (testo a sinistra, mock a destra): icona, titolo, sintesi e link alla pagina /prodotto/ricerca-legale/ (dal 04/11/2026). La colonna mock porta il riempitivo finché il widget `mock/ricerca-legale.html` non viene incollato come blocco HTML personalizzato (regole in docs/10a-guida-box-funzione.md).
  *
  * Sezione di /prodotto/, dal copy approvato il 24/09/2026. Riusa `funzione.css`.
  *
@@ -23,20 +23,8 @@ defined( 'ABSPATH' ) || exit;
 <p>Norme, sentenze e prassi dalle fonti ufficiali, collegate tra loro con tecnologia GraphRAG. Ogni risposta arriva con i riferimenti ai testi usati, così la verifica è una lettura e non una ricostruzione.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:list {"className":"lidia-funzione-punti"} -->
-<ul class="wp-block-list lidia-funzione-punti"><!-- wp:list-item -->
-<li>Fonti ufficiali comprese nel canone</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Ricerca web tramite un agente interno</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Riferimenti puntuali in ogni risposta</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list -->
-
 <!-- wp:paragraph {"className":"lidia-freccia"} -->
-<p class="lidia-freccia"><a href="/sicurezza/">Dove stanno i dati e chi può vederli →</a></p>
+<p class="lidia-freccia"><a href="/prodotto/ricerca-legale/">Scopri la ricerca legale →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

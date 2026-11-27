@@ -57,7 +57,7 @@ L'AI potenzia il giudizio umano, non lo rimpiazza.
 - Le conclusioni operative del panel.
 
 **FORM DI DOWNLOAD** — modulo del tema (`lidia/modulo`, `tipo: whitepaper`). Campi e consensi
-in `docs/tecnico/moduli-delera.md`.
+in `docs/11-form-delera.md`.
 
 ---
 

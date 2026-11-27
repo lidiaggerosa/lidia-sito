@@ -51,6 +51,7 @@ function lidia_sezioni() {
 		'lidia-funzione-box' => 'assets/css/sezioni/funzione.css',
 		'lidia-mcp'        => 'assets/css/sezioni/mcp.css',
 		'lidia-ingresso'   => 'assets/css/sezioni/ingresso.css',
+		'lidia-webinar'    => 'assets/css/sezioni/webinar.css',
 		'wp:lidia/modulo'  => 'assets/css/sezioni/modulo.css',
 	);
 }
@@ -198,6 +199,18 @@ function lidia_enqueue_sezioni() {
 			LIDIA_URI . '/assets/css/components/demo.css',
 			array( 'lidia-tokens', 'lidia-base' ),
 			lidia_versione_file( 'assets/css/components/demo.css' )
+		);
+	}
+
+	// Le sezioni delle landing riusate nelle pagine funzione (04/11): tre punti con immagine,
+	// fonti in tre colonne, tre passi. Stesso handle di inc/landing.php, quindi sulle landing
+	// il foglio parte una volta sola.
+	if ( false !== strpos( $contenuto, 'lidia-lp-punti' ) || false !== strpos( $contenuto, 'lidia-lp-fonti' ) ) {
+		wp_enqueue_style(
+			'lidia-landing',
+			LIDIA_URI . '/assets/css/sezioni/landing.css',
+			array( 'lidia-tokens', 'lidia-base' ),
+			lidia_versione_file( 'assets/css/sezioni/landing.css' )
 		);
 	}
 

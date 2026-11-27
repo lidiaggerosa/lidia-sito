@@ -5,7 +5,7 @@ title: "Software AI per studi legali: le funzioni | Lidia"
 meta_description: "Le funzioni di Lidia, software AI per studi legali: ricerca su fonti ufficiali con GraphRAG, workflow, add-in Word, AI Assistant, Smart Answer."
 h1: "Software AI per studi legali: ogni funzione, un passo verso il risultato."
 keyword_primaria: "software ai per studi legali"
-keyword_secondarie: "piattaforma legal ai; ai agentica legale; ai ricerca giuridica; analisi contratti intelligenza artificiale; integrazione word studi legali; fonti giurisprudenziali ai"
+keyword_secondarie: "piattaforma legal ai; ai agentica legale; analisi contratti intelligenza artificiale; integrazione word studi legali; fonti giurisprudenziali ai"
 cta_primaria: { testo: "Richiedi una prova gratuita", url: "#prova" }
 step_loop: nessuno
 stato: approvato
@@ -13,6 +13,7 @@ approvato_da: Gianluca Gerosa
 approvato_il: 2026-09-24
 revisione: "24/09/2026 — H1 «Ogni funzione, un passo verso il risultato.» (la formula «sempre al tuo fianco» resta alla home); mock dei box rinviati a un secondo passaggio, riempitivo nella colonna. Pagina rifatta sul nuovo storytelling: un box per funzione (testo + mock), indice orizzontale, FAQ sulle fonti, CTA verso il modulo. Escono «I limiti, detti prima», «I dati» e il prezzo. Sostituisce la versione del 16/09."
 revisione_07_10: "07/10/2026 — SEO: keyword «software ai per studi legali», H1 e sommario con la keyword, occhiello «Funzioni di Lidia», H2 delle quattro azioni. Approvato in chat da Gianluca."
+revisione_04_11: "04/11/2026 — Uscita /prodotto/ricerca-legale/: il box Ricerca legale diventa sintesi + link alla pagina, «ai ricerca giuridica» passa alla pagina nuova, le tre FAQ su fonti normative, fonti giurisprudenziali e GraphRAG si spostano lì. Approvato in chat da Gianluca."
 revisione_30_09: "30/09/2026 — revisione testi prima della messa online, approvata in chat da Gianluca."
 ---
 
@@ -55,15 +56,11 @@ Redazione e revisione dentro Word, con controllo umano.
 
 *(Box: testo a sinistra, mock a destra.)*
 
-**Colonna mock — riempitivo:** «Mock in arrivo — componente HTML, secondo passaggio» (`mock/ricerca-legale.html`).
-
 Norme, sentenze e prassi dalle fonti ufficiali, collegate tra loro con tecnologia GraphRAG.
 Ogni risposta arriva con i riferimenti ai testi usati, così la verifica è una lettura e non una
 ricostruzione.
 
-- Fonti ufficiali comprese nel canone
-- Ricerca web tramite un agente interno
-- Riferimenti puntuali in ogni risposta
+→ Scopri la ricerca legale (`/prodotto/ricerca-legale/`)
 
 ---
 
@@ -166,7 +163,7 @@ Tutto il lavoro organizzato per pratica: documenti archiviati, OCR avanzato. Doc
 
 ## Domande frequenti {#faq}
 
-Cinque risposte, nessuna sovrapposizione con le otto della home. Vanno nel JSON-LD `FAQPage` di
+Due risposte, nessuna sovrapposizione con le otto della home (le tre su fonti e GraphRAG sono passate a `/prodotto/ricerca-legale/` il 04/11/2026). Vanno nel JSON-LD `FAQPage` di
 questa pagina con testo identico al visibile.
 
 ### Che cos'è un software di intelligenza artificiale per studi legali?
@@ -175,23 +172,6 @@ su fonti normative e giurisprudenziali ufficiali, analisi di fascicoli e contrat
 assistita. Si distingue da un assistente generalista perché lavora sul patrimonio documentale
 dello studio, cita le fonti che usa e rende verificabile ogni passaggio. Lidia è un software AI
 per studi legali con i dati in Unione Europea.
-
-### Quali fonti normative usa Lidia?
-Normativa primaria nazionale ed europea e normativa secondaria delle autorità di settore: Banca
-d'Italia, IVASS, CONSOB. Le fonti ufficiali sono comprese nel canone, senza abbonamenti separati
-a banche dati.
-
-### Quali fonti giurisprudenziali usa Lidia?
-Corte Suprema di Cassazione (Sezioni Unite, Civile, Penale, Lavoro, Tributaria); Corte
-Costituzionale, Corte dei Conti, Corte di Giustizia UE e Corte EDU; Consiglio di Stato, TAR di
-tutte le sedi, giustizia tributaria di primo e secondo grado; una selezione di sentenze di Corti
-d'Appello e Tribunali ordinari.
-
-### Che cos'è GraphRAG e perché conta nella ricerca giuridica?
-GraphRAG è una tecnica di recupero delle informazioni che, oltre a cercare documenti simili alla
-domanda, ricostruisce le relazioni fra le entità coinvolte — una norma, le sentenze che la
-applicano, i precedenti collegati. Nel diritto conta perché la risposta utile non è quasi mai un
-documento isolato: è la catena che li lega. Lidia usa GraphRAG per la ricerca su fonti ufficiali.
 
 ### Lidia funziona dentro Microsoft Word?
 Sì. La redazione e la revisione dei documenti avvengono in Word tramite add-in: l'analisi e le

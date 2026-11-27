@@ -1,4 +1,8 @@
-# Segreti e ambiente: i valori stanno in wp-config.php sul server
+# Accessi e dati locali: mai su GitHub
+strumenti/server.ps1
+strumenti/server.md
+strumenti/.staging.json
+_riorganizzazione/
 *.env
 .env*
 wp-config.php
@@ -15,12 +19,14 @@ theme/lidia/blocks/build/
 *.zip
 *.sql
 *.sqlite
+*.tar
 *.tar.gz
 migration/_raw/
 migration/export/
 
 # Sistema ed editor
 Thumbs.db
+ehthumbs.db
 Desktop.ini
 .DS_Store
 .vscode/

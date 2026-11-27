@@ -5,14 +5,17 @@
  * Yoast costruisce il grafo (WebSite, Organization, WebPage, BreadcrumbList, Article):
  * qui lo si completa, non lo si duplica (docs/06-seo-technical.md §4).
  *
- * - Organization: ragione sociale, P. IVA, sede legale, contatti, profili. Nessun riferimento
- *   al gruppo (decisione del 30/09, applicata il 07/10).
+ * - Organization: ragione sociale, P. IVA, sede legale, contatti, profili, descrizione,
+ *   anno di fondazione, fondatori e Gruppo MESA come società madre (23/11/2026, supera la
+ *   decisione del 30/09 di non citare il gruppo: serve a distinguere Lidia da prodotti omonimi).
  * - FAQPage: su ogni pagina con una sezione `lidia-faq`, costruito leggendo le domande
  *   della pagina. Il testo dello schema è quello visibile per costruzione: non esiste una
  *   seconda copia da tenere allineata, e una FAQ nuova entra nello schema da sola.
  * - SoftwareApplication: su /prodotto/ e /prezzi/ (IT ed EN), con il prezzo di partenza già pubblico.
  * - Article sui whitepaper (CPT `risorsa`), con gli autori del campo `lidia_autori`.
+ * - Event sui webinar (CPT `webinar`), con data e ora dei campi della pagina (18/11/2026).
  * - Briciole: Home › Risorse › Articoli|Whitepaper › titolo, anche nella BreadcrumbList.
+ *   I webinar: Home › Risorse › titolo.
  * - Articoli: autore Lidia (l'Organization), non l'utente WordPress che li ha caricati.
  *
  * Tutto passa dai filtri di Yoast: se Yoast è spento, questo file non stampa niente.
@@ -53,6 +56,25 @@ function lidia_schema_organizzazione( $dati ) {
 	// distinguere Lidia dalle omonime.
 	$dati['alternateName'] = array( 'Lidia AI', 'LidiaTech' );
 
+	// Chi è Lidia, in chiaro per motori e AI (audit SEO/GEO del 23/11/2026, testo approvato dall'owner).
+	$dati['description']        = 'Lidia S.r.l. sviluppa Lidia, piattaforma di intelligenza artificiale legale per studi legali e direzioni legali d\'impresa. Società del Gruppo MESA, fondata nel 2024, con sedi a Genova e Milano.';
+	$dati['foundingDate']       = '2024';
+	$dati['founder']            = array(
+		array(
+			'@type' => 'Person',
+			'name'  => 'Alessandro Musella',
+		),
+		array(
+			'@type' => 'Person',
+			'name'  => 'Emanuela Semino',
+		),
+	);
+	$dati['parentOrganization'] = array(
+		'@type' => 'Organization',
+		'name'  => 'MESA Group',
+		'url'   => 'https://mesagroup.eu/',
+	);
+
 	// I profili ufficiali stanno qui, non nei campi social di Yoast (database).
 	$profili        = isset( $dati['sameAs'] ) ? (array) $dati['sameAs'] : array();
 	$profili        = array_merge( $profili, lidia_profili_ufficiali() );
@@ -63,7 +85,7 @@ function lidia_schema_organizzazione( $dati ) {
 add_filter( 'wpseo_schema_organization', 'lidia_schema_organizzazione' );
 
 /**
- * Profili ufficiali di Lidia, confermati dall'owner il 07/10/2026.
+ * Profili ufficiali di Lidia, confermati dall'owner il 07/10/2026 (Crunchbase aggiunto il 23/11/2026).
  *
  * @return string[]
  */
@@ -75,6 +97,7 @@ function lidia_profili_ufficiali() {
 		'https://marketplace.microsoft.com/en-us/product/web-apps/mesa.lidia_nocosell',
 		'https://www.hublegaltech.com/glth-members-2025/lidia',
 		'https://www.instagram.com/lidiatech.ai/',
+		'https://www.crunchbase.com/organization/lidia',
 	);
 }
 
@@ -412,6 +435,62 @@ function lidia_schema_whitepaper( $grafo, $contesto ) {
 add_filter( 'wpseo_schema_graph', 'lidia_schema_whitepaper', 10, 2 );
 
 /* -------------------------------------------------------------------------
+ * Event sui webinar
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Un webinar è un evento online: Yoast lo marca solo come WebPage. Senza data di inizio il
+ * nodo non si aggiunge.
+ *
+ * @param array  $grafo    Nodi del grafo Yoast.
+ * @param object $contesto Meta_Tags_Context di Yoast.
+ * @return array
+ */
+function lidia_schema_webinar( $grafo, $contesto ) {
+	if ( ! is_singular( 'webinar' ) || ! function_exists( 'lidia_webinar_intervallo' ) ) {
+		return $grafo;
+	}
+
+	$id         = get_queried_object_id();
+	$intervallo = lidia_webinar_intervallo( $id );
+
+	if ( ! $intervallo ) {
+		return $grafo;
+	}
+
+	$sito   = isset( $contesto->site_url ) ? $contesto->site_url : trailingslashit( home_url() );
+	$pagina = get_permalink( $id );
+	$testo  = (string) get_post_meta( $id, '_yoast_wpseo_metadesc', true );
+
+	$nodo = array(
+		'@type'               => 'Event',
+		'@id'                 => $pagina . '#event',
+		'mainEntityOfPage'    => array( '@id' => $pagina ),
+		'name'                => wp_strip_all_tags( html_entity_decode( get_the_title( $id ), ENT_QUOTES, 'UTF-8' ) ),
+		'startDate'           => wp_date( 'c', $intervallo[0] ),
+		'endDate'             => wp_date( 'c', $intervallo[1] ),
+		'eventAttendanceMode' => 'https://schema.org/OnlineEventAttendanceMode',
+		'eventStatus'         => 'https://schema.org/EventScheduled',
+		'location'            => array(
+			'@type' => 'VirtualLocation',
+			'url'   => $pagina,
+		),
+		'organizer'           => array( '@id' => $sito . '#organization' ),
+		'isAccessibleForFree' => true,
+		'inLanguage'          => 'it-IT',
+	);
+
+	if ( '' !== $testo ) {
+		$nodo['description'] = $testo;
+	}
+
+	$grafo[] = $nodo;
+
+	return $grafo;
+}
+add_filter( 'wpseo_schema_graph', 'lidia_schema_webinar', 10, 2 );
+
+/* -------------------------------------------------------------------------
  * Briciole
  * ---------------------------------------------------------------------- */
 
@@ -429,6 +508,8 @@ function lidia_briciole( $briciole ) {
 		$percorsi = array( 'risorse', 'risorse/articoli' );
 	} elseif ( is_singular( 'risorsa' ) ) {
 		$percorsi = array( 'risorse', 'risorse/whitepaper' );
+	} elseif ( is_singular( 'webinar' ) ) {
+		$percorsi = array( 'risorse' );
 	} else {
 		return $briciole;
 	}

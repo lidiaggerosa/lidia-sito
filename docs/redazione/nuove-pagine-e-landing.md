@@ -18,10 +18,10 @@ Lo sviluppo crea il file di blocchi e lo script, lo prova su staging, e lo pubbl
 ## Correggere un testo su una pagina esistente
 
 Si corregge nell'editor, dentro la sezione. Poi si avvisa lo sviluppo, che riporta la correzione
-nel file della pagina in `scripts/blocchi/`: altrimenti al rilascio successivo la correzione si perde.
+nel file della pagina in `pagine/`: altrimenti al rilascio successivo la correzione si perde.
 
 ## Landing di campagna
 
 Il modello esiste dal 12/10/2026: tipo di contenuto `landing`, URL `/lp/{slug}/`, testata con solo logo,
 `noindex`, modulo verso Delera. Una landing nuova si chiede come una pagina nuova (testi approvati,
-gruppi Ads, data); lo sviluppo la crea con `scripts/23-landing.md`.
+gruppi Ads, data); lo sviluppo la crea con `23-landing.md` (archivio).

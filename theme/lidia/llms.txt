@@ -1,21 +1,26 @@
 # Lidia
 
-> Lidia è l'intelligenza artificiale legale italiana che lavora con te: ricerca su fonti ufficiali, analisi e redazione dei documenti, integrata in Word. Progettata da avvocati. Lidia S.r.l., Genova.
+> Lidia è l'intelligenza artificiale legale italiana sviluppata da Lidia S.r.l. (Gruppo MESA, fondata nel 2024, Genova e Milano): ricerca su fonti ufficiali, analisi e redazione dei documenti, integrata in Word. Progettata da avvocati.
 
 - Ricerca legale su fonti normative e giurisprudenziali ufficiali, con tecnologia GraphRAG. Accesso alle fonti compreso nel canone.
+- Fonti: Cassazione, Corte Costituzionale, Consiglio di Stato, TAR, Corte dei Conti, CGUE, CEDU, giustizia tributaria, normativa nazionale ed europea, Banca d'Italia, IVASS, CONSOB, prassi di Agenzia delle Entrate, Garante Privacy, AGCM e altre autorità.
 - OCR avanzato su PDF e scansioni; con Smart Answer si interroga un singolo documento fino a 1.000 pagine.
 - Redazione e revisione dentro Microsoft Word, sempre con controllo umano.
+- Server MCP: Lidia si usa anche dentro Claude e ChatGPT.
 - Prova gratuita di 7 giorni sui documenti reali dello studio. Da 125 € al mese.
 - Dati in Unione Europea su AWS. ISO/IEC 27001, CSA STAR Level 1, ISO 9001, GDPR. Nessun dato conservato dai fornitori dei modelli né usato per addestrarli.
 
 ## Pagine
 
 - [Prodotto]({{sito}}/prodotto/)
+- [Ricerca legale]({{sito}}/prodotto/ricerca-legale/)
+- [Server MCP: Lidia dentro Claude e ChatGPT]({{sito}}/prodotto/integrazione-mcp/)
 - [Sicurezza]({{sito}}/sicurezza/)
 - [Prezzi]({{sito}}/prezzi/)
 - [Prova gratuita]({{sito}}/prova-gratuita/)
 - [Chi siamo]({{sito}}/azienda/)
 - [Contatti]({{sito}}/contatti/)
+- [English version]({{sito}}/en/)
 
 ## Risorse
 

@@ -142,6 +142,28 @@
 	display: block;
 }
 
+/* --- Testa delle pagine funzione (04/11/2026) ----------------------------------
+ * /prodotto/ricerca-legale/ e le pagine funzione che seguono: lo stesso box,
+ * con occhiello, H1, sommario e una sola CTA al posto di icona e H2.
+ * Il respiro è quello della testa di /prodotto/.
+ */
+.lidia-funzione-pagina.lidia-funzione-box {
+	padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+}
+
+.lidia-funzione-pagina .lidia-funzione-testo .lidia-occhiello {
+	margin: 0 0 14px;
+}
+
+.lidia-funzione-pagina .lidia-funzione-testo h1 {
+	margin: 0 0 var(--wp--preset--spacing--40);
+	text-wrap: balance;
+}
+
+.lidia-funzione-pagina .lidia-funzione-testo .wp-block-buttons {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
 /* --- Variante specchiata ------------------------------------------------------ */
 
 .lidia-funzione-inverso .lidia-funzione-testo {

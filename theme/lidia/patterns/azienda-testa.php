@@ -5,7 +5,7 @@
  * Categories: lidia-sezioni
  * Description: Occhiello, H1 e che cosa costruisce Lidia.
  *
- * Sezione di /azienda/, dal copy approvato il 14/09/2026.
+ * Sezione di /azienda/, dal copy approvato il 14/09/2026. Frase sul Gruppo MESA aggiunta il 23/11/2026.
  *
  * @package Lidia
  */
@@ -24,6 +24,10 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:paragraph {"className": "lidia-misura-lettura","fontSize": "voce"} -->
 <p class="lidia-misura-lettura has-voce-font-size">Lidia S.r.l. costruisce l’intelligenza legale che lavora con te: ricerca, analizza, redige e automatizza i processi più complessi. Il prodotto è uno solo, e serve studi legali, direzioni legali d’impresa e il settore assicurativo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className": "lidia-misura-lettura","fontSize": "voce"} -->
+<p class="lidia-misura-lettura has-voce-font-size">Lidia è sviluppata da Lidia S.r.l., società del Gruppo MESA fondata nel 2024, con sedi a Genova e Milano.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

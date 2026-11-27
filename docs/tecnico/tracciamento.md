@@ -14,7 +14,7 @@
 | `tracking/gtm-container.json` | export del container, ID sostituiti da segnaposto |
 | `tracking/gtm-import.md` | come importarlo |
 | `tracking/utm-convention.md` | convenzione UTM |
-| `scripts/06-tracking.md` | collegamento del mu-plugin in locale, costanti |
+| `06-tracking.md` (archivio) | collegamento del mu-plugin in locale, costanti |
 
 ## Regole
 

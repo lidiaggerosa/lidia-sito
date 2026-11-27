@@ -30,8 +30,8 @@ const LIDIA_FB_PAGINE = array(
 /** Secondi minimi fra apertura della pagina e invio. */
 const LIDIA_FB_ATTESA = 4;
 
-/** Invii ammessi per connessione ogni 10 minuti. */
-const LIDIA_FB_TETTO = 10;
+/** Invii ammessi per connessione ogni 10 minuti (alzato da 10 a 50 il 25/11/2026: più colleghi dello stesso studio compilano insieme). */
+const LIDIA_FB_TETTO = 50;
 
 /* -------------------------------------------------------------------------
  * Le domande. Valore => etichetta: il valore è quello che arriva a Notion

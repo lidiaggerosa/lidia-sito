@@ -72,7 +72,7 @@ Il paper distribuisce i compiti per fase:
 - I criteri di validità ex ante (idoneità e copertura delle fonti) ed ex post (replicabilità, controllo degli errori, accountability).
 
 **FORM DI DOWNLOAD** — modulo del tema (`lidia/modulo`, `tipo: whitepaper`). Campi e consensi
-in `docs/tecnico/moduli-delera.md`.
+in `docs/11-form-delera.md`.
 
 ---
 

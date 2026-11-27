@@ -15,7 +15,8 @@
 
 	var tipi = {
 		prova: __( 'Prova gratuita / contatto', 'lidia' ),
-		whitepaper: __( 'Download whitepaper', 'lidia' )
+		whitepaper: __( 'Download whitepaper', 'lidia' ),
+		webinar: __( 'Iscrizione webinar', 'lidia' )
 	};
 
 	var intenti = [
@@ -50,11 +51,12 @@
 						{ title: __( 'Modulo', 'lidia' ) },
 						el( components.SelectControl, {
 							label: __( 'Tipo di modulo', 'lidia' ),
-							help: __( 'Il modulo di download va solo sulle pagine dei whitepaper: prende il documento dalla pagina in cui si trova.', 'lidia' ),
+							help: __( 'Download e iscrizione vanno solo sulle pagine dei whitepaper e dei webinar: prendono il documento o il webinar dalla pagina in cui si trovano.', 'lidia' ),
 							value: tipo,
 							options: [
 								{ label: tipi.prova, value: 'prova' },
-								{ label: tipi.whitepaper, value: 'whitepaper' }
+								{ label: tipi.whitepaper, value: 'whitepaper' },
+								{ label: tipi.webinar, value: 'webinar' }
 							],
 							onChange: function ( valore ) {
 								props.setAttributes( { tipo: valore } );
