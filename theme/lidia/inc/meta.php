@@ -290,3 +290,153 @@ function lidia_documento_script( $schermata ) {
 	);
 }
 add_action( 'admin_enqueue_scripts', 'lidia_documento_script' );
+
+/* -------------------------------------------------------------------------
+ * Webinar (18/11/2026)
+ *
+ * - `lidia_webinar_inizio`    data e ora di inizio, ora di Roma, «AAAA-MM-GGTHH:MM»
+ * - `lidia_webinar_fine`      data e ora di fine, stesso formato (vuota: inizio + 2 ore)
+ * - `lidia_webinar_teams_id`  ID del webinar Teams (da `wp lidia webinar elenco`)
+ * - `lidia_webinar_prossimo`  ID del webinar successivo: a webinar finito, il rimando
+ *
+ * Si impostano con 26-pubblica.ps1 -Campi (scripts/30-webinar.md) o dal pannello «Webinar».
+ * Fuori dalla REST: l'ID Teams non serve a nessuno fuori dal sito.
+ * ---------------------------------------------------------------------- */
+
+/**
+ * I campi del webinar.
+ *
+ * @return array<string, string> chiave => tipo.
+ */
+function lidia_webinar_campi() {
+	return array(
+		'lidia_webinar_inizio'   => 'string',
+		'lidia_webinar_fine'     => 'string',
+		'lidia_webinar_teams_id' => 'string',
+		'lidia_webinar_prossimo' => 'integer',
+	);
+}
+
+/**
+ * Data e ora nel formato del campo, o vuota.
+ *
+ * @param mixed $valore Valore.
+ * @return string
+ */
+function lidia_webinar_pulisci_data( $valore ) {
+	$valore = substr( sanitize_text_field( (string) $valore ), 0, 16 );
+
+	return preg_match( '/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/', $valore ) ? $valore : '';
+}
+
+/** Registra i campi del webinar. */
+function lidia_registra_meta_webinar() {
+	foreach ( lidia_webinar_campi() as $chiave => $tipo ) {
+		$pulisci = 'integer' === $tipo ? 'absint' : ( 'lidia_webinar_teams_id' === $chiave ? 'sanitize_text_field' : 'lidia_webinar_pulisci_data' );
+
+		register_post_meta(
+			'webinar',
+			$chiave,
+			array(
+				'type'              => $tipo,
+				'single'            => true,
+				'show_in_rest'      => false,
+				'sanitize_callback' => $pulisci,
+				'auth_callback'     => function () {
+					return current_user_can( 'edit_posts' );
+				},
+			)
+		);
+	}
+}
+add_action( 'init', 'lidia_registra_meta_webinar' );
+
+/** Pannello «Webinar» nella pagina di modifica. */
+function lidia_webinar_meta_box() {
+	add_meta_box( 'lidia-webinar', __( 'Webinar', 'lidia' ), 'lidia_webinar_meta_box_html', 'webinar', 'side', 'high' );
+}
+add_action( 'add_meta_boxes_webinar', 'lidia_webinar_meta_box' );
+
+/**
+ * Markup del pannello.
+ *
+ * @param WP_Post $post Il webinar.
+ */
+function lidia_webinar_meta_box_html( $post ) {
+	$inizio   = (string) get_post_meta( $post->ID, 'lidia_webinar_inizio', true );
+	$fine     = (string) get_post_meta( $post->ID, 'lidia_webinar_fine', true );
+	$teams    = (string) get_post_meta( $post->ID, 'lidia_webinar_teams_id', true );
+	$prossimo = absint( get_post_meta( $post->ID, 'lidia_webinar_prossimo', true ) );
+	$altri    = get_posts(
+		array(
+			'post_type'      => 'webinar',
+			'post_status'    => array( 'publish', 'draft', 'future' ),
+			'posts_per_page' => 50,
+			'exclude'        => array( $post->ID ),
+			'orderby'        => 'date',
+			'order'          => 'DESC',
+		)
+	);
+
+	wp_nonce_field( 'lidia_webinar_' . $post->ID, 'lidia_webinar_nonce' );
+	?>
+	<p>
+		<label for="lidia-webinar-inizio"><?php esc_html_e( 'Inizio (ora di Roma)', 'lidia' ); ?></label><br>
+		<input type="datetime-local" class="widefat" id="lidia-webinar-inizio" name="lidia_webinar_inizio" value="<?php echo esc_attr( $inizio ); ?>">
+	</p>
+	<p>
+		<label for="lidia-webinar-fine"><?php esc_html_e( 'Fine', 'lidia' ); ?></label><br>
+		<input type="datetime-local" class="widefat" id="lidia-webinar-fine" name="lidia_webinar_fine" value="<?php echo esc_attr( $fine ); ?>">
+		<span class="description"><?php esc_html_e( 'Dopo la fine il modulo sparisce da solo.', 'lidia' ); ?></span>
+	</p>
+	<p>
+		<label for="lidia-webinar-teams"><?php esc_html_e( 'ID del webinar Teams', 'lidia' ); ?></label>
+		<input type="text" class="widefat" id="lidia-webinar-teams" name="lidia_webinar_teams_id" value="<?php echo esc_attr( $teams ); ?>">
+		<span class="description"><?php esc_html_e( 'Da «wp lidia webinar elenco».', 'lidia' ); ?></span>
+	</p>
+	<p>
+		<label for="lidia-webinar-prossimo"><?php esc_html_e( 'Webinar successivo', 'lidia' ); ?></label>
+		<select class="widefat" id="lidia-webinar-prossimo" name="lidia_webinar_prossimo">
+			<option value="0"><?php esc_html_e( 'Nessuno', 'lidia' ); ?></option>
+			<?php foreach ( $altri as $altro ) : ?>
+				<option value="<?php echo esc_attr( $altro->ID ); ?>" <?php selected( $prossimo, $altro->ID ); ?>><?php echo esc_html( get_the_title( $altro ) ); ?></option>
+			<?php endforeach; ?>
+		</select>
+		<span class="description"><?php esc_html_e( 'A webinar finito, la pagina rimanda qui.', 'lidia' ); ?></span>
+	</p>
+	<?php
+}
+
+/**
+ * Salva i campi dal pannello.
+ *
+ * @param int $post_id ID del webinar.
+ */
+function lidia_webinar_salva( $post_id ) {
+	if ( ! isset( $_POST['lidia_webinar_nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['lidia_webinar_nonce'] ), 'lidia_webinar_' . $post_id ) ) {
+		return;
+	}
+
+	if ( ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) || ! current_user_can( 'edit_post', $post_id ) ) {
+		return;
+	}
+
+	foreach ( lidia_webinar_campi() as $chiave => $tipo ) {
+		$grezzo = isset( $_POST[ $chiave ] ) ? wp_unslash( $_POST[ $chiave ] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized — pulito sotto.
+
+		if ( 'integer' === $tipo ) {
+			$valore = absint( $grezzo );
+		} elseif ( 'lidia_webinar_teams_id' === $chiave ) {
+			$valore = sanitize_text_field( (string) $grezzo );
+		} else {
+			$valore = lidia_webinar_pulisci_data( $grezzo );
+		}
+
+		if ( $valore ) {
+			update_post_meta( $post_id, $chiave, $valore );
+		} else {
+			delete_post_meta( $post_id, $chiave );
+		}
+	}
+}
+add_action( 'save_post_webinar', 'lidia_webinar_salva' );

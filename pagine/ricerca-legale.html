@@ -1,0 +1,411 @@
+<!-- wp:group {"className":"lidia-sezione lidia-prodotto lidia-prod-testa lidia-funzione-box lidia-funzione-pagina","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div class="wp-block-group alignfull lidia-sezione lidia-prodotto lidia-prod-testa lidia-funzione-box lidia-funzione-pagina"><!-- wp:group {"className":"lidia-funzione-griglia","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-griglia"><!-- wp:group {"className":"lidia-funzione-testo","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-testo"><!-- wp:paragraph {"className":"lidia-occhiello"} -->
+<p class="lidia-occhiello">Ricerca legale</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1,"fontSize":"pagina"} -->
+<h1 class="wp-block-heading has-pagina-font-size">La ricerca giuridica con AI, dalle fonti ufficiali.</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Norme, sentenze e prassi collegate tra loro con tecnologia GraphRAG. Ogni risposta arriva con i riferimenti ai testi usati: verificare vuol dire leggerli, non ricostruirli.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#prova">Richiedi una prova gratuita</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-funzione-mock","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-funzione-mock"><!-- wp:html -->
+<div class="lidia-mock lidia-mock-ricerca-legale">
+<style>
+.lidia-mock-ricerca-legale{ --lm-navy:#0F133A; --lm-blue:#303A99; --lm-border:#E7E7EE; --lm-text:#1E2030; --lm-muted:#8A8CA0;
+  font-family:var(--wp--preset--font-family--testo);
+  display:flex; justify-content:center; }
+.lidia-mock-ricerca-legale *{ box-sizing:border-box; }
+.lidia-mock-ricerca-legale .widget{ width:100%; max-width:380px; background:linear-gradient(180deg,#fff 0%,#FBFBFE 100%); border:1px solid var(--lm-border);
+  border-radius:18px; padding:22px 22px 20px 22px; box-shadow:0 20px 50px rgba(15,19,58,.1); }
+.lidia-mock-ricerca-legale .badge{ display:inline-flex; align-items:center; gap:6px; background:#EEF3FF; color:var(--lm-blue);
+  font-size:10.5px; font-weight:600; padding:4px 10px; border-radius:100px; margin-bottom:12px; align-self:flex-start; }
+.lidia-mock-ricerca-legale .widget-title{ font-size:16px; font-weight:600; color:var(--lm-navy); margin:0 0 16px 0; letter-spacing:-.01em; line-height:1.3; }
+.lidia-mock-ricerca-legale .searchbox{ border:1.5px solid var(--lm-border); border-radius:12px; padding:12px 14px; background:#fff;
+  display:flex; align-items:flex-start; gap:8px; transition:border-color .3s, box-shadow .3s; height:64px; overflow:hidden; margin-bottom:14px; }
+.lidia-mock-ricerca-legale .searchbox.focus{ border-color:var(--lm-blue); box-shadow:0 5px 16px rgba(48,58,153,.12); }
+.lidia-mock-ricerca-legale .searchbox-text{ flex:1; font-size:11.5px; line-height:1.5; color:var(--lm-text); }
+.lidia-mock-ricerca-legale .caret{ display:inline-block; width:1.5px; height:13px; background:var(--lm-blue); margin-left:1px; vertical-align:middle; animation:lidia-mock-blink 1s step-end infinite; }
+@keyframes lidia-mock-blink{ 50%{opacity:0;} }
+.lidia-mock-ricerca-legale .sendbtn{ width:24px; height:24px; border-radius:7px; background:var(--lm-border); display:flex; align-items:center; justify-content:center; flex:none; transition:background .3s; }
+.lidia-mock-ricerca-legale .sendbtn.ready{ background:var(--lm-blue); }
+.lidia-mock-ricerca-legale .result{ height:170px; opacity:0; transition:opacity .4s ease; position:relative; overflow:hidden; }
+.lidia-mock-ricerca-legale .result.show{ opacity:1; }
+.lidia-mock-ricerca-legale .result-box{ position:relative; height:100%; border:1px solid var(--lm-border); border-radius:12px; background:#FAFAFC; padding:14px 16px; overflow:hidden; }
+.lidia-mock-ricerca-legale .section-label{ font-size:9.5px; font-weight:600; color:var(--lm-blue); text-transform:uppercase; letter-spacing:.04em; margin:0 0 7px 0; }
+.lidia-mock-ricerca-legale .ph{ height:6.5px; border-radius:3px; background:#E4E4EE; margin:6px 0; }
+.lidia-mock-ricerca-legale .a-text{ font-size:10.5px; line-height:1.6; color:#333; margin:0 0 8px 0; }
+.lidia-mock-ricerca-legale .loading{ display:flex; align-items:center; gap:7px; padding:4px 0; color:var(--lm-muted); font-size:10.5px; }
+.lidia-mock-ricerca-legale .dots{ display:flex; gap:4px; }
+.lidia-mock-ricerca-legale .dots span{ width:4.5px; height:4.5px; border-radius:50%; background:var(--lm-blue); animation:lidia-mock-bnc 1s infinite ease-in-out; }
+.lidia-mock-ricerca-legale .dots span:nth-child(2){ animation-delay:.15s; } .lidia-mock-ricerca-legale .dots span:nth-child(3){ animation-delay:.3s; }
+@keyframes lidia-mock-bnc{ 0%,80%,100%{ transform:scale(.6); opacity:.5; } 40%{ transform:scale(1); opacity:1; } }
+.lidia-mock-ricerca-legale .reveal-item{ opacity:0; transform:translateY(4px); transition:opacity .4s ease, transform .4s ease; }
+.lidia-mock-ricerca-legale .reveal-item.show{ opacity:1; transform:translateY(0); }
+.lidia-mock-ricerca-legale .fade-cue{ position:absolute; left:1px; right:1px; bottom:1px; height:44px; border-radius:0 0 11px 11px;
+  background:linear-gradient(180deg, rgba(250,250,252,0) 0%, #FAFAFC 70%); display:flex; align-items:flex-end;
+  justify-content:center; padding-bottom:7px; pointer-events:none; opacity:0; transition:opacity .4s ease; }
+.lidia-mock-ricerca-legale .fade-cue.show{ opacity:1; }
+.lidia-mock-ricerca-legale .fade-cue span{ font-size:15px; letter-spacing:3px; color:var(--lm-blue); font-weight:700; line-height:1; }
+</style>
+
+<div class="widget">
+  <div class="badge">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#303A99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg>
+    Ricerca Legale
+  </div>
+  <p class="widget-title">Banche dati normative e giurisprudenziali, interrogate direttamente.</p>
+  <div class="searchbox" data-box=""><div class="searchbox-text" data-text=""></div>
+    <div class="sendbtn" data-send=""><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19.5a.496.496 0 0 0-.635-.635l-19.5 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></div>
+  </div>
+  <div class="result" data-result=""><div class="result-box">
+    <div class="loading" data-loading=""><span>Sto raccogliendo le fonti</span><div class="dots"><span></span><span></span><span></span></div></div>
+    <div data-answer="" style="display:none;">
+      <div class="section-label reveal-item">Risposta</div>
+      <p class="a-text reveal-item">Se i vizi emersi integrano la nozione di "gravi difetti" ex art. 1669 c.c., il committente può agire con l'azione extracontrattuale decennale, che prescinde dall'accettazione dell'opera.</p>
+      <div class="ph reveal-item" style="width:93%"></div>
+      <div class="ph reveal-item" style="width:76%"></div>
+      <div class="section-label reveal-item">Legislazione</div>
+      <div class="ph reveal-item" style="width:90%"></div>
+      <div class="ph reveal-item" style="width:71%"></div>
+    </div>
+    <div class="fade-cue" data-fade-cue=""><span>···</span></div>
+  </div></div>
+</div>
+
+<script>
+(function(){
+function findRoot(){
+  var r=(document.currentScript && document.currentScript.closest('.lidia-mock')) || null;
+  if(!r){
+    var _roots=document.querySelectorAll('.lidia-mock-ricerca-legale:not([data-lm-init])');
+    r=_roots[_roots.length-1] || null;
+  }
+  return r;
+}
+var root=findRoot();
+if(!root) return;
+root.setAttribute('data-lm-init','1');
+var QUESTION = "Termini di decadenza e prescrizione per i gravi difetti dell'opera in un appalto?";
+var box=root.querySelector('[data-box]'), text=root.querySelector('[data-text]'), send=root.querySelector('[data-send]'),
+  result=root.querySelector('[data-result]'), loading=root.querySelector('[data-loading]'), answer=root.querySelector('[data-answer]'),
+  fadeCue=root.querySelector('[data-fade-cue]');
+function wait(ms){ return new Promise(function(r){ setTimeout(r,ms); }); }
+async function typeText(el,str,speed){
+  speed = speed || 27;
+  el.innerHTML='<span class="caret"></span>';
+  var acc='';
+  for(var i=0;i<str.length;i++){
+    acc+=str[i];
+    el.innerHTML=acc+'<span class="caret"></span>';
+    await wait(speed+Math.random()*16);
+  }
+  await wait(250);
+  var c=el.querySelector('.caret'); if(c) c.remove();
+}
+async function cycle(){
+  while(true){
+    result.classList.remove('show'); box.classList.remove('focus'); send.classList.remove('ready');
+    loading.style.display='flex'; answer.style.display='none'; text.innerHTML='';
+    fadeCue.classList.remove('show');
+    var items0 = answer.querySelectorAll('.reveal-item');
+    for(var i=0;i<items0.length;i++){ items0[i].classList.remove('show'); }
+    await wait(700);
+    box.classList.add('focus'); await typeText(text,QUESTION); send.classList.add('ready'); await wait(350);
+    box.classList.remove('focus');
+    result.classList.add('show'); await wait(1100);
+    loading.style.display='none'; answer.style.display='block';
+    var items = answer.querySelectorAll('.reveal-item');
+    for(var j=0;j<items.length;j++){ items[j].classList.add('show'); await wait(300); }
+    fadeCue.classList.add('show');
+    await wait(3800);
+  }
+}
+function startWhenVisible(el, cb){
+  var started=false;
+  function go(){
+    if(started) return;
+    started=true;
+    try{ cb(); }catch(e){ if(window.console) console.error('lidia-mock ricerca-legale:', e); }
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ go(); io.disconnect(); }
+      });
+    }, {threshold:0.1});
+    io.observe(el);
+  }
+  // safety net: if the observer never fires (hidden ancestor, zero size,
+  // unsupported browser, or already scrolled past on load), start anyway.
+  setTimeout(go, 2500);
+}
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', function(){ startWhenVisible(root, cycle); });
+} else {
+  startWhenVisible(root, cycle);
+}
+})();
+</script>
+</div>
+<!-- /wp:html --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-sezione lidia-lp-punti lidia-registro-alterno","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div class="wp-block-group alignfull lidia-sezione lidia-lp-punti lidia-registro-alterno"><!-- wp:group {"className":"lidia-lp-punti-griglia","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-lp-punti-griglia"><!-- wp:group {"className":"lidia-lp-visual","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-lp-visual"><!-- wp:image {"className":"lidia-lp-immagine"} -->
+<figure class="wp-block-image lidia-lp-immagine"><img src="/wp-content/themes/lidia/assets/images/prodotto/lp-ricerca-legale.webp" alt="Ricerca legale in Lidia: una domanda sui gravi difetti dell’opera e la risposta con i riferimenti normativi"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-lp-punti-testo","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-lp-punti-testo"><!-- wp:heading -->
+<h2 class="wp-block-heading">Una risposta strutturata, pronta da usare.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"className":"lidia-lp-elenco"} -->
+<ul class="wp-block-list lidia-lp-elenco"><!-- wp:list-item -->
+<li><strong>Struttura</strong> Prima la normativa di riferimento, poi gli orientamenti giurisprudenziali, poi le conclusioni.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Fonti ufficiali</strong> Ogni passaggio rinvia al testo usato.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Dalla ricerca alla redazione</strong> Con l’add-in Word il lavoro continua nel documento.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-sezione lidia-lp-fonti","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div class="wp-block-group alignfull lidia-sezione lidia-lp-fonti"><!-- wp:group {"className":"lidia-lp-fonti-corpo","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-lp-fonti-corpo"><!-- wp:heading -->
+<h2 class="wp-block-heading">Tutte le fonti ufficiali, comprese nel canone.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"lidia-lp-fonti-griglia","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-lp-fonti-griglia">
+<!-- wp:group {"className":"lidia-lp-fonti-colonna","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-lp-fonti-colonna"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Normativa</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Primaria, nazionale ed europea</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>CCNL dall’archivio CNEL, identificati con il codice CNEL</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Secondaria delle autorità di settore</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Banca d’Italia</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>IVASS</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>CONSOB</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-lp-fonti-colonna","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-lp-fonti-colonna"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giurisprudenza</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Corte di Cassazione: Sezioni Unite, Civile, Penale, Lavoro, Tributaria</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Corte Costituzionale</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Corte dei Conti</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Corte di Giustizia UE</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Corte EDU</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Consiglio di Stato</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>TAR di tutte le sedi</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Giustizia tributaria di primo e secondo grado</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Selezione di Corti d’Appello e Tribunali ordinari</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-lp-fonti-colonna","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-lp-fonti-colonna"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Prassi</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Agenzia delle Entrate</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Garante Privacy</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Arbitro per le Controversie Finanziarie (ACF)</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Arbitro Assicurativo (decisioni)</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>AGCOM</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>AGCM</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Consigli Notarili: massime di Milano, Triveneto e Roma</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>EDPB: linee guida, pareri e documenti</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"lidia-lp-esempi"} -->
+<p class="lidia-lp-esempi">Nessun modulo di materia. Nessun abbonamento separato a banche dati.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-sezione lidia-prodotto lidia-registro-alterno","align":"full","anchor":"ricerca-web","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div id="ricerca-web" class="wp-block-group alignfull lidia-sezione lidia-prodotto lidia-registro-alterno"><!-- wp:group {"className":"lidia-colonna","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-colonna"><!-- wp:heading -->
+<h2 class="wp-block-heading">Oltre il perimetro ufficiale: la ricerca web.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"lidia-misura-lettura","fontSize":"voce"} -->
+<p class="lidia-misura-lettura has-voce-font-size">Analisi di settore, approfondimenti, fonti online: un agente interno di Lidia cerca sul web senza uscire dalla piattaforma e porta il risultato nel contesto della pratica.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-sezione lidia-come","align":"full","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div class="wp-block-group alignfull lidia-sezione lidia-come"><!-- wp:heading -->
+<h2 class="wp-block-heading">Dalla domanda alla fonte, in tre passi.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"lidia-passaggi lidia-tre","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-passaggi lidia-tre">
+<!-- wp:group {"className":"lidia-passaggio","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-passaggio">
+<!-- wp:paragraph {"className":"lidia-tessera lidia-numero"} -->
+<p class="lidia-tessera lidia-numero">01</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Fai la domanda</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In linguaggio naturale, come la porresti a un collega.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-passaggio","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-passaggio">
+<!-- wp:paragraph {"className":"lidia-tessera lidia-numero"} -->
+<p class="lidia-tessera lidia-numero">02</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Lidia cerca</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Norme, sentenze e prassi collegate tra loro con tecnologia GraphRAG.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-passaggio","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-passaggio">
+<!-- wp:paragraph {"className":"lidia-tessera lidia-numero"} -->
+<p class="lidia-tessera lidia-numero">03</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Verifichi le fonti</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Normativa, orientamenti e conclusioni, ciascuno con il rinvio al testo.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-sezione lidia-prodotto lidia-faq lidia-faq-centrata lidia-registro-alterno","align":"full","anchor":"faq","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div id="faq" class="wp-block-group alignfull lidia-sezione lidia-prodotto lidia-faq lidia-faq-centrata lidia-registro-alterno"><!-- wp:group {"className":"lidia-colonna","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-colonna"><!-- wp:heading -->
+<h2 class="wp-block-heading">Domande frequenti</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"lidia-domande","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-domande"><!-- wp:details {"showContent":true} -->
+<details class="wp-block-details" open><summary>Quali fonti normative usa Lidia?</summary><!-- wp:paragraph -->
+<p>Normativa primaria nazionale ed europea e normativa secondaria delle autorità di settore: Banca d’Italia, IVASS, CONSOB. Le fonti ufficiali sono comprese nel canone, senza abbonamenti separati a banche dati.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Quali fonti giurisprudenziali usa Lidia?</summary><!-- wp:paragraph -->
+<p>Corte Suprema di Cassazione (Sezioni Unite, Civile, Penale, Lavoro, Tributaria); Corte Costituzionale, Corte dei Conti, Corte di Giustizia UE e Corte EDU; Consiglio di Stato, TAR di tutte le sedi, giustizia tributaria di primo e secondo grado; una selezione di sentenze di Corti d’Appello e Tribunali ordinari.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Che cos’è GraphRAG e perché conta nella ricerca giuridica?</summary><!-- wp:paragraph -->
+<p>GraphRAG è una tecnica di recupero delle informazioni che, oltre a cercare documenti simili alla domanda, ricostruisce le relazioni fra le entità coinvolte — una norma, le sentenze che la applicano, i precedenti collegati. Nel diritto conta perché la risposta utile non è quasi mai un documento isolato: è la catena che li lega. Lidia usa GraphRAG per la ricerca su fonti ufficiali.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-sezione lidia-form lidia-registro-scuro","align":"full","anchor":"prova","layout":{"type":"constrained","contentSize":"1040px"}} -->
+<div id="prova" class="wp-block-group alignfull lidia-sezione lidia-form lidia-registro-scuro"><!-- wp:group {"className":"lidia-form-griglia","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-form-griglia"><!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:heading -->
+<h2 class="wp-block-heading">Richiedi subito una prova gratuita di 7 giorni.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Compila il modulo: ti contattiamo per mostrarti la piattaforma e attivare la prova sui tuoi documenti e sui tuoi flussi di lavoro.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"lidia-elenco-argomenti"} -->
+<ul class="wp-block-list lidia-elenco-argomenti"><!-- wp:list-item -->
+<li>Prova gratuita di 7 giorni, sui documenti reali dello studio</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Nessun dato trasmesso ai fornitori dei modelli</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Fonti ufficiali comprese nel canone</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"lidia-form-box","layout":{"type":"default"}} -->
+<div class="wp-block-group lidia-form-box"><!-- wp:lidia/modulo {"tipo":"prova"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->

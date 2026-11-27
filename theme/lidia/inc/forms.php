@@ -12,6 +12,9 @@
  * visitatore all'altro — marca temporale, URL di partenza, contatto della visita — lo scrive
  * il browser, non il server: l'HTML in cache è uguale per tutti e resta valido.
  *
+ * Tre tipi: `prova` (con intento prova o commerciale), `whitepaper`, `webinar` (18/11/2026: iscrizione
+ * a un webinar Teams; il passaggio a Teams lo fa Delera chiamando inc/webinar.php).
+ *
  * Specifica: docs/11-form-delera.md
  *
  * @package Lidia
@@ -82,6 +85,16 @@ function lidia_modulo_professioni() {
 		'ateneo'           => __( 'Ateneo', 'lidia' ),
 		'altro'            => __( 'Altro', 'lidia' ),
 	);
+}
+
+/**
+ * Il tipo di modulo, ripulito.
+ *
+ * @param mixed $tipo Valore grezzo.
+ * @return string prova, whitepaper o webinar.
+ */
+function lidia_modulo_tipo( $tipo ) {
+	return in_array( $tipo, array( 'whitepaper', 'webinar' ), true ) ? $tipo : 'prova';
 }
 
 /** Le chiavi di campagna che ribaltiamo dentro il payload (`campagna`). */
@@ -233,13 +246,17 @@ function lidia_modulo_campagna( $ultimo ) {
 /**
  * Da quale modulo arriva il lead, con il nome che usa Delera.
  *
- * @param string $tipo    prova o whitepaper.
+ * @param string $tipo    prova, whitepaper o webinar.
  * @param string $intento prova o commerciale.
  * @return string
  */
 function lidia_modulo_form_origine( $tipo, $intento ) {
 	if ( 'whitepaper' === $tipo ) {
 		return 'Paper';
+	}
+
+	if ( 'webinar' === $tipo ) {
+		return 'Webinar';
 	}
 
 	return 'commerciale' === $intento ? 'Richiesta contatto' : 'Prova gratuita';
@@ -461,8 +478,8 @@ function lidia_modulo_raccogli( $grezzo ) {
 	$posizione = $prendi( 'posizione' );
 
 	return array(
-		'tipo'               => 'whitepaper' === $prendi( 'tipo' ) ? 'whitepaper' : 'prova',
-		'intento'            => 'commerciale' === $prendi( 'intento' ) ? 'commerciale' : 'prova',
+		'tipo'               => lidia_modulo_tipo( $prendi( 'tipo' ) ),
+		'intento'            => ( 'prova' === lidia_modulo_tipo( $prendi( 'tipo' ) ) && 'commerciale' === $prendi( 'intento' ) ) ? 'commerciale' : 'prova',
 		'nome'               => substr( $prendi( 'nome' ), 0, 80 ),
 		'cognome'            => substr( $prendi( 'cognome' ), 0, 80 ),
 		'email'              => substr( sanitize_email( $prendi( 'email' ) ), 0, 150 ),
@@ -472,6 +489,7 @@ function lidia_modulo_raccogli( $grezzo ) {
 		'consenso_privacy'   => ! empty( $grezzo['consenso_privacy'] ),
 		'consenso_marketing' => ! empty( $grezzo['consenso_marketing'] ),
 		'documento'          => absint( isset( $grezzo['documento'] ) ? $grezzo['documento'] : 0 ),
+		'webinar'            => sanitize_title( $prendi( 'webinar' ) ),
 		'origine'            => esc_url_raw( isset( $grezzo['origine'] ) && is_scalar( $grezzo['origine'] ) ? (string) $grezzo['origine'] : '' ),
 		'istanza'            => substr( $prendi( 'istanza' ), 0, 40 ),
 		'posizione'          => array_key_exists( $posizione, lidia_modulo_posizioni() ) ? $posizione : '',
@@ -546,7 +564,7 @@ function lidia_modulo_campo( $c ) {
 		$html .= '<select id="' . esc_attr( $id ) . '" name="' . esc_attr( $c['nome'] ) . '"';
 		$html .= $descr ? ' aria-describedby="' . esc_attr( $descr ) . '"' : '';
 		$html .= empty( $c['obbligatorio'] ) ? '' : ' required';
-		$html .= '><option value="">' . esc_html__( 'Scegliete una voce', 'lidia' ) . '</option>';
+		$html .= '><option value="">' . esc_html__( 'Scegli una voce', 'lidia' ) . '</option>';
 
 		foreach ( $c['voci'] as $chiave => $etichetta ) {
 			$html .= '<option value="' . esc_attr( $chiave ) . '"' . selected( $c['valore'], $chiave, false ) . '>' . esc_html( $etichetta ) . '</option>';
@@ -575,7 +593,7 @@ function lidia_modulo_campo( $c ) {
 /**
  * I due consensi.
  *
- * @param string $tipo    prova o whitepaper: cambia la finalità dichiarata.
+ * @param string $tipo    prova, whitepaper o webinar: cambia la finalità dichiarata.
  * @param string $istanza Istanza.
  * @param array  $dati    Valori.
  * @param array  $errori  Errori.
@@ -586,9 +604,14 @@ function lidia_modulo_consensi( $tipo, $istanza, $dati, $errori ) {
 	$mktg    = 'lm-' . $istanza . '-marketing';
 	$errore  = isset( $errori['consenso_privacy'] ) ? $errori['consenso_privacy'] : '';
 
-	$finalita = 'whitepaper' === $tipo
-		? __( ' e acconsento al trattamento dei dati per ricevere il documento ed essere ricontattato.', 'lidia' )
-		: __( ' e acconsento al trattamento dei dati per essere ricontattato.', 'lidia' );
+	if ( 'whitepaper' === $tipo ) {
+		$finalita = __( ' e acconsento al trattamento dei dati per ricevere il documento ed essere ricontattato.', 'lidia' );
+	} elseif ( 'webinar' === $tipo ) {
+		// Approvato il 18/11/2026: dice che i dati passano a Microsoft.
+		$finalita = __( ' e acconsento al trattamento dei dati per l’iscrizione al webinar su Microsoft Teams e per essere ricontattato.', 'lidia' );
+	} else {
+		$finalita = __( ' e acconsento al trattamento dei dati per essere ricontattato.', 'lidia' );
+	}
 
 	$html  = '<div class="lidia-consensi">';
 	$html .= '<p class="lidia-consenso' . ( $errore ? ' lidia-campo--errore' : '' ) . '">';
@@ -617,7 +640,7 @@ function lidia_modulo_consensi( $tipo, $istanza, $dati, $errori ) {
 /**
  * Il modulo.
  *
- * @param string $tipo      prova o whitepaper.
+ * @param string $tipo      prova, whitepaper o webinar.
  * @param string $istanza   Istanza.
  * @param string $posizione hero, footer, inline o vuoto.
  * @param array  $dati      Valori da ripristinare.
@@ -644,6 +667,7 @@ function lidia_modulo_form( $tipo, $istanza, $posizione = '', $dati = array(), $
 	);
 
 	$documento = 'whitepaper' === $tipo ? (int) get_queried_object_id() : 0;
+	$webinar   = 'webinar' === $tipo ? (string) get_post_field( 'post_name', get_queried_object_id() ) : '';
 
 	$html = '<form class="lidia-modulo" id="lm-' . esc_attr( $istanza ) . '" method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" data-tipo="' . esc_attr( $tipo ) . '" data-posizione="' . esc_attr( $posizione ) . '" novalidate>';
 
@@ -658,6 +682,7 @@ function lidia_modulo_form( $tipo, $istanza, $posizione = '', $dati = array(), $
 	$html .= '<input type="hidden" name="posizione" value="' . esc_attr( $posizione ) . '">';
 	$html .= '<input type="hidden" name="intento" value="' . esc_attr( $intento ) . '">';
 	$html .= '<input type="hidden" name="documento" value="' . esc_attr( (string) $documento ) . '">';
+	$html .= '<input type="hidden" name="webinar" value="' . esc_attr( $webinar ) . '">';
 	$html .= '<input type="hidden" name="origine" value="' . esc_url( lidia_modulo_url_corrente() ) . '" data-lidia="origine">';
 	$html .= '<input type="hidden" name="marca" value="' . esc_attr( lidia_modulo_marca() ) . '" data-lidia="marca">';
 
@@ -743,6 +768,9 @@ function lidia_modulo_form( $tipo, $istanza, $posizione = '', $dati = array(), $
 	if ( 'whitepaper' === $tipo ) {
 		$prova       = __( 'Scarica il whitepaper', 'lidia' );
 		$commerciale = '';
+	} elseif ( 'webinar' === $tipo ) {
+		$prova       = __( 'Iscriviti al webinar', 'lidia' );
+		$commerciale = '';
 	} else {
 		$prova       = __( 'Richiedi la prova gratuita', 'lidia' );
 		$commerciale = __( 'Scrivi al team commerciale', 'lidia' );
@@ -799,6 +827,19 @@ function lidia_modulo_conferma( $esito ) {
 		}
 
 		return $html . '</p></div>';
+	}
+
+	// Webinar: testi con il tu (24/11/2026). Con l'app Teams configurata il link lo manda Teams;
+	// finché non c'è, lo manda Lidia via Delera. Cambia da sé quando arrivano le credenziali.
+	if ( 'webinar' === $tipo ) {
+		$teams = function_exists( 'lidia_teams_configurato' ) && lidia_teams_configurato();
+
+		$html .= '<h3>' . esc_html__( 'Iscrizione ricevuta.', 'lidia' ) . '</h3>';
+		$html .= '<p>' . ( $teams
+			? esc_html__( 'A breve riceverai da Microsoft Teams la mail con il link per partecipare.', 'lidia' )
+			: esc_html__( 'Ti mandiamo via email il link per partecipare.', 'lidia' ) ) . '</p>';
+
+		return $html . '</div>';
 	}
 
 	$html .= '<h3>' . esc_html__( 'Richiesta ricevuta', 'lidia' ) . '</h3>';
@@ -932,6 +973,28 @@ function lidia_modulo_elabora( $grezzo ) {
 		);
 	}
 
+	// Il webinar deve esistere ed essere ancora aperto: lo slug arriva dal browser, e la pagina
+	// può arrivare dalla cache anche dopo la fine del webinar.
+	if ( 'webinar' === $dati['tipo'] ) {
+		$webinar = function_exists( 'lidia_webinar_da_slug' ) ? lidia_webinar_da_slug( $dati['webinar'] ) : null;
+
+		if ( ! $webinar ) {
+			return array(
+				'ok'     => false,
+				'dati'   => $dati,
+				'errori' => array( 'generale' => $generico ),
+			);
+		}
+
+		if ( lidia_webinar_concluso( $webinar->ID ) ) {
+			return array(
+				'ok'     => false,
+				'dati'   => $dati,
+				'errori' => array( 'generale' => __( 'Il webinar si è concluso. Le iscrizioni sono chiuse.', 'lidia' ) ),
+			);
+		}
+	}
+
 	lidia_delera_consegna( $dati );
 
 	$esito = array(
@@ -945,6 +1008,11 @@ function lidia_modulo_elabora( $grezzo ) {
 	if ( 'whitepaper' === $dati['tipo'] ) {
 		$esito['documento'] = (string) get_post_field( 'post_name', $dati['documento'] );
 		$esito['download']  = lidia_delera_link_download( $dati['documento'] );
+	}
+
+	// Per il webinar `documento` porta lo slug: l'evento lidia_lead lo passa a GTM così com'è.
+	if ( 'webinar' === $dati['tipo'] ) {
+		$esito['documento'] = $dati['webinar'];
 	}
 
 	return array(
@@ -1072,7 +1140,7 @@ function lidia_modulo_render( $attributi ) {
 
 	++$contatore;
 
-	$tipo      = ( isset( $attributi['tipo'] ) && 'whitepaper' === $attributi['tipo'] ) ? 'whitepaper' : 'prova';
+	$tipo      = lidia_modulo_tipo( isset( $attributi['tipo'] ) ? $attributi['tipo'] : 'prova' );
 	$posizione = isset( $attributi['posizione'] ) && array_key_exists( $attributi['posizione'], lidia_modulo_posizioni() ) ? $attributi['posizione'] : '';
 	$intento   = ( 'prova' === $tipo && isset( $attributi['intento'] ) && 'commerciale' === $attributi['intento'] ) ? 'commerciale' : 'prova';
 	$istanza   = $tipo . '-' . $contatore;
@@ -1080,6 +1148,19 @@ function lidia_modulo_render( $attributi ) {
 	$suo       = ( $stato && ! empty( $stato['istanza'] ) ) ? $stato['istanza'] : '';
 
 	wp_enqueue_script( 'lidia-modulo' );
+
+	// Webinar: il modulo vive solo nella pagina di un webinar, e sparisce a webinar finito.
+	if ( 'webinar' === $tipo ) {
+		$pagina = (int) get_queried_object_id();
+
+		if ( ! $pagina || 'webinar' !== get_post_type( $pagina ) || ! function_exists( 'lidia_webinar_concluso' ) ) {
+			return '';
+		}
+
+		if ( lidia_webinar_concluso( $pagina ) ) {
+			return '<div ' . get_block_wrapper_attributes( array( 'class' => 'lidia-modulo-blocco' ) ) . '>' . lidia_webinar_chiuso( $pagina ) . '</div>';
+		}
+	}
 
 	// Whitepaper non protetto: niente modulo, solo il pulsante.
 	if ( 'whitepaper' === $tipo ) {

@@ -34,6 +34,7 @@ foreach (
 		'lingue',        // Polylang: hreflang, testata e footer per lingua
 		'forms',         // blocco lidia/modulo: markup, validazione, antispam, ricezione
 		'delera',        // consegna al webhook, riprove, coda, download firmato
+		'webinar',       // webinar Teams: date, iscrizione via Microsoft Graph, endpoint per Delera
 		'feedback',      // questionari /feedback/ e /feedback-prova/: blocco, noindex, invio a Notion
 	) as $lidia_inc
 ) {

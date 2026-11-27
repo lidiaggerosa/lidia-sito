@@ -27,11 +27,15 @@ const LIDIA_CARTELLA_RISERVATA = 'riservati';
  *
  * Le URL stanno in wp-config.php: non entrano mai nei file di progetto.
  *
- * @param string $tipo prova o whitepaper.
+ * @param string $tipo prova, whitepaper o webinar.
  * @return string
  */
 function lidia_delera_url( $tipo ) {
-	$costante = 'whitepaper' === $tipo ? 'LIDIA_DELERA_WEBHOOK_WHITEPAPER' : 'LIDIA_DELERA_WEBHOOK_PROVA';
+	$costanti = array(
+		'whitepaper' => 'LIDIA_DELERA_WEBHOOK_WHITEPAPER',
+		'webinar'    => 'LIDIA_DELERA_WEBHOOK_WEBINAR',
+	);
+	$costante = isset( $costanti[ $tipo ] ) ? $costanti[ $tipo ] : 'LIDIA_DELERA_WEBHOOK_PROVA';
 
 	return defined( $costante ) ? (string) constant( $costante ) : '';
 }
@@ -55,6 +59,26 @@ function lidia_delera_payload( $dati ) {
 				'slug'   => $post->post_name,
 				'titolo' => get_the_title( $post ),
 				'tag'    => (string) get_post_meta( $post->ID, 'lidia_delera_tag', true ),
+			);
+		}
+	}
+
+	// Webinar (18/11/2026): chiavi piatte, una per campo personalizzato di Delera. `webinar` è lo
+	// slug che il workflow Delera rimanda al sito come `webinar_slug`.
+	$webinar = array(
+		'webinar'        => '',
+		'webinar_titolo' => '',
+		'webinar_data'   => '',
+	);
+
+	if ( 'webinar' === $dati['tipo'] && ! empty( $dati['webinar'] ) && function_exists( 'lidia_webinar_da_slug' ) ) {
+		$post = lidia_webinar_da_slug( $dati['webinar'] );
+
+		if ( $post ) {
+			$webinar = array(
+				'webinar'        => $post->post_name,
+				'webinar_titolo' => get_the_title( $post ),
+				'webinar_data'   => (string) get_post_meta( $post->ID, 'lidia_webinar_inizio', true ),
 			);
 		}
 	}
@@ -87,7 +111,7 @@ function lidia_delera_payload( $dati ) {
 		'posizione'          => isset( $dati['posizione'] ) ? $dati['posizione'] : '',
 		'campagna'           => isset( $dati['campagna'] ) ? $dati['campagna'] : lidia_modulo_campagna( null ),
 		'documento'          => $documento,
-	) + lidia_delera_attribuzione( isset( $dati['attribuzione'] ) ? $dati['attribuzione'] : array() );
+	) + $webinar + lidia_delera_attribuzione( isset( $dati['attribuzione'] ) ? $dati['attribuzione'] : array() );
 }
 
 /**
@@ -287,6 +311,10 @@ function lidia_delera_allarme( $payload, $motivo ) {
 		if ( ! empty( $payload[ $chiave ] ) ) {
 			$righe[] = $chiave . ': ' . $payload[ $chiave ];
 		}
+	}
+
+	if ( ! empty( $payload['webinar_titolo'] ) ) {
+		$righe[] = 'webinar: ' . $payload['webinar_titolo'];
 	}
 
 	if ( ! empty( $payload['documento']['titolo'] ) ) {

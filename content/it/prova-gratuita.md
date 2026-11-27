@@ -19,7 +19,7 @@ revisione: 2026-09-24 (H1 e apertura allineati al modulo della home)
 Compila il modulo: ti contattiamo per mostrarti la piattaforma e attivare la prova sui tuoi documenti e sui tuoi flussi di lavoro. Tutte le funzioni attive, per una settimana.
 
 **FORM — in cima, accanto all'apertura.** Modulo del tema (`lidia/modulo`, `tipo: prova`).
-Campi e consensi stanno in `docs/tecnico/moduli-delera.md`, non in questo file.
+Campi e consensi stanno in `docs/11-form-delera.md`, non in questo file.
 
 ---
 
@@ -72,7 +72,7 @@ Si parla dei risultati e, se lo studio vuole proseguire, arriva il preventivo. L
 
 - **Il form è il modulo nativo del tema** (`lidia/modulo`, `tipo: prova`), che consegna a Delera
   via webhook (decisione del 18/09, che ritira l'iframe del 14/09). Campi, antispam e coda stanno
-  in `docs/tecnico/moduli-delera.md`: non vanno duplicati qui.
+  in `docs/11-form-delera.md`: non vanno duplicati qui.
 - **Due istanze dello stesso modulo**, in cima e in fondo. Un solo evento `lidia_lead`, con un
   parametro di posizione (`hero` / `footer`): senza, in GA4 non si distingue quale converte.
 - **Il submit avviene in pagina**, quindi GTM lo vede: nessun `postMessage`, nessuna conversione

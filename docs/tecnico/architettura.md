@@ -38,12 +38,12 @@ theme/lidia/
 
 ## Pagine
 
-Le pagine sono fatte di pattern. Il contenuto di ogni pagina è un file in `scripts/blocchi/`
-(`scripts/blocchi/en/` per l'inglese). Lo script della pagina (`scripts/01-home.md` … `08-legale.md`)
-la crea o la aggiorna da quel file. Il copy approvato sta in `content/`.
+Le pagine sono fatte di pattern. Il contenuto di ogni pagina è un file in `pagine/`
+(`pagine/en/` per l'inglese). `strumenti/pubblica.ps1` o il connettore WordPress.com la creano o la
+aggiornano da quel file. Il copy approvato sta in `content/`.
 
-Per cambiare una pagina: si modifica il file di blocchi, si rilascia, si aggiorna la pagina con
-`wp post update <ID> <file>`. Mai solo dall'editor, altrimenti il repo non corrisponde più al sito.
+Per cambiare una pagina: si modifica il file di blocchi e si rilascia (`CLAUDE.md`, «Come si rilascia»).
+Mai solo dall'editor, altrimenti il repo non corrisponde più al sito.
 
 Template `page-composta`: l'H1 sta dentro la prima sezione, non nel template.
 
@@ -59,9 +59,3 @@ Template `page-composta`: l'H1 sta dentro la prima sezione, non nel template.
 Scala blu: notte `#0F133A` per l'apertura e le fasce strumento, chiaro `#F4F5FB` per la lettura,
 `#303A99` per l'azione. I valori vivono in `theme.json` e `tokens.css`: da lì, non da qui.
 I registri di colore (chiaro, alterno, scuro, notte) si applicano alla sezione, non al singolo blocco.
-
-## Ambiente locale
-
-WordPress Studio, sito con PHP 8.4. Il tema non si copia: una junction Windows collega
-`<sito Studio>\wp-content\themes\lidia` a `theme\lidia` del repo. Lo stesso per il mu-plugin
-(`scripts/06-tracking.md`). Il sito locale si configura con `scripts/00-bootstrap.md`.

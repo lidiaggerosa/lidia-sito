@@ -67,7 +67,7 @@ Spesso un dato rientra in più categorie insieme. A questo si aggiungono le tens
 - La mappa delle intersezioni normative e le aree di ulteriore indagine.
 
 **FORM DI DOWNLOAD** — modulo del tema (`lidia/modulo`, `tipo: whitepaper`). Campi e consensi
-in `docs/tecnico/moduli-delera.md`.
+in `docs/11-form-delera.md`.
 
 ---
 

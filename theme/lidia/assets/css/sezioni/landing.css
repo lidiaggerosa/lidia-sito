@@ -1,6 +1,8 @@
 /*
  * Landing di campagna — solo ciò che le sezioni del sito non hanno già.
  * Caricato da inc/landing.php sulle pagine del tipo `landing` (12/10/2026).
+ * Dal 04/11/2026 anche sulle pagine funzione che riusano le sezioni `lidia-lp-punti`
+ * e `lidia-lp-fonti` (enqueue.php): le regole valide solo sulle landing restano sotto `.lidia-lp`.
  */
 
 /* Hero: sulla home i loghi gli stanno attaccati sotto; qui no, quindi respiro pari. */
@@ -93,7 +95,7 @@
 
 /* ---------- Come funziona: la riga degli esempi sotto i passi ---------- */
 
-.lidia-lp .lidia-lp-esempi {
+.lidia-lp-esempi {
 	margin-top: 52px;
 	max-width: 70ch;
 	font-size: var(--wp--preset--font-size--riscontro);
@@ -101,7 +103,7 @@
 	color: var(--lidia-secondario);
 }
 
-.lidia-lp .lidia-lp-esempi strong {
+.lidia-lp-esempi strong {
 	color: var(--lidia-testo);
 	font-weight: 600;
 }

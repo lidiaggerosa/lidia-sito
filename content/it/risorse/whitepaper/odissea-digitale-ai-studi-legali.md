@@ -54,7 +54,7 @@ Strumento: l'AI Policy Builder (v1.0), con scheletro di policy riutilizzabile.
 - L'AI Policy Builder completo, con ruoli, artefatti, metriche e ciclo di vita dei workflow.
 
 **FORM DI DOWNLOAD** — modulo del tema (`lidia/modulo`, `tipo: whitepaper`). Campi e consensi
-in `docs/tecnico/moduli-delera.md`.
+in `docs/11-form-delera.md`.
 
 ---
 

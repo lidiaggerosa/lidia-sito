@@ -13,7 +13,7 @@
       "accountId": "0",
       "containerId": "0",
       "name": "lidiatech.ai",
-      "publicId": "GTM-XXXXXXX",
+      "publicId": "GTM-KCRCTXVB",
       "usageContext": [
         "WEB"
       ]
@@ -1079,7 +1079,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "G-XXXXXXXXXX"
+            "value": "G-28336JVWJ1"
           }
         ]
       },
@@ -1139,7 +1139,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "AW-XXXXXXXXXX"
+            "value": "AW-17718661060"
           }
         ]
       },

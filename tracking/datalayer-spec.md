@@ -1,7 +1,7 @@
 # Spec dataLayer — sito lidiatech.ai
 
 Fonte di verità del dataLayer. Chi lavora in GTM legge questo file e non ha bisogno del repo del
-tema. Supera la tabella di `docs/tecnico/tracciamento.md` §4.
+tema. Supera la tabella di `docs/04-tracking-consent.md` §4.
 
 Container Web: account «Lidia». GA4, Meta, LinkedIn e Google Ads vivono **dentro** GTM. Nessun tag
 nel tema, nessuno snippet nell'admin. Gli ID stanno in `wp-config.php`, mai nei file di progetto.
@@ -61,9 +61,12 @@ alla dimensione personalizzata in GA4).
 
 | Parametro | Valori |
 |---|---|
-| `tipo` | `prova` · `whitepaper` |
-| `intento` | `prova` · `commerciale` · vuoto su `tipo: whitepaper` |
-| `documento` | slug del whitepaper · vuoto su `tipo: prova` |
+| `tipo` | `prova` · `whitepaper` · `webinar` (18/11/2026) |
+| `intento` | `prova` · `commerciale` · vuoto su `tipo: whitepaper` · `prova` su `tipo: webinar` |
+| `documento` | slug del whitepaper · slug del webinar · vuoto su `tipo: prova` |
+
+L'iscrizione al webinar è una conversione come le altre: GA4, Meta e LinkedIn la contano già (trigger
+su ogni `lidia_lead`). Google Ads no: il tag «Lead prova» filtra `tipo = prova`.
 
 `lidia_lead` è **l'unico evento di conversione**. GA4, Meta, LinkedIn e Google Ads si agganciano
 tutti a lui e distinguono con `tipo` e `intento`. Nessun pixel di conversione separato per canale.

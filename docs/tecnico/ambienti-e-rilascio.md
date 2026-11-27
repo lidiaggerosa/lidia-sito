@@ -1,76 +1,37 @@
 # Ambienti e rilascio
 
-## Ambienti
+| | Staging | Produzione |
+|---|---|---|
+| URL | `staging.lidiatech.ai` (Protected URLs, noindex) | `lidiatech.ai` |
+| Cartella sul server | `~/www/staging.lidiatech.ai/public_html` | `~/www/lidiatech.ai/public_html` |
+| `LIDIA_ENV` | `staging` | `production` |
+| Webhook Delera | di prova | veri |
+| Connettore WordPress.com (Jetpack) | no | sì |
 
-| | Locale | Staging | Produzione |
-|---|---|---|---|
-| URL | WordPress Studio | `staging.lidiatech.ai` | `lidiatech.ai` |
-| Cartella sul server | — | `~/www/staging.lidiatech.ai/public_html` | `~/www/lidiatech.ai/public_html` |
-| `LIDIA_ENV` | `local` | `staging` | `production` |
-| Indicizzazione | no | no (`noindex` + Protected URLs) | sì |
-| Webhook Delera | di prova | di prova | veri |
-
-Hosting SiteGround. Accesso SSH: Site Tools → Devs → SSH Keys Manager. Chiave, utente e server
-li dà l'owner: non si scrivono nel repo.
+Accessi SSH: `strumenti/server.ps1` e `strumenti/server.md` (solo sul PC, mai su GitHub).
 
 ## Costanti in `wp-config.php` (solo i nomi)
-
 `LIDIA_ENV` · `LIDIA_GTM_ID` · `LIDIA_DELERA_WEBHOOK_PROVA` · `LIDIA_DELERA_WEBHOOK_WHITEPAPER` ·
 `LIDIA_FORM_ALERT_EMAIL` · `LIDIA_DIETRO_PROXY` · `LIDIA_WHITEPAPER_MAIL_DELERA` ·
-`LIDIA_NOTION_TOKEN` · `LIDIA_NOTION_DB_UTENTI` ·
+`LIDIA_NOTION_TOKEN` · `LIDIA_NOTION_DB_UTENTI` · costanti Teams (solo staging) ·
 `DISALLOW_FILE_EDIT` · `DISABLE_WP_CRON` · `AUTOMATIC_UPDATER_DISABLED`
 
 ## Rilascio
-
-Sempre prima su staging, poi in produzione con OK dell'owner.
-
-Dal 22/10/2026 il locale non si usa: pagine e file del tema si pubblicano con lo script di rilascio
-dell'owner (`scripts/26-pubblica.md`). I passi sotto restano per il tema intero e per il mu-plugin.
-
-**0. Backup del database**
+Regole e comandi: `CLAUDE.md`, «Come si rilascia». Comandi in breve:
 
 ```powershell
-ssh -p 18765 -i $KEY $S "cd ~/www/<sito>/public_html && wp db export ~/backup-<sito>-<data>.sql"
+.\strumenti\pubblica.ps1 prezzi                 # staging
+.\strumenti\pubblica.ps1 prezzi -Produzione     # produzione + registro + GitHub
+.\strumenti\pubblica.ps1 -Riallinea             # staging = produzione
+.\strumenti\salva.ps1 "cosa"                    # solo GitHub
+.\strumenti\aggiornamenti.ps1                   # controllo mensile WordPress e plugin
 ```
 
-**1. Tema e mu-plugin** (da PowerShell, nella cartella del repo, `$S` = `utente@server`, `$KEY` = chiave)
+Mu-plugin `tracking/lidia-tracking.php`: si carica a mano (`strumenti/server.md`).
+`-Tema` non cancella: un file tolto dal repo va tolto a mano anche sul server.
 
-```powershell
-scp -P 18765 -i $KEY -r theme\lidia\* "${S}:www/<sito>/public_html/wp-content/themes/lidia/"
-scp -P 18765 -i $KEY tracking\lidia-tracking.php "${S}:www/<sito>/public_html/wp-content/mu-plugins/"
-```
-
-`scp` non cancella: un file tolto dal repo va tolto a mano anche sul server.
-
-**2. Pagine cambiate**
-
-```powershell
-scp -P 18765 -i $KEY scripts\blocchi\<file>.html "${S}:scripts/blocchi/"
-ssh -p 18765 -i $KEY $S "cd ~/www/<sito>/public_html && wp post update <ID> ~/scripts/blocchi/<file>.html --user=<admin>"
-```
-
-ID con `wp post list --post_type=page --name=<slug> --field=ID`. `--user` serve per le pagine con blocchi HTML (home, prodotto).
-
-**3. Cache**
-
-```powershell
-ssh -p 18765 -i $KEY $S "cd ~/www/<sito>/public_html && wp sg purge https://<sito>/"
-```
-
-**4. Verifica** — in incognito: home, `/prodotto/`, un whitepaper, un URL inesistente (404 di Lidia),
-invio del modulo di prova → contatto in Delera. Poi Ctrl+F5.
-
-## Regole pratiche
-
-- Un comando `ssh`/`scp` per volta: ognuno chiede la passphrase.
-- In PowerShell `$( … )` si espande in locale: per usare un ID fare due passi.
-- I PDF dei whitepaper si caricano dal pannello «Documento protetto» del whitepaper, mai dalla Libreria media.
-- Mai un nuovo import WXR su un sito popolato: duplica i contenuti.
-- Se il sito risponde 500, 410 o 503 dopo un rilascio dei redirect: `cp .htaccess.pre-redirect .htaccess && wp sg purge`.
-
-## Rollback
-
-- Codice: `git revert` del commit, poi rilascio come sopra.
-- Database: `wp db import ~/backup-<sito>-<data>.sql` e purge.
-
-Dettaglio completo del server e ricostruzione da zero: `scripts/10-staging.md`.
+## Ripristino
+- Pagina o tema: i comandi li stampa `pubblica.ps1` a fine rilascio (backup in `~/backup-pagine/`).
+- Pagina modificata col connettore: admin → pagina → Revisioni.
+- Codice su GitHub: `git revert` del commit, poi rilascio.
+- Database: `wp db import <backup>.sql` e `wp sg purge`.

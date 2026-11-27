@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lidia S.r.l.//Webinar//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lidia-live-lab-20261209@lidiatech.ai
+DTSTAMP:20261126T170000Z
+DTSTART:20261209T130000Z
+DTEND:20261209T134500Z
+SUMMARY:Lidia Live Lab
+LOCATION:Microsoft Teams
+URL:https://teams.microsoft.com/meet/3416427381182228?p=8S7wezm5FPxx3jYbTX
+DESCRIPTION:Webinar gratuito di Lidia. In 45 minuti mostriamo dal vivo come
+  Lidia accompagna il lavoro legale dalla ricerca alla decisione: ricerca l
+ egale\, Smart Answer sul fascicolo\, Lidia Workflow\, add-in per Word\, si
+ curezza dei dati. Domande e risposte in chiusura.\n\nEntra nel webinar: ht
+ tps://teams.microsoft.com/meet/3416427381182228?p=8S7wezm5FPxx3jYbTX\nID r
+ iunione: 341 642 738 118 222 8 - Passcode: ZF7Am7Ur\n\nAll'ingresso inseri
+ sci nome\, cognome e studio.\n\nPagina del webinar: https://lidiatech.ai/r
+ isorse/webinar/lidia-live-lab-dicembre-2026/
+ORGANIZER;CN=Lidia:mailto:marketing@lidiatech.ai
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lidia Live Lab tra 15 minuti
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
